@@ -49,8 +49,8 @@ RewriteRule ^ /%1 [NE,L,R]
 # map /file to /file.html
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)/?$ /$1.html [L]
-# map / to /home
-RewriteRule ^$ /home [R=301,L]
+# map / to /index
+RewriteRule ^$ /index [R=301,L]
 
 # redirect outdated urls to new layout
 Redirect 301 /articles/agriculture-ruined-everything /articles/agriculture
