@@ -32,6 +32,15 @@ body {
     -webkit-font-smoothing  : antialiased;
 }
 
+.no-bullets {
+    list-style-type : none;
+}
+.no-bullets li {
+    margin-top   : 1rem;
+    padding-left : 1rem;
+    line-height  : 1.25rem;
+}
+
 /* ── Layout ── */
 
 .container {
@@ -219,7 +228,6 @@ h3 {
 
 .section-spacious {
     padding-bottom : 3.83rem;
-}
     line-height   : 1.7;
     color         : var(--text-muted);
     margin-bottom : 1rem;
