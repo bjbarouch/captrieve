@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captrieve — Capture in the moment. Retrieve in context.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:         #ffffff;
+            --bg-card:    #f7f5f2;
+            --bg-rule:    #e8e3dc;
+            --text:       #1a1714;
+            --text-muted: #6b6258;
+            --text-dim:   #b0a89e;
+            --accent:     #9a6f3a;
+            --accent-dim: #c49a60;
+            --serif:      'Cormorant Garamond', Georgia, serif;
+            --sans:       'DM Sans', system-ui, sans-serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 100%;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--sans);
+            font-weight: 300;
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 46.25rem;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        section {
+            padding: 2rem 0 0.83rem;
+            border-bottom: 1px solid var(--bg-rule);
+        }
+
+        section:last-of-type { border-bottom: none; }
+
+        /* ── Scroll reveal ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(1.5rem);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* ── Nav ── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 1.25rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--bg-rule);
+        }
+
+        .nav-brand {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--text);
+            letter-spacing: 0.05em;
+            text-decoration: none;
+        }
+
+        .nav-brand em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-decoration: none;
+            border: 1px solid var(--accent-dim);
+            padding: 0.5rem 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        /* ── Hero ── */
+        .hero {
+            padding: 6rem 0 1.66rem;
+            margin-top: 3.8125rem;
+            border-bottom: 1px solid var(--bg-rule);
+        }
+
+        .hero-eyebrow {
+            font-family: var(--sans);
+            font-size: 0.6875rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.625rem, 8vw, 4rem);
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .hero-sub {
+            font-size: 1.17rem;
+            line-height: 1.65;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .hero-sub + .hero-sub { margin-top: 0.25rem; }
+
+        .hero-tagline {
+            font-family: var(--serif);
+            font-size: 1.375rem;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--text-muted);
+            border-left: 2px solid var(--accent-dim);
+            padding-left: 1.25rem;
+            margin-top: 0.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .cta-group {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg);
+            font-family: var(--sans);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0.875rem 2rem;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background: var(--accent-dim);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--bg-rule);
+            font-weight: 400;
+            letter-spacing: 0.08em;
+        }
+
+        .btn-secondary:hover {
+            color: var(--text);
+            border-color: var(--text-dim);
+            transform: none;
+        }
+
+        /* ── Section headers ── */
+        .section-label {
+            font-size: 0.6875rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-dim);
+            margin-bottom: 1.25rem;
+        }
+
+        h2 {
+            font-family: var(--serif);
+            font-size: clamp(1.875rem, 5vw, 2.875rem);
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        h2 em { font-style: italic; color: var(--accent); }
+
+        .section-lead {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        /* ── Stories ── */
+        .stories { padding-top: 0.25rem; }
+
+        .story {
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--bg-rule);
+        }
+
+        .story:last-child { border-bottom: none; }
+
+        .story-quote {
+            font-family: var(--serif);
+            font-size: clamp(1.25rem, 3.5vw, 1.625rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.5;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1.75rem;
+        }
+
+        .story-quote::before {
+            content: '\201C';
+            position: absolute;
+            left: 0;
+            top: -0.5rem;
+            font-size: 3rem;
+            line-height: 1;
+            color: var(--accent-dim);
+            font-style: normal;
+        }
+
+        .story-attr {
+            font-size: 0.8125rem;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            color: var(--text-dim);
+            padding-left: 1.75rem;
+        }
+
+        .story-attr span {
+            color: var(--accent-dim);
+            margin-right: 0.5rem;
+        }
+
+        /* ── How it works ── */
+        .steps {
+            display: grid;
+            gap: 1rem;
+            margin-top: 0.8rem;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 3rem 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .step-num {
+            font-family: var(--serif);
+            font-size: 2.25rem;
+            font-weight: 300;
+            color: var(--accent-dim);
+            line-height: 1;
+            padding-top: 0.125rem;
+        }
+
+        .step h3 {
+            font-family: var(--serif);
+            font-size: 1.375rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        /* ── Trigger examples ── */
+        .triggers {
+            display: grid;
+            gap: 2px;
+            margin-top: 3rem;
+            margin-bottom: 1.66rem;
+        }
+
+        .triggers-label {
+            font-size: 0.8125rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 0.75rem;
+        }
+
+        .trigger-item {
+            background: var(--bg-card);
+            padding: 1.125rem 1.5rem;
+            font-size: 0.9375rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+
+        .trigger-item:hover {
+            background: #eeeae4;
+            color: var(--text);
+        }
+
+        .trigger-icon {
+            color: var(--accent-dim);
+            font-size: 0.8125rem;
+            flex-shrink: 0;
+            font-style: normal;
+        }
+
+        /* ── Who it's for ── */
+        .audiences {
+            display: grid;
+            gap: 2px;
+            margin-top: 1.75rem;
+            margin-bottom: 1.66rem;
+        }
+
+        .audience {
+            background: var(--bg-card);
+            padding: 2rem;
+        }
+
+        .audience h3 {
+            font-family: var(--serif);
+            font-size: 1.375rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+
+        .audience p {
+            font-size: 0.9375rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        /* ── Privacy ── */
+        .privacy-points {
+            display: grid;
+            gap: 2px;
+            margin-top: 1.75rem;
+        }
+
+        .privacy-point {
+            display: flex;
+            align-items: baseline;
+            gap: 1.25rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--bg-rule);
+        }
+
+        .privacy-point:last-child { border-bottom: none; }
+
+        .privacy-mark {
+            color: var(--accent);
+            font-size: 1.125rem;
+            flex-shrink: 0;
+        }
+
+        .privacy-point p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .privacy-point strong {
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        /* ── Pricing ── */
+        .pricing-block {
+            margin-top: 1.75rem;
+            background: var(--bg-card);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-block::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px; height: 100%;
+            background: var(--accent);
+        }
+
+        .price {
+            font-family: var(--serif);
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: var(--text);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent-dim);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-details {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+
+        .pricing-details li {
+            font-size: 0.9375rem;
+            color: var(--text-muted);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--bg-rule);
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .pricing-details li::before {
+            content: '—';
+            color: var(--accent-dim);
+            flex-shrink: 0;
+        }
+
+        .paywall-note {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: var(--text-dim);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* ── Footer ── */
+        footer {
+            padding: 0.96rem 0;
+            border-top: 1px solid var(--bg-rule);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-brand {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        .footer-copy {
+            font-size: 0.8125rem;
+            color: var(--text-dim);
+        }
+
+        /* ── Utility ── */
+        .text-accent { color: var(--accent); }
+
+        /* ── Mobile: compact ── */
+        @media (max-width: 37.5rem) {
+            section { padding: 2rem 0 0.65rem; }
+            .hero { padding: 4rem 0 1.66rem; }
+            .hero-sub { font-size: 1.125rem; }
+            .pricing-block { padding: 2rem; }
+            .step { grid-template-columns: 2.25rem 1fr; gap: 1rem; }
+            .cta-group { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .audience { padding: 1.5rem; }
+        }
+
+        /* ── Desktop: generous whitespace ── */
+        @media (min-width: 60rem) {
+            .container { max-width: 50rem; }
+            section { padding: 3rem 0 0.83rem; }
+            .hero { padding: 5rem 0 1.66rem; }
+            .stories { padding-top: 0.25rem; }
+            .story { padding: 1.25rem 0; }
+            .steps { gap: 1.2rem; margin-top: 0.68rem; }
+            .section-label { margin-bottom: 1.5rem; }
+            .section-lead { margin-bottom: 1rem; }
+            .triggers { margin-top: 2rem; }
+            .audiences { margin-top: 2rem; }
+            .privacy-points { margin-top: 2rem; }
+            .pricing-block { padding: 4rem; }
+            .audience { padding: 2.5rem; }
+        }
+
+        /* ── Wide desktop: even more room ── */
+        @media (min-width: 80rem) {
+            section { padding: 5rem 0 0.83rem; }
+            .hero { padding: 8rem 0 1.66rem; }
+            .story { padding: 2rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="nav-brand">
+        Cap<em>trieve</em>
+    </a>
+    <a href="#download" class="nav-cta">Get the app</a>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-eyebrow">
+            <strong>Cap</strong>ture in the moment. Re<strong>trieve</strong> in context.
+        </div>
+        <h1>
+            The thought you have <em>now</em> is the thought <em>future&nbsp;you</em> will need.
+        </h1>
+        <p class="hero-sub">
+            Most thoughts arrive at the wrong moment — and disappear before you can act on them.
+            Captrieve captures them before they're gone and delivers them back exactly when and where they'll do some good.
+        </p>
+        <p class="hero-sub">
+            You are in the shower, in the car, in bed and wishing you were asleep instead of thinking, … and you don't want to
+            lose that thought when the time comes that you can act on it – writing down a question for your upcoming doctor
+            appointment, giving that line to that character in that scene you are writing, laying down that track when you get
+            to the studio, remembering to call that person …
+        </p>
+        <p class="hero-tagline">
+            Future you will thank you for taking a painless moment to capture the idea in the moment it is with you.
+        </p>
+    </div>
+</section>
+
+<!-- ── Stories ── -->
+<section>
+    <div class="container">
+        <div class="section-label reveal">
+            People who use it
+        </div>
+        <h2 class="reveal">
+            What it actually <em>does</em> for people
+        </h2>
+        <p class="section-lead reveal">
+            Captrieve doesn't have a lot of features. It does one thing extremely well.
+            It captures what would otherwise be lost from your life and gives it back to you <em>when it's helpful</em>.
+        </p>
+        <div class="stories">
+            <div class="story reveal">
+                <p class="story-quote">
+                    I was in the shower and a chord progression came to me — I just started humming it, different parts, the
+                    rhythm, the feel.
+                    I dried off just enough to handle my phone. Then tap, record my mouth doing its best to sound like a rock
+                    band, and said, "Give this to me when I get to the studio." Then I finished my shower.
+                    When I got to the studio, my phone vibrated, and presented the riff. I built the whole bridge from that
+                    two-minute voice memo, without having to worry about what part I might have forgotten.
+                </p>
+                <p class="story-attr">
+                    <span>—</span> Jordan K., singer-songwriter
+                </p>
+            </div>
+            <div class="story reveal">
+                <p class="story-quote">
+                    I used to walk into meetings and remember, right as they started, that there was something I wanted to
+                    bring up, but damn me if I knew what it was.
+                    Now I capture it the second I think of it and it's there when I walk in the door.
+                    My manager has noticed. I've noticed.
+                    I assigned my phone's action button to Captrieve.
+                </p>
+                <p class="story-attr">
+                    <span>—</span> Priya S., project coordinator
+                </p>
+            </div>
+            <div class="story reveal">
+                <p class="story-quote">
+                    Ten minutes before we sat down to negotiate the licensing terms, my phone surfaced a note I'd captured six
+                    weeks earlier — something their CEO had said offhand at a conference about their biggest pressure point.
+                    I walked in knowing exactly where to push and how to frame what we had to offer.
+                </p>
+                <p class="story-attr">
+                    <span>—</span> R. Whitfield, VP of Sales
+                </p>
+            </div>
+            <div class="story reveal">
+                <p class="story-quote">
+                    My daughter used to worry that I'd forget my questions at the doctor and just say everything was fine.
+                    Now I capture them when I think of them, and they're there when I walk in.
+                    Last visit I actually remembered to ask about the medication interaction. Turns out it mattered.
+                </p>
+                <p class="story-attr">
+                    <span>—</span> Carolyn M., retired teacher
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── How it works ── -->
+<section id="how">
+    <div class="container">
+        <div class="section-label reveal">
+            How it works
+        </div>
+        <h2 class="reveal">
+            Three steps.<br><em>That's the whole thing.</em>
+        </h2>
+        <p class="section-lead reveal">
+            Captrieve is not a notes app. It's not a reminder app. It doesn't want your attention.
+            It wants to disappear into your life and show up when something matters.
+        </p>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-num">1</div>
+                <div>
+                    <h3>Capture it</h3>
+                    <p>
+                        Tap, speak, done — before the thought is gone.
+                        Voice is primary because thoughts move faster than typing.
+                        Photo and text work too, for when the moment calls for it.
+                    </p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">2</div>
+                <div>
+                    <h3>Tell it when or where</h3>
+                    <p>
+                        Set a time, a date, a place, or a combination.
+                        When you leave work. When you arrive at the clinic. Tomorrow morning.
+                        When you land. The next time you walk into the grocery store.
+                    </p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">3</div>
+                <div>
+                    <h3>It finds you</h3>
+                    <p>
+                        At the right moment, in the right place, it surfaces.
+                        Not in a pile of notes you have to dig through.
+                        Not because an algorithm decided you were ready.
+                        Because you told it to.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="triggers reveal">
+            <p class="triggers-label">A few things people tell it</p>
+            <div class="trigger-item">
+                <em class="trigger-icon">◎</em> When I arrive at the doctor's office
+            </div>
+            <div class="trigger-item">
+                <em class="trigger-icon">◎</em> When my plane lands
+            </div>
+            <div class="trigger-item">
+                <em class="trigger-icon">◎</em> The next time I am in New York
+            </div>
+            <div class="trigger-item">
+                <em class="trigger-icon">◎</em> 20 minutes after I leave work
+            </div>
+            <div class="trigger-item">
+                <em class="trigger-icon">◎</em> Every Sunday at 7:30 in the morning
+            </div>
+            <div class="trigger-item">
+                <em class="trigger-icon">◎</em> When I get to the recording studio
+            </div>
+            <div class="trigger-item">
+                <em class="trigger-icon">◎</em> Tomorrow morning, when I can think clearly
+            </div>
+            <div class="trigger-item">
+                <em class="trigger-icon">◎</em> Next time I open the app
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Who it's for ── -->
+<section>
+    <div class="container">
+        <h2 class="reveal">
+            Who is Captrieve for?<br><em>Anyone whose thoughts arrive at the wrong moment.</em>
+        </h2>
+        <div class="audiences">
+            <div class="audience reveal">
+                <h3>Creative people</h3>
+                <p>
+                    Ideas don't wait for a convenient moment. Captrieve captures them at the speed they arrive
+                    and delivers them back when you are positioned to do something with them — at the studio,
+                    at the desk, in the flow state that makes the work happen.
+                </p>
+            </div>
+            <div class="audience reveal">
+                <h3>People with ADHD</h3>
+                <p>
+                    A reminder that fires at an arbitrary time is easy to dismiss and forget.
+                    A reminder that fires when you walk through the door of the place where it matters
+                    is a different thing entirely. Context-triggered retrieval is not a convenience for
+                    people with ADHD — it is a meaningful functional accommodation.
+                </p>
+            </div>
+            <div class="audience reveal">
+                <h3>People managing their health and memory</h3>
+                <p>
+                    The question you thought of on Tuesday needs to be there on Thursday when the doctor
+                    asks if you have anything else. Captrieve is a reliable external memory that surfaces
+                    things in exactly the context where they are useful —
+                    and everything stays private on your phone, always.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Privacy ── -->
+<section>
+    <div class="container">
+        <div class="section-label reveal">
+            Privacy
+        </div>
+        <h2 class="reveal">
+            Your thoughts stay<br><em>on your phone.</em>
+        </h2>
+        <p class="section-lead reveal">
+            This is not a policy position. It is how the product is built.
+            There is no server receiving your captures, no cloud storing your voice memos,
+            no company with access to the things you are trying to remember.
+        </p>
+        <div class="privacy-points reveal">
+            <div class="privacy-point">
+                <div class="privacy-mark">—</div>
+                <p>
+                    <strong>No account required.</strong> There is nothing to sign up for and nothing to log into.
+                </p>
+            </div>
+            <div class="privacy-point">
+                <div class="privacy-mark">—</div>
+                <p>
+                    <strong>No cloud.</strong> Your captures live in local storage on your device. Full stop.
+                </p>
+            </div>
+            <div class="privacy-point">
+                <div class="privacy-mark">—</div>
+                <p>
+                    <strong>No subscription.</strong> One purchase. No recurring charges. No ongoing relationship to manage.
+                </p>
+            </div>
+            <div class="privacy-point">
+                <div class="privacy-mark">—</div>
+                <p>
+                    <strong>No algorithm.</strong> Nothing decides when you are ready. You set the trigger. The app honors it.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Pricing ── -->
+<section id="download">
+    <div class="container">
+        <div class="section-label reveal">
+            Get Captrieve
+        </div>
+        <h2 class="reveal">
+            Try it free.<br><em>Pay when you believe it.</em>
+        </h2>
+        <p class="section-lead reveal">
+            The free tier gives you ten retrieves — ten moments of the product working exactly as promised.
+            After that, you decide.
+        </p>
+        <div class="pricing-block reveal">
+            <div class="price">$4.99</div>
+            <div class="price-label">
+                One-time purchase &nbsp;·&nbsp; No subscription
+            </div>
+            <ul class="pricing-details">
+                <li>Unlimited captures and retrieves</li>
+                <li>Voice, photo, and text capture</li>
+                <li>Time, date, and location triggers</li>
+                <li>Everything on your device — nothing in the cloud</li>
+            </ul>
+            <div class="cta-group">
+                <a href="#" class="btn">App Store</a>
+                <a href="#" class="btn btn-secondary">Google Play</a>
+            </div>
+        </div>
+        <p class="paywall-note">
+            10 free retrieves, and then you decide if you want to keep it forever for only $4.99.
+        </p>
+    </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">Captrieve</div>
+            <div class="footer-copy">captrieve.com</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const observer = new IntersectionObserver(
+        function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    document.querySelectorAll(".reveal").forEach(function(el) {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>

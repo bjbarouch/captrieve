@@ -1,0 +1,809 @@
+:root {
+    --bg         : #ffffff;
+    --bg-card    : #f7f5f2;
+    --bg-rule    : #e8e3dc;
+    --text       : #1a1714;
+    --text-muted : #6b6258;
+    --text-dim   : #b0a89e;
+    --accent     : #9a6f3a;
+    --accent-dim : #c49a60;
+    --serif      : "Cormorant Garamond", Georgia, serif;
+    --sans       : "DM Sans", system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing : border-box;
+    margin     : 0;
+    padding    : 0;
+}
+
+html {
+    scroll-behavior : smooth;
+    font-size       : 100%;
+}
+
+body {
+    background              : var(--bg);
+    color                   : var(--text);
+    font-family             : var(--sans);
+    font-weight             : 300;
+    font-size               : 1.0625rem;
+    line-height             : 1.7;
+    -webkit-font-smoothing  : antialiased;
+}
+
+/* ── Layout ── */
+
+.container {
+    max-width : 46.25rem;
+    margin    : 0 auto;
+    padding   : 0 5%;
+}
+
+section {
+    padding       : 2rem 0 1.83rem;
+    border-bottom : 1px solid var(--bg-rule);
+}
+
+section:last-of-type {
+    border-bottom : none;
+}
+
+/* ── Scroll reveal ── */
+
+.reveal {
+    opacity    : 0;
+    transform  : translateY(1.5rem);
+    transition : opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity   : 1;
+    transform : none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity   : 1;
+        transform : none;
+    }
+}
+
+/* ── Nav ── */
+
+nav {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    z-index         : 100;
+    padding         : 1.25rem 5%;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    background      : rgba(255, 255, 255, 0.88);
+    backdrop-filter : blur(12px);
+    border-bottom   : 1px solid var(--bg-rule);
+}
+
+.nav-brand {
+    font-family     : var(--serif);
+    font-size       : 1.25rem;
+    font-weight     : 300;
+    color           : var(--text);
+    letter-spacing  : 0.05em;
+    text-decoration : none;
+}
+
+.nav-brand em {
+    font-style : italic;
+    color      : var(--accent);
+}
+
+.nav-links {
+    display     : flex;
+    align-items : center;
+    gap         : 2rem;
+    list-style  : none;
+}
+
+.nav-links a {
+    font-size       : 0.75rem;
+    font-weight     : 400;
+    letter-spacing  : 0.1em;
+    text-transform  : uppercase;
+    color           : var(--text-muted);
+    text-decoration : none;
+    transition      : color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color : var(--text);
+}
+
+.nav-links a.active {
+    color : var(--accent);
+}
+
+.nav-cta {
+    font-size       : 0.75rem;
+    font-weight     : 500;
+    letter-spacing  : 0.15em;
+    text-transform  : uppercase;
+    color           : var(--accent);
+    text-decoration : none;
+    border          : 1px solid var(--accent-dim);
+    padding         : 0.5rem 1.25rem;
+    transition      : all 0.2s ease;
+}
+
+.nav-cta:hover {
+    background : var(--accent);
+    color      : var(--bg);
+}
+
+/* ── Buttons ── */
+
+.btn {
+    display         : inline-block;
+    background      : var(--accent);
+    color           : var(--bg);
+    font-family     : var(--sans);
+    font-size       : 0.8125rem;
+    font-weight     : 500;
+    letter-spacing  : 0.12em;
+    text-transform  : uppercase;
+    text-decoration : none;
+    padding         : 0.875rem 2rem;
+    transition      : background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background : var(--accent-dim);
+    transform  : translateY(-1px);
+}
+
+.btn-secondary {
+    background   : transparent;
+    color        : var(--text-muted);
+    border       : 1px solid var(--bg-rule);
+    font-weight  : 400;
+    letter-spacing: 0.08em;
+}
+
+.btn-secondary:hover {
+    color        : var(--text);
+    border-color : var(--text-dim);
+    transform    : none;
+}
+
+.cta-group {
+    display     : flex;
+    align-items : center;
+    gap         : 2rem;
+    flex-wrap   : wrap;
+}
+
+/* ── Section headers ── */
+
+.section-label {
+    font-size      : 0.6875rem;
+    font-weight    : 500;
+    letter-spacing : 0.2em;
+    text-transform : uppercase;
+    color          : var(--accent-dim);
+    margin-bottom  : 1.25rem;
+}
+
+h2 {
+    font-family   : var(--serif);
+    font-size     : clamp(1.875rem, 5vw, 2.875rem);
+    font-weight   : 300;
+    line-height   : 1.2;
+    color         : var(--text);
+    margin-bottom : 1rem;
+}
+
+h2 em {
+    font-style : italic;
+    color      : var(--accent);
+}
+
+h3 {
+    font-family   : var(--serif);
+    font-size     : 1.375rem;
+    font-weight   : 400;
+    color         : var(--text);
+    margin-bottom : 0.5rem;
+}
+
+.section-spacious {
+    padding-bottom : 3.83rem;
+}
+    line-height   : 1.7;
+    color         : var(--text-muted);
+    margin-bottom : 1rem;
+}
+
+/* ── Hero ── */
+
+.hero {
+    padding       : 6rem 0 1.66rem;
+    margin-top    : 4.5rem;
+    border-bottom : 1px solid var(--bg-rule);
+}
+
+.hero-eyebrow {
+    font-family    : var(--sans);
+    font-size      : 0.6875rem;
+    font-weight    : 500;
+    letter-spacing : 0.2em;
+    text-transform : uppercase;
+    color          : var(--accent);
+    margin-bottom  : 1.25rem;
+}
+
+.hero h1 {
+    font-family   : var(--serif);
+    font-size     : clamp(2.625rem, 8vw, 4rem);
+    font-weight   : 300;
+    line-height   : 1.1;
+    letter-spacing: -0.01em;
+    color         : var(--text);
+    margin-bottom : 1.5rem;
+}
+
+.hero h1 em {
+    font-style : italic;
+    color      : var(--accent);
+}
+
+.hero-sub {
+    font-size     : 1.17rem;
+    line-height   : 1.65;
+    color         : var(--text-muted);
+    margin-bottom : 1rem;
+}
+
+.hero-tagline {
+    font-family   : var(--serif);
+    font-size     : 1.375rem;
+    font-style    : italic;
+    font-weight   : 300;
+    color         : var(--text-muted);
+    border-left   : 2px solid var(--accent-dim);
+    padding-left  : 1.25rem;
+    margin-top    : 0.25rem;
+    margin-bottom : 1.25rem;
+}
+
+/* ── Page hero (interior pages) ── */
+
+.page-hero {
+    padding       : 5rem 0 1.66rem;
+    margin-top    : 3.8125rem;
+    border-bottom : 1px solid var(--bg-rule);
+}
+
+.page-hero h1 {
+    font-family   : var(--serif);
+    font-size     : clamp(2rem, 6vw, 3.25rem);
+    font-weight   : 300;
+    line-height   : 1.15;
+    color         : var(--text);
+    margin-bottom : 1rem;
+}
+
+.page-hero h1 em {
+    font-style : italic;
+    color      : var(--accent);
+}
+
+.page-hero p {
+    font-size  : 1.125rem;
+    color      : var(--text-muted);
+    max-width  : 38rem;
+    line-height: 1.7;
+}
+
+/* ── Steps ── */
+
+.steps {
+    display       : flex;
+    flex-direction: column;
+    gap           : 1.5rem;
+    margin        : 1.5rem 0;
+}
+
+.step {
+    display    : flex;
+    gap        : 1.5rem;
+    align-items: flex-start;
+}
+
+.step-num {
+    font-family    : var(--serif);
+    font-size      : 2.5rem;
+    font-weight    : 300;
+    color          : var(--accent-dim);
+    line-height    : 1;
+    min-width      : 2rem;
+    padding-top    : 0.125rem;
+}
+
+.step h3 {
+    font-family   : var(--serif);
+    font-size     : 1.375rem;
+    font-weight   : 400;
+    margin-bottom : 0.375rem;
+}
+
+.step p {
+    color       : var(--text-muted);
+    line-height : 1.65;
+}
+
+/* ── Triggers ── */
+
+.cues {
+    background : var(--bg-card);
+    padding    : 1.5rem;
+    margin-top : 1.5rem;
+}
+
+.cues-label {
+    font-size      : 0.6875rem;
+    font-weight    : 500;
+    letter-spacing : 0.15em;
+    text-transform : uppercase;
+    color          : var(--text-dim);
+    margin-bottom  : 1rem;
+}
+
+.cue-item {
+    padding       : 0.5rem 0;
+    border-bottom : 1px solid var(--bg-rule);
+    color         : var(--text-muted);
+    font-size     : 0.9375rem;
+    display       : flex;
+    align-items   : center;
+    gap           : 0.75rem;
+}
+
+.cue-item:last-child {
+    border-bottom : none;
+}
+
+.cue-icon {
+    color      : var(--accent-dim);
+    font-style : normal;
+    flex-shrink: 0;
+}
+
+/* ── Audiences ── */
+
+.audiences {
+    display       : flex;
+    flex-direction: column;
+    gap           : 1.5rem;
+    margin-top    : 1.5rem;
+}
+
+.audience {
+    border-left  : 2px solid var(--bg-rule);
+    padding-left : 1.25rem;
+}
+
+.audience h3 {
+    margin-bottom : 0.375rem;
+}
+
+.audience p {
+    color       : var(--text-muted);
+    line-height : 1.65;
+}
+
+/* ── Stories ── */
+
+.stories {
+    display       : flex;
+    flex-direction: column;
+    gap           : 1.5rem;
+    margin-top    : 1.5rem;
+}
+
+.story {
+    background  : var(--bg-card);
+    padding     : 1.5rem;
+}
+
+.story-quote {
+    font-family   : var(--serif);
+    font-size     : 1.125rem;
+    font-style    : italic;
+    line-height   : 1.65;
+    color         : var(--text);
+    margin-bottom : 0.75rem;
+}
+
+.story-attr {
+    font-size  : 0.8125rem;
+    color      : var(--text-dim);
+    display    : flex;
+    gap        : 0.5rem;
+    align-items: center;
+}
+
+.story-attr span {
+    color : var(--accent-dim);
+}
+
+/* ── Trigger type cards (triggers page) ── */
+
+.cue-cards {
+    display       : flex;
+    flex-direction: column;
+    gap           : 1.5rem;
+    margin-top    : 1.5rem;
+}
+
+.cue-card {
+    border-left  : 3px solid var(--bg-rule);
+    padding-left : 1.25rem;
+}
+
+.cue-card.featured {
+    border-left-color : var(--accent-dim);
+}
+
+.cue-card h3 {
+    font-family   : var(--serif);
+    font-size     : 1.25rem;
+    margin-bottom : 0.375rem;
+}
+
+.cue-card .trigger-type-label {
+    font-size      : 0.6875rem;
+    font-weight    : 500;
+    letter-spacing : 0.15em;
+    text-transform : uppercase;
+    color          : var(--accent-dim);
+    margin-bottom  : 0.5rem;
+}
+
+.cue-card p {
+    color       : var(--text-muted);
+    line-height : 1.65;
+    margin-bottom: 0.5rem;
+}
+
+.cue-card p:last-child {
+    margin-bottom : 0;
+}
+
+.cue-examples {
+    margin-top : 0.75rem;
+    display    : flex;
+    flex-wrap  : wrap;
+    gap        : 0.5rem;
+}
+
+.cue-example-tag {
+    font-size      : 0.8125rem;
+    color          : var(--text-muted);
+    background     : var(--bg-card);
+    padding        : 0.25rem 0.75rem;
+    border         : 1px solid var(--bg-rule);
+}
+
+/* ── Pull quote ── */
+
+.pull-quote {
+    font-family  : var(--serif);
+    font-size    : clamp(1.375rem, 3vw, 1.75rem);
+    font-style   : italic;
+    font-weight  : 300;
+    color        : var(--text-muted);
+    border-left  : 2px solid var(--accent-dim);
+    padding-left : 1.5rem;
+    margin       : 2rem 0;
+    line-height  : 1.45;
+}
+
+/* ── Pricing ── */
+
+.pricing-table {
+    width           : 100%;
+    border-collapse : collapse;
+    margin-top      : 1.5rem;
+    font-size       : 0.9375rem;
+}
+
+.pricing-table th {
+    font-family    : var(--sans);
+    font-size      : 0.75rem;
+    font-weight    : 500;
+    letter-spacing : 0.1em;
+    text-transform : uppercase;
+    color          : var(--text-muted);
+    padding        : 0.75rem 1rem;
+    border-bottom  : 2px solid var(--bg-rule);
+    text-align     : left;
+}
+
+.pricing-table th:not(:first-child) {
+    text-align : center;
+}
+
+.pricing-table td {
+    padding       : 0.625rem 1rem;
+    border-bottom : 1px solid var(--bg-rule);
+    color         : var(--text-muted);
+    vertical-align: middle;
+}
+
+.pricing-table td:not(:first-child) {
+    text-align : center;
+}
+
+.pricing-table tr:last-child td {
+    border-bottom : none;
+}
+
+.pricing-table .check {
+    color     : var(--accent);
+    font-size : 1rem;
+}
+
+.pricing-table .no {
+    color     : var(--text-dim);
+    font-size : 0.875rem;
+}
+
+.pricing-table .row-label {
+    color : var(--text);
+}
+
+.pricing-table .col-connected th {
+    color : var(--accent);
+}
+
+.pricing-prices {
+    display         : flex;
+    gap             : 2rem;
+    flex-wrap       : wrap;
+    margin-top      : 1.5rem;
+    padding-top     : 1.5rem;
+    border-top      : 1px solid var(--bg-rule);
+    align-items     : flex-end;
+}
+
+.pricing-option {
+    flex : 1;
+    min-width: 10rem;
+}
+
+.pricing-option .price {
+    font-family : var(--serif);
+    font-size   : 2.5rem;
+    font-weight : 300;
+    color       : var(--text);
+    line-height : 1;
+}
+
+.pricing-option .price-label {
+    font-size   : 0.8125rem;
+    color       : var(--text-muted);
+    margin-top  : 0.25rem;
+    line-height : 1.4;
+}
+
+.pricing-note {
+    font-size   : 0.875rem;
+    color       : var(--text-dim);
+    margin-top  : 1rem;
+    line-height : 1.6;
+}
+
+.paywall-note {
+    font-size   : 0.875rem;
+    color       : var(--text-dim);
+    margin-top  : 1rem;
+    line-height : 1.6;
+}
+
+/* ── Caregiver page ── */
+
+.use-case {
+    background    : var(--bg-card);
+    padding       : 1.5rem;
+    margin-bottom : 1rem;
+}
+
+.use-case h3 {
+    font-family   : var(--serif);
+    font-size     : 1.125rem;
+    font-weight   : 400;
+    margin-bottom : 0.5rem;
+    color         : var(--accent);
+}
+
+.use-case p {
+    color       : var(--text-muted);
+    line-height : 1.65;
+}
+
+.two-people {
+    display    : grid;
+    grid-template-columns: 1fr 1fr;
+    gap        : 1.5rem;
+    margin-top : 1.5rem;
+}
+
+.person-column h3 {
+    font-family   : var(--serif);
+    font-size     : 1.125rem;
+    color         : var(--accent);
+    margin-bottom : 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom : 1px solid var(--bg-rule);
+}
+
+.person-column ul {
+    list-style : none;
+    display    : flex;
+    flex-direction: column;
+    gap        : 0.5rem;
+}
+
+.person-column li {
+    color     : var(--text-muted);
+    font-size : 0.9375rem;
+    display   : flex;
+    gap       : 0.5rem;
+}
+
+.person-column li::before {
+    content    : "—";
+    color      : var(--accent-dim);
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .two-people {
+        grid-template-columns : 1fr;
+    }
+}
+
+/* ── FAQ ── */
+
+.faq-list {
+    display       : flex;
+    flex-direction: column;
+    margin-top    : 1.5rem;
+}
+
+.faq-item {
+    border-bottom : 1px solid var(--bg-rule);
+    padding       : 1.25rem 0;
+}
+
+.faq-item:last-child {
+    border-bottom : none;
+}
+
+.faq-q {
+    font-family   : var(--serif);
+    font-size     : 1.125rem;
+    font-weight   : 400;
+    color         : var(--text);
+    margin-bottom : 0.5rem;
+}
+
+.faq-a {
+    color       : var(--text-muted);
+    line-height : 1.7;
+    font-size   : 0.9375rem;
+}
+
+/* ── Privacy points ── */
+
+.privacy-points {
+    margin-top    : 1.5rem;
+    display       : flex;
+    flex-direction: column;
+    gap           : 1rem;
+}
+
+.privacy-point {
+    display : flex;
+    gap     : 1.25rem;
+}
+
+.privacy-mark {
+    color      : var(--accent-dim);
+    font-size  : 1.25rem;
+    flex-shrink: 0;
+    padding-top: 0.125rem;
+}
+
+.privacy-point p {
+    color       : var(--text-muted);
+    line-height : 1.65;
+}
+
+.privacy-point strong {
+    color       : var(--text);
+    font-weight : 500;
+}
+
+.privacy-caveat {
+    font-size   : 0.875rem;
+    color       : var(--text-dim);
+    margin-top  : 0.375rem;
+    line-height : 1.6;
+}
+
+/* ── Footer ── */
+
+footer {
+    padding    : 2rem 0;
+    border-top : 1px solid var(--bg-rule);
+    margin-top : 2rem;
+}
+
+.footer-inner {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+}
+
+.footer-brand {
+    font-family : var(--serif);
+    font-size   : 1.125rem;
+    font-weight : 300;
+    color       : var(--text-dim);
+}
+
+.footer-nav {
+    display    : flex;
+    gap        : 1.5rem;
+    list-style : none;
+}
+
+.footer-nav a {
+    font-size       : 0.8125rem;
+    color           : var(--text-dim);
+    text-decoration : none;
+    transition      : color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color : var(--text-muted);
+}
+
+.footer-copy {
+    font-size : 0.8125rem;
+    color     : var(--text-dim);
+}
+
+@media (max-width: 600px) {
+    .footer-inner {
+        flex-direction : column;
+        gap            : 1rem;
+        text-align     : center;
+    }
+
+    .footer-nav {
+        flex-wrap  : wrap;
+        justify-content: center;
+    }
+
+    nav {
+        padding : 1rem 5%;
+    }
+
+    .nav-links {
+        display : none;
+    }
+}

@@ -1,0 +1,43 @@
+name: captrieve_geofence_spike
+description: Geofence reliability spike for Captrieve. Tests native_geofence
+  behavior across app states – backgrounded, terminated, low-battery, reboot,
+  and airplane mode.
+
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Core geofencing – wraps CLLocationManager (iOS) and GeofencingClient (Android)
+  # directly. No continuous location tracking; pure region monitoring.
+  native_geofence: ^2.0.0
+
+  # Local notifications – delivers the geofence event to the user.
+  # No push server required; all on-device.
+  flutter_local_notifications: ^18.0.0
+
+  # Permission management – handles the two-step iOS location permission flow
+  # (when-in-use first, then always) and Android notification permission.
+  permission_handler: ^11.0.0
+
+  # Battery state – captures battery level and low-power mode status at the
+  # moment each geofence callback fires. Critical for the low-battery test scenario.
+  battery_plus: ^6.0.0
+
+  # Path provider – resolves the app documents directory so the headless callback
+  # can write the persistent log file. The headless context has no access to
+  # Flutter's asset system, so we need a concrete filesystem path.
+  path_provider: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

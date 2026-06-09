@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Captrieve</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- until the site and product are ready, then remove -->
+    <script src="preview-auth.js"></script>
+
+<nav>
+    <a href="index.html" class="nav-brand">Cap<em>trieve</em></a>
+    <ul class="nav-links">
+        <li><a href="cues.html">Cues</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="caregivers.html">Caregivers</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+    </ul>
+    <a href="index.html#download" class="nav-cta">Get the app</a>
+</nav>
+
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label reveal">FAQ</p>
+        <h1 class="reveal">
+            Questions people<br>
+            <em>actually ask.</em>
+        </h1>
+    </div>
+</div>
+
+<!-- ── The basics ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">The basics</p>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <p class="faq-q">What's the difference between Captrieve and a reminder app?</p>
+                <p class="faq-a">
+                    A reminder app fires at a time you set.
+                    Captrieve fires at a time, a place, a Wi-Fi network, an NFC tag tap, a Bluetooth connection,
+                    or a calendar event — and can combine these with conditions.
+                    More importantly, Captrieve's whole job is capture and retrieval.
+                    That singularity is what makes it worth developing a habit around.
+                    Siri and Alexa do reminders alongside a thousand other things.
+                    When a tool does one thing, you remember to use it.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">What's a retrieve?</p>
+                <p class="faq-a">
+                    A retrieve is the moment a capture surfaces — when the cue fires and the thought
+                    you stored finds you.
+                    The free tier gives you 20 of these.
+                    After that, a one-time purchase gives you unlimited retrieves forever.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Why does the free tier cap on retrieves rather than captures?</p>
+                <p class="faq-a">
+                    Because a retrieve is the moment the product delivers on its promise.
+                    You've captured a thought.
+                    It found you at exactly the right moment.
+                    That is what you are deciding whether to pay for.
+                    Twenty retrieves across different cue types gives you a genuine picture of what
+                    the product does before you spend anything.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">What happens to my captures if I delete the app?</p>
+                <p class="faq-a">
+                    Everything is stored locally on your device.
+                    Deleting the app deletes your captures.
+                    Back up your phone before deleting if you want to restore them later.
+                    On the Connected tier, presence log history on the server is deleted within 30 days
+                    of cancellation.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Cues ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">Cues</p>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <p class="faq-q">Why is location triggering less reliable in some places than others?</p>
+                <p class="faq-a">
+                    Location accuracy depends on what signals are available: GPS satellites work best
+                    outdoors with a clear sky, cell towers provide good coverage in most areas, and Wi-Fi
+                    networks help indoors near known networks.
+                    Dense urban areas with tall buildings can interfere with GPS.
+                    Underground locations have no GPS at all.
+                    iOS and Android do the best they can with what is available.
+                    Captrieve works with what the device provides — it has no access to signals the
+                    device cannot receive.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">My Wi-Fi cue didn't fire when I arrived. What happened?</p>
+                <p class="faq-a">
+                    Wi-Fi cues fire on network join, which requires the device to actively connect
+                    to that network.
+                    If your phone connected to a different network nearby, or stayed on a previous network,
+                    the join event does not occur.
+                    Confirm the network name matches exactly, including capitalization.
+                    If you are near multiple networks and your phone auto-selects a different one, consider
+                    combining with a geofence cue as a fallback.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">How do I set up an NFC tag?</p>
+                <p class="faq-a">
+                    Select "When I tap an NFC tag" as your cue type, then hold your phone against the
+                    tag when prompted.
+                    Captrieve reads the tag's unique identifier and registers it.
+                    If the tag is blank, Captrieve writes an identifier to it.
+                    You can name the tag — Piano, Desk, Car — and reuse it across multiple captures.
+                    NFC tags are inexpensive and available online and at office supply stores.
+                    A pack of 30 costs under $15.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Does NFC work in the background, or do I have to open the app first?</p>
+                <p class="faq-a">
+                    On Android, NFC tags can wake Captrieve automatically when tapped.
+                    On iOS, NFC requires either the app to be open or a lock screen NFC shortcut to be
+                    configured.
+                    iOS does not allow fully background NFC scanning.
+                    The intentional tap is the intended interaction on all platforms — hold your phone to
+                    the tag, see what you needed to remember.
+                    On iOS, one swipe to the lock screen shortcut and a tap is the full gesture.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">
+                    What if I want a retrieve to fire while I'm still on my way somewhere, not when
+                    I arrive?
+                </p>
+                <p class="faq-a">
+                    Set a geofence arrival cue on your destination with a generous radius — 5 to 15
+                    kilometers rather than 100 meters.
+                    The cue fires when you enter that radius, while you are still traveling.
+                    This is the right approach for "call home to let my spouse know I'll be there in
+                    15 minutes" — set a large geofence on home, and it fires while you're still driving.
+                    Experiment with the radius to find the lead time that works for your commute.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── NFC and habits ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">NFC tags and habits</p>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <p class="faq-q">
+                    What if after using the NFC feature for a while, the places I've put them become
+                    cues for my brain and I don't need the app for those things any more?
+                </p>
+                <p class="faq-a">
+                    Then you spent a few dollars on some small stickers and permanently improved your memory
+                    in a way that had eluded you for years.
+                    That is not a failure of the app.
+                    That is the app working at its best.
+                    Captrieve is designed to make itself unnecessary, one habit at a time.
+                    The tag on your nightstand was never the point — the bedtime routine that no longer
+                    requires a reminder is.
+                    Keep the tags where they are.
+                    Tap them anyway.
+                    Something else worth remembering will come along.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Where do people put NFC tags?</p>
+                <p class="faq-a">
+                    Anywhere that represents a meaningful context.
+                    Common locations: front door, bedside table, kitchen counter, medicine cabinet,
+                    bathroom mirror, home desk, work desk, piano, guitar case, recording desk, workbench,
+                    car dashboard, bicycle handlebar.
+                    Temporary uses: airplane seat armrest, hotel desk, temporary locker.
+                    Tags are inexpensive enough to treat as disposable when the context is one-off.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Connected tier ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">Connected tier</p>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <p class="faq-q">What is the Connected tier?</p>
+                <p class="faq-a">
+                    Connected is a subscription layer that lets you share presence events, captures, and
+                    context with people you trust who also have Captrieve.
+                    It is designed for families, caregivers, partners, and close colleagues — not a social
+                    network, not a group chat.
+                    The Solo tier is a one-time purchase with full local functionality.
+                    Connected adds the network layer on top.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">
+                    If I subscribe to Connected and then cancel, do I lose everything?
+                </p>
+                <p class="faq-a">
+                    No.
+                    Your local captures and cues are fully unaffected — they live on your device and
+                    nothing about them changes when you cancel.
+                    Connected features pause: presence events stop routing, shared captures stop flowing.
+                    After any 12 consecutive months of Connected subscription, Solo is yours permanently
+                    at no further cost, even if you cancel.
+                    If you haven't yet reached 12 months, you revert to the free tier unless you've
+                    separately purchased Solo.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Why does Connected require a subscription when Solo is a one-time purchase?</p>
+                <p class="faq-a">
+                    Because Connected requires a backend to route presence events and shared captures
+                    between devices.
+                    That backend has real ongoing costs: push notification infrastructure, encrypted relay,
+                    presence log storage.
+                    A one-time purchase doesn't recover those costs at scale.
+                    A subscription does, honestly and proportionally.
+                    Solo has no backend and no ongoing costs — one purchase is the right model for it.
+                    Connected has both — subscription is the right model for it.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Does the caregiver need a separate account from the person they care for?</p>
+                <p class="faq-a">
+                    Yes.
+                    Both the caregiver and the person being cared for have their own Captrieve accounts
+                    and their own subscriptions.
+                    Both get the full app.
+                    The caregiving layer connects them.
+                    Neither has a stripped-down experience.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Can Captrieve send a text message to my caregiver when I leave the house?</p>
+                <p class="faq-a">
+                    Not a native SMS text — iOS and Android both prevent apps from sending SMS silently
+                    in the background.
+                    What Captrieve does instead: when you tap the front door NFC tag, a push notification
+                    is routed instantly to your caregiver's Captrieve.
+                    They see: "Left home, 10:47am."
+                    If they have Captrieve open, it appears immediately.
+                    Functionally equivalent, and more reliable than SMS.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Privacy ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">Privacy</p>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <p class="faq-q">Does Captrieve send my location to a server?</p>
+                <p class="faq-a">
+                    No.
+                    Location permissions are used only to evaluate cues you have set.
+                    Your location is processed on-device and never transmitted.
+                    This is true even on the Connected tier — presence events are timestamped NFC taps,
+                    not GPS coordinates.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">What does the Connected tier's backend actually store?</p>
+                <p class="faq-a">
+                    Encrypted relay payloads for presence events and shared captures, and presence log
+                    entries for connected pairs.
+                    The server holds ciphertext only and cannot read your capture content or your presence
+                    event details.
+                    When you revoke a connection, the key is invalidated immediately.
+                    When you cancel Connected, server-held history is deleted within 30 days.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">Captrieve</div>
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cues.html">Cues</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="caregivers.html">Caregivers</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+            <div class="footer-copy">captrieve.com</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const observer = new IntersectionObserver(
+        function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    document.querySelectorAll(".reveal").forEach(function(el) {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>

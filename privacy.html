@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy — Captrieve</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- until the site and product are ready, then remove -->
+    <script src="preview-auth.js"></script>
+
+<nav>
+    <a href="index.html" class="nav-brand">Cap<em>trieve</em></a>
+    <ul class="nav-links">
+        <li><a href="cues.html">Cues</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="caregivers.html">Caregivers</a></li>
+        <li><a href="privacy.html" class="active">Privacy</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <a href="index.html#download" class="nav-cta">Get the app</a>
+</nav>
+
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label reveal">Privacy</p>
+        <h1 class="reveal">
+            Your thoughts stay<br>
+            <em>on your phone.</em>
+        </h1>
+        <p class="reveal">
+            This is not a policy position.
+            It is how the product is built.
+            There is no server receiving your captures, no cloud storing your voice memos,
+            no company with access to the things you are trying to remember.
+        </p>
+    </div>
+</div>
+
+<!-- ── Four points ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">The short version</p>
+        <div class="privacy-points">
+            <div class="privacy-point reveal">
+                <div class="privacy-mark">—</div>
+                <div>
+                    <p>
+                        <strong>No account required.</strong>
+                        There is nothing to sign up for and nothing to log into.
+                    </p>
+                    <p class="privacy-caveat">
+                        Unless you choose Connected, which requires an account to identify you to the people
+                        you share with.
+                        That is your choice, made explicitly.
+                    </p>
+                </div>
+            </div>
+            <div class="privacy-point reveal">
+                <div class="privacy-mark">—</div>
+                <div>
+                    <p>
+                        <strong>No cloud.</strong>
+                        Your captures live in local storage on your device.
+                        Full stop.
+                    </p>
+                    <p class="privacy-caveat">
+                        Unless you choose to share a capture with a connected person, in which case only
+                        what you explicitly share leaves the device — end-to-end encrypted.
+                    </p>
+                </div>
+            </div>
+            <div class="privacy-point reveal">
+                <div class="privacy-mark">—</div>
+                <div>
+                    <p>
+                        <strong>No subscription.</strong>
+                        One purchase.
+                        No recurring charges.
+                        No ongoing relationship to manage.
+                    </p>
+                    <p class="privacy-caveat">
+                        Unless you choose Connected, which has real ongoing backend costs and is priced
+                        accordingly.
+                        The Solo tier remains a one-time purchase, permanently.
+                    </p>
+                </div>
+            </div>
+            <div class="privacy-point reveal">
+                <div class="privacy-mark">—</div>
+                <div>
+                    <p>
+                        <strong>No algorithm.</strong>
+                        Nothing decides when you are ready.
+                        You set the cue.
+                        The app honors it.
+                    </p>
+                    <p class="privacy-caveat">
+                        This does not change at any tier.
+                        Ever.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Architecture ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">How it's built</p>
+        <h2 class="reveal">
+            Local first.<br>
+            <em>Connected only when you choose it.</em>
+        </h2>
+        <p class="section-lead reveal">
+            The Solo tier runs entirely on your device.
+            No outbound connections.
+            No telemetry.
+            No analytics.
+            Location permissions are used only to fire cues you have set — they are never sent anywhere.
+            Voice recordings are transcribed on-device and never leave unless you explicitly share them.
+        </p>
+        <p class="section-lead reveal">
+            The Connected tier introduces a backend for one purpose: routing signals between people who
+            have chosen to be connected.
+            That backend holds ciphertext only — it cannot read your capture content or your presence events.
+            Revoking a connection immediately invalidates the encryption key for that connection.
+            When you cancel Connected, presence log history is deleted from the server within 30 days.
+        </p>
+        <p class="section-lead reveal">
+            The qualifications on the previous page are honest, not apologetic.
+            Every exception is your own choice, made explicitly, for a feature that requires it.
+            Nothing happens to your data without your action.
+        </p>
+    </div>
+</section>
+
+<!-- ── Permissions ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">Permissions</p>
+        <h2 class="reveal">
+            What the app asks for<br>
+            <em>and why.</em>
+        </h2>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <p class="faq-q">Location (when in use)</p>
+                <p class="faq-a">
+                    Required for geofence cues.
+                    Used only to detect when you enter or leave an area you have defined.
+                    Your location is never transmitted.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Location (always)</p>
+                <p class="faq-a">
+                    Required for geofence cues to fire while the app is in the background.
+                    You can choose "when in use" only — geofences will fire less reliably.
+                    Always-on location is never transmitted.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Microphone</p>
+                <p class="faq-a">
+                    Required for voice capture.
+                    Recordings are transcribed on-device.
+                    Audio is stored locally until you choose to delete it.
+                    Nothing is transmitted without your action.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Camera</p>
+                <p class="faq-a">
+                    Required for photo capture.
+                    Photos are stored locally.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">NFC</p>
+                <p class="faq-a">
+                    Required to read and write NFC tags.
+                    Tag identifiers are stored locally.
+                    Nothing is transmitted.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Bluetooth</p>
+                <p class="faq-a">
+                    Required for Bluetooth device cues.
+                    Device names are stored locally.
+                    Nothing is transmitted.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Wi-Fi information (Connected tier only)</p>
+                <p class="faq-a">
+                    Required for Wi-Fi network cues.
+                    Network names are stored locally.
+                    Nothing is transmitted.
+                    This permission requires the Access Wi-Fi Information entitlement on iOS.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Notifications</p>
+                <p class="faq-a">
+                    Required to deliver retrieves.
+                    Notifications are generated locally by cues you have set.
+                    No push notifications are sent without your action, except on the Connected tier where
+                    presence events and shared captures are routed to connected devices.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">Captrieve</div>
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cues.html">Cues</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="caregivers.html">Caregivers</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="footer-copy">captrieve.com</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const observer = new IntersectionObserver(
+        function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    document.querySelectorAll(".reveal").forEach(function(el) {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
