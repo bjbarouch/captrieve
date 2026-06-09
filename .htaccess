@@ -18,8 +18,8 @@ DefaultLanguage en-US
 Options -Indexes +FollowSymLinks
 IndexIgnore *
 
-# given a directory name, serve home.html if present, else index.html (else fail)
-DirectoryIndex home.html index.html
+# given the root as the url of interest, go to index.html
+DirectoryIndex index.html
 
 # ensure rewrite engine is on
 RewriteEngine On
