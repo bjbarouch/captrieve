@@ -13,7 +13,6 @@ DefaultLanguage en-US
     Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-hashes'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
 </IfModule>
 
-
 # do not let people browse directories, do follow symbolic links
 Options -Indexes +FollowSymLinks
 IndexIgnore *
