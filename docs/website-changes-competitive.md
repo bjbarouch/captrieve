@@ -1,11 +1,11 @@
-# Captrieve Website Changes — Competitive Honesty Pass (June 2026)
+# Captrieve Website Changes – Competitive Honesty Pass (June 2026)
 
 Reason for this pass: Apple Reminders has offered location triggers (arrive/leave geofences, Siri creation, car triggers)
 since iOS 5 in 2011, and iOS Shortcuts automations can fire on NFC, Wi-Fi, Bluetooth, and location.
 Several lines of current site copy claim or imply that nothing on the user's phone is location-aware.
 Any Apple-literate reviewer can refute those lines with a screenshot, and the product's credibility takes the hit at first
 contact.
-The fix is not to soften the pitch — it is to aim it at the true enemy: tools that make the user do all the work at the
+The fix is not to soften the pitch – it is to aim it at the true enemy: tools that make the user do all the work at the
 wrong moment.
 Bonus tailwind to exploit: Google removed location-based reminders from Android entirely in late 2025 (Keep-to-Tasks
 migration).
@@ -14,7 +14,7 @@ Three changes below. Each shows exact current text and exact proposed replacemen
 
 ---
 
-## Change 1 — index.html hero: fix the attackable paragraph
+## Change 1 – index.html hero: fix the attackable paragraph
 
 ### Current (the "In desperation" paragraph)
 
@@ -38,7 +38,7 @@ Apple Reminders does locations, and has for fifteen years.
     In desperation, you dictate it to Siri or Alexa to put in a note, and forget to ask for it later, or you put it in a
     Google doc, or even a spreadsheet, and it sits there, passively not reminding you.
     It just sits there, unindexed, so it's hard to find if you do remember to go looking for it.
-    Or you stop what you're doing, open your reminders app, type it in as a task, pick its one trigger, and hope —
+    Or you stop what you're doing, open your reminders app, type it in as a task, pick its one trigger, and hope –
     its own users will tell you how often those actually fire.
     And none of that had room for the melody, the phrasing, the half-formed idea.
     A task list was never the right shape for a thought.
@@ -51,11 +51,11 @@ Every clause survives a hostile fact-check.
 
 ---
 
-## Change 2 — index.html: new section "What about the apps you already have?"
+## Change 2 – index.html: new section "What about the apps you already have?"
 
 Insert between the "How it works" section and the "Who is Captrieve for?" section.
 This is the user-facing competitive landscape: name what they already own, say plainly what it does, and locate the added
-value in the drudgery it removes — not in pretending the incumbent doesn't exist.
+value in the drudgery it removes – not in pretending the incumbent doesn't exist.
 
 ```html
 <!-- ── What you already have ── -->
@@ -67,7 +67,7 @@ value in the drudgery it removes — not in pretending the incumbent doesn't exi
             <em>That's not the problem.</em>
         </h2>
         <p class="section-lead reveal">
-            Apple's Reminders app has location triggers — it has since 2011.
+            Apple's Reminders app has location triggers – it has since 2011.
             Shortcuts can fire on an NFC tag, if you enjoy building automations.
             We'd rather tell you that ourselves than have you wonder.
             Here is what each of them asks of you, and where each of them stops.
@@ -76,7 +76,7 @@ value in the drudgery it removes — not in pretending the incumbent doesn't exi
             <div class="use-case reveal">
                 <h3>Notes, docs, voice memos</h3>
                 <p>
-                    Capture, yes — retrieval, never.
+                    Capture, yes – retrieval, never.
                     Everything you save waits for you to remember that it exists and go looking.
                     The thought is preserved and the moment is lost.
                 </p>
@@ -84,7 +84,7 @@ value in the drudgery it removes — not in pretending the incumbent doesn't exi
             <div class="use-case reveal">
                 <h3>Siri and Alexa</h3>
                 <p>
-                    Fine for "remind me at 4 on Wednesday" — when you happen to know the when.
+                    Fine for "remind me at 4 on Wednesday" – when you happen to know the when.
                     Most thoughts worth keeping don't come with an appointment attached.
                     They come with a <em>where</em>, a <em>situation</em>, a <em>next time I'm at the piano</em>.
                 </p>
@@ -93,7 +93,7 @@ value in the drudgery it removes — not in pretending the incumbent doesn't exi
                 <h3>Apple Reminders</h3>
                 <p>
                     A good task list with a trigger bolted on.
-                    You stop, type the task, configure its one trigger by hand, and hope — missed and late deliveries are
+                    You stop, type the task, configure its one trigger by hand, and hope – missed and late deliveries are
                     its longest-running complaint.
                     No combinations, no delays, no tags to tap, nothing for the person you care for.
                     And nowhere to put a thought that isn't a task.
@@ -104,7 +104,7 @@ value in the drudgery it removes — not in pretending the incumbent doesn't exi
                 <p>
                     Genuinely capable, for the few who enjoy programming their phone.
                     One hand-built automation per behavior, maintained forever, by you.
-                    If that's you — sincerely, enjoy.
+                    If that's you – sincerely, enjoy.
                     Captrieve is for everyone else.
                 </p>
             </div>
@@ -121,7 +121,7 @@ value in the drudgery it removes — not in pretending the incumbent doesn't exi
                 <p>
                     Built around two moments and nothing else: the instant a thought arrives, and the instant it's useful.
                     Speak first, file never.
-                    Cue it by place, tag, network, device, time — or combinations, with conditions and delays.
+                    Cue it by place, tag, network, device, time – or combinations, with conditions and delays.
                     The work happens once, at capture.
                     The remembering is no longer your job.
                 </p>
@@ -137,7 +137,7 @@ Naming the incumbents' strengths first is what buys the credibility for the last
 
 ---
 
-## Change 3 — faq.html: fix one entry, add three
+## Change 3 – faq.html: fix one entry, add three
 
 ### 3a. Revise the existing first entry
 
@@ -149,10 +149,10 @@ Same factual problem as the hero.
 <div class="faq-item reveal">
     <p class="faq-q">What's the difference between Captrieve and a reminder app?</p>
     <p class="faq-a">
-        A reminder app is a task list: you type a task and configure its trigger — in Apple's case a time, a place,
+        A reminder app is a task list: you type a task and configure its trigger – in Apple's case a time, a place,
         or getting in the car.
         Captrieve starts a step earlier, at the thought itself: speak it before it escapes, then cue it by time, place,
-        Wi-Fi network, NFC tag, Bluetooth device, or calendar event — alone or in combination, with conditions and delays.
+        Wi-Fi network, NFC tag, or Bluetooth device – alone or in combination, with conditions and delays.
         More importantly, Captrieve's whole job is capture and retrieval.
         That singularity is what makes it worth developing a habit around.
         Siri and Alexa do reminders alongside a thousand other things.
@@ -161,7 +161,7 @@ Same factual problem as the hero.
 </div>
 ```
 
-### 3b. New entry — the head-on question
+### 3b. New entry – the head-on question
 
 Place directly after the entry above, in "The basics."
 
@@ -169,22 +169,22 @@ Place directly after the entry above, in "The basics."
 <div class="faq-item reveal">
     <p class="faq-q">Doesn't Apple Reminders already do location reminders?</p>
     <p class="faq-a">
-        Yes — arriving and leaving a place, since 2011, plus getting in or out of the car.
-        If a plain location-triggered task list covers your needs, use it — it's free and already on your phone.
+        Yes – arriving and leaving a place, since 2011, plus getting in or out of the car.
+        If a plain location-triggered task list covers your needs, use it – it's free and already on your phone.
         Here is where it stops.
-        It is a task list: you must stop, type the task, and configure its one trigger by hand — there is no capturing a
+        It is a task list: you must stop, type the task, and configure its one trigger by hand – there is no capturing a
         voice note, a melody, a half-formed idea.
         One trigger per item: no "when I leave work, but only after 5pm," no "20 minutes after leaving," no "the store
         or the fridge tag, whichever comes first."
         No NFC tags, no Wi-Fi networks, no Bluetooth devices beyond your car.
         Nothing for sharing a thought that arrives at someone else's right moment, and nothing for the person you care for.
-        And its location triggers are famously hit-or-miss — its own users describe delivery as a coin flip.
+        And its location triggers are famously hit-or-miss – its own users describe delivery as a coin flip.
         Captrieve exists for everything after "yes."
     </p>
 </div>
 ```
 
-### 3c. New entry — the tinkerer's question
+### 3c. New entry – the tinkerer's question
 
 ```html
 <div class="faq-item reveal">
@@ -192,7 +192,7 @@ Place directly after the entry above, in "The basics."
     <p class="faq-a">
         A surprising amount of it, yes.
         Shortcuts automations can fire on an NFC tag, a Wi-Fi network, a Bluetooth device, a location, a time.
-        What you'd be building is one automation per behavior, by hand, maintained forever — with no capture flow,
+        What you'd be building is one automation per behavior, by hand, maintained forever – with no capture flow,
         no inbox, no cue attached to a thought, and nothing for anyone but yourself.
         If you build it and it serves you: genuinely, well done.
         Captrieve is the product shape on top of the same phone hardware, for everyone who won't.
@@ -200,14 +200,14 @@ Place directly after the entry above, in "The basics."
 </div>
 ```
 
-### 3d. New entry — the Android question
+### 3d. New entry – the Android question
 
 ```html
 <div class="faq-item reveal">
-    <p class="faq-q">I'm on Android — didn't Google have location reminders?</p>
+    <p class="faq-q">I'm on Android – didn't Google have location reminders?</p>
     <p class="faq-a">
         It did.
-        Google removed them when Keep's reminders migrated to Google Tasks in late 2025 — they can no longer be created
+        Google removed them when Keep's reminders migrated to Google Tasks in late 2025 – they can no longer be created
         or received.
         Captrieve is, in part, what replaces them.
     </p>
@@ -218,11 +218,11 @@ Place directly after the entry above, in "The basics."
 
 ## Not changed, deliberately
 
--  cues.html — the datetime card already concedes "Siri and your calendar can do this too" and claims composition as the
+-  cues.html – the datetime card already concedes "Siri and your calendar can do this too" and claims composition as the
    difference, which is correct and survives the fact-check.
-   The geofence card claims combination and delay features Reminders lacks — also accurate.
--  The "Who is Captrieve for?" stories and testimonials — no factual claims about incumbents.
--  Pricing and privacy pages — no competitive claims.
+   The geofence card claims combination and delay features Reminders lacks – also accurate.
+-  The "Who is Captrieve for?" stories and testimonials – no factual claims about incumbents.
+-  Pricing and privacy pages – no competitive claims.
 
 ## One open question
 

@@ -11,7 +11,7 @@
     <meta property="og:image:width" content="394">
     <meta property="og:image:height" content="382">
     <link rel="icon" href="/captrieve-icon.png" type="image/png">
-    <title>FAQ — Captrieve</title>
+    <title>FAQ – Captrieve</title>
     <link rel="preload" href="/css/CormorantGaramond-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/css/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/css/stylesheet.css">
@@ -26,7 +26,9 @@
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="cues.html">Cues</a></li>
+                <li><a href="inspirations.html">Inspirations</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="adhd.html">ADHD</a></li>
         <li><a href="caregivers.html">Caregivers</a></li>
         <li><a href="privacy.html">Privacy</a></li>
         <li><a href="faq.html" class="active">FAQ</a></li>
@@ -52,19 +54,64 @@
             <div class="faq-item reveal">
                 <p class="faq-q">What's the difference between Captrieve and a reminder app?</p>
                 <p class="faq-a">
-                    A reminder app fires at a time you set.
-                    Captrieve fires at a time, a place, a Wi-Fi network, an NFC tag tap, a Bluetooth connection,
-                    or a calendar event — and can combine these with conditions.
+                    A reminder app is a task list: you stop what you're doing, type the task, and configure its one trigger by hand.
+                    In Apple's case that trigger can be a time, a place, or getting in the car – it has been able to do that since 2011.
+                    Captrieve starts a step earlier, at the thought itself: speak it before it escapes, then cue it by time, place,
+                    Wi-Fi network, NFC tag, Bluetooth device, charger, or Focus mode – alone or in combination, with conditions and delays.
                     More importantly, Captrieve's whole job is capture and retrieval.
                     That singularity is what makes it worth developing a habit around.
-                    Siri and Alexa do reminders alongside a thousand other things.
                     When a tool does one thing, you remember to use it.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Doesn't Apple Reminders already do location reminders?</p>
+                <p class="faq-a">
+                    Yes – arriving and leaving a place, since 2011, plus getting in or out of the car.
+                    If a plain location-triggered task list covers your needs, use it – it's free and already on your phone.
+                    Here is where it stops.
+                    It requires you to stop what you're doing, type a task, and configure its one trigger by hand – there is no capturing
+                    a voice note, a melody, a half-formed idea.
+                    One trigger per item: no "when I leave work, but only after 5pm," no "20 minutes after leaving," no "the store
+                    or the fridge tag, whichever comes first."
+                    No NFC tags, no Wi-Fi networks, no arbitrary Bluetooth devices, no charger, no Focus mode.
+                    Nothing for sharing a thought that finds someone else at their right moment, and nothing for the person you care for.
+                    And its delivery is famously unreliable – its own users describe it as a coin flip.
+                    Captrieve exists for everything past "yes."
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">Couldn't I build this myself with iOS Shortcuts?</p>
+                <p class="faq-a">
+                    A surprising amount of it, yes – if you're willing to do the work.
+                    Shortcuts can fire on an NFC tag, a Wi-Fi network, a Bluetooth device, a charger, a Focus mode, a location.
+                    The hardware is capable.
+                    What Shortcuts asks of you is the product work Captrieve has already done.
+                    To set up a single NFC-cued reminder in Shortcuts: open the app, create a Personal Automation, select NFC,
+                    hold the phone to the tag, name the automation, add a notification action, type the thought text, save.
+                    That is eight steps for one thought.
+                    To add a time condition – "but only after 9pm" – you add a conditional action block and wire it manually.
+                    To add a second trigger – "or when I arrive home, whichever comes first" – you build a second automation.
+                    Each thought is a separate engineering project, maintained by you indefinitely.
+                    There is no inbox, no snooze, no lifecycle – just a notification that fires and disappears.
+                    If you want to change the thought later, you find the automation, edit the text, save.
+                    Shortcuts proves your phone can do this.
+                    Captrieve is the product that makes it available without requiring you to become your own developer.
+                    <a href="compare.html">See exactly what each approach requires →</a>
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">I'm on Android – didn't Google have location reminders?</p>
+                <p class="faq-a">
+                    It did.
+                    Google removed them when Keep's reminders migrated to Google Tasks in late 2025 – they can no longer be created
+                    or received.
+                    Captrieve is, in part, what replaces them.
                 </p>
             </div>
             <div class="faq-item reveal">
                 <p class="faq-q">What's a retrieve?</p>
                 <p class="faq-a">
-                    A retrieve is the moment a capture surfaces — when the cue fires and the thought
+                    A retrieve is the moment a capture surfaces – when the cue fires and the thought
                     you stored finds you.
                     The free tier gives you 20 of these.
                     After that, a one-time purchase gives you unlimited retrieves forever.
@@ -109,7 +156,7 @@
                     Dense urban areas with tall buildings can interfere with GPS.
                     Underground locations have no GPS at all.
                     iOS and Android do the best they can with what is available.
-                    Captrieve works with what the device provides — it has no access to signals the
+                    Captrieve works with what the device provides – it has no access to signals the
                     device cannot receive.
                 </p>
             </div>
@@ -132,7 +179,7 @@
                     tag when prompted.
                     Captrieve reads the tag's unique identifier and registers it.
                     If the tag is blank, Captrieve writes an identifier to it.
-                    You can name the tag — Piano, Desk, Car — and reuse it across multiple captures.
+                    You can name the tag – Piano, Desk, Car – and reuse it across multiple captures.
                     NFC tags are inexpensive and available online and at office supply stores.
                     A pack of 30 costs under $15.
                 </p>
@@ -144,7 +191,7 @@
                     On iOS, NFC requires either the app to be open or a lock screen NFC shortcut to be
                     configured.
                     iOS does not allow fully background NFC scanning.
-                    The intentional tap is the intended interaction on all platforms — hold your phone to
+                    The intentional tap is the intended interaction on all platforms – hold your phone to
                     the tag, see what you needed to remember.
                     On iOS, one swipe to the lock screen shortcut and a tap is the full gesture.
                 </p>
@@ -155,11 +202,11 @@
                     I arrive?
                 </p>
                 <p class="faq-a">
-                    Set a geofence arrival cue on your destination with a generous radius — 5 to 15
+                    Set a geofence arrival cue on your destination with a generous radius – 5 to 15
                     kilometers rather than 100 meters.
                     The cue fires when you enter that radius, while you are still traveling.
                     This is the right approach for "call home to let my spouse know I'll be there in
-                    15 minutes" — set a large geofence on home, and it fires while you're still driving.
+                    15 minutes" – set a large geofence on home, and it fires while you're still driving.
                     Experiment with the radius to find the lead time that works for your commute.
                 </p>
             </div>
@@ -183,7 +230,7 @@
                     That is not a failure of the app.
                     That is the app working at its best.
                     Captrieve is designed to make itself unnecessary, one habit at a time.
-                    The tag on your nightstand was never the point — the bedtime routine that no longer
+                    The tag on your nightstand was never the point – the bedtime routine that no longer
                     requires a reminder is.
                     Keep the tags where they are.
                     Tap them anyway.
@@ -215,7 +262,7 @@
                 <p class="faq-a">
                     Connected is a subscription layer that lets you share presence events, captures, and
                     context with people you trust who also have Captrieve.
-                    It is designed for families, caregivers, partners, and close colleagues — not a social
+                    It is designed for families, caregivers, partners, and close colleagues – not a social
                     network, not a group chat.
                     The Solo tier is a one-time purchase with full local functionality.
                     Connected adds the network layer on top.
@@ -227,7 +274,7 @@
                 </p>
                 <p class="faq-a">
                     No.
-                    Your local captures and cues are fully unaffected — they live on your device and
+                    Your local captures and cues are fully unaffected – they live on your device and
                     nothing about them changes when you cancel.
                     Connected features pause: presence events stop routing, shared captures stop flowing.
                     After any 12 consecutive months of Connected subscription, Solo is yours permanently
@@ -245,8 +292,8 @@
                     presence log storage.
                     A one-time purchase doesn't recover those costs at scale.
                     A subscription does, honestly and proportionally.
-                    Solo has no backend and no ongoing costs — one purchase is the right model for it.
-                    Connected has both — subscription is the right model for it.
+                    Solo has no backend and no ongoing costs – one purchase is the right model for it.
+                    Connected has both – subscription is the right model for it.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -263,7 +310,7 @@
             <div class="faq-item reveal">
                 <p class="faq-q">Can Captrieve send a text message to my caregiver when I leave the house?</p>
                 <p class="faq-a">
-                    Not a native SMS text — iOS and Android both prevent apps from sending SMS silently
+                    Not a native SMS text – iOS and Android both prevent apps from sending SMS silently
                     in the background.
                     What Captrieve does instead: when you tap the front door NFC tag, a push notification
                     is routed instantly to your caregiver's Captrieve.
@@ -287,7 +334,7 @@
                     No.
                     Location permissions are used only to evaluate cues you have set.
                     Your location is processed on-device and never transmitted.
-                    This is true even on the Connected tier — presence events are timestamped NFC taps,
+                    This is true even on the Connected tier – presence events are timestamped NFC taps,
                     not GPS coordinates.
                 </p>
             </div>
@@ -313,8 +360,10 @@
             <ul class="footer-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="cues.html">Cues</a></li>
+                <li><a href="inspirations.html">Inspirations</a></li>
         <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="caregivers.html">Caregivers</a></li>
+                <li><a href="adhd.html">ADHD</a></li>
+        <li><a href="caregivers.html">Caregivers</a></li>
                 <li><a href="privacy.html">Privacy</a></li>
             </ul>
             <div class="footer-copy">captrieve.com</div>

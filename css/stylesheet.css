@@ -35,6 +35,7 @@
     --bg-card    : #f7f5f2;
     --bg-rule    : #e8e3dc;
     --text       : #1a1714;
+    --text-dark  : #161310;
     --text-muted : #6b6258;
     --text-dim   : #b0a89e;
     --accent     : #9a6f3a;
@@ -129,7 +130,7 @@ nav {
 
 .nav-brand em {
     font-style : italic;
-    color      : var(--accent);
+    color      : var(--text-dark);
 }
 
 .nav-links {
@@ -790,7 +791,7 @@ h3 {
 }
 
 .person-column li::before {
-    content    : "—";
+    content    : "–";
     color      : var(--accent-dim);
     flex-shrink: 0;
 }
@@ -801,7 +802,117 @@ h3 {
     }
 }
 
-/* ── FAQ ── */
+/* ── Comparison table ── */
+
+.compare-table {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    gap                  : 0;
+    margin-top           : 2rem;
+    border               : 1px solid var(--bg-rule);
+}
+
+.compare-col {
+    display        : flex;
+    flex-direction : column;
+}
+
+.compare-col + .compare-col {
+    border-left: 1px solid var(--bg-rule);
+}
+
+.compare-header {
+    font-size      : 0.6875rem;
+    font-weight    : 500;
+    letter-spacing : 0.15em;
+    text-transform : uppercase;
+    color          : var(--accent-dim);
+    padding        : 0.875rem 1.25rem;
+    border-bottom  : 1px solid var(--bg-rule);
+}
+
+.compare-header.compare-header-captrieve {
+    color: var(--accent);
+}
+
+.compare-steps {
+    list-style     : none;
+    display        : flex;
+    flex-direction : column;
+    padding        : 1rem 1.25rem;
+    gap            : 0.625rem;
+}
+
+.compare-steps li {
+    color       : var(--text-muted);
+    font-size   : 0.9375rem;
+    line-height : 1.55;
+    display     : flex;
+    gap         : 0.625rem;
+}
+
+.compare-steps li .step-n {
+    font-size      : 0.75rem;
+    font-weight    : 500;
+    color          : var(--accent-dim);
+    flex-shrink    : 0;
+    min-width      : 1.25rem;
+    padding-top    : 0.15em;
+}
+
+.compare-col-captrieve .compare-steps li .step-n {
+    color: var(--accent);
+}
+
+.compare-verdict {
+    font-size     : 0.9375rem;
+    color         : var(--text-muted);
+    padding       : 0.875rem 1.25rem;
+    border-top    : 1px solid var(--bg-rule);
+    line-height   : 1.55;
+    margin-top    : auto;
+}
+
+.compare-verdict strong {
+    color: var(--text);
+}
+
+.compare-scenario {
+    margin-top  : 3rem;
+    padding-top : 2.5rem;
+    border-top  : 1px solid var(--bg-rule);
+}
+
+.compare-scenario:first-child {
+    margin-top  : 0;
+    padding-top : 0;
+    border-top  : none;
+}
+
+.compare-scenario h3 {
+    font-family   : var(--serif);
+    font-size     : 1.375rem;
+    margin-bottom : 0.375rem;
+}
+
+.compare-scenario p.scenario-context {
+    color         : var(--text-muted);
+    font-size     : 0.9375rem;
+    line-height   : 1.65;
+    margin-bottom : 0;
+}
+
+@media (max-width: 600px) {
+    .compare-table {
+        grid-template-columns: 1fr;
+    }
+    .compare-col + .compare-col {
+        border-left  : none;
+        border-top   : 1px solid var(--bg-rule);
+    }
+}
+
+
 
 .faq-list {
     display       : flex;
