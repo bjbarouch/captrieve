@@ -14,8 +14,8 @@ A captured thought does not go into a black hole called your faulty memory, that
 formed.
 It doesn't go into a Google doc, a spreadsheet, a notes app, a list app, or any place else where it passively waits for you to
 remember that it's there and go looking for it, unindexed.
-It doesn't go into a reminder app that only knows to mention things at a pre-defined date and time, but not based on what you
-are doing or where you are.
+It doesn't go into a reminder app, where a task you remembered to type and remembered to configure fires once, on one trigger,
+into a list you've learned to swipe away – an app built around tasks you assign yourself, not thoughts that arrive unbidden.
 
 Captrieve makes your ideas reappear when and where you tell them to.
 
@@ -48,7 +48,9 @@ Every person loses thoughts that mattered.
 The idea that arrived in the shower, the question you meant to ask the doctor, the thing you needed to say before the
 negotiation, the errand that only made sense on the way home — gone, because the moment of remembering and the moment of
 usefulness never coincided.
-Notes apps, reminders, and voice memos all solve the capture half and abandon the retrieval half entirely.
+Notes apps and voice memos solve the capture half and abandon the retrieval half entirely.
+Reminder apps solve a sliver of retrieval – one trigger per task, configured by hand, for things you already knew were tasks –
+and abandon the capture half: there is no place in them for a melody, a phrasing, a half-formed idea.
 
 Captrieve solves both.
 Capture is three steps: tap, speak, done — fast enough that the thought doesn't escape.
@@ -65,13 +67,16 @@ Future you will thank you for taking the moment to capture it.
 
 Captrieve addresses a universal problem — the gap between when a thought arrives and when it is useful — that no existing
 product solves cleanly.
-Reminder apps are time-only and ignore context.
+Reminder apps – including Apple's, which has offered location triggers since 2011 – are task lists with a trigger bolted on:
+one trigger per item, no composition, no capture flow, and delivery reliability that their own users describe as a coin flip.
 Notes apps require the user to remember to look.
 Voice memo apps solve capture and ignore retrieval entirely.
+Google removed location-based reminders from Android entirely in late 2025, vacating the category on the platform where
+Apple's free incumbent does not exist.
 AI assistants surface things algorithmically and unpredictably, with no user control and no privacy.
 
 Captrieve's v1 architecture is intentionally minimal: fully on-device, no backend, no subscription, one-time purchase at
-$4.99.
+$7.99.
 This is not a constraint — it is a positioning decision.
 The no-data-leaves-the-device principle is a genuine differentiator in a market where every competing tool is cloud-first and
 data-hungry.
@@ -79,8 +84,8 @@ It is especially resonant for the three highest-value user segments: creative pr
 managing cognitive load.
 Each of these segments is large, underserved by existing tools, and motivated to pay for something that genuinely works.
 
-The freemium model converts on demonstrated value — 10 free retrievals, then a single $4.99 purchase — meaning users pay only
-after the product has delivered on its promise ten times.
+The freemium model converts on demonstrated value — 20 free retrieves, then a single $7.99 purchase — meaning users pay only
+after the product has delivered on its promise twenty times.
 
 Version 2 introduces the Connected Tier: a subscription layer for users who want to share presence, captures, and context
 with people they trust — family members, caregivers, partners, close colleagues.
@@ -182,6 +187,89 @@ A few examples across very different contexts — in every case, future you is g
 
 ---
 
+## Competitive Landscape
+
+Added June 2026 after a late discovery: Apple Reminders has had location triggers since iOS 5 (2011), and earlier drafts of
+this spec and the site copy claimed or implied otherwise.
+This section exists so that every marketing claim is written against what incumbents actually do, and so the "doesn't my
+phone already do this?" objection is answered before a reviewer asks it.
+Standing rule: no claim of the form "your phone can't do X" ships without being checked against this section, and this
+section gets re-verified each release.
+
+### What incumbents actually do
+
+**Apple Reminders (free, preinstalled, iOS/macOS/watchOS)**
+
+-  Geofence triggers, arriving or leaving, with adjustable radius (~100m minimum to ~150 miles), since iOS 5.
+-  Siri creation by voice, including "when I get home / leave work" via contact-card addresses.
+-  Car triggers: getting in / out of the car, via CarPlay or car Bluetooth connect/disconnect.
+-  "When Messaging" a chosen person.
+-  Shared lists with assignment, subtasks, attachments, early reminders, iCloud sync.
+
+What it does not do: capture-first flow (no voice-note-becomes-item gesture), one trigger per item, no AND conditions, no
+time offsets ("20 minutes after leaving"), no multi-cue OR, no NFC, no Wi-Fi network triggers, no arbitrary Bluetooth
+devices, no caregiver layer, no presence events, no Android.
+Reliability of its geofences is a long-running user complaint – community threads describe roughly coin-flip delivery.
+
+**iOS Shortcuts personal automations (free, preinstalled)**
+
+-  Triggers include: NFC tag, Wi-Fi network join, Bluetooth device connect, arrive/leave location, time of day, app opened,
+   charger, Focus mode, CarPlay.
+   This overlaps most of the Captrieve trigger taxonomy.
+
+What it does not do: it is a programming tool, not a product.
+No capture model, no inbox, no per-capture cue attachment – the user builds and maintains one automation per behavior.
+The overlap is real for power users and irrelevant for the target segments (creative flow, ADHD, older adults, caregivers).
+The honest framing: Shortcuts proves the OS primitives exist – Captrieve is the product shape on top of them.
+
+**Google / Android**
+
+-  Google migrated Keep reminders into Google Tasks (rollout late 2025) and removed location-based reminders entirely –
+   they can no longer be created or received.
+-  Displaced users are being pointed at Samsung Reminder (Samsung devices only), TickTick, and Tasks.org.
+
+This is a tailwind: the platform without Apple's free incumbent just lost its first-party location reminders.
+
+**Third-party geofence reminder apps (iOS App Store)**
+
+-  A persistent small-app category since Checkmark (2012), whose differentiator against Reminders was exactly time offsets
+   before/after location events.
+   Current examples: GeoNudge, GeoReminder, Remind There – typically $1–$20 lifetime or ~$10/year, geofence-only,
+   single-trigger, ad- or subscription-funded, several with data-collection practices that contradict Captrieve's privacy
+   posture.
+
+None observed offers the combination of NFC + Wi-Fi + BLE + composition + capture-first + caregiver layer + local-only privacy.
+
+### Where the moat actually is
+
+The trigger, taken alone, is commoditized.
+The defensible territory, in order of strength:
+
+1. The Connected/caregiver layer – presence events, shared captures with recipient-side cues, the log-not-a-map model.
+   Nothing in any incumbent resembles it.
+2. Capture-first UX – speak before the thought escapes, attach the cue after.
+   Reminders structurally cannot do this without becoming a different product.
+3. Cue composition – AND conditions, delays, multi-cue OR.
+   Thirteen years of third parties differentiating on fragments of this suggests Apple will not absorb it.
+4. NFC-as-product for normal humans – the deliberate tap ritual, packaged, named, and habit-framed, vs Shortcuts DIY.
+5. Cross-platform, with Android freshly vacated by Google.
+6. Local-only privacy as architecture, against a third-party field that is largely tracking-funded.
+
+### Positioning rules derived from the above
+
+-  Never claim incumbents lack location triggers.
+   Claim what they lack: the capture flow, the composition, the reliability engineering, the connected layer, the system.
+-  The enemy in marketing copy is not "your phone can't" but "what you have makes you do all the work at the wrong moment":
+   remember to type the task, remember to configure the trigger, accept one trigger, hope it fires.
+-  Preempt the objection by asking it ourselves, in the FAQ and on the site, in plain words: "Doesn't Apple Reminders
+   already do this?"
+-  Lead marketing with NFC, composition, and the caregiver story – geofence is the most commoditized and least reliable
+   trigger and should not be the headline.
+-  Apple-risk note for investors: the composition and capture features are absorbable by Apple in principle; the caregiver
+   layer, cross-platform presence, and privacy-architected sharing are the parts that survive an Apple sherlocking.
+
+---
+
 ## FAQ Page (captrieve.com/faq)
 
 A second page on the marketing site, distinct from the main landing page.
@@ -208,6 +296,20 @@ Each entry follows this structure consistently:
 These are the entries the FAQ launches with.
 Each will be fleshed out into full prose before the page goes live.
 
+-  Doesn't Apple Reminders already do location reminders?
+   (Yes — answer honestly. Arriving/leaving geofences since 2011, Siri creation, car triggers. Then the difference:
+   Reminders is a task list you must remember to type into and configure, one trigger per item, no capture flow, no
+   combinations, no NFC/Wi-Fi/Bluetooth-device cues, no caregiver layer, and delivery its own users describe as
+   hit-or-miss. Captrieve is built around the capture moment and the retrieval moment — the task list in between is
+   what it eliminates.)
+-  Can't I build this myself with iOS Shortcuts?
+   (A fair amount of it, yes, if you enjoy that sort of thing — answer with respect for the tinkerer. Shortcuts can fire
+   on NFC, Wi-Fi, Bluetooth, and location. What it can't give you is the product: a capture flow, an inbox, a cue attached
+   to a thought rather than an automation attached to a trigger, or anything for the person you care for. If you build it
+   and it serves you, genuinely, good. Captrieve is for everyone who won't.)
+-  I'm on Android — didn't Google have location reminders?
+   (It did. Google removed them when Keep reminders migrated to Google Tasks in late 2025 — they can no longer be created
+   or received. Captrieve is, in part, what replaces them.)
 -  Why didn't my location cue fire?
    (Covers: phone off during boundary crossing, low-power mode deferral, region cap prioritization — all attributed to iOS/Android.)
 -  Can Captrieve tell which floor of a building I'm on?
@@ -1027,9 +1129,9 @@ This is consistent with the no-data-leaves-device philosophy — the user contro
    social features. The account exists solely to identify the user to the routing layer.
 -  Subscription pricing — validate $2.99/month and $24.99/year against projected backend infrastructure costs before
    committing. Confirm App Store and Google Play subscription mechanics.
--  Which geofencing Flutter package — evaluate `geofencer_plus`, `background_fetch`, and platform-native wrapping before
-   committing. iOS limits the number of simultaneously monitored regions and may defer delivery in low-power mode. Spike this
-   before building cue UI.
+-  Which geofencing Flutter package — `native_geofence` is the current candidate and the reliability spike (background,
+   terminated, low-power, reboot scenarios) is underway. iOS limits the number of simultaneously monitored regions and may
+   defer delivery in low-power mode. Commit only after spike results are in; do not build cue UI before then.
 -  Transcription — on-device only, or optional cloud transcription for accuracy? On-device preferred given the
    no-data-leaves-device principle; evaluate quality on both platforms first.
 -  Snooze options — confirm quick-option menu: 1 hour, tonight, tomorrow morning, plus free datetime picker.
@@ -1049,12 +1151,12 @@ This is consistent with the no-data-leaves-device philosophy — the user contro
 -  Radius slider UX — confirm range and step behavior feels natural across neighborhood, city, and airport-approach scales.
 -  TTS playback — text-to-speech reading of capture body on notification or detail view open. Low implementation cost,
    high value for elderly users, drivers, and anyone in a hands-free context. Global preference with per-capture override.
-   Auto-enable heuristic when a Bluetooth audio device is connected warrants evaluation. Decide free vs. paid tier before
-   building.
+   Auto-enable heuristic when a Bluetooth audio device is connected warrants evaluation. Tier decided: free, all tiers
+   (see Open Questions).
 -  Voice cue input — natural language voice input for cue setting ("the cue for this is when I leave the
    house") as an alternative to tapping the cue picker UI. Requires constrained NLP parsing against the cue model.
    Keeps the capture flow in one modality (voice throughout). Should be an enhancement to the cue picker, not a
-   replacement — some users will always prefer tapping. Decide free vs. paid tier before building.
+   replacement — some users will always prefer tapping. Tier decided: Connected-only (see Open Questions).
 -  Natural language location resolution — when a voice or text cue references a place name the app does not
    recognize, prompt the user to identify it: "I don't have a location called 'house'. Do you want to identify it by
    Wi-Fi, map, or NFC?" Once resolved, the name is saved as a named Location. Falls out of voice cue input but
@@ -1090,10 +1192,10 @@ Content is defined in the Connected Tier section.
 Write and design before Connected Tier launch.
 
 **Site revision.**
-The current single-page site predates most of the product decisions in this spec.
-A multi-page structure is planned: Home, Triggers, Who It's For, Caregivers, Privacy, FAQ.
-The pricing table needs to reflect the three-tier model before the site ships.
-Execute after tier structure and pricing are finalized — which they now are.
+Resolved June 2026: the multi-page site is built (Home, Cues, Pricing, Caregivers, Privacy, FAQ) and the pricing table
+reflects the three-tier model.
+Remaining sync obligations: keep the FAQ seed list in this spec and the live faq.html aligned as both grow, and implement
+the search behavior the FAQ section of this spec requires — the page currently has no search.
 
 ---
 
