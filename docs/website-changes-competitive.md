@@ -174,7 +174,7 @@ Place directly after the entry above, in "The basics."
         Here is where it stops.
         It is a task list: you must stop, type the task, and configure its one trigger by hand – there is no capturing a
         voice note, a melody, a half-formed idea.
-        One trigger per item: no "when I leave work, but only after 5pm," no "20 minutes after leaving," no "the store
+        One trigger per item: no "when I leave work, but only after 5 PM," no "20 minutes after leaving," no "the store
         or the fridge tag, whichever comes first."
         No NFC tags, no Wi-Fi networks, no Bluetooth devices beyond your car.
         Nothing for sharing a thought that arrives at someone else's right moment, and nothing for the person you care for.

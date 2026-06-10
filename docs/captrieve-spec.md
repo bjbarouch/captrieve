@@ -49,7 +49,8 @@ The idea that arrived in the shower, the question you meant to ask the doctor, t
 negotiation, the errand that only made sense on the way home – gone, because the moment of remembering and the moment of
 usefulness never coincided.
 Notes apps and voice memos solve the capture half and abandon the retrieval half entirely.
-Reminder apps solve a sliver of retrieval – one trigger per task, configured by hand, for things you already knew were tasks –
+Reminder apps solve a sliver of retrieval – one trigger per task, configured by hand,
+for things you already knew were tasks –
 and abandon the capture half: there is no place in them for a melody, a phrasing, a half-formed idea.
 
 Captrieve solves both.
@@ -58,7 +59,7 @@ Then you tell Captrieve when and where you want it back – a time, a date, a pl
 When that moment arrives, it finds you.
 Not in a pile of notes you have to dig through.
 Not dependent on you remembering to look.
-It surfaces when it is useful, because you told it to.
+It appears when it is useful, because you told it to.
 Your thoughts stay private – nothing leaves your phone.
 No subscriptions, no cloud, no algorithm deciding when you are ready.
 Future you will thank you for taking the moment to capture it.
@@ -108,7 +109,7 @@ The trigger taxonomy alone is not the moat.
 The moat is the combination of things no incumbent offers together:
 
 1. The capture-first model with a thought inbox.
-   A thought has a lifecycle in Captrieve – captured, pending, surfaced, acted on or snoozed.
+   A thought has a lifecycle in Captrieve – captured, pending, delivered, acted on or snoozed.
    Nothing in any incumbent represents a thought this way.
    This is the structural difference Reminders cannot absorb without becoming a different product.
 
@@ -208,28 +209,28 @@ Each illustrates a specific human moment rather than describing a feature.
 The range of what Captrieve handles is intentionally broad.
 A few examples across very different contexts – in every case, future you is glad present you captured it before it was gone:
 
--  The question you want to ask at your doctor's appointment next month, captured the moment you thought of it – surfaced when
+-  The question you want to ask at your doctor's appointment next month, captured the moment you thought of it – ready when
    you arrive at the clinic.
--  The thing you want to pick up the next time you are in New York – surfaced when you land.
--  The idea that won't let you sleep – captured in the dark in thirty seconds, surfaced tomorrow morning at 8am so you can
+-  The thing you want to pick up the next time you are in New York – ready for you when you land.
+-  The idea that won't let you sleep – captured in the dark in thirty seconds, ready tomorrow morning at 8 AM so you can
    evaluate it rested.
--  The medication side effect you noticed on Wednesday – surfaced at your Thursday appointment.
--  The weekly review you keep meaning to do – surfaced every Sunday at 7:30am.
--  The errand you need to run on the way home – surfaced when you leave the office, only if it's after 5pm.
--  The thing to tell the dog walker – surfaced when you arrive home and they are likely there.
--  The follow-up you meant to send – surfaced Tuesday at 3pm when you said you would be at your desk.
--  The book title someone mentioned at dinner – surfaced the next time you open the app, when you are ready to look it up.
--  The observation about your parent's health – surfaced when you arrive at their next care appointment.
--  The ingredient you are out of – surfaced the next time you are at the grocery store.
--  The song you want to learn – surfaced when you get to the recording studio.
--  The errand that only makes sense on the way – surfaced 20 minutes after you leave work, when you are close enough to the
+-  The medication side effect you noticed on Wednesday – waiting at your Thursday appointment.
+-  The weekly review you keep meaning to do – waiting every Sunday at 7:30 AM.
+-  The errand you need to run on the way home – waiting when you leave the office, only if it's after 5 PM.
+-  The thing to tell the dog walker – waiting when you arrive home and they are likely there.
+-  The follow-up you meant to send – ready Tuesday at 3 PM when you said you would be at your desk.
+-  The book title someone mentioned at dinner – ready the next time you open the app, when you are ready to look it up.
+-  The observation about your parent's health – ready when you arrive at their next care appointment.
+-  The ingredient you are out of – waiting the next time you are at the grocery store.
+-  The song you want to learn – ready when you get to the recording studio.
+-  The errand that only makes sense on the way – waiting 20 minutes after you leave work, when you are close enough to the
    store to stop.
--  The thing to remember when you sit down at the piano – surfaced when you tap the NFC tag on the bench.
--  The question for your colleague – surfaced when you join the office Wi-Fi network.
--  The grocery item you thought of at midnight – surfaced when you join the supermarket's Wi-Fi or enter its geofence.
--  The reminder to call ahead – surfaced when you are 15 minutes from home, set via a large-radius geofence on your home
+-  The thing to remember when you sit down at the piano – ready when you tap the NFC tag.
+-  The question for your colleague – ready when you join the office Wi-Fi network.
+-  The grocery item you thought of at midnight – waiting when you join the supermarket's Wi-Fi or enter its geofence.
+-  The reminder to call ahead – ready when you are 15 minutes from home, set via a large-radius geofence on your home
    location.
--  The thing you need when you get in the car – surfaced when your phone connects to your car audio system.
+-  The thing you need when you get in the car – ready when your phone connects to your car audio system.
 
 
 ---
@@ -368,7 +369,7 @@ Personal Automation, choose NFC, hold the phone against the tag to register it, 
 show a notification, type the thought text into the notification body, save.
 That is eight to ten steps, requires knowing what an automation is and where to find it, and produces a notification with
 no inbox, no lifecycle, no snooze, no dismiss, no way to browse all pending automations together.
-To add an AND condition ("but only after 5pm"), the user must add a conditional action block and wire it correctly.
+To add an AND condition ("but only after 5 PM"), the user must add a conditional action block and wire it correctly.
 To replicate OR logic across two triggers, the user must build two automations that both show the same notification.
 To replicate a delay, the user must add a wait action and understand that Shortcuts automations can be killed by the OS
 while waiting.
@@ -416,7 +417,7 @@ The FAQ serves two distinct audiences with different needs.
 Prospective users want reassurance and context – they are deciding whether to trust the product.
 Existing users hitting a problem want a direct answer fast, in language that matches how they would describe the problem
 ("my reminder didn't go off," not "geofence cue failure").
-Entries should be written with enough natural-language keywords that a frustrated user's search surfaces the right entry.
+Entries should be written with enough natural-language keywords that a frustrated user's search finds the right entry.
 
 ### Entry Structure
 
@@ -444,11 +445,13 @@ Status codes: [LIVE] = on faq.html now. [SPEC ONLY] = defined here, not yet on s
 **Cues and reliability**
 
 -  Why didn't my location cue fire? [SPEC ONLY]
-   (Covers: phone off during boundary crossing, low-power mode deferral, region cap prioritization – all attributed to iOS/Android.)
+   (Covers: phone off during boundary crossing, low-power mode deferral,
+   region cap prioritization – all attributed to iOS/Android.)
 -  Why is location triggering less reliable in some places than others? [LIVE]
 -  My Wi-Fi cue didn't fire when I arrived. What happened? [LIVE]
 -  Can Captrieve tell which floor of a building I'm on? [SPEC ONLY]
-   (No. GPS does not resolve altitude at floor scale on any phone. iOS and Android do not expose this. Not a Captrieve limitation.)
+   (No. GPS does not resolve altitude at floor scale on any phone.
+   iOS and Android do not expose this. Not a Captrieve limitation.)
 -  Why did my cue fire twice right after I restarted my phone? [SPEC ONLY]
    (Known iOS behavior on reboot. One-line explanation, no action needed – Captrieve discards the duplicate automatically.)
 -  What happens if I have a lot of location cues set? [SPEC ONLY]
@@ -496,9 +499,15 @@ Status codes: [LIVE] = on faq.html now. [SPEC ONLY] = defined here, not yet on s
 **Connected tier**
 
 -  What is the Connected tier? [LIVE]
+-  If I subscribe to Connected and then cancel, do I lose everything? [LIVE]
 -  Why does Connected require a subscription when Solo is a one-time purchase? [LIVE]
 -  Does the caregiver need a separate account from the person they care for? [LIVE]
 -  Can Captrieve send a text message to my caregiver when I leave the house? [LIVE]
+-  What if I want a retrieve to fire while I'm still on my way somewhere, not when I arrive? [LIVE]
+   (Large-radius geofence pattern – set radius to 5–15km so it fires in transit. Named use case.)
+-  What if after using the NFC feature for a while the places become cues for my brain and
+   I don't need the app for those things anymore? [LIVE]
+   (That is the product working at its best. Keep the tags. Tap them anyway.)
 
 ### Hardware Expectations
 
@@ -557,8 +566,8 @@ User support questions that recur become FAQ entries.
 Creatives already know the pain of a good idea evaporating before they could act on it.
 A notes app fails them at the retrieval step – the idea gets buried in a pile of other captures and is never seen again at the
 right moment.
-Captrieve's retrieval guarantee changes that: the melodic idea surfaces when they arrive at the studio, the character
-observation surfaces on Sunday morning when they write, the visual concept surfaces when they are standing in front of a canvas.
+Captrieve's retrieval guarantee changes that: the melodic idea is there when they arrive at the studio, the character
+observation is ready on Sunday morning when they write, the visual concept is there when they are standing in front of a canvas.
 The tool fits naturally into a creative workflow without requiring the creative person to build or maintain a system – which
 they will not.
 
@@ -575,7 +584,7 @@ This is why the capture flow is non-negotiable as a design constraint: one tap, 
 
 Standard reminders fail this population in a specific, well-documented way: a reminder that fires at an arbitrary time
 is easy to dismiss because the context makes it abstract.
-"Call the pharmacy" at 2pm on Tuesday means nothing if you are in the middle of something else.
+"Call the pharmacy" at 2 PM on Tuesday means nothing if you are in the middle of something else.
 "Call the pharmacy" when you walk past the pharmacy on the way home is a different thing entirely – the context
 makes it immediately actionable and nearly impossible to rationalize away.
 Context-triggered retrieval is not a convenience for people with ADHD.
@@ -604,12 +613,12 @@ or other acquired memory impairments.
 Also: older adults who are fully cognitively intact but find that the volume of things to manage – medications,
 appointments, follow-up questions – has grown beyond what working memory handles comfortably.
 
-For this population, a reliable external memory that surfaces things in the right context is not a convenience – it is
+For this population, a reliable external memory that presents things in the right context is not a convenience – it is
 a meaningful quality-of-life tool.
 The failure mode is not forgetting to look at a note.
 It is walking into the doctor's office after waiting six weeks for the appointment and saying "everything is fine"
 because the questions are gone.
-Captrieve addresses that specific failure: the question is captured when it arrives, and it surfaces at the clinic door.
+Captrieve addresses that specific failure: the question is captured when it arrives, and it appears at the clinic door.
 
 The privacy positioning is especially important here: people navigating memory loss or cognitive change are often
 already managing loss of autonomy, and may be resistant to tools that feel surveillant or that share their data without
@@ -677,7 +686,182 @@ Notification delivery on web is secondary since the phone handles that reliably.
 
 ---
 
-## Technology Stack
+## Phone Capabilities and Constraints
+
+This section records what the phone can and cannot do on behalf of Captrieve, both to inform feature design and to
+prevent building against constraints that don't exist or assuming capabilities that do.
+
+### What the app can make the phone do
+
+**Audio**
+-  Play any audio file at any volume, including voice recordings, system sounds, and custom audio.
+-  Text-to-speech (TTS) synthesis and playback via platform APIs (AVSpeechSynthesizer on iOS,
+   TextToSpeech on Android).
+-  Route audio to Bluetooth output (AirPods, car speakers) when connected.
+-  Record audio via the microphone (with permission).
+
+**Haptics / vibration**
+-  Trigger the system vibration pattern (standard notification vibration).
+-  On iOS with a Taptic Engine (iPhone 6s+), trigger specific haptic feedback patterns via
+   UIFeedbackGenerator: impact (light, medium, heavy), selection, notification (success, warning, error).
+-  On Android, trigger vibration patterns with precise timing via VibrationEffect.
+   Custom rhythmic patterns (e.g., long-short-long) are fully supported.
+-  Haptic feedback is an underused delivery channel for Captrieve: a distinct vibration pattern for a
+   high-priority cue, felt even when the phone is in a pocket and silenced, is worth specifying.
+
+**Display**
+-  Push local notifications to the lock screen and notification center (with permission).
+-  Show a badge count on the app icon.
+-  Display banners while the app is in the foreground.
+-  Control the screen (brightness, prevent sleep) while the app is active.
+
+**Background actions**
+-  Evaluate geofence boundary crossings in the background (OS-managed, subject to platform limits).
+-  Receive scheduled background task execution (best-effort on iOS, more reliable on Android).
+-  Receive push notifications from a server (Connected Tier only).
+-  Wake the app on NFC tag read (Android); initiate NFC session when app is open or via lock screen
+   shortcut (iOS).
+
+**Communication**
+-  Open the native SMS app with a pre-populated message and recipient, requiring the user to tap Send.
+   Captrieve cannot send the SMS itself – the user must confirm.
+   This is a deliberate iOS and Android constraint, not removable.
+-  Open the phone dialer with a pre-populated number.
+-  Open Mail, WhatsApp, or other registered handlers for a URI scheme.
+-  Share a capture via the system share sheet to any installed app.
+
+**Watch (WatchOS / Wear OS)**
+-  Covered in the Watch section below.
+
+### What the app cannot do
+
+-  Send an SMS or iMessage without user action. The OS requires the user to tap Send.
+-  Make a phone call without user action.
+-  Access precise GPS velocity for speed detection – the CLLocation API on iOS and Location API on Android
+   provide speed as part of location updates, but speed data is noisy at low velocities and unreliable
+   enough that Captrieve should not use it for cue firing. Speed data is available in principle; using it
+   reliably is a different matter.
+-  Geofence sub-room precision. Consumer GPS resolves to roughly 5–30 meters outdoors; indoors it degrades
+   significantly. "Only if south of the center of this building" is not achievable via GPS.
+   NFC tags are the right tool for sub-room and indoor precision.
+-  Access the microphone, camera, or location in the background without specific entitlements and
+   App Store justification.
+-  Guarantee background task execution on iOS – the OS schedules background work opportunistically and
+   can defer or skip it in low-power conditions.
+
+### GPS precision and geofence augmentation
+
+GPS gives a position fix with a horizontal accuracy radius, typically 5–30 meters outdoors and worse indoors.
+It does not give reliable vertical position (floor discrimination), speed at low velocities, or indoor
+room-level precision.
+
+Geofences in Captrieve are circular regions defined by lat/lng center and a radius.
+The minimum practical radius is about 100 meters; below that, signal noise makes reliable boundary detection
+impractical on most devices.
+
+"Only if south of the center" and similar directional refinements are not achievable with GPS alone.
+Options for finer-grained location discrimination:
+-  Wi-Fi SSID: reliably distinguishes a specific building or floor (wherever a distinct network exists).
+-  NFC tag: reliably distinguishes a specific desk, room, or object.
+-  Bluetooth device proximity: reliably identifies a specific device's vicinity.
+These are the right tools for the cases GPS cannot handle.
+They are already first-class cue types in Captrieve and can be used in AND combination with geofences.
+
+Speed detection from GPS is technically available but too noisy for cue-firing use.
+It is explicitly out of scope for Captrieve – the product has no use case that benefits from speed, and
+building around noisy speed data would create unreliable behavior.
+
+### Text to the caregiver: the Send-button pattern
+
+iOS and Android both prevent apps from sending SMS in the background without user action.
+This is intentional and cannot be worked around.
+
+Captrieve can, however, bring a pre-written text to the user's attention at exactly the right moment, with
+one tap to open the native Messages app with the message already composed and the recipient already filled in.
+The user taps Send.
+
+Example: the care recipient taps their front door NFC tag.
+This fires their outgoing check-in sequence – their own captures surface – and also presents a notification:
+"Let your daughter know you're heading out? [Open in Messages]."
+The message is pre-written by the caregiver during setup.
+One tap opens Messages with the text ready.
+One more tap sends it.
+
+This is the right answer to "can Captrieve send a text when I leave the house."
+It is not automatic – but for the population this serves, the extra tap is not a barrier.
+The alternative – fully automated silent SMS – is both technically blocked and arguably worse UX, since the
+person knows they are communicating and can choose not to if the situation warrants it.
+
+If the person prefers zero manual action, the Connected Tier's push notification routing achieves the same
+informational result without SMS: the caregiver's Captrieve receives a presence event notification the moment
+the NFC tag is tapped, requiring nothing from the care recipient beyond the tap they were already performing.
+This should be the primary answer in documentation and the FAQ; the Send-button SMS pattern is the secondary
+option for caregivers who are not Captrieve users themselves.
+
+---
+
+## Watch Support
+
+The watch app is deferred from v1 but specified here so the architecture does not foreclose it.
+
+### What a watch can do for Captrieve
+
+**Notification delivery.**
+On Apple Watch with WatchOS, notifications delivered to the iPhone are mirrored to the watch if:
+-  The paired iPhone is locked or in another room.
+-  The watch is worn and unlocked.
+The notification appears on the watch face as a banner or haptic alert without any watch-specific app code.
+This works for free from the iOS app's existing notification implementation.
+
+On Wear OS (Android), the same mirroring behavior applies with a paired Android phone.
+
+**Complication.**
+A watch face complication can show the count of captures currently waiting.
+This requires a WatchOS or Wear OS app extension, not just the phone app.
+The complication only displays if the user has added it to their active watch face – this is a user action,
+not a default.
+Without the complication, the notification banner still works (see above); the complication adds ambient
+awareness.
+
+**Quick capture.**
+The watch can offer a microphone tap-to-record that sends the audio to the phone app for cue assignment.
+This is the single most useful watch interaction: capturing a thought when the phone is not in hand.
+It requires the WatchOS/Wear OS app extension.
+
+**Cue acknowledgment.**
+Responding to a notification on the watch (dismiss, snooze) should reflect in the phone app.
+This requires the watch app to communicate back to the phone app over the watch-phone bridge.
+
+### What a watch cannot do
+
+-  Fire cues independently without the phone app running – the watch has no geofencing or NFC cue evaluation.
+-  Guarantee notification delivery if the watch face has no Captrieve complication configured (mirrored
+   notifications still work, but complication-based delivery does not).
+-  NFC cue evaluation (WatchOS does not support NFC tag reading; Wear OS support varies by device).
+
+### Notification delivery on watch: what is guaranteed vs not
+
+If the user has the Captrieve phone app installed and notifications enabled, watch mirroring works for free
+on both platforms.
+The user does not need a watch app for this.
+
+The complication (showing capture count on the watch face) requires the watch app extension.
+If no complication is active on the current face, the badge count does not show on the watch.
+Mirrored notifications still arrive regardless of complication status.
+
+### Specification for the watch app (when built)
+
+When the watch app is built, these are the required screens:
+-  Glance / complication: count of captures waiting for attention.
+-  Quick capture: microphone button, tap to record, sends to phone for cue assignment.
+-  Pending list: scrollable list of captures currently waiting, each showing capture label and cue summary.
+-  Notification response: from a notification, offer Dismiss and Snooze (with quick duration options).
+
+Watch app is deferred to v2 or later.
+The priority is: mirrored notifications working correctly from the phone app (v1), complication + quick
+capture (v2), full pending list (v2 or later).
+
+---
 
 ### Local Storage
 
@@ -733,7 +917,8 @@ Everything the user stores is a Capture.
 | `snoozedUntil` | DateTime? | Set when status is snoozed |
 | `label` | String? | Optional user-defined name shown in inbox instead of auto-generated cue summary |
 | `autoDismiss` | bool | If true, dismiss automatically after first notification is acted on |
-| `surfaceCount` | int | Incremented each time a cue fires and a notification is delivered. Never reset. Used to detect stale captures. |
+| `surfaceCount` | int | Incremented each time a cue fires and a notification is delivered. Never reset. |
+|   |   | Used to detect stale captures. |
 
 ### Trigger
 
@@ -749,7 +934,9 @@ Any cue that fires delivers the notification.
 | Field | Type | Notes |
 |---|---|---|
 | `id` | UUID | |
-| `type` | TriggerType | datetime, geofence_arrival, geofence_departure, wifi_join, wifi_leave, bluetooth_connect, bluetooth_disconnect, charger_connect, charger_disconnect, dnd_mode_enter, nfc_checkin, app_open |
+| `type` | TriggerType | datetime, geofence_arrival, geofence_departure, wifi_join, wifi_leave,
+|   |   | bluetooth_connect, bluetooth_disconnect, charger_connect, charger_disconnect,
+|   |   | dnd_mode_enter, nfc_checkin, app_open |
 | `fireAt` | DateTime? | For datetime triggers |
 | `locationId` | UUID? | Reference to a saved Location |
 | `inlineLat` | double? | For one-off geofences not saved as a Location |
@@ -774,13 +961,15 @@ A point-in-time predicate evaluated at the moment a Trigger's primary event occu
 
 **Examples of compound cue logic:**
 
--  "Remind me when I leave the office, but only if it's after 5pm" – geofence_departure trigger on the office location, with a
+-  "Remind me when I leave the office, but only if it's after 5 PM" –
+   geofence_departure trigger on the office location, with a
    time_after 17:00 AND condition.
--  "Remind me at 5pm, but only if I'm not at the office" – datetime cue at 17:00, with an outside_location AND condition on
+-  "Remind me at 5 PM, but only if I'm not at the office" – datetime cue at 17:00, with an outside_location AND condition on
    the office location.
--  "Either of the above, or remind me at 7pm regardless" – the two cues above, plus a plain datetime cue at 19:00. OR
+-  "Either of the above, or remind me at 7 PM regardless" – the two cues above, plus a plain datetime cue at 19:00. OR
    across all three.
--  "Remind me when I leave the office, then again 20 minutes later" – geofence_departure trigger with repeatAfterMinutes set to
+-  "Remind me when I leave the office, then again 20 minutes later" –
+   geofence_departure trigger with repeatAfterMinutes set to
    20.
 -  "Remind me when I leave the office, but wait 20 minutes first" – geofence_departure trigger with delayMinutes set to 20.
 -  "Remind me when I land" – geofence_arrival trigger on the destination city or airport, with a generous radius (several
@@ -818,7 +1007,7 @@ Use cases: arrive at the doctor's office, arrive at the grocery store, land in a
 
 Fires when the device leaves a defined circular region.
 Same region model as geofence_arrival.
-Particularly useful with AND conditions – "when I leave the office, but only if it's after 5pm."
+Particularly useful with AND conditions – "when I leave the office, but only if it's after 5 PM."
 
 Use cases: leave work, leave the house, leave a meeting venue.
 
@@ -918,7 +1107,7 @@ The charger cue serves users who want the same result without any physical setup
 of their routine.
 
 The cue is most useful with a time_after AND condition to avoid firing on incidental mid-day charges.
-"When I plug in, but only after 9pm" isolates the bedtime scenario cleanly.
+"When I plug in, but only after 9 PM" isolates the bedtime scenario cleanly.
 Without a time condition, the cue fires on every charger connection, which is likely too frequent.
 
 Use cases: bedtime routine captures, end-of-day review, anything that should surface when the user is winding down.
@@ -929,7 +1118,7 @@ Fires when the device is unplugged from a charger.
 The complement of charger_connect.
 
 Same time-condition discipline applies.
-"When I unplug, but only after 5am" isolates the morning wake-up scenario and avoids firing if the phone is briefly
+"When I unplug, but only after 5 AM" isolates the morning wake-up scenario and avoids firing if the phone is briefly
 disconnected and reconnected at night.
 
 Use cases: morning routine captures, start-of-day reminders, anything that should surface when the user is beginning
@@ -950,14 +1139,43 @@ interrupting during it.
 Example: a preparation reminder that fires when Work Focus activates – "check your notes before the deep work session"
 – rather than firing at a fixed time that may or may not align with when focus actually begins.
 
-The cue fires once per DND/Focus mode activation event.
-It does not fire repeatedly while the mode is active.
-A time_after OR time_before AND condition can scope it to a specific window if the user's focus modes are set on a
-regular schedule but not always at the same time.
+### dnd_mode_enter
 
-Implementation note: iOS exposes Focus mode state via the Focus framework; reading current Focus status requires
-appropriate entitlements.
-Android exposes DND state via NotificationManager.
+Fires when the device enters Do Not Disturb or a Focus mode.
+
+**DND and Focus are not the same thing, and the distinction matters for implementation.**
+
+On iOS, Do Not Disturb was replaced by Focus in iOS 15 (2021).
+Focus is a superset: each Focus mode (Work, Personal, Sleep, Driving, and any user-created modes) is a named
+configuration that can filter notifications, restrict apps, and share status.
+DND still exists on iOS as a named Focus mode – it is the "Do Not Disturb" Focus preset.
+From the OS perspective, activating any Focus mode (including the DND preset) is the same kind of event.
+The app receives a "Focus mode changed" callback; the specific mode name is available if needed.
+
+On Android, Do Not Disturb (DND) is a notification interruption filter managed via NotificationManager.
+Android has no equivalent of iOS Focus modes.
+DND on Android has three states: All, Priority, and None (fully silent).
+There is no user-defined named mode concept equivalent to iOS Focus.
+
+**What this means for the cue type.**
+The dnd_mode_enter cue fires when the OS signals a Focus/DND activation on iOS, or a DND enable on Android.
+On iOS, the cue picker should allow the user to select "any Focus mode" or a specific named mode (Work, Sleep, etc.).
+On Android, the cue fires on any DND enable, since there are no named modes.
+The cue fires once per activation event, not repeatedly while the mode is active.
+
+A time_after or time_before AND condition can scope it to a specific window if the user's focus modes run on a
+schedule but not always at exactly the same time.
+
+**Interaction with Captrieve's own DND feature.**
+This cue responds to the OS-level state change, which is external to Captrieve.
+Captrieve's own in-app DND feature (which gates Captrieve notifications) is separate.
+When the OS enters a Focus mode, Captrieve's in-app DND does not activate automatically unless the user has
+configured Captrieve to respond to OS Focus state.
+That integration is worth evaluating but is not in scope for v1.
+
+Implementation note: iOS Focus state requires the Focus framework; appropriate entitlements are needed and may
+require App Store review justification.
+Android: NotificationManager interrupt filter state change broadcast.
 Evaluate package support and permission requirements during the trigger spike.
 
 ### nfc_checkin
@@ -970,7 +1188,7 @@ The tap is a deliberate micro-ritual: I am here now, what do I need to know?
 NFC tags are inexpensive (under $1 each), widely available, and can be placed anywhere: a desk, a piano, a car dashboard,
 a medicine cabinet, a front door, an airplane seat armrest.
 The user writes a unique identifier to each tag during setup.
-When the phone reads that identifier, the associated capture surfaces.
+When the phone reads that identifier, the capture appears.
 
 **The check-in habit.**
 For users with ADHD or age-related memory impairment, passive cues fire at them.
@@ -1127,7 +1345,8 @@ A "New location" option opens the map.
 For setting a one-off geofence or creating a new saved Location.
 
 The map opens centered on the user's current position by default.
-A search bar at the top supports place name, city, airport code, and street address lookup via geocoding – the map navigates to
+A search bar at the top supports place name, city, airport code, and street address lookup
+via geocoding – the map navigates to
 the result and drops a pin.
 The user can then drag the pin to fine-tune position.
 A current-location button returns the map to the user's present position.
@@ -1169,7 +1388,7 @@ The inbox has two sections:
 
 **Surfaced** – captures whose cue has fired but have not yet been acted on.
 Shown at the top.
-The app badge count reflects the number of surfaced captures.
+The app badge count reflects the number of captures in `surfaced` state.
 On foreground, surfaced captures are displayed prominently.
 They persist until the user explicitly snoozes or dismisses.
 
@@ -1255,12 +1474,12 @@ When a cue fires and all AND conditions pass:
 -  `surfaceCount` is incremented by 1.
 
 If the user does not act on a surfaced capture, it remains in the surfaced section of the inbox on next app open.
-The badge count reflects all unacted surfaced captures.
+The badge count reflects all unacted captures in `surfaced` state.
 
 ### Stale Capture Prompt
 
 When a geofence cue fires and `surfaceCount` is already 2 or more, the notification is delivered as normal, but the
-detail view also surfaces a non-intrusive prompt:
+detail view also shows a non-intrusive prompt:
 
 > You've been here a few times without acting on this. Still relevant?
 
@@ -1269,18 +1488,20 @@ or **Change the cue** (opens the cue picker).
 
 The prompt is informational, not accusatory.
 It does not block interaction with the capture.
-It does not appear for datetime cues – repeated datetime surfacing is expected for recurring-style captures and carries
+It does not appear for datetime cues – repeated datetime delivery is expected for recurring-style captures and carries
 less signal.
-It applies to geofence, Wi-Fi, Bluetooth, charger, DND mode, and NFC cues – all context-based cue types where repeated surfacing without action is meaningful signal.
+It applies to geofence, Wi-Fi, Bluetooth, charger, DND mode, and NFC cues –
+all context-based cue types where repeated delivery without action is meaningful signal.
 The threshold of 2 is a starting point; adjust after observing real usage patterns.
 
-This prompt serves a secondary function: it naturally surfaces candidates for dismissal when the user is approaching the
+This prompt serves a secondary function: it naturally brings candidates for dismissal
+to attention when the user is approaching the
 20-region iOS geofence cap, without ever exposing the cap to the user as a technical constraint.
 
 ### Phone Off or Rebooted
 
 Time-based cues whose fire time passed while the phone was off are evaluated on next boot.
-Any whose time has passed are surfaced immediately on next app open.
+Any whose time has passed appear immediately on next app open.
 
 Geofence cues that fired while the phone was off are unrecoverable – the device was not present to detect the boundary
 crossing.
@@ -1292,9 +1513,14 @@ problem.
 
 ## Do Not Disturb
 
+Captrieve has its own in-app DND feature – a global notification gate separate from and independent of the OS
+Focus/DND system.
+This section covers the in-app DND.
+The dnd_mode_enter cue type (which fires when the OS enters Focus or DND) is covered in the Cue Types section.
+
 A global, momentary notification gate.
 Not the same as snooze, which operates on individual captures.
-DND says: I am not available right now – hold everything.
+In-app DND says: I am not available right now – hold everything.
 
 The user was just pulled into an unplanned meeting.
 A timer is about to go off.
@@ -1302,19 +1528,35 @@ They need one tap to suppress all incoming notifications until they are ready.
 
 ### What It Does
 
-DND is a delivery gate, not a state change.
+In-app DND is a delivery gate, not a state change.
 While active, cues continue to evaluate normally.
 If a cue fires and all conditions pass, the capture moves to `surfaced` and the badge count increments –
 but no notification is delivered to the lock screen or notification center.
 The capture is waiting in the inbox when the user is ready.
 
-DND does not affect cue scheduling, capture status, or the cue evaluation pipeline.
+In-app DND does not affect cue scheduling, capture status, or the cue evaluation pipeline.
 It is purely a notification delivery gate, applied at the moment of delivery.
+
+### OS Focus / DND Integration
+
+When the device enters an OS Focus mode or DND state, Captrieve should respond by activating its own in-app DND
+automatically.
+This keeps Captrieve consistent with the user's declared attention state without requiring a separate tap.
+When the OS Focus or DND ends, Captrieve's in-app DND lifts automatically.
+
+This integration is optional and should be a user setting: "Activate Captrieve DND when phone is in Focus or DND."
+Default: on.
+Users who want Captrieve to continue delivering during OS Focus can disable this.
+
+The behavior on DND lift is the same as manual in-app DND end: no flood of notifications.
+Captures that fired during the DND period are already in the inbox.
+The badge count already reflects them.
+No additional notification is sent on DND end.
 
 ### Activation
 
 One tap from anywhere in the app.
-DND is a persistent element in the navigation chrome – not buried in settings.
+In-app DND is a persistent element in the navigation chrome – not buried in settings.
 It must be reachable in the moment something is about to happen.
 
 On activation, the user is offered quick duration options:
@@ -1336,32 +1578,32 @@ Three mechanisms, whichever comes first:
 
 ### Visual Treatment
 
-While DND is active, a persistent indicator is visible in the navigation chrome –
+While in-app DND is active, a persistent indicator is visible in the navigation chrome –
 unambiguous, not alarming, dismissible with one tap.
 The indicator shows the remaining duration if a duration was set: "DND – 47 min remaining."
 Manual DND shows: "DND – tap to end."
 
-The app badge continues to reflect surfaced captures during DND.
+The app badge continues to reflect captures waiting during DND.
 The user knows things are waiting; they chose when to look.
 
 ### Held Notifications on DND End
 
 When DND lifts, no flood of notifications is delivered.
-Captures that surfaced during DND are already in the surfaced section of the inbox.
+Captures that fired during DND are already in the `surfaced` section of the inbox.
 The badge count already reflects them.
-No additional notification is sent – the inbox is the retrieval surface, not the lock screen.
+No additional notification is sent – the inbox is where retrieval happens, not the lock screen.
 
 ### Auto-Dismiss Interaction
 
 A capture with `autoDismiss` set to true normally archives itself when the notification is tapped.
-If that capture surfaces during DND, the notification is never delivered, so the tap never occurs.
+If that capture fires during DND, the notification is never delivered, so the tap never occurs.
 The capture remains in `surfaced` state – it does not auto-dismiss.
 This is correct behavior: auto-dismiss requires the user to have consciously encountered the capture.
 DND does not constitute that encounter.
 
 ### Data Model
 
-DND state is session-only and not persisted to the database.
+In-app DND state is session-only and not persisted to the database.
 It is held in application state: `dndActive` bool and `dndExpiresAt` DateTime?.
 No schema change required.
 
@@ -1378,7 +1620,7 @@ This is consistent with the no-data-leaves-device philosophy – the user contro
 ## Settings
 
 -  Default cue – the quick option shown first in the cue picker (default: tomorrow morning)
--  Default "tomorrow morning" time (default: 8:00am)
+-  Default "tomorrow morning" time (default: 8:00 AM)
 -  Auto-dismiss default – whether new captures default to auto-dismiss on or off
 -  Audio retention preference – keep all, keep none, ask each time
 -  Saved Locations – manage, edit, delete
@@ -1407,8 +1649,9 @@ This is consistent with the no-data-leaves-device philosophy – the user contro
    no-data-leaves-device principle; evaluate quality on both platforms first.
 -  Snooze options – confirm quick-option menu: 1 hour, tonight, tomorrow morning, plus free datetime picker.
    For captures whose cue fired on a location event (geofence, Wi-Fi, NFC), the snooze menu should offer location-based
-   options first – "snooze until I arrive here again," "snooze until I get to [another saved location]" – before time options.
-   Offering time-only snooze on a location-triggered capture is a UX mismatch; the capture surfaced because of context, and
+   options first – "snooze until I arrive here again," "snooze until I get to
+   [another saved location]" – before time options.
+   Offering time-only snooze on a location-triggered capture is a UX mismatch; the capture fired because of context, and
    the natural deferral is back to that context.
 -  Wi-Fi cue – confirm CNCopyCurrentNetworkInfo entitlement approval process for App Store submission. Evaluate whether
    SSID is accessible in background on both platforms without foreground requirement.
@@ -1421,7 +1664,7 @@ This is consistent with the no-data-leaves-device philosophy – the user contro
 -  Charger cue – confirm charger connect/disconnect event availability in Flutter on both iOS and Android.
    On iOS, evaluate UIDevice.BatteryState notifications or equivalent.
    On Android, evaluate BatteryManager broadcast receiver.
-   Confirm the time_after AND condition is surfaced prominently in the cue picker for charger triggers –
+   Confirm the time_after AND condition appears prominently in the cue picker for charger triggers –
    without a time gate the cue is too noisy for most users.
 -  DND/Focus mode cue – confirm Focus framework access on iOS (entitlement requirements, App Store review implications).
    On Android, confirm NotificationManager DND state change broadcast availability.
@@ -1437,18 +1680,39 @@ This is consistent with the no-data-leaves-device philosophy – the user contro
 -  "Next time I open the app" cue – flag checked on foreground resume; confirm sufficient before building around it.
 -  Geocoding package for flutter_map – evaluate options for place name, city, and airport search.
 -  Radius slider UX – confirm range and step behavior feels natural across neighborhood, city, and airport-approach scales.
--  TTS playback – text-to-speech reading of capture body on notification or detail view open. Low implementation cost,
-   high value for elderly users, drivers, and anyone in a hands-free context. Global preference with per-capture override.
-   Auto-enable heuristic when a Bluetooth audio device is connected warrants evaluation. Tier decided: free, all tiers
-   (see Open Questions).
--  Voice cue input – natural language voice input for cue setting ("the cue for this is when I leave the
-   house") as an alternative to tapping the cue picker UI. Requires constrained NLP parsing against the cue model.
-   Keeps the capture flow in one modality (voice throughout). Should be an enhancement to the cue picker, not a
-   replacement – some users will always prefer tapping. Tier decided: Connected-only (see Open Questions).
--  Natural language location resolution – when a voice or text cue references a place name the app does not
-   recognize, prompt the user to identify it: "I don't have a location called 'house'. Do you want to identify it by
-   Wi-Fi, map, or NFC?" Once resolved, the name is saved as a named Location. Falls out of voice cue input but
-   applies to text input as well.
+-  TTS playback – text-to-speech reading of the capture body when a reminder is presented, and on demand
+   from the detail view.
+   Global preference (on/off) with per-capture override.
+   When a capture is presented: if TTS is on, the body is read aloud automatically after a short delay
+   to let the notification animation complete.
+   On the detail view: a speaker button reads the body on tap regardless of the global preference.
+   Auto-enable heuristic: when a Bluetooth audio device (AirPods, car speakers) is connected, prompt
+   the user once to enable TTS globally – "You're connected to audio. Want Captrieve to read your
+   reminders aloud?" – with the option to say yes, no, or "only when connected to audio."
+   Tier: free, all tiers.
+   Implementation: AVSpeechSynthesizer (iOS), TextToSpeech API (Android).
+   Low implementation cost; high value for elderly users, drivers, and hands-free contexts.
+   Can be added to v1 if time allows, v1.1 otherwise.
+
+-  Voice creation – full voice input for the entire capture creation flow, not just the capture body.
+   Today's flow: tap to record body, then tap cue picker to set cue.
+   Voice creation extends this: after recording the body, the user can speak the cue directly –
+   "remind me when I get to the pharmacy," "give this back to me when I plug in tonight," "when I sit
+   down at my piano."
+   The app parses the spoken cue using constrained NLP against the cue model and confirms: "I'll remind
+   you when you arrive at Pharmacy – is that right?"
+   If the location is not recognized, the app prompts: "I don't have a location called 'pharmacy.'
+   Do you want to identify it by map, Wi-Fi, or NFC tag?"
+   This keeps the entire capture creation experience in voice, without forcing the user to shift to the
+   touchscreen for cue assignment.
+   Voice creation is an enhancement to the cue picker, not a replacement – tapping remains fully
+   supported and some users will always prefer it.
+   Tier: Connected-only.
+   This requires NLP work and should be spiked before committing to a timeline.
+   Natural language location resolution (saving a new location named in a voice cue) falls out of this
+   work and applies to typed cue input as well.
+
+-  Voice cue input open item in Open Items (below) should be considered resolved by this entry.
 -  Multi-signal Location model – the Location entity currently carries lat/lng/radius. It should also carry optional
    wifiSsid and nfcTagIds fields, all pointing to the same named place. Any signal sufficient to identify arrival or
    departure. This makes location identification redundant and reliable in a way no single method is. Requires data model
@@ -1466,10 +1730,20 @@ Finalize the exact wording before v1 launch.
 The principle is fixed: fire at a moment of demonstrated value, name what just happened, ask for money.
 
 **Advanced voice cue input and TTS – implementation sequencing.**
-Both are decided (voice cue input is Connected-only; TTS is free).
-Neither is designed or built yet.
-Voice cue input requires NLP work and should be spiked before committing to a timeline.
-TTS is straightforward and can be added to v1 if time allows or v1.1 otherwise.
+Both are decided and specified (see Open Items above).
+Voice cue input is Connected-only and requires an NLP spike before timeline commitment.
+TTS is free, straightforward, can ship in v1 if time allows or v1.1 otherwise.
+
+**Multiple caregivers per care recipient.**
+Specified in the Caregiver Use Case section.
+The connection graph must be designed as one-to-many from the start.
+This is a backend model requirement, not a product question – the decision is made, the implementation
+must reflect it before Connected Tier launch.
+
+**30-day server deletion trigger.**
+Specified in Subscription Cancellation.
+The trigger is cancellation or explicit account deletion, not app deletion.
+All user-facing copy (privacy policy, FAQ, Connected Tier description) must use this accurate language.
 
 **Connected Tier backend provider.**
 Select infrastructure provider and define minimum viable backend before Connected Tier design begins.
@@ -1494,7 +1768,7 @@ and implement the search behavior the FAQ section of this spec requires – the 
 ### Free Tier
 
 Captrieve is free to download with full local functionality.
-The free tier allows 20 lifetime retrieves – a retrieve being a capture that has surfaced via a cue and been acted on.
+The free tier allows 20 lifetime retrieves – a retrieve being a capture whose cue has fired and that has been acted on.
 20 retrieves is enough to experience the product across genuinely different contexts and cue types.
 Ten retrieves might all happen in the same week with the same cue type before the user has explored what the product
 can do.
@@ -1738,47 +2012,59 @@ This distinction should be applied to every proposed Connected Tier feature befo
 
 ### Caregiver Use Case
 
-The caregiver relationship is the most fully developed use case within the Connected Tier and the primary driver of
-subscription revenue.
+The caregiver relationship is the most fully developed use case within the Connected Tier and the primary
+driver of subscription revenue.
 
 **Two roles, one product.**
 The caregiver is not a passive viewer of someone else's app.
-They are a full Captrieve user in their own right, using the app for their own captures alongside their caregiving role.
-This matters for the product story: the caregiver page and marketing should not present a stripped-down companion
-experience.
+They are a full Captrieve user in their own right, using the app for their own captures alongside their
+caregiving role.
+This matters for the product story: the caregiver page and marketing should not present a stripped-down
+companion experience.
 Both people have the full app.
 Both people benefit from it independently.
 The caregiving layer is what connects them.
 
+**Multiple caregivers per person.**
+A care recipient can connect more than one caregiver.
+Common cases: two adult children sharing responsibility for an aging parent, a professional caregiver and
+a family member, a primary caregiver and a backup.
+Each caregiver sees the same presence event log and shared captures.
+Each receives the same presence notifications.
+
+The care recipient controls who is connected and can revoke any individual connection independently.
+Revoking one caregiver's access does not affect the others.
+Each connection is independently keyed; invalidating one key does not touch the others.
+
+This is a data model and backend routing requirement, not a feature that can be retrofitted.
+The connection graph must support one-to-many from the start: one care recipient, N caregivers.
+Design the backend account and connection model to support this before building the Connected Tier.
+
 **Setting up captures for the care recipient.**
-The caregiver can create captures on the care recipient's behalf, shared to the recipient's device with cues the
-caregiver sets.
+The caregiver can create captures on the care recipient's behalf, shared to the recipient's device with
+cues the caregiver sets.
 The care recipient does not need to capture anything, navigate any UI, or understand the cue model.
-Their trained behavior may be as simple as a single physical gesture – tapping a named NFC tag – which surfaces whatever
-the caregiver has prepared for that context.
-Example: a nightstand NFC tag, tapped at bedtime, surfaces: medications taken, door locked, phone charging.
+Their trained behavior may be as simple as a single physical gesture – tapping a named NFC tag – which
+gives them back whatever the caregiver has prepared for that context.
+Example: a nightstand NFC tag, tapped at bedtime, shows: medications taken, door locked, phone charging.
 The caregiver set this up.
 Granny taps the tag.
 
-The caregiver page on the website (to be written) will illustrate this role in detail with concrete examples, for both
-marketing purposes and user reference.
-
 **The caregiver's own captures in the care recipient's space.**
 NFC tags placed in the care recipient's home serve both people independently.
-The same physical tag, read by different phones, surfaces different captures for each person – the tag is just an
-identifier; what surfaces depends entirely on whose phone is reading it.
-The caregiver walks into the care recipient's home and taps the kitchen tag – their own Captrieve surfaces whatever they
-set for that context: "ask about the medication side effect she mentioned Tuesday," "she wanted to show you the photos from
-the reunion," "check whether she has enough of the blood pressure medication."
+The same physical tag, read by different phones, shows different captures for each person – the tag is
+just an identifier; what appears depends entirely on whose phone is reading it.
+The caregiver walks into the care recipient's home and taps the kitchen tag – their own Captrieve shows
+whatever they set for that context: "ask about the medication side effect she mentioned Tuesday," "she
+wanted to show you the photos from the reunion."
 They tap the front door on the way out – "call the visiting nurse service before end of day."
 The caregiver does not have to remember what to ask, what to check, what to bring up.
-Their own captures surface at exactly the moment they are standing in the relevant context.
-This is the caregiver using Captrieve for themselves, inside a space they share with the person they care for.
+Their own captures appear at exactly the moment they are standing in the relevant context.
 
 **Presence events and the presence log.**
-A care recipient connects a caregiver – a family member, a professional, a friend.
-The caregiver sees:
--  The care recipient's pending and surfaced captures and cue status, in real time.
+A care recipient connects one or more caregivers – family members, a professional, a friend.
+Each caregiver sees:
+-  The care recipient's pending captures and cue status, in real time.
 -  The presence event log – NFC door taps, arrival and departure times, the rhythm of a normal day.
 -  Shared captures the care recipient has chosen to send them.
 
@@ -1786,14 +2072,14 @@ The care recipient sees no added complexity.
 Their capture flow is unchanged.
 The sharing layer is invisible to them in normal use.
 
-The caregiver-facing view is richer and may eventually be web-accessible, since caregivers often want to check on a laptop
-rather than a phone.
+The caregiver-facing view is richer and may eventually be web-accessible, since caregivers often want to
+check on a laptop rather than a phone.
 Web access to the caregiver view is a near-term backend priority once the Connected Tier is established.
 
 This feature directly addresses the autonomy concerns of people navigating cognitive decline or memory impairment.
 GPS-based tracking feels surveillant because it is passive – it watches without the person's ongoing participation.
 The NFC tap model is different: the person is an active participant in their own monitoring.
-The tap serves them (check-in habit, captures surfaced) and incidentally informs their caregiver.
+The tap serves them (check-in habit, captures ready) and incidentally informs their caregiver.
 That distinction matters to the population and to the families supporting them.
 
 ### Privacy Architecture
@@ -1816,20 +2102,63 @@ That scope is a product decision, not a resource constraint, and should be enfor
 
 When a Connected Tier subscription is canceled:
 -  All active connections are immediately suspended.
+   "Immediately" means within seconds of cancellation confirmation, not at end of billing period.
+   A caregiver who depends on presence events must not continue receiving them after the person has
+   canceled – the connection ends when the subscription ends, not when the month ends.
 -  Connected people are notified that the sharing relationship has ended.
 -  No further presence events or shared captures are routed.
 -  The user's local captures and cues are fully unaffected – the Solo experience continues normally.
--  If the user has completed 12 consecutive months of Connected subscription, Solo is permanently unlocked at no further
-   cost. This is automatic and requires no action from the user.
--  If the user has not yet reached 12 months, they revert to the free tier (20-retrieve cap) unless they have separately
-   purchased Solo.
--  Presence log history held on the server is deleted within 30 days of cancellation.
+-  If the user has completed 12 consecutive months of Connected subscription, Solo is permanently unlocked
+   at no further cost. This is automatic and requires no action from the user.
+-  If the user has not yet reached 12 months, they revert to the free tier (20-retrieve cap) unless they
+   have separately purchased Solo.
+-  Server-held presence log history is deleted within 30 days of cancellation.
+
+**The 30-day deletion trigger: cancellation, not app deletion.**
+The original formulation ("deleted within 30 days of deleting the app") is not implementable.
+The server has no way to know when a user has deleted the app from their phone – app deletion is a local
+device action that generates no server-side event.
+The server only knows about:
+-  Account creation
+-  Subscription state changes (via App Store / Play Store subscription webhooks)
+-  Explicit account deletion (user-initiated in-app action)
+-  Connection revocation
+
+The correct trigger for server data deletion is subscription cancellation or explicit account deletion,
+not app deletion.
+This distinction must be accurate in all user-facing copy: the privacy policy, the FAQ, and the Connected
+Tier description.
+
+The user-facing promise: "When you cancel your subscription or delete your account, your server-held data
+is deleted within 30 days."
+The phrase "delete the app" should not appear in connection with server deletion because it implies a
+guarantee the server cannot deliver.
+
+Explicit account deletion (separate from subscription cancellation) must be supported as a user action and
+must trigger immediate connection suspension and 30-day data deletion on the same timeline as cancellation.
 
 
 
 ---
 
 ## Deferred
+
+-  Desktop agent (future product, not a feature) – a background process on Mac or PC that watches for
+   application launches or focus changes and retrieves captures tagged for that context.
+   Example: open Logic or Ableton, the riff you captured two weeks ago appears on the desktop.
+   The use case is real: the desktop is as much "where the work happens" as any physical location,
+   and a phone notification across the room is the wrong surface when your hands are on keys.
+   This is not a feature addition to Captrieve; it is a second product requiring a separate agent,
+   separate distribution, and a backend coordination layer that conflicts with the no-data-leaves-device
+   architecture unless the user explicitly opts into sync.
+   macOS increasingly restricts what background agents can observe about other applications;
+   the reliability and App Store viability of such an agent is uncertain.
+   Worth building if Captrieve becomes a successful platform with an established user base that
+   wants desktop integration.
+   Not worth speculating about before that.
+   Note: iOS and Android cannot reliably fire a cue when a third-party app is opened while Captrieve
+   is in the background – the phone half of this idea does not exist.
+   The `app_open` cue fires when Captrieve itself is opened, not any other app.
 
 -  Web companion interface – deferred for v1 and v2 solo tier, but a caregiver-facing web view is a near-term priority
    once the Connected Tier backend is established. The backend already exists at that point; the web view is an interface
@@ -1839,7 +2168,9 @@ When a Connected Tier subscription is canceled:
 -  Cloud sync or backup
 -  iCloud / Google Drive export
 -  Recurring captures (e.g. "remind me every Monday morning")
--  Watch app
+-  Watch app – specified in the Watch Support section.
+   Mirrored notifications work for free from v1 phone app.
+   Complication, quick capture, and pending list require the watch app extension, deferred to v2.
 -  Proximity-to-person cue via Bluetooth LE – detecting that a connected Captrieve user is physically nearby and
    triggering a capture on that event. Technically feasible with mutual consent and both parties running the app and
    subscribed to the Connected Tier. The adoption dependency is solved once a subscriber network exists. Deferred to v3
