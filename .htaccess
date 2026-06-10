@@ -156,11 +156,17 @@ FileETag MTime Size
        ExpiresDefault "access plus 1 year"
    </filesmatch>
 </ifmodule>
-# very small site, very few visitors, defeat all caching so users always get the latest of everything
+# very small site, modest traffic, defeat all caching so users always get the latest of everything
+# exception: font files are immutable -- cache them hard
 <IfModule mod_headers.c>
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires 0
+    <FilesMatch "\.woff2$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(html|css|js|php|png|jpg|gif|ico|webp)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
 </IfModule>
 <IfModule mod_deflate.c>
     # Force compression for mangled headers.
@@ -215,9 +221,15 @@ FileETag MTime Size
     AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
     AddOutputFilterByType DEFLATE font/truetype font/opentype
 </ifModule>
-<Files *>
-    SetOutputFilter DEFLATE
-</Files>
+# gzip everything except files whose formats are already compressed
+# woff/woff2 are internally compressed -- gzipping them wastes CPU for ~0% gain
+# ttf/otf/eot are NOT excluded -- they are uncompressed formats and benefit from gzip
+<IfModule mod_deflate.c>
+    SetEnvIfNoCase Request_URI \.(?:woff2?|jpe?g|png|gif|webp|zip|gz|mp4|pdf)$ no-gzip
+    <Files *>
+        SetOutputFilter DEFLATE
+    </Files>
+</IfModule>
 # end of performance factors
 
 # php -- BEGIN cPanel-generated handler, do not edit

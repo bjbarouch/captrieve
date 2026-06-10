@@ -1,3 +1,35 @@
+@font-face {
+    font-family:  "Cormorant Garamond";
+    src:          url("/css/CormorantGaramond-VariableFont_wght.woff2") format("woff2");
+    font-weight:  300 700;
+    font-style:   normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:  "Cormorant Garamond";
+    src:          url("/css/CormorantGaramond-Italic-VariableFont_wght.woff2") format("woff2");
+    font-weight:  300 700;
+    font-style:   italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:  "DM Sans";
+    src:          url("/css/DMSans-VariableFont_opsz,wght.woff2") format("woff2");
+    font-weight:  100 1000;
+    font-style:   normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:  "DM Sans";
+    src:          url("/css/DMSans-Italic-VariableFont_opsz,wght.woff2") format("woff2");
+    font-weight:  100 1000;
+    font-style:   italic;
+    font-display: swap;
+}
+
 :root {
     --bg         : #ffffff;
     --bg-card    : #f7f5f2;
