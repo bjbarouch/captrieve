@@ -32,15 +32,6 @@ body {
     -webkit-font-smoothing  : antialiased;
 }
 
-.no-bullets {
-    list-style-type : none;
-}
-.no-bullets li {
-    margin-top   : 1rem;
-    padding-left : 1rem;
-    line-height  : 1.25rem;
-}
-
 /* ── Layout ── */
 
 .container {
@@ -228,6 +219,7 @@ h3 {
 
 .section-spacious {
     padding-bottom : 3.83rem;
+}
     line-height   : 1.7;
     color         : var(--text-muted);
     margin-bottom : 1rem;
@@ -241,9 +233,60 @@ h3 {
     border-bottom : 1px solid var(--bg-rule);
 }
 
+.hero-top {
+    display     : flex;
+    align-items : center;
+    gap         : 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-top-left {
+    flex-shrink : 0;
+    display     : flex;
+    flex-direction: column;
+    align-items : flex-start;
+}
+
+.hero-top-left .hero-eyebrow {
+    margin-bottom : 0.5rem;
+}
+
+.hero-logo {
+    width  : 130px;
+    height : auto;
+}
+
+.hero-top > h1 {
+    font-family   : var(--serif);
+    font-size     : clamp(1.875rem, 4.5vw, 2.875rem);
+    font-weight   : 300;
+    line-height   : 1.15;
+    letter-spacing: -0.01em;
+    color         : var(--text);
+    margin-bottom : 0;
+    flex          : 1;
+}
+
+.hero-top > h1 em {
+    font-style : italic;
+    color      : var(--accent);
+}
+
+@media (max-width: 600px) {
+    .hero-top {
+        flex-direction : column;
+        align-items    : flex-start;
+        gap            : 1rem;
+    }
+
+    .hero-logo {
+        width : 130px;
+    }
+}
+
 .hero-eyebrow {
     font-family    : var(--sans);
-    font-size      : 0.6875rem;
+    font-size      : 0.625rem;
     font-weight    : 500;
     letter-spacing : 0.2em;
     text-transform : uppercase;
@@ -290,7 +333,7 @@ h3 {
 }
 
 .hero-home h1 {
-    font-size     : clamp(2.625rem, 8vw, 4rem);
+    font-size     : clamp(1.75rem, 4.25vw, 2.75rem);
     margin-bottom : 1.5rem;
 }
 
@@ -330,7 +373,7 @@ h3 {
 
 .page-hero h1 {
     font-family   : var(--serif);
-    font-size     : clamp(2rem, 6vw, 3.25rem);
+    font-size     : clamp(2.25rem, 6vw, 3rem);
     font-weight   : 300;
     line-height   : 1.15;
     color         : var(--text);
