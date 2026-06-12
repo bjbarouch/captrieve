@@ -55,9 +55,32 @@ njkEnv.addGlobal("assetVersion", assetVersion);
  * @param {string} outFile
  * @returns {boolean}
  */
+
+/**
+ * Returns the most recent mtime (ms) across all partials and the SCSS source.
+ * Used by needsRebuild to treat any dependency change as a trigger.
+ * @returns {number}
+ */
+function depsLastModified() {
+    const
+        scssFile  = path.join(srcDir, "scss", "stylesheet.scss"),
+        partials  = globSync(path.join(partialDir, "*.htm_")),
+        files     = existsSync(scssFile) ? [...partials, scssFile] : partials;
+    return files.reduce(function maxMtime(max, f) {
+        try {
+            return Math.max(max, statSync(f).mtimeMs);
+        }
+        catch {
+            return max;
+        }
+    }, 0);
+}
+
 function needsRebuild(srcFile, outFile) {
     try {
-        return statSync(srcFile).mtimeMs > statSync(outFile).mtimeMs;
+        const
+            outMtime = statSync(outFile).mtimeMs;
+        return statSync(srcFile).mtimeMs > outMtime || depsLastModified() > outMtime;
     }
     catch {
         return true;
