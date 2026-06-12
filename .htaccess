@@ -1,7 +1,7 @@
 # basic config stuff
 <IfModule mod_env.c>
     SetEnv TZ America/Los_Angeles
-    SetEnv SERVER_ADMIN support@zen-ish.space
+    SetEnv SERVER_ADMIN support@captrieve.com
 </IfModule>
 
 AddDefaultCharset UTF-8
@@ -10,8 +10,9 @@ DefaultLanguage en-US
 # HSTS and Content-Security-Policy
 <IfModule mod_headers.c>
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-hashes'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
+    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
 </IfModule>
+
 
 # do not let people browse directories, do follow symbolic links
 Options -Indexes +FollowSymLinks
@@ -52,9 +53,6 @@ RewriteRule ^(.*)/?$ /$1.html [L]
 # map / to /index
 RewriteRule ^$ /index [R=301,L]
 
-# redirect outdated urls to new layout
-Redirect 301 /articles/agriculture-ruined-everything /articles/agriculture
-
 # avoid nonsensical MIME type problems when loading javascript files
 AddType text/javascript .js
 AddType text/javascript .mjs
@@ -62,65 +60,68 @@ AddType text/javascript .mjs
 # redirect error messages from the webserver to avoid ugly default error messages
 # almost none of these will be relevant for us in real life
 # those commented out cause unrecoverable errors if uncommented!
-#ErrorDocument 418 /html/418.html
-#ErrorDocument 420 /html/420.html
-#ErrorDocument 425 /html/425.html
-#ErrorDocument 430 /html/430.html
-#ErrorDocument 451 /html/451.html
-ErrorDocument 400 /html/400.html
-ErrorDocument 401 /html/401.html
-ErrorDocument 402 /html/402.html
-ErrorDocument 403 /html/403.html
-ErrorDocument 404 /html/404.html
-ErrorDocument 405 /html/405.html
-ErrorDocument 406 /html/406.html
-ErrorDocument 407 /html/407.html
-ErrorDocument 408 /html/408.html
-ErrorDocument 409 /html/409.html
-ErrorDocument 410 /html/410.html
-ErrorDocument 411 /html/411.html
-ErrorDocument 412 /html/412.html
-ErrorDocument 413 /html/413.html
-ErrorDocument 414 /html/414.html
-ErrorDocument 415 /html/415.html
-ErrorDocument 416 /html/416.html
-ErrorDocument 417 /html/417.html
-ErrorDocument 421 /html/421.html
-ErrorDocument 422 /html/422.html
-ErrorDocument 423 /html/423.html
-ErrorDocument 424 /html/424.html
-ErrorDocument 426 /html/426.html
-ErrorDocument 428 /html/428.html
-ErrorDocument 429 /html/429.html
-ErrorDocument 500 /html/500.html
-ErrorDocument 501 /html/501.html
-ErrorDocument 502 /html/502.html
-ErrorDocument 504 /html/504.html
-ErrorDocument 505 /html/505.html
-ErrorDocument 506 /html/506.html
-ErrorDocument 507 /html/507.html
-ErrorDocument 508 /html/508.html
-ErrorDocument 510 /html/510.html
-ErrorDocument 511 /html/511.html
+#ErrorDocument 418 /errorPages/418.html
+#ErrorDocument 420 /errorPages/420.html
+#ErrorDocument 425 /errorPages/425.html
+#ErrorDocument 430 /errorPages/430.html
+#ErrorDocument 451 /errorPages/451.html
+ErrorDocument 400 /errorPages/400.html
+ErrorDocument 401 /errorPages/401.html
+ErrorDocument 402 /errorPages/402.html
+ErrorDocument 403 /errorPages/403.html
+ErrorDocument 404 /errorPages/404.html
+ErrorDocument 405 /errorPages/405.html
+ErrorDocument 406 /errorPages/406.html
+ErrorDocument 407 /errorPages/407.html
+ErrorDocument 408 /errorPages/408.html
+ErrorDocument 409 /errorPages/409.html
+ErrorDocument 410 /errorPages/410.html
+ErrorDocument 411 /errorPages/411.html
+ErrorDocument 412 /errorPages/412.html
+ErrorDocument 413 /errorPages/413.html
+ErrorDocument 414 /errorPages/414.html
+ErrorDocument 415 /errorPages/415.html
+ErrorDocument 416 /errorPages/416.html
+ErrorDocument 417 /errorPages/417.html
+ErrorDocument 421 /errorPages/421.html
+ErrorDocument 422 /errorPages/422.html
+ErrorDocument 423 /errorPages/423.html
+ErrorDocument 424 /errorPages/424.html
+ErrorDocument 426 /errorPages/426.html
+ErrorDocument 428 /errorPages/428.html
+ErrorDocument 429 /errorPages/429.html
+ErrorDocument 500 /errorPages/500.html
+ErrorDocument 501 /errorPages/501.html
+ErrorDocument 502 /errorPages/502.html
+ErrorDocument 504 /errorPages/504.html
+ErrorDocument 505 /errorPages/505.html
+ErrorDocument 506 /errorPages/506.html
+ErrorDocument 507 /errorPages/507.html
+ErrorDocument 508 /errorPages/508.html
+ErrorDocument 510 /errorPages/510.html
+ErrorDocument 511 /errorPages/511.html
 
 # forbid access to this and various other files
 # no access to dot files
 <FilesMatch "^\.">
-    Order allow,deny
-    Deny from all
+    Require all denied
 </FilesMatch>
 # no access to files with these extensions
 # do NOT block *.txt -- as this screws up annual auto-renew of TLS cert
 <FilesMatch "\.(cfg|enc|ini|json|json5|key|log|psd|scss|sql)$">
-    Order allow,deny
-    Deny from all
+    Require all denied
 </FilesMatch>
 # no access to files in these directories
-RewriteRule (/backend/|/sec/|/test/|/tmp/) - [F,L,NC]
+RewriteRule (/docs/|/node_modules/|/sec/|/src/|/test/|/tmp/) - [F,L,NC]
+
+# block build system files at the web root
+<FilesMatch "^(build\.js|buildData\.js|Makefile|package\.json|package-lock\.json)$">
+    Require all denied
+</FilesMatch>
 
 # ensure AutoSSL has access to the .well-known folders and files it may use
 <FilesMatch "\.well-known/(acme-challenge|cpanel-dcv|pki-validation)/.*">
-    Allow from all
+    Require all granted
 </FilesMatch>
 
 # set some headers as we like them
@@ -150,22 +151,19 @@ Header set X-DNS-Prefetch-Control: On
 # performance factors
 # default etag for cache control
 FileETag MTime Size
-<ifmodule mod_expires.c>
-  <filesmatch "\.(html|php|webp|jpg|png|gif|ico|css|js)$">
-       ExpiresActive on
-       ExpiresDefault "access plus 1 year"
-   </filesmatch>
-</ifmodule>
-# very small site, modest traffic, defeat all caching so users always get the latest of everything
-# exception: font files are immutable -- cache them hard
+# HTML: always revalidate so users get the latest content
 <IfModule mod_headers.c>
-    <FilesMatch "\.woff2$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
-    </FilesMatch>
-    <FilesMatch "\.(html|css|js|php|png|jpg|gif|ico|webp)$">
+    <FilesMatch "\.(html|php)$">
         Header set Cache-Control "no-cache, no-store, must-revalidate"
         Header set Pragma "no-cache"
         Header set Expires 0
+    </FilesMatch>
+</IfModule>
+# CSS, JS, fonts, images: cache for one year -- use query string versioning on <link> and <script> tags to bust
+<IfModule mod_expires.c>
+    <FilesMatch "\.(css|js|mjs|woff|woff2|jpg|png|gif|ico|webp)$">
+        ExpiresActive on
+        ExpiresDefault "access plus 1 year"
     </FilesMatch>
 </IfModule>
 <IfModule mod_deflate.c>
@@ -221,20 +219,7 @@ FileETag MTime Size
     AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
     AddOutputFilterByType DEFLATE font/truetype font/opentype
 </ifModule>
-# gzip everything except files whose formats are already compressed
-# woff/woff2 are internally compressed -- gzipping them wastes CPU for ~0% gain
-# ttf/otf/eot are NOT excluded -- they are uncompressed formats and benefit from gzip
-<IfModule mod_deflate.c>
-    SetEnvIfNoCase Request_URI \.(?:woff2?|jpe?g|png|gif|webp|zip|gz|mp4|pdf)$ no-gzip
-    <Files *>
-        SetOutputFilter DEFLATE
-    </Files>
-</IfModule>
+<Files *>
+    SetOutputFilter DEFLATE
+</Files>
 # end of performance factors
-
-# php -- BEGIN cPanel-generated handler, do not edit
-# Set the “ea-php74” package as the default “PHP” programming language.
-<IfModule mime_module>
-  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
-</IfModule>
-# php -- END cPanel-generated handler, do not edit

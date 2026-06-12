@@ -1,0 +1,361 @@
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@graph"   : [
+        {
+            "@type"         : "WebPage",
+            "name"          : "Captrieve for caregivers – support the person, respect their independence",
+            "url"           : "https://captrieve.com/caregivers",
+            "description"   : "Set up retrieves for the person you care for. See a log of their day. Stay connected without surveillance. Both of you use the full app."
+        },
+        {
+            "tabTitle" : "Caregivers – Captrieve"
+        },
+        {
+            "@type"         : "Article",
+            "headline"      : "Captrieve for caregivers – support the person, respect their independence",
+            "description"   : "Set up retrieves for the person you care for. See a log of their day. Stay connected without surveillance. Both of you use the full app.",
+            "datePublished" : "2025-06-01",
+            "dateModified"  : "2026-06-11"
+        }
+    ]
+}
+</script>
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label reveal">
+            Caregivers
+        </p>
+        <h1 class="reveal">
+            Support the person.<br>
+            <em>Respect their independence.</em>
+        </h1>
+        <p class="reveal">
+            Captrieve is not a monitoring app.
+            It is not a tracker.
+            The person you care for uses it for themselves – to hold onto thoughts, to get reminders at the right moment, to
+            feel capable rather than managed.
+            You are connected to what they choose to share, and to the gentle rhythm of their day.
+        </p>
+    </div>
+</div>
+
+<!-- ── Two roles, one product ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            How it works
+        </p>
+        <h2 class="reveal">
+            Two people.<br>
+            <em>Both using the full app.</em>
+        </h2>
+        <p class="section-lead reveal">
+            The caregiver is not a passive viewer of someone else's screen.
+            They have their own full Captrieve – their own captures, their own cues, their own retrieves.
+            The caregiving layer is what connects them.
+        </p>
+        <div class="two-people reveal">
+            <div class="person-column">
+                <h3>
+                    The person being cared for
+                </h3>
+                <ul>
+                    <li>
+                        Uses Captrieve for their own captures and reminders
+                    </li>
+                    <li>
+                        Taps NFC tags at meaningful locations as part of their own routine
+                    </li>
+                    <li>
+                        Sees retrieves you've set up on their behalf at exactly the right moment
+                    </li>
+                    <li>
+                        Does not need to understand the cue model
+                    </li>
+                    <li>
+                        Chooses what to share – nothing happens without their action
+                    </li>
+                </ul>
+            </div>
+            <div class="person-column">
+                <h3>
+                    The caregiver
+                </h3>
+                <ul>
+                    <li>
+                        Sets up retrieves for the person they care for
+                    </li>
+                    <li>
+                        Sees a timestamped log of when and where the person checked in
+                    </li>
+                    <li>
+                        Uses their own captures in the person's home – the same NFC tags, independent retrieves
+                    </li>
+                    <li>
+                        Receives a notification when the person leaves or returns home
+                    </li>
+                    <li>
+                        Gets a real-time view of pending and actual retrieves
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Setting up for someone else ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            Setting up retrieves for someone else
+        </p>
+        <h2 class="reveal">
+            You capture it.<br>
+            <em>It finds them.</em>
+        </h2>
+        <p class="section-lead reveal">
+            The person you care for doesn't need to do anything except develop one habit:
+            tapping their phone against a small sticker you've placed somewhere meaningful.
+            You set up what they see when they do.
+        </p>
+        <div class="cue-cards">
+            <div class="cue-card featured reveal">
+                <h3>
+                    The nightstand example
+                </h3>
+                <p>
+                    You put an NFC tag on the nightstand.
+                    You set up three retrieves: medications taken, door locked, phone charging.
+                    You train them to tap their phone against the tag at bedtime.
+                    That's it.
+                </p>
+                <p>
+                    They don't open an app.
+                    They don't navigate menus.
+                    They tap the tag.
+                    The reminders appear.
+                    One gesture, every night, for as long as they need it.
+                </p>
+            </div>
+        </div>
+        <div class="cue-cards" style="margin-top: 1rem;">
+            <div class="use-case reveal">
+                <h3>
+                    Morning routine
+                </h3>
+                <p>
+                    Tag on the kitchen counter.
+                    Reminder: Take morning medications, call the clinic today, the visiting nurse arrives at 2 PM.
+                </p>
+            </div>
+            <div class="use-case reveal">
+                <h3>
+                    Leaving the house
+                </h3>
+                <p>
+                    Tag by the front door.
+                    Reminder: keys, wallet, today's appointment address.
+                    And notifies you, automatically, that they've left.
+                </p>
+            </div>
+            <div class="use-case reveal">
+                <h3>
+                    The doctor's appointment
+                </h3>
+                <p>
+                    Geofence on the clinic.
+                    You've been capturing questions since the last visit – "ask about the new medication,"
+                    "mention the sleep trouble."
+                    They all pop up when they walk in.
+                </p>
+            </div>
+            <div class="use-case reveal">
+                <h3>
+                    Returning home
+                </h3>
+                <p>
+                    The same front door tag, tapped again on return.
+                    You get a notification: home at 1:23 PM.
+                    No GPS tracking.
+                    No constant monitoring.
+                    Just the rhythm of a normal day, visible when it reassures.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Presence events ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            Presence events
+        </p>
+        <h2 class="reveal">
+            Not surveillance.<br>
+            <em>A rhythm you can see.</em>
+        </h2>
+        <p class="section-lead reveal">
+            GPS tracking watches someone without their ongoing participation.
+            Captrieve is different: The person taps a tag they placed themselves, for their own routine.
+            The presence signal is a side effect of a gesture that already serves them.
+        </p>
+        <p class="section-lead reveal">
+            What you see as a caregiver is a log – not a map.
+            Front door, 10:47 AM: departed.
+            Front door, 1:23 PM: returned.
+            The log makes a normal day visible.
+            An absence in the log is something you notice yourself, in your own time.
+            The app does not alarm.
+            You do the interpreting.
+        </p>
+        <blockquote class="pull-quote reveal">
+            The tap serves them.
+            It incidentally informs you.
+            That distinction matters.
+        </blockquote>
+    </div>
+</section>
+
+<!-- ── Caregiver's own captures ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            Your own captures, in their space
+        </p>
+        <h2 class="reveal">
+            The same tags.<br>
+            <em>Different retrieves for each phone.</em>
+        </h2>
+        <p class="section-lead reveal">
+            The NFC tags you place in their home serve both of you.
+            The same physical tag, tapped by your phone, brings up your own retrieves – whatever you've set
+            for that moment in that place.
+        </p>
+        <div class="cue-cards">
+            <div class="cue-card reveal">
+                <h3>
+                    When you walk in
+                </h3>
+                <p>
+                    Tap the tag by the front door on arrival.
+                    Your Captrieve shows: "She mentioned the heat hasn't been working," "Ask about appetite
+                    this week – the doctor wanted to know," "She wanted to show you the reunion photos."
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    When you open the medicine cabinet
+                </h3>
+                <p>
+                    Tag inside the cabinet door.
+                    Your retrieve: "check whether she has enough of the blood pressure medication."
+                    Her retrieve: Take the morning pill.
+                    Same tag.
+                    Each of you sees only your own.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    When you leave
+                </h3>
+                <p>
+                    Tag by the front door, on the way out.
+                    Your retrieve: "call the visiting nurse service before end of day."
+                    You don't have to remember.
+                    It finds you at the door.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Shared captures ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            Shared captures
+        </p>
+        <h2 class="reveal">
+            A thought that<br>
+            <em>finds them at the right moment.</em>
+        </h2>
+        <p class="section-lead reveal">
+            You can send a capture directly to someone you're connected with.
+            They receive it as a retrieve in their own Captrieve, with whatever cue you've set –
+            or they can set their own.
+        </p>
+        <p class="section-lead reveal">
+            This is not a text message.
+            A text message arrives now, when you send it, whether or not now is a useful moment.
+            A shared capture arrives when it's actionable – at the store, at the clinic, before the
+            meeting, when they tap the fridge.
+        </p>
+        <div class="use-case reveal">
+            <h3>
+                The ketchup example
+            </h3>
+            <p>
+                You notice the ketchup is nearly gone.
+                You capture it – "we're low on ketchup" – and forward it to your partner with a geofence
+                cue on the grocery store.
+                They don't see it until they're standing in the condiments aisle.
+                That is when it is useful.
+                That is when it arrives.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ── Pricing ── -->
+<section>
+    <div class="container">
+<!-- ── Multiple caregivers ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            More than one caregiver
+        </p>
+        <h2 class="reveal">
+            The whole family<br>
+            <em>can be connected.</em>
+        </h2>
+        <p class="section-lead reveal">
+            A person can connect more than one caregiver.
+            Two adult children sharing responsibility for an aging parent.
+            A professional caregiver and a family member.
+            A primary caregiver and a backup.
+            Each caregiver sees the same presence log and shared captures.
+            Each one gets presence notifications independently.
+        </p>
+        <p class="section-lead reveal">
+            The person being cared for controls who is connected and can remove any individual connection
+            at any time.
+            Removing one person's access does not affect anyone else.
+        </p>
+    </div>
+</section>
+
+<!-- ── Pricing ── -->
+        <h2 class="reveal">
+            The full app.<br>
+            <em>For both of you.</em>
+        </h2>
+        <p class="section-lead reveal">
+            Both the person you care for and you need Captrieve and a Connected subscription.
+            You both get the full app – not a stripped-down companion version.
+            Both of you benefit from it independently.
+            The caregiving layer is what connects you.
+        </p>
+        <p class="section-lead reveal">
+            Connected is $2.99/month or $24.99/year.
+            After any 12 consecutive months of Connected, Solo is yours permanently –
+            even if you stop the subscription.
+        </p>
+        <div class="cta-group reveal">
+            <a href="/index#download" class="btn">Get Captrieve</a>
+            <a href="/faq" class="btn btn-secondary">Read the FAQ</a>
+        </div>
+    </div>
+</section>

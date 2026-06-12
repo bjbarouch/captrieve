@@ -1,0 +1,397 @@
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@graph"   : [
+        {
+            "@type"         : "WebPage",
+            "name"          : "Captrieve for creative people – musicians, writers, visual artists",
+            "url"           : "https://captrieve.com/inspirations",
+            "description"   : "The chord progression in the shower. The perfect sentence while driving. Captrieve catches the idea when it arrives and delivers it back when you're actually at the piano, the desk, the canvas."
+        },
+        {
+            "tabTitle" : "Inspirations – Captrieve"
+        },
+        {
+            "@type"         : "Article",
+            "headline"      : "Captrieve for creative people – musicians, writers, visual artists",
+            "description"   : "The chord progression in the shower. The perfect sentence while driving. Captrieve catches the idea when it arrives and delivers it back when you're actually at the piano, the desk, the canvas.",
+            "datePublished" : "2025-06-01",
+            "dateModified"  : "2026-06-11"
+        }
+    ]
+}
+</script>
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label reveal">
+            Inspirations
+        </p>
+        <h1 class="reveal">
+            Inspiration arrived at the wrong moment.<br>
+            <em>It usually does.</em>
+        </h1>
+        <p class="reveal">
+            The chord progression came in the shower.
+            The perfect sentence arrived while you were driving.
+            The composition came to you on a walk, fully formed and vivid, and then you got home and it was mostly gone.
+        </p>
+        <p class="reveal">
+            This is a specific grief of creative work: The best ideas don't consult your schedule.
+            They arrive when your hands are full and leave before you can get to them.
+            Captrieve is built for exactly this moment – catch it in seconds,
+            and it finds you again when you're actually at
+            the piano, at the desk, at the canvas.
+        </p>
+    </div>
+</div>
+
+<!-- ── The failure modes ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            What isn't working
+        </p>
+        <h2 class="reveal">
+            You've tried to solve this.<br>
+            <em>Here's why it keeps happening.</em>
+        </h2>
+        <div class="cue-cards">
+            <div class="cue-card reveal">
+                <h3>
+                    "I'll remember it."
+                </h3>
+                <p>
+                    You won't – not fully, not with the texture that made it good.
+                    The general shape might survive.
+                    The specific thing that made it feel exceptional is often elusive, as being exceptional is in the first
+                    place.
+                    Creative memory is not the same as factual memory.
+                    The version you reconstruct is almost always a little flatter.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    Voice memos
+                </h3>
+                <p>
+                    You captured it.
+                    It's in a pile of other voice memos, unlabeled, unsorted, unindexed, waiting for you to remember that it
+                    even exists, and then to find it.
+                    The idea is preserved – somewhere – which is quite similar to not being preserved.
+                    The moment when it would have been useful passes while it was sitting there, somewhere.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    Notes apps
+                </h3>
+                <p>
+                    Different format, same problem.
+                    The note exists.
+                    You never see it at the right moment.
+                    Capture without retrieval is just pretending.
+                    Worse yet, when yo capture it, you might feel like it's okay to not remember it because you can count on the
+                    note to remember it for you.
+                    But you can't.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    Reminders set to a time
+                </h3>
+                <p>
+                    Captrieve supports time-based reminders too.
+                    Sometimes they are the best you can do.
+                    But their slogan should be: Well, I tried, but you were busy.
+                    "Remind me at 9 AM."
+                    9 AM you're answering email, and so you dismiss the reminder until "later".
+                    The reminder worked.
+                    The retrieval didn't.
+                    It's amazing how much the place we are is tied to what we are doing.
+                    You don't play the flute when you are driving.
+                    You don't stop at the store on the way home when you are already in the kitchen, making dinner.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── The thing Captrieve does ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            What's different
+        </p>
+        <h2 class="reveal">
+            Catch it now.<br>
+            <em>Find it at the piano.</em>
+        </h2>
+        <p class="section-lead reveal">
+            One tap, speak, done – before the idea finishes arriving.
+            Then tell Captrieve where you'll want it back: the yoga studio, the music studio, the easel, your desk at work, …
+            It shows up <em>there</em>.
+            Not in a pile of notes you never search.
+            Not at a time you thought would work, but your schedule got moved around.
+            There, when you're physically positioned to do something with it.
+        </p>
+        <p class="section-lead reveal">
+            The NFC tag discretely placed on the underside your piano keyboard costs about 20 cents.
+            Tap your phone against it when you sit down.
+            Every idea you captured since you were last there, comes back to you, <em>then</em>.
+            The chord progression from the shower.
+            The bridge you figured out on a walk.
+            The lyric that came to you at 2 AM.
+            All of it comes back to you, right when you need it.
+        </p>
+    </div>
+</section>
+
+<!-- ── By practice ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            By practice
+        </p>
+        <h2 class="reveal">
+            The same problem.<br>
+            <em>In every creative practice.</em>
+        </h2>
+        <div class="cue-cards">
+            <div class="cue-card featured reveal">
+                <h3>
+                    Writers
+                </h3>
+                <p>
+                    The sentence arrived on a walk.
+                    The observation about a character came in a conversation.
+                    The structural insight that would fix the whole second act came while you were
+                    doing something completely unrelated.
+                    These are the ideas you can't reconstruct after the fact.
+                    The version you remember is always a little less precise than the one that arrived.
+                </p>
+                <p>
+                    Capture it the moment it comes – voice is faster than typing and works when
+                    your hands aren't free.
+                    Tell it to appear on Sunday morning, or when you open your writing app,
+                    or when you sit down at your desk.
+                    It waits.
+                </p>
+                <div class="cue-examples">
+                    <span class="cue-example-tag">Character insight mid-conversation</span>
+                    <span class="cue-example-tag">Plot fix on a walk</span>
+                    <span class="cue-example-tag">Perfect sentence while driving</span>
+                    <span class="cue-example-tag">→ Writing desk, Sunday morning</span>
+                </div>
+            </div>
+            <div class="cue-card featured reveal">
+                <h3>
+                    Visual artists
+                </h3>
+                <p>
+                    The composition came to you in passing – a quality of light, a spatial relationship,
+                    a reference you wanted to work from.
+                    It was fully formed for a moment and then it softened.
+                    The sketch you make from memory is almost always a step removed from the original vision.
+                </p>
+                <p>
+                    Photo capture is available alongside voice – the thing you saw, not just
+                    the thing you thought.
+                    An optional caption by voice or text, and a cue set for when you're at the easel
+                    or the studio.
+                    The reference finds you there.
+                </p>
+                <div class="cue-examples">
+                    <span class="cue-example-tag">Light quality on a walk</span>
+                    <span class="cue-example-tag">Reference photo with context</span>
+                    <span class="cue-example-tag">Composition that came and went</span>
+                    <span class="cue-example-tag">→ Studio, easel, art table</span>
+                </div>
+            </div>
+            <div class="cue-card featured reveal">
+                <h3>
+                    Musicians
+                </h3>
+                <p>
+                    The melody came in the car.
+                    You hummed it – all the parts, the rhythm, the feel – into Captrieve and told it
+                    to give it back to you when you got to the studio.
+                    When you walked in, there it was: two minutes of you doing your best impression
+                    of a full band, enough to build the whole bridge from.
+                </p>
+                <p>
+                    Tags worth placing: piano, recording desk, guitar case, studio entrance.
+                    Set geofences on the rehearsal space, the studio, anywhere the work happens.
+                    Ideas that arrive anywhere find you when you're ready.
+                </p>
+                <div class="cue-examples">
+                    <span class="cue-example-tag">Melody in the shower</span>
+                    <span class="cue-example-tag">Lyrics while driving</span>
+                    <span class="cue-example-tag">Arrangement idea at 2 AM</span>
+                    <span class="cue-example-tag">→ Studio, piano, recording desk</span>
+                </div>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    Everyone else with a creative practice
+                </h3>
+                <p>
+                    The woodworker with a design idea.
+                    The photographer who saw a shot they want to return to.
+                    The filmmaker with a scene that arrived whole.
+                    The game designer who figured something out in the shower.
+                    The problem is the same: the idea arrived when you couldn't use it,
+                    and the tool you have for catching it doesn't guarantee it finds you
+                    when you can.
+                    Captrieve does.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── The NFC detail ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            NFC tags at your creative spaces
+        </p>
+        <h2 class="reveal">
+            The idea finds you<br>
+            <em>where the work happens.</em>
+        </h2>
+        <p class="section-lead reveal">
+            NFC tags are small stickers – under a dollar each – that you place at the locations where you
+            do your creative work.
+            Tap your phone against one when you arrive and Captrieve shows you everything you've captured
+            since you were last there.
+            No menu to navigate.
+            No notes pile to dig through.
+            Just: you're here now, here is everything that was waiting for you.
+        </p>
+        <p class="section-lead reveal">
+            This is the difference between a capture tool and a retrieval tool.
+            Voice memos capture.
+            Captrieve retrieves – at the moment and in the place where retrieval is useful.
+        </p>
+        <div class="cue-cards">
+            <div class="use-case reveal">
+                <h3>
+                    Piano
+                </h3>
+                <p>
+                    Every melodic idea, lyric fragment, and arrangement thought you've captured
+                    since you were last here.
+                    Tap, and they're all there.
+                </p>
+            </div>
+            <div class="use-case reveal">
+                <h3>
+                    Recording desk
+                </h3>
+                <p>
+                    The production idea you had in the car.
+                    The mix note you captured at 11 PM.
+                    The reference track someone mentioned.
+                    Right there when the session starts.
+                </p>
+            </div>
+            <div class="use-case reveal">
+                <h3>
+                    Writing desk
+                </h3>
+                <p>
+                    The observation, the sentence, the structural insight.
+                    Everything that arrived when you were away from the page,
+                    waiting for you when you sit back down.
+                </p>
+            </div>
+            <div class="use-case reveal">
+                <h3>
+                    Easel or studio entrance
+                </h3>
+                <p>
+                    The reference, the composition, the color note.
+                    See it when you walk in, before you've started something new
+                    and lost the thread of what you were thinking last time.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Social proof ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            From people using it
+        </p>
+        <div class="stories">
+            <div class="story reveal">
+                <p class="story-quote">
+                    I was in the shower and a chord progression came to me – I just started humming it,
+                    different parts, the rhythm, the feel.
+                    I dried off just enough to handle my phone.
+                    Then tap, record my mouth doing its best to sound like a rock band, and said,
+                    "Give this to me when I get to the studio."
+                    Then I finished my shower.
+                    When I got to the studio, my phone vibrated, and presented the riff.
+                    I built the whole bridge from that two-minute voice memo, without having to worry
+                    about what part I might have forgotten.
+                </p>
+                <p class="story-attr"><span>–</span> Jordan K., singer-songwriter</p>
+            </div>
+            <div class="story reveal">
+                <p class="story-quote">
+                    I was working on a new piece of music for my band, and really struggling with the bridge.
+                    It came to me on a walk, and it was really good!
+                    I hummed it into Captrieve and told it to cue me when I got to my piano.
+                    When I sat down at the piano, there it was, instead of me not being able to recall it
+                    from memory!
+                    I don't know how I worked before this.
+                </p>
+                <p class="story-attr"><span>–</span> Jim F., singer, songwriter, keyboardist</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Privacy ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            Privacy
+        </p>
+        <h2 class="reveal">
+            Your ideas stay<br>
+            <em>on your phone.</em>
+        </h2>
+        <p class="section-lead reveal">
+            No account required.
+            No cloud.
+            Nothing leaves your device.
+            Your unfinished ideas, your half-formed lyrics, your work in progress – none of it goes anywhere.
+            This is not a subscription with a server full of your creative output.
+            It is a one-time purchase that works entirely offline.
+        </p>
+    </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="download">
+    <div class="container">
+        <p class="section-label reveal">
+            Get Captrieve
+        </p>
+        <h2 class="reveal">
+            Try it free.<br><em>Pay when you believe it.</em>
+        </h2>
+        <p class="section-lead reveal">
+            Twenty retrieves, no credit card, no account.
+            After that, $7.99 keeps it forever.
+        </p>
+        <div class="cta-group reveal">
+            <a href="#" class="btn">App Store</a>
+            <a href="#" class="btn btn-secondary">Google Play</a>
+        </div>
+    </div>
+</section>

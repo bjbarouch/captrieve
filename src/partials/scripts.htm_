@@ -1,0 +1,6 @@
+    <script type="module" src="/js/siteScripts.js{{ assetVersion('/js/siteScripts.js') }}"></script>
+    {% for script in bodyScripts %}
+    <script type="module" src="{{ script }}{{ assetVersion(script) }}"></script>
+    {% endfor %}
+</body>
+</html>

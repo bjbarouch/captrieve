@@ -1,0 +1,289 @@
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@graph"   : [
+        {
+            "@type"         : "WebPage",
+            "name"          : "Cues – Captrieve",
+            "url"           : "https://captrieve.com/cues",
+            "description"   : "Geofence, Wi-Fi network, NFC tag, Bluetooth, charger, time, Focus mode – and combinations. Every cue type Captrieve supports, explained."
+        },
+        {
+            "tabTitle" : "Cues – Captrieve"
+        },
+        {
+            "@type"         : "Article",
+            "headline"      : "Cues – Captrieve",
+            "description"   : "Geofence, Wi-Fi network, NFC tag, Bluetooth, charger, time, Focus mode – and combinations. Every cue type Captrieve supports, explained.",
+            "datePublished" : "2025-06-01",
+            "dateModified"  : "2026-06-11"
+        }
+    ]
+}
+</script>
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label reveal">
+            Cues
+        </p>
+        <h1 class="reveal">
+            The right moment<br>
+            <em>is different every time.</em>
+        </h1>
+        <p class="reveal">
+            A thought about the grocery store is useless at bedtime and essential when you walk through the store's door.
+            A question for your doctor needs to be there on Thursday, at the appointment, not on Tuesday when you thought of it.
+            A melody needs to find you at your instrument, not in the shower where it arrived.
+            Captrieve has a cue for each of these – and many more.
+        </p>
+    </div>
+</div>
+
+<!-- ── Location cues ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            Location
+        </p>
+        <h2 class="reveal">
+            The place is the cue.
+        </h2>
+        <p class="section-lead reveal">
+            GPS geofencing, Wi-Fi network detection, NFC tags, and Bluetooth each solve a different version of the location
+            problem.
+            Use whichever fits the place – or combine them for the same location.
+        </p>
+        <div class="cue-cards">
+            <div class="cue-card reveal">
+                <p class="cue-type-label">
+                    Geofence
+                </p>
+                <h3>
+                    When I arrive – or leave – somewhere
+                </h3>
+                <p>
+                    Draw a circle on a map.
+                    When your phone enters or exits that circle, the retrieve fires.
+                    Works anywhere with GPS signal – outdoors, in a city, at an airport approach.
+                    Set the radius from a single building to an entire neighborhood.
+                </p>
+                <p>
+                    Combine with a time condition – "when I leave the office, but only after 5 PM" – or add a delay:
+                    "20 minutes after I leave work, when I'm close enough to the store to stop."
+                </p>
+                <div class="cue-examples">
+                    <span class="cue-example-tag">Arrive at the clinic</span>
+                    <span class="cue-example-tag">Leave work</span>
+                    <span class="cue-example-tag">Land in a city</span>
+                    <span class="cue-example-tag">Get close to home</span>
+                </div>
+            </div>
+            <div class="cue-card reveal">
+                <p class="cue-type-label">
+                    Wi-Fi network
+                </p>
+                <h3>
+                    When I connect to a specific network
+                </h3>
+                <p>
+                    Joining a Wi-Fi network is a precise, passive location signal that GPS cannot match indoors.
+                    Your home network means you're home.
+                    The network at work means you're at work.
+                    The dentist's network means you're in the waiting room.
+                </p>
+                <p>
+                    No hardware needed.
+                    No battery drain.
+                    Just the networks you already connect to, doing double duty as location signals.
+                </p>
+                <div class="cue-examples">
+                    <span class="cue-example-tag">Home network</span>
+                    <span class="cue-example-tag">Office network</span>
+                    <span class="cue-example-tag">Airport lounge</span>
+                    <span class="cue-example-tag">Joe's house</span>
+                </div>
+            </div>
+            <div class="cue-card featured reveal">
+                <p class="cue-type-label">
+                    NFC tag – tap to check in
+                </p>
+                <h3>
+                    When I tap a tag I've placed somewhere
+                </h3>
+                <p>
+                    Small, inexpensive stickers you place anywhere.
+                    Tap your phone against one and whatever you've set for that location is instantly presented to you.
+                    The tap is deliberate – a physical micro-ritual that asks: I am here now, what did I need?
+                </p>
+                <p>
+                    NFC tags solve the indoor precision problem GPS and Wi-Fi can't.
+                    Your desk, your piano, your medicine cabinet, your front door – each becomes a precise,
+                    reliable context.
+                </p>
+                <div class="cue-examples">
+                    <span class="cue-example-tag">Piano</span>
+                    <span class="cue-example-tag">Bedside table</span>
+                    <span class="cue-example-tag">Front door</span>
+                    <span class="cue-example-tag">Medicine cabinet</span>
+                    <span class="cue-example-tag">Car dashboard</span>
+                    <span class="cue-example-tag">Work desk</span>
+                </div>
+            </div>
+            <div class="cue-card featured reveal">
+                <p class="cue-type-label">
+                    Bluetooth proximity
+                </p>
+                <p>
+                    When I pick up my car bluetooth for audio signal, I'm in my car.
+                </p>
+                <p>
+                    When I put my phone down next to my computer, it can tell and then tell me what I needed to do when back at
+                    my computer.
+                </p>
+                <p>
+                    When I turn on the bluetooth headphones I use to block distractions at work, I am at work.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── NFC detail ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            NFC tags in depth
+        </p>
+        <h2 class="reveal">
+            A sticker, a tap,<br>
+            <em>a physical memory.</em>
+        </h2>
+        <p class="section-lead reveal">
+            NFC tags come in many forms, many within the range from just 15 to 30 cents each.
+            Any of them should work with your phone, and that signal will be passed to Captrieve.
+            Stick them anywhere.
+            Give each one a name for where you put them: kitchen, nightstand, car, work desk, front door, guitar.
+        </p>
+        <h3>
+            The airplane seat example
+        </h3>
+        <p>
+            A GPS geofence on an airport fires when you're in the parking lot, on approach, or dropping someone off.
+            An NFC tap on departure is unambiguous.
+            You're leaving the plane right then.
+            Stick a tag on the armrest when you board.
+            Set a retrieve for anything you need to remember when you leave the plane.
+            Tap the tag when you gather your things to depart.
+            It's so inexpensive, if you forget to take it with you, it's okay.
+        </p>
+        <blockquote class="pull-quote reveal">
+            The tap is a deliberate micro-ritual.
+            I am here now.
+            What do I need to remember?
+        </blockquote>
+    </div>
+</section>
+
+<!-- ── Habit scaffold ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            A thought on habits
+        </p>
+        <h2 class="reveal">
+            Use Captrieve to build habits
+        </h2>
+        <p class="section-lead reveal">
+            Use the nightstand tag every night to remember your bedtime routine.
+            After a while you notice you don't tap it anymore.
+            The routine runs on its own.
+            The place became the cue – not the app.
+        </p>
+        <p class="section-lead reveal">
+            That is not a failure.
+            That is the product working at its best.
+            You spent a few dollars on an app and some NFC stickers and permanently improved your memory in a way that has
+            eluded you for years.
+            Congratulations!
+        </p>
+        <p class="section-lead reveal">
+            Keep the tags where they are.
+            Tap them anyway.
+            Something else worth remembering will come along.
+        </p>
+    </div>
+</section>
+
+<!-- ── Other cue types ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">More cue types</p>
+        <h2 class="reveal">
+            Time, device state,<br>
+            <em>and what you're connected to.</em>
+        </h2>
+        <div class="cue-cards">
+            <div class="cue-card reveal">
+                <p class="cue-type-label">Date and time</p>
+                <h3>When a specific moment arrives</h3>
+                <p>
+                    Tomorrow morning.
+                    This Friday at noon.
+                    The night before your flight.
+                    Simple and reliable – Siri and your calendar can do this too, but Captrieve
+                    can combine it with location and context in ways they can't.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <p class="cue-type-label">Charger</p>
+                <h3>When I plug in – or unplug</h3>
+                <p>
+                    If I put my phone on the charger <em>and it's past 10 PM</em>, I am going to bed.
+                    If I take my phone off its charger <em>and it's early morning</em>, I am getting up.
+                    The charger is already a moment you mark.
+                    Captrieve can meet you there.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <p class="cue-type-label">Bluetooth device</p>
+                <h3>When I connect to a device</h3>
+                <p>
+                    When I turn on the Bluetooth headphones I use to block distractions at work, I am
+                    at my desk.
+                    Devices you already own, doing double duty as context signals.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <p class="cue-type-label">Do Not Disturb / Focus</p>
+                <h3>When I enter a focus mode</h3>
+                <p>
+                    When your phone shifts into Do Not Disturb or a Focus mode, Captrieve can hold its
+                    own reminders until you return to normal mode, or fire a specific capture at that
+                    transition – the preparation reminder that should appear exactly when focused work begins.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <p class="cue-type-label">App open</p>
+                <h3>Next time I open Captrieve</h3>
+                <p>
+                    Not every thought has a clean time or place.
+                    Sometimes you just know you'll want it soon.
+                    This cue fires the next time you open Captrieve – until you ask, the thought waits.
+                </p>
+            </div>
+        </div>
+        <div class="cue-cards" style="margin-top: 2rem;">
+            <div class="cue-card reveal">
+                <p class="cue-type-label">Combining cues</p>
+                <h3>And / or conditions</h3>
+                <p>
+                    Arrive at the grocery store <em>or</em> the pharmacy – whichever comes first.
+                    Leave work, <em>but only after 5 PM</em>.
+                    Connect to the car speaker, <em>but only if it's after 9:30 PM</em>.
+                    One cue is a trigger.
+                    Two cues with a condition is a system.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

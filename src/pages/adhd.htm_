@@ -1,0 +1,367 @@
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@graph"   : [
+        {
+            "@type"         : "WebPage",
+            "name"          : "Captrieve for ADHD – built for the way ADHD brains actually work",
+            "url"           : "https://captrieve.com/adhd",
+            "description"   : "The thought is gone before you finish the sentence. Captrieve captures it in seconds and reminds you when you're actually in the right place to do something about it."
+        },
+        {
+            "tabTitle" : "ADHD – Captrieve"
+        },
+        {
+            "@type"         : "Article",
+            "headline"      : "Captrieve for ADHD – built for the way ADHD brains actually work",
+            "description"   : "The thought is gone before you finish the sentence. Captrieve captures it in seconds and reminds you when you're actually in the right place to do something about it.",
+            "datePublished" : "2025-06-01",
+            "dateModified"  : "2026-06-11"
+        }
+    ]
+}
+</script>
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label reveal">
+            ADHD
+        </p>
+        <h1 class="reveal">
+            The thought is gone<br>
+            <em>before you finish the sentence.</em>
+        </h1>
+        <p class="reveal">
+            You know this.
+            The idea that arrived while you were driving.
+            The thing you absolutely needed to say before that conversation started.
+            The question you meant to ask the doctor.
+            There and then not there.
+        </p>
+        <p class="reveal">
+            Captrieve is built for exactly this – capture in a few seconds, and it reminds you
+            when you're actually in the right place
+            to do something about it.
+            Not at 2 PM on a Tuesday a week and a half before the appointment.
+            When you need it because you just walked through the door.
+        </p>
+    </div>
+</div>
+
+<!-- ── The failure modes ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            What isn't working
+        </p>
+        <h2 class="reveal">
+            You've tried the other things.<br>
+            <em>Here's why they don't stick.</em>
+        </h2>
+        <div class="cue-cards">
+            <div class="cue-card reveal">
+                <h3>
+                    "I'll remember it."
+                </h3>
+                <p>
+                    You won't.
+                    Not because you're careless – because working memory doesn't hold things while the rest of your brain is
+                    doing something else.
+                    That's not a character flaw.
+                    That's just how this works.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    Notes apps
+                </h3>
+                <p>
+                    You capture it.
+                    It goes into a pile.
+                    You never see it again at the moment it matters.
+                    The note exists.
+                    The moment is gone.
+                    Capture without retrieval is just organized forgetting.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    Reminders set to a time
+                </h3>
+                <p>
+                    It fires at 2 PM.
+                    You're in the middle of something.
+                    You dismiss it.
+                    Now it's gone and you've also lost your train of thought.
+                    A reminder at an arbitrary time works if the time is the right context.
+                    Usually it isn't.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    Location reminders in your phone
+                </h3>
+                <p>
+                    Apple Reminders has location triggers.
+                    They work sometimes.
+                    You still have to stop what you're doing, open the app, type the task,
+                    configure the trigger by hand – all while the thought is actively leaving your brain at lightspeed.
+                    One trigger per task.
+                    No combinations.
+                    And delivery, the thing you are relying on, is not guaranteed.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── How Captrieve is different ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            What's different
+        </p>
+        <h2 class="reveal">
+            Capture in seconds.<br>
+            <em>Get reminded when you're there, whenever that is.</em>
+        </h2>
+        <p class="section-lead reveal">
+            The capture flow is one tap and your voice.
+            Fast enough that the thought doesn't escape.
+            Then you tell it when or where you'll want it back – and it finds you there.
+        </p>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-num">
+                    1
+                </div>
+                <div>
+                    <h3>
+                        Tap and speak
+                    </h3>
+                    <p>
+                        One tap opens the record view.
+                        Speak.
+                        Tap again.
+                        Done.
+                        The whole thing takes less time than unlocking your phone and opening another app.
+                        The thought doesn't have to wait for you to finish.
+                    </p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">
+                    2
+                </div>
+                <div>
+                    <h3>
+                        Tell it where or when
+                    </h3>
+                    <p>
+                        When I get to the pharmacy.
+                        When I walk in the front door.
+                        When I sit down at my desk.
+                        When I plug in tonight.
+                        You pick the moment that will make it actionable – not just audible.
+                    </p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">
+                    3
+                </div>
+                <div>
+                    <h3>
+                        It finds you there
+                    </h3>
+                    <p>
+                        Not at a random time you set three days ago.
+                        At the pharmacy counter.
+                        At your front door.
+                        In the context that makes it impossible to dismiss because
+                        you're already exactly where you need to be to act on it.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── NFC tags ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            NFC tags
+        </p>
+        <h2 class="reveal">
+            Small stickers.<br>
+            <em>A physical system that actually works.</em>
+        </h2>
+        <p class="section-lead reveal">
+            NFC tags are inexpensive stickers – under a dollar each – that you place around your home.
+            Tap your phone against one and whatever you've set for that location pops up instantly.
+            No app to open.
+            No menu to navigate.
+            Tap the thing, see the thing.
+        </p>
+        <p class="section-lead reveal">
+            For a lot of people with ADHD, this is the part that actually sticks.
+            It's active and physical – I am here now, what did I need? – rather than a notification
+            that fires at you while you're doing something else and interrupts the thing you were
+            actually focused on.
+            The tap is a moment you initiate.
+            That's a different relationship with your own reminders.
+        </p>
+        <div class="cue-cards">
+            <div class="cue-card reveal">
+                <h3>
+                    Your desk
+                </h3>
+                <p>
+                    Tap when you sit down.
+                    Everything you meant to do at the computer – all of it, right there, without having to
+                    reconstruct it from wherever you left off.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    The front door
+                </h3>
+                <p>
+                    On the way out: the thing you keep forgetting to bring.
+                    On the way in: the thing you needed to do once you got home.
+                    The door is already the context.
+                    The tag makes it explicit.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    Your guitar, your piano, your art table
+                </h3>
+                <p>
+                    The song idea you captured on Tuesday.
+                    The technique you wanted to try.
+                    The reference you found that you wanted to work from.
+                    Right there when you sit down, instead of somewhere in a notes pile.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    The medicine cabinet
+                </h3>
+                <p>
+                    The side effect to mention at the next appointment.
+                    The question about the dosage.
+                    The interaction you read about and wanted to ask the doctor.
+                    You're standing right there when you need to remember it.
+                    Now it's right there too.
+                </p>
+            </div>
+        </div>
+        <blockquote class="pull-quote reveal">
+            After a while you notice you don't tap it anymore.
+            The routine runs on its own.
+            The place became the cue – not the app.
+            That is the product working at its best.
+        </blockquote>
+    </div>
+</section>
+
+<!-- ── Not a task manager ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            What Captrieve is not
+        </p>
+        <h2 class="reveal">
+            Not a task manager.<br>
+            <em>Not another system to maintain.</em>
+        </h2>
+        <p class="section-lead reveal">
+            Captrieve does not want you to organize anything.
+            It does not have projects or tags or priorities or due dates.
+            It has thoughts and cues.
+            You speak the thought.
+            You tell it when you'll want it.
+            That's the whole thing.
+        </p>
+        <p class="section-lead reveal">
+            If you've tried and abandoned approximately seventeen productivity systems, this is built for you.
+            The ones that failed asked you to build and maintain a system.
+            Captrieve asks you to do one thing in the moment the thought arrives, and then nothing else.
+            Future you handles it when the cue fires.
+        </p>
+    </div>
+</section>
+
+<!-- ── Social proof ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            From people using it
+        </p>
+        <div class="stories">
+            <div class="story reveal">
+                <p class="story-quote">
+                    As a person with ADHD, ideas fly in <em>and out</em> of my mind all the time.
+                    Now I use Captrieve with NFC tags all over my house – in the kitchen, on my guitar, at my desk,
+                    on my TV.
+                    It not only reminds me of the thing I need to do, the song I want to learn to play, the show I
+                    heard about and want to watch, but the habit of checking in with Captrieve in all of these places
+                    is actually training me to remember stuff on my own just from being in those places!
+                </p>
+                <p class="story-attr"><span>–</span> J. E. M., full-time student, part-time crazy person</p>
+            </div>
+            <div class="story reveal">
+                <p class="story-quote">
+                    I used to walk into meetings and remember, right as they started, that there was something I
+                    wanted to bring up, but damn me if I knew what it was.
+                    Now I capture it the second I think of it and it's there when I walk in the door.
+                    My manager has noticed. I've noticed.
+                    I assigned my phone's action button to Captrieve.
+                </p>
+                <p class="story-attr"><span>–</span> Priya S., project coordinator</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Privacy note ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            Privacy
+        </p>
+        <h2 class="reveal">
+            Everything stays<br>
+            <em>on your phone.</em>
+        </h2>
+        <p class="section-lead reveal">
+            No account required.
+            No cloud.
+            No one seeing what you capture or when your cues fire.
+            Everything is stored locally on your device.
+            This is not a subscription to manage or a relationship to worry about – it is a one-time purchase
+            that works entirely offline.
+        </p>
+    </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="download">
+    <div class="container">
+        <p class="section-label reveal">
+            Get Captrieve
+        </p>
+        <h2 class="reveal">
+            Try it free.<br><em>Pay when you believe it.</em>
+        </h2>
+        <p class="section-lead reveal">
+            Twenty retrieves, no credit card, no account.
+            After that, $7.99 keeps it forever.
+        </p>
+        <div class="cta-group reveal">
+            <a href="#" class="btn">App Store</a>
+            <a href="#" class="btn btn-secondary">Google Play</a>
+        </div>
+    </div>
+</section>

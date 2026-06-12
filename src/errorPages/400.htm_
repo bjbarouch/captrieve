@@ -1,0 +1,10 @@
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label" id="err-code"></p>
+        <h1 id="err-message"></h1>
+        <p class="section-lead">
+            If you followed a link to get here, it may be outdated or mistyped.
+            <a href="/index">Return to Captrieve</a>
+        </p>
+    </div>
+</div>

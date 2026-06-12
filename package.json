@@ -1,0 +1,19 @@
+{
+    "name"        : "captrieve",
+    "version"     : "1.0.0",
+    "description" : "captrieve.com build toolchain",
+    "type"        : "module",
+    "scripts" : {
+        "build" : "node build.js",
+        "watch" : "nodemon --watch src --watch buildData.js --ext htm_,js,scss --exec 'node build.js'",
+        "clean" : "node build.js --clean"
+    },
+    "dependencies" : {
+    },
+    "devDependencies" : {
+        "glob"     : "^11.0.0",
+        "nodemon"  : "^3.1.0",
+        "nunjucks" : "^3.2.4",
+        "sass"     : "^1.89.0"
+    }
+}

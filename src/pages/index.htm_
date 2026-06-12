@@ -1,0 +1,400 @@
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@graph"   : [
+        {
+            "@type"         : "WebPage",
+            "name"          : "Captrieve – Capture in the moment. Retrieve in context.",
+            "url"           : "https://captrieve.com/index",
+            "description"   : "Captrieve solves a single problem: You have a thought you don't want to lose, and you want it back when you can act on it. Capture in seconds. Retrieve in context."
+        },
+        {
+            "tabTitle" : "Captrieve – Capture in the moment. Retrieve in context."
+        },
+        {
+            "@type"         : "Article",
+            "headline"      : "Captrieve – Capture in the moment. Retrieve in context.",
+            "description"   : "Captrieve solves a single problem: You have a thought you don't want to lose, and you want it back when you can act on it. Capture in seconds. Retrieve in context.",
+            "datePublished" : "2025-06-01",
+            "dateModified"  : "2026-06-10"
+        }
+    ]
+}
+</script>
+<!-- ── Hero ── -->
+<div class="page-hero hero-home">
+    <div class="container">
+        <div class="hero-top reveal">
+            <div class="hero-top-left">
+                <p class="hero-eyebrow">
+                    Capture · Retrieve
+                </p>
+                <img src="/images/captrieve-logo-square.png" alt="Captrieve" class="hero-logo">
+            </div>
+            <h1>
+                The thought you have <em>now</em> is the thought <em>future&nbsp;you</em> will need.
+            </h1>
+        </div>
+        <p class="hero-sub reveal">
+            Captrieve solves a single problem: You have a thought you do not want to lose, and you want to remember it <em>when
+            you can put it to use</em>.
+        </p>
+        <p class="hero-sub reveal">
+            You remember to do something – when you can't do anything about it, so you have to remember it again <em>at the
+            right time</em>.
+        </p>
+        <p class="hero-sub reveal">
+            You need to pick up that thing at the store, say something <em>just that way</em> when you have that tough
+            conversation, or that sales conversation.
+        </p>
+        <p class="hero-sub reveal">
+            You have to work that idea into a character's backstory, put that riff in that song, finally remember to make that
+            call, do that task, … and you are in the car right now, driving. You are in bed right now, and instead of having a
+            million unfinished things streaming through your head, escaping almost as quickly as they arrive, you just want to
+            go to sleep <em>but not forget them!</em>
+        </p>
+        <p class="hero-sub reveal">
+            So you <em>hope</em> you will remember these things when you can act on them.
+            How's that working for you?
+        </p>
+        <p class="hero-sub reveal">
+            In desperation, you dictate it to Siri or Alexa to put in a note, and forget to ask for it later, or you put it in a
+            Google doc, or even a spreadsheet, and it sits there, passively, not reminding you.
+            It sits there, unindexed, so it's hard to find even if you remember to go looking for it.
+            Or you stop what you're doing, open your reminders app, type it in as a task, pick a trigger like geofencing, and
+            hope – users will tell you how often those fail to fire.
+            And what if you needed to capture a tone of voice, or a melody – nope.
+        </p>
+        <p class="hero-sub reveal">
+            What if your ideas took just a few seconds to record, and came looking for you the next time you are at your
+            computer, the next time you are leaving work to go home, the next time you are in the kitchen, the next time you
+            meet with that client, the next time you are at a doctor appointment, or just before you give that speech?
+            Wow.
+            That's a whole different ballgame.
+        </p>
+        <p class="hero-tagline reveal">
+            Captrieve makes your ideas reappear when and where you tell them to.
+        </p>
+        <div class="cta-group reveal">
+            <a href="#download" class="btn">App Store</a>
+            <a href="#download" class="btn btn-secondary">Google Play</a>
+        </div>
+    </div>
+</div>
+
+<!-- ── How it works ── -->
+<section id="how">
+    <div class="container">
+        <p class="section-label reveal">
+            How it works
+        </p>
+        <h2 class="reveal">
+            Three steps.<br><em>That's the whole thing.</em>
+        </h2>
+        <p class="section-lead reveal">
+            Captrieve: You capture a thought when you have it, and it shows up when you need it.
+        </p>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-num">
+                    1
+                </div>
+                <div>
+                    <h3>
+                        Capture it
+                    </h3>
+                    <p>
+                        Tap, speak, done – before the thought is gone.
+                        (Captrieve is a great assignment for your phone's action button.)
+                    </p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">
+                    2
+                </div>
+                <div>
+                    <h3>
+                        Tell it when or where
+                    </h3>
+                    <p>
+                        Set a cue based on time, proximity to a named WiFi network, your car, your home, your job, or 20 minutes
+                        after leaving work, or 15 minutes before arriving at home, or the next time you are at your computer, or
+                        when your flight lands, or when you get a minute to play your guitar, or just before you go to bed, or
+                        as soon as you wake up, or …
+                    </p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">
+                    3
+                </div>
+                <div>
+                    <h3>
+                        It finds you
+                    </h3>
+                    <p>
+                        At the right moment, in the right place, it presents itself to you without you having to even remember
+                        that you have something to remember.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="section-lead reveal" style="margin-top: 1.25rem;">
+            There are more ways to cue a retrieve than you might expect.
+            <a href="/cues" style="color: var(--accent);">See all cue types →</a>
+        </p>
+    </div>
+</section>
+
+<!-- ── What's actually happening ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            What's actually happening
+        </p>
+        <h2 class="reveal">
+            You've had a smartphone for years.
+            <em>The idea you had in the shower is still gone.</em>
+        </h2>
+        <p class="section-lead reveal">
+            The question isn't whether your phone is capable.
+            It's whether you're actually capturing and retrieving things reliably right now.
+            For most people, the honest answer is no.
+        </p>
+        <div class="cue-cards">
+            <div class="cue-card reveal">
+                <h3>
+                    The voice memo you'll get to later
+                </h3>
+                <p>
+                    It's in a pile of other voice memos.
+                    Unlabeled. Unindexed.
+                    Waiting for you to remember it exists and go listening through them all to possibly find it.
+                    Later never comes, or comes too late, or takes too long.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    The note that goes nowhere
+                </h3>
+                <p>
+                    You captured it.
+                    It went into a pile.
+                    The moment when it would have been useful passed while it was sitting there.
+                    Capture without retrieval is just not admitting you are going to forget anyway.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    The reminder you dismissed
+                </h3>
+                <p>
+                    It fired at 2 PM on Tuesday.
+                    You were in the middle of something.
+                    You dismissed it.
+                    2 PM Tuesday was never the right moment anyway.
+                    The pharmacy was the right moment, and the reminder was never going to know that.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    On iPhones
+                </h3>
+                <p>
+                    Geofencing is semi-reliable (which means not reliable) and gets worse as your battery level goes down.
+                    Alternative indicators of location such as connecting to a particular WiFi network help, but require you to
+                    take steps like hand-creating a Shortcut, something confusing and time consuming that the vast majority of
+                    users never do.
+                    When geofencing does work, Captrieve lets you do things like when I leave work AND it's after 5, but not if
+                    I leave work for lunch, for an off-site meeting, or to take a short break and go on a walk.
+                    Does Apple give you that without Captrieve?
+                    No.
+                </p>
+            </div>
+            <div class="cue-card reveal">
+                <h3>
+                    On Android
+                </h3>
+                <p>
+                    Google removed location-based reminders entirely in late 2025.
+                    They cannot be created or received anymore.
+                    On Android, this category is simply non-existent.
+                </p>
+            </div>
+        </div>
+        <p class="section-lead reveal" style="margin-top: 2rem;">
+            <a href="/compare" style="color: var(--accent);">See what it actually takes to do this without Captrieve →</a>
+        </p>
+    </div>
+</section>
+
+<!-- ── Who it's for ── -->
+<section class="section-spacious">
+    <div class="container">
+        <h2 class="reveal">
+            Who is Captrieve for?<br>
+        </h2>
+        <div class="audiences">
+            <div class="audience reveal">
+                <h3>
+                    People who forget things (everyone)
+                </h3>
+                <ul class="no-bullets">
+                    <li>
+                        "Why can't I remember to make that call when I am at home in the evening?"
+                    </li>
+                    <li>
+                        "Oh yeah, I promised I would go to Laura's game on Saturday, and to Michael's play next Friday. I have
+                        to put those things in my calendar when I get home."
+                    </li>
+                    <li>
+                        "I must tell Klaus about the new direction I want to take when we meet with the Board."
+                    </li>
+                    <li>
+                        "I can't forget again! We're out of triple-A batteries, and low on toilet paper. Stop at Target on the
+                        way home."
+                    </li>
+                </ul>
+                <p style="margin-top: 1rem;">
+                    In fact, you can do these things without Captrieve, but do you even know how?
+                    Are you having Siri or Alexa make reminders for you, but then having them show up when it's still not a good
+                    time to act on them?
+                    Bottom line: Are you getting them done?
+                </p>
+            </div>
+            <div class="audience reveal">
+                <h3>
+                    Creative people
+                </h3>
+                <p>
+                    Inspiration strikes when it strikes.
+                    Captrieve captures it at the speed it arrives and delivers it back when you are positioned to use it –
+                    at the studio, at the desk, at the piano, in the setting where the work happens.
+                </p>
+                <p>
+                    <a href="/inspirations" style="color: var(--accent);">Musicians, writers, visual artists →</a>
+                </p>
+            </div>
+            <div class="audience reveal">
+                <h3>
+                    People with ADHD
+                </h3>
+                <p>
+                    The thought was there and then it was just gone.
+                    You wrote it down but never looked at the note.
+                    What note?
+                    Is there a note somewhere?
+                    The reminder fired at 2 PM on Tuesday and you dismissed it because you were in the middle of something else.
+                    And now it's gone again.
+                </p>
+                <p>
+                    Captrieve is different from a reminder because it fires in context – when you walk into the pharmacy, when
+                    you sit down at the piano, when you get in the car.
+                    The context provides a reminder at the time you can actually use it.
+                </p>
+                <p>
+                    <a href="/adhd" style="color: var(--accent);">How Captrieve works for ADHD →</a>
+                </p>
+            </div>
+            <div class="audience reveal">
+                <h3>
+                    People managing their health and memory
+                </h3>
+                <p>
+                    You waited six weeks for that appointment.
+                    You had three questions.
+                    The doctor asked if there was anything else, and you said no, because the questions were gone.
+                </p>
+                <p>
+                    Capture the question the moment it occurs to you – in the middle of the night, in the car, whenever.
+                    It actively reminds you when you walk through the clinic door.
+                    Not in a note you have to remember to look at.
+                    Right then, right there.
+                </p>
+                <p>
+                    Health info is sensitive.
+                    Nothing leaves your phone.
+                    No account, no cloud, no one watching.
+                </p>
+            </div>
+            <div class="audience reveal">
+                <h3>
+                    Families and caregivers
+                </h3>
+                <p>
+                    Set Captrieve up for someone you care for.
+                    Know they are moving through their day, or know to call them if they are not.
+                    Share a thought that finds them at exactly the right moment.
+                    Help them remember their medications, and their appointments.
+                    <a href="/caregivers" style="color: var(--accent);">Learn more →</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Social proof ── -->
+<section class="section-spacious">
+    <div class="container">
+        <p class="section-label reveal">
+            From people using it
+        </p>
+        <div class="stories">
+            <div class="story reveal">
+                <p class="story-quote">
+                    I was working on a new piece of music for my band, and really struggling with the bridge.
+                    It came to me on a walk, and it was really good!
+                    I hummed it into Captrieve and told it to cue me when I got to my piano.
+                    When I sat down at the piano, there it was, instead of me not being able to recall it from memory!
+                    I don't know how I worked before this.
+                </p>
+                <p class="story-attr"><span>–</span> Jim F., singer, songwriter, keyboardist</p>
+            </div>
+            <div class="story reveal">
+                <p class="story-quote">
+                    My daughter used to worry that I'd forget my questions at the doctor and just say everything was fine.
+                    Now I capture them when I think of them, and when I walk into the doctor's office, my phone reminds me of
+                    all my questions.
+                    Last visit I remembered to ask about a medication reaction, and it turns out that it mattered.
+                </p>
+                <p class="story-attr"><span>–</span> Carolyn M., retired teacher</p>
+            </div>
+            <div class="story reveal">
+                <p class="story-quote">
+                    As a person with ADHD, ideas fly in <em>and out</em> of my mind all the time. Now I use Captrieve with NFC
+                    tags all over my house – in the kitchen, on my guitar, at my desk, on my TV.
+                    It not only reminds me of the
+                    thing I need to do, the song I want to learn to play, the show I heard about and want to watch, but the
+                    habit of tapping an NFC tag in all of these places is actually training me to remember stuff on my own, just
+                    just from being in those places!
+                </p>
+                <p class="story-attr"><span>–</span> J. E. M., full-time student, part-time crazy person</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Get the app ── -->
+<section id="download">
+    <div class="container">
+        <p class="section-label reveal">
+            Get Captrieve
+        </p>
+        <h2 class="reveal">
+            Try it free.<br><em>Pay when you believe it.</em>
+        </h2>
+        <p class="section-lead reveal">
+            Twenty retrieves, no credit card, no account.
+            After that, a one-time purchase keeps it forever – or add the Connected tier for shared captures,
+            presence events, and caregiver support.
+        </p>
+        <div class="cta-group reveal">
+            <a href="#" class="btn">App Store</a>
+            <a href="#" class="btn btn-secondary">Google Play</a>
+        </div>
+        <p class="paywall-note reveal">
+            <a href="/pricing" style="color: var(--accent);">See full pricing →</a>
+        </p>
+    </div>
+</section>

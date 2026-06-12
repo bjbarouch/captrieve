@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="{{ site.verify.google }}"/>
+    <meta name="msvalidate.01" content="{{ site.verify.msft }}"/>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.brand }}">
+    <meta property="og:title" content="{{ meta.title }}">
+    <meta property="og:description" content="{{ meta.description }}">
+    <meta property="og:url" content="{{ meta.canonical }}">
+    <meta property="og:image" content="{{ site.ogImage.url }}">
+    <meta property="og:image:width" content="{{ site.ogImage.width }}">
+    <meta property="og:image:height" content="{{ site.ogImage.height }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ meta.title }}">
+    <meta name="twitter:description" content="{{ meta.description }}">
+    <meta name="twitter:image" content="{{ site.ogImage.url }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="{{ site.copyright }}">
+    <title>{{ meta.tabTitle or meta.title }}</title>
+    <meta name="description" content="{{ meta.description }}">
+    <link rel="canonical" href="{{ meta.canonical }}"/>
+    <link rel="icon" href="/images/captrieve-icon.png" type="image/png">
+    <link rel="preload" href="/fonts/CormorantGaramond-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/DMSans-Italic-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css{{ assetVersion('/css/stylesheet.min.css') }}">
+    <noscript>
+        <style>.reveal { opacity: 1; transform: none; }</style>
+    </noscript>
+    {% for script in headScripts %}
+    <script src="{{ script }}{{ assetVersion(script) }}"></script>
+    {% endfor %}
+</head>
