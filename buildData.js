@@ -57,6 +57,12 @@ export default {
         caregivers   : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
         faq          : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
         privacy      : { headScripts : ["/preview-auth.js"], bodyScripts : [] }
+    },
+
+    // error page scripts, keyed by HTTP status code or "default"
+    errorPageScripts : {
+        404     : ["/js/errorPage{{min.js}}", "/js/notFound{{min.js}}"],
+        default : ["/js/errorPage{{min.js}}"]
     }
 
 }

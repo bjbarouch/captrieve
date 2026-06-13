@@ -5,7 +5,8 @@
     "type"        : "module",
     "scripts" : {
         "build" : "node build.js",
-        "watch" : "nodemon --watch src --watch buildData.js --ext htm_,js,scss --exec 'node build.js'",
+        "prod"  : "node build.js --prod",
+        "watch" : "nodemon --watch src --watch buildData.js --ext htm_,mjs,js,scss --exec 'node build.js'",
         "clean" : "node build.js --clean"
     },
     "dependencies" : {
@@ -14,6 +15,7 @@
         "glob"     : "^11.0.0",
         "nodemon"  : "^3.1.0",
         "nunjucks" : "^3.2.4",
-        "sass"     : "^1.89.0"
+        "sass"     : "^1.89.0",
+        "terser"   : "^5.0.0"
     }
 }

@@ -1,4 +1,4 @@
-import { safeHtml } from "/js/safeHtml.min.mjs";
+import { safeHtml } from "/js/safeHtml{{min.mjs}}";
 
 /**
  * Displays the requested URL in the 404 page body.

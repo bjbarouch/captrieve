@@ -8,6 +8,10 @@ import { globSync }                                       from "glob";
 import path                                               from "path";
 import { fileURLToPath }                                  from "url";
 import site                                               from "./buildData.js";
+import { minify }                                         from "terser";
+
+const
+    devAndTest = ! process.argv.includes("--prod");
 
 const
     __dirname  = path.dirname(fileURLToPath(import.meta.url)),
@@ -15,6 +19,16 @@ const
     srcDir     = path.join(__dirname, "src"),
     partialDir = path.join(srcDir, "partials"),
     verbose    = process.argv.includes("--verbose");
+
+const
+    minMjs = devAndTest ? ".mjs"  : ".min.mjs",
+    minJs  = devAndTest ? ".js"   : ".min.js";
+
+function substituteMarkers(source) {
+    return source
+        .replaceAll("{{min.mjs}}", minMjs)
+        .replaceAll("{{min.js}}",  minJs);
+}
 
 // ---------------------------------------------------------------------------
 // Nunjucks environment
@@ -44,6 +58,7 @@ function assetVersion(assetPath) {
 
 njkEnv.addFilter("assetVersion", assetVersion);
 njkEnv.addGlobal("assetVersion", assetVersion);
+njkEnv.addGlobal("siteScriptsPath", substituteMarkers("/js/siteScripts{{min.js}}"));
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -148,8 +163,8 @@ function buildPage(srcFile, outFile) {
         context     = {
             site,
             meta,
-            headScripts : pageScripts.headScripts ?? [ ],
-            bodyScripts : pageScripts.bodyScripts ?? [ ]
+            headScripts : (pageScripts.headScripts ?? [ ]).map(substituteMarkers),
+            bodyScripts : (pageScripts.bodyScripts ?? [ ]).map(substituteMarkers)
         },
         head    = njkEnv.render("head.htm_",    context),
         nav     = njkEnv.render("nav.htm_",     context),
@@ -178,7 +193,7 @@ function buildCss() {
         return;
     }
     const
-        result = sass.compile(srcFile, { style: "compressed", sourceMap: true });
+        result = sass.compile(srcFile, { style: devAndTest ? "expanded" : "compressed", sourceMap: true });
     mkdirSync(path.join(outDir, "css"), { recursive: true });
     writeFileSync(outFile, result.css);
     if (result.sourceMap) {
@@ -245,29 +260,47 @@ function buildImages(built) {
 }
 
 /**
- * Copies all .js and .mjs files from src/js/ to the output js/ directory.
- * @param {string[]} built - accumulates filenames of copied files
- * @returns {void}
+ * Processes JS and MJS source files from src/js/ to the output js/ directory.
+ * Applies marker substitution to all file contents.
+ * In dev/test: writes verbatim under the source filename.
+ * In production: minifies via terser and writes under a .min.-inserted filename.
+ * @param {string[]} built - accumulates output filenames of written files
+ * @returns {Promise<void>}
  */
-function buildJs(built) {
+async function buildJs(built) {
     const
         jsSrcDir = path.join(srcDir, "js"),
         jsOutDir = path.join(outDir, "js");
     mkdirSync(jsOutDir, { recursive: true });
     for (const file of readdirSync(jsSrcDir)) {
-        if ( ! file.endsWith(".mjs") && ! file.endsWith(".js")) {
+        const
+            isMjs = file.endsWith(".mjs"),
+            isJs  = file.endsWith(".js");
+        if ( ! isMjs && ! isJs) {
+            continue;
+        }
+        if (file.includes(".min.")) {
             continue;
         }
         const
             srcFile = path.join(jsSrcDir, file),
-            outFile = path.join(jsOutDir, file);
+            outName = devAndTest ? file : file.replace(/\.(mjs|js)$/, ".min.$1"),
+            outFile = path.join(jsOutDir, outName);
         if ( ! needsRebuild(srcFile, outFile)) {
             continue;
         }
-        copyFileSync(srcFile, outFile);
-        built.push(file);
+        const
+            source = substituteMarkers(readFileSync(srcFile, "utf8"));
+        if (devAndTest) {
+            writeFileSync(outFile, source);
+        }
+        else {
+            const result = await minify(source, { module: true, compress: true, mangle: true });
+            writeFileSync(outFile, result.code);
+        }
+        built.push(outName);
         if (verbose) {
-            console.log(`  copied js/${file}`);
+            console.log(`  copied js/${outName}`);
         }
     }
 }
@@ -435,9 +468,7 @@ function buildErrorPages() {
                 datePublished : "",
                 dateModified  : ""
             },
-            bodyScripts = code === 404
-                ? ["/js/errorPage.js", "/js/notFound.js"]
-                : ["/js/errorPage.js"],
+            bodyScripts = (site.errorPageScripts?.[code] ?? site.errorPageScripts?.default ?? []).map(substituteMarkers),
             context     = {
                 site,
                 meta,
@@ -504,7 +535,7 @@ function auditIndex() {
  */
 function clean() {
     const
-        dirs = ["css", "fonts", "images", "js", "errorPages"];
+        dirs = ["css", "fonts", "images", "js", "articles", "errorPages"];
     for (const dir of dirs) {
         rmSync(path.join(outDir, dir), { recursive: true, force: true });
         console.log(`  removed ${dir}/`);
@@ -527,11 +558,15 @@ function clean() {
  * Runs the full build.
  * @returns {void}
  */
-function main() {
+async function main() {
     if (process.argv.includes("--clean")) {
         console.log("\ncleaning...");
         clean();
         return;
+    }
+    if ( ! devAndTest) {
+        console.log("\ncleaning...");
+        clean();
     }
     console.log("\nbuilding...");
     const
@@ -541,7 +576,7 @@ function main() {
     buildCss();
     buildFonts(fontBuilt);
     buildImages(imageBuilt);
-    buildJs(jsBuilt);
+    await buildJs(jsBuilt);
     if ( ! verbose) {
         if (fontBuilt.length > 0) {
             console.log(`  built fonts/ (${fontBuilt.length} file${fontBuilt.length === 1 ? "" : "s"})`);
@@ -556,6 +591,7 @@ function main() {
     buildPages();
     buildSitemap();
     buildErrorPages();
+    auditIndex();
     console.log("done\n");
 }
 

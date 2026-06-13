@@ -1,4 +1,4 @@
-import { httpCodeMap } from "/js/httpCodes.min.mjs";
+import { httpCodeMap } from "/js/httpCodes{{min.mjs}}";
 
 const
     errCode   = Number(location.pathname.replace(/.*\//, "").replace(".html", "")),
