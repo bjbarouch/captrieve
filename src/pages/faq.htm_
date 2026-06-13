@@ -123,13 +123,13 @@
                 <p class="faq-a">
                     A retrieve is the moment a capture comes back to you – when the cue fires and the thought you stored finds
                     you.
-                    The free tier gives you 20 of these.
+                    The <span class="tier">Free</span> tier gives you 20 of these.
                     After that, a one-time purchase gives you unlimited retrieves forever.
                 </p>
             </div>
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    Why does the free tier cap on retrieves rather than captures?
+                    Why does the <span class="tier">Free</span> tier cap on retrieves rather than captures?
                 </p>
                 <p class="faq-a">
                     As we've shown, capturing the idea is easy, and not where the value lies.
@@ -144,7 +144,8 @@
                     Everything is stored locally on your device.
                     Deleting the app deletes your captures.
                     Back up your phone before deleting if you want to restore them later.
-                    On the Connected tier, the very little (and securely encrypted) data kept on the server is deleted within 30
+                    On the <span class="tier">Connected</span> tier, the very little (and securely encrypted) data kept on the
+                    server is deleted within 30
                     days of cancellation.
                 </p>
             </div>
@@ -276,15 +277,16 @@
 <section>
     <div class="container">
         <p class="section-label reveal">
-            Connected tier
+            <span class="tier">Connected</span> tier
         </p>
         <div class="faq-list">
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    What is the Connected tier?
+                    What is the <span class="tier">Connected</span> tier?
                 </p>
                 <p class="faq-a">
-                    Connected is a subscription layer that lets you share retrieves with people you trust who also have
+                    <span class="tier">Connected</span> is a subscription layer that lets you share retrieves with people you
+                    trust who also have
                     Captrieve.
                     It is designed for family members and caregivers for someone who needs a little non-invasive monitoring.
                     Let's say that Grandma uses Captrieve with NFC tags to mark when she takes her meds, or has breakfast.
@@ -292,38 +294,43 @@
                     the bathroom, or wherever.
                     Then you get to see  that she is up and about (or not so you call to check in on her), that she has taken
                     her meds, that she has been in the bathroom a long time, or many times, and so on.
-                    The Solo tier is a one-time purchase with full local functionality.
-                    Connected adds the network layer on top.
+                    The <span class="tier">Solo</span> tier is a one-time purchase with full local functionality.
+                    <span class="tier">Connected</span> adds the network layer on top.
                 </p>
             </div>
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    If I subscribe to Connected and then cancel, do I lose everything?
+                    If I subscribe to <span class="tier">Connected</span> and then cancel, do I lose everything?
                 </p>
                 <p class="faq-a">
                     No.
                     Your local captures and cues are fully unaffected – they live on your device
                     and nothing about them changes
-                    if you cancel your Connected plan.
-                    Connected features stop immediately: presence events stop routing, shared captures stop
+                    if you cancel your <span class="tier">Connected</span> plan.
+                    <span class="tier">Connected</span> features stop immediately: presence events stop routing, shared captures
+                    stop
                     flowing, connected people are notified the sharing relationship has ended.
                     This happens within seconds of cancellation, not at the end of the billing period.
-                    After any 12 consecutive months of Connected subscription, Solo is yours permanently –
+                    After any 12 consecutive months of <span class="tier">Connected</span> subscription,
+                    <span class="tier">Solo</span> is yours permanently –
                     no further payment needed, ever.
-                    If you haven't yet reached 12 months, you revert to the free tier unless you separately purchased Solo.
+                    If you haven't yet reached 12 months, you revert to the <span class="tier">Free</span> tier unless you
+                    separately purchased <span class="tier">Solo</span>.
                 </p>
             </div>
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    Why does Connected require a subscription when Solo is a one-time purchase?
+                    Why does <span class="tier">Connected</span> require a subscription when <span class="tier">Solo</span> is a
+                    one-time purchase?
                 </p>
                 <p class="faq-a">
-                    Because Connected requires a backend to route presence events and shared captures
+                    Because <span class="tier">Connected</span> requires a backend to route presence events and shared captures
                     between devices.
                     That backend has real ongoing costs for secure push notification infrastructure.
                     A one-time purchase doesn't recover those costs.
                     A subscription does.
-                    Solo has no ongoing backend costs, so we don't charge you forever even though you get to keep using
+                    <span class="tier">Solo</span> has no ongoing backend costs, so we don't charge you forever even though you
+                    get to keep using
                     Captrieve forever.
                 </p>
             </div>
@@ -390,13 +397,14 @@
                     No.
                     Location permissions are used only to evaluate cues you have set.
                     Your location is processed on-device and never transmitted.
-                    This is true even on the Connected tier – presence events are timestamped NFC taps,
+                    This is true even on the <span class="tier">Connected</span> tier – presence events are timestamped NFC
+                    taps,
                     not GPS coordinates.
                 </p>
             </div>
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    What does the Connected tier's backend actually store?
+                    What does the <span class="tier">Connected</span> tier's backend actually store?
                 </p>
                 <p class="faq-a">
                     Encrypted relay payloads for presence events and shared captures, and presence log

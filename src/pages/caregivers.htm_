@@ -343,14 +343,15 @@
             <em>For both of you.</em>
         </h2>
         <p class="section-lead reveal">
-            Both the person you care for and you need Captrieve and a Connected subscription.
+            Both the person you care for and you need Captrieve and a <span class="tier">Connected</span> subscription.
             You both get the full app – not a stripped-down companion version.
             Both of you benefit from it independently.
             The caregiving layer is what connects you.
         </p>
         <p class="section-lead reveal">
-            Connected is $2.99/month or $24.99/year.
-            After any 12 consecutive months of Connected, Solo is yours permanently –
+            <span class="tier">Connected</span> is $2.99/month or $24.99/year.
+            After any 12 consecutive months of <span class="tier">Connected</span>, <span class="tier">Solo</span> is yours
+            permanently –
             even if you stop the subscription.
         </p>
         <div class="cta-group reveal">

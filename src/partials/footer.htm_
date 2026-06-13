@@ -1,10 +1,5 @@
 <footer>
     <div class="container">
-        <ul class="footer-nav">
-            {% for item in site.nav %}
-            <li><a href="{{ item.href }}">{{ item.label }}</a></li>
-            {% endfor %}
-        </ul>
         <div class="footer-copy">
             {{ site.copyright }}
         </div>

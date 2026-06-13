@@ -1,0 +1,46 @@
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@graph"   : [
+        {
+            "@type"         : "WebPage",
+            "name"          : "Login / Register - Captrieve",
+            "url"           : "https://captrieve.com/login",
+            "description"   : "Log in to Captrieve or create an account."
+        },
+        {
+            "tabTitle" : "Login / Register - Captrieve"
+        },
+        {
+            "@type"         : "Article",
+            "headline"      : "Login / Register",
+            "description"   : "Log in to Captrieve or create an account.",
+            "datePublished" : "2026-06-13",
+            "dateModified"  : "2026-06-13"
+        }
+    ]
+}
+</script>
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label reveal">
+            Login / Register
+        </p>
+        <h2 class="reveal">
+            Just <em>Kidding</em>
+        </h2>
+        <p class="reveal">
+            On the <span class="tier">Free</span> and <span class="tier">Solo</span> tiers of service, your app does not send
+            any information at all to our server.
+            It is entirely contained on your phone.
+            There is no need to have an account, and there would be benefit in doing so.
+        </p>
+        <p class="reveal">
+            On the <span class="tier">Connected</span> plan, our server holds only the data you have chosen to share with
+            another <span class="brand">Cap<em>trieve</em></span> customer, and is shared only with them.
+            While stored on our server it is encrypted.
+            There is literally nothing to see here, by you, by us, or by any malicious attacker.
+            There is no need to have an account, and there would be no benefit in doing so.
+        </p>
+    </div>
+</div>

@@ -26,7 +26,7 @@
     <link rel="preload" href="/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-Italic-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=f0c6d7">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=1cdda2">
     <noscript>
         <style>.reveal { opacity: 1; transform: none; }</style>
     </noscript>
@@ -37,7 +37,7 @@
 <body>
 <nav>
     <a href="/index" class="nav-brand">Cap<em>trieve</em></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
         
         <li><a href="/index">Home</a></li>
         
@@ -51,12 +51,24 @@
         
         <li><a href="/caregivers">Caregivers</a></li>
         
+        <li><a href="/recommendations">Recommendations</a></li>
+        
+        <li><a href="/science">Science</a></li>
+        
         <li><a href="/faq">FAQ</a></li>
         
         <li><a href="/privacy">Privacy</a></li>
         
     </ul>
-    <a href="/index#download" class="nav-cta">Get the app</a>
+    <div class="nav-right">
+        <a href="/index#download" class="nav-cta">Get the app</a>
+        <a href="/login" class="nav-login">Login /<br>Register</a>
+        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
 </nav>
 <script type="application/ld+json">
 {
@@ -91,15 +103,32 @@
             <em>on your phone.</em>
         </h1>
         <p class="reveal">
-            This is not a policy position.
+            This is not merely a policy position.
             It is how the product is built.
             There is no server receiving your captures, no cloud storing your voice memos,
             no company with access to the things you are trying to remember.
         </p>
+        <p>
+            If you choose the <span class="tier">Connected</span> plan, information you have chosen to share with a specific
+            other <span class="brand">Cap<em>trieve</em></span> customer will flow through our servers, but encrypted with a
+            private key on your device that even we don't have.
+            Neither we, nor a malicious attacker, nor anyone will see your data.
+            If you delete the app, take note of two things:
+        </p>
+        <ul>
+            <li>
+                Since we have no ongoing connection with the app, we don't know if you delete it.
+                If you are on the <span class="tier">Connected</span> plan, cancel your subscription from within the app before
+                deleting it, or cancel your subscription through your phone's subscription management view.
+            </li>
+            <li>
+                If you later put the app back on your phone, your private key will have been lost in the delete.
+                We will send you a enw key if you re-subscribe
+            </li>
+        </ul>
     </div>
 </div>
 
-<!-- ── Four points ── -->
 <section>
     <div class="container">
         <p class="section-label reveal">
@@ -112,13 +141,25 @@
                 </div>
                 <div>
                     <p>
-                        <strong>No account required.</strong>
+                        <strong>No account required (or possible!)</strong>
                         There is nothing to sign up for and nothing to log into.
                     </p>
+                </div>
+            </div>
+            <div class="privacy-point reveal">
+                <div class="privacy-mark">
+                    –
+                </div>
+                <div>
+                    <p>
+                        <strong>No cloud</strong>
+                        Your captures are saved on your device.
+                    </p>
                     <p class="privacy-caveat">
-                        Unless you choose Connected, which requires an account to identify you to the people
-                        you share with.
-                        That is your choice, made explicitly.
+                        If you choose to share information with another <span class="brand">Cap<em>trieve</em></span> customer
+                        via the <span class="tier">Connected</span> plan, your id, theirs, and the shared information will pass
+                        through <span class="brand">Cap<em>trieve</em></span> servers, but will be encrypted so neither we nor
+                        a malicious attacker can see it.
                     </p>
                 </div>
             </div>
@@ -128,48 +169,19 @@
                 </div>
                 <div>
                     <p>
-                        <strong>No cloud.</strong>
-                        Your captures live in local storage on your device.
-                        Full stop.
-                    </p>
-                    <p class="privacy-caveat">
-                        Unless you choose to share a capture with a connected person, in which case only
-                        what you explicitly share leaves the device – end-to-end encrypted.
-                    </p>
-                </div>
-            </div>
-            <div class="privacy-point reveal">
-                <div class="privacy-mark">
-                    –
-                </div>
-                <div>
-                    <p>
-                        <strong>No subscription.</strong>
+                        <strong>No subscription</strong>
                         One purchase.
                         No recurring charges.
                         No ongoing relationship to manage.
                     </p>
                     <p class="privacy-caveat">
-                        Unless you choose Connected, which has real ongoing backend costs and is priced
+                        If you choose the <span class="tier">Connected</span> plan,
+                        <span class="brand">Cap<em>trieve</em></span> has real ongoing backend costs, so we price the plan
                         accordingly.
-                        The Solo tier remains a one-time purchase, permanently.
-                    </p>
-                </div>
-            </div>
-            <div class="privacy-point reveal">
-                <div class="privacy-mark">
-                    –
-                </div>
-                <div>
-                    <p>
-                        <strong>No algorithm.</strong>
-                        Nothing decides when you are ready.
-                        You set the cue.
-                        The app honors it.
-                    </p>
-                    <p class="privacy-caveat">
-                        This does not change at any tier.
-                        Ever.
+                        The <span class="tier">Solo</span> tier remains a one-time purchase, permanently, and if you opt for the
+                        <span class="tier">Connected</span> plan and stay on it for two years and then terminate it, we will put
+                        you onto the Solo tier so you can still use <span class="brand">Cap<em>trieve</em></span> for yourself
+                        forever.
                     </p>
                 </div>
             </div>
@@ -185,30 +197,22 @@
         </p>
         <h2 class="reveal">
             Local first.<br>
-            <em>Connected only when you choose it.</em>
+            <em><span class="tier">Connected</span> only when you choose it.</em>
         </h2>
         <p class="section-lead reveal">
-            The Solo tier runs entirely on your device.
+            The <span class="tier">Free</span> and <span class="tier">Solo</span> tiers runs entirely on your device.
             No outbound connections.
             No telemetry.
             No analytics.
-            Location permissions are used only to fire cues you have set – they are never sent anywhere.
-            Voice recordings are transcribed on-device and never leave unless you explicitly share them.
+            Location permissions are used only to fire cues you have set.
+            Voice recordings are transcribed on-device, without engaging a backend server.
         </p>
         <p class="section-lead reveal">
-            The Connected tier introduces a backend for one purpose: routing signals between people who
-            have chosen to be connected.
-            That backend holds ciphertext only – it cannot read your capture content or your presence events.
-            Revoking a connection immediately invalidates the encryption key for that connection.
-            When you cancel your subscription or delete your account, presence log history is deleted
-            from the server within 30 days.
-            Deleting the app from your phone does not trigger server deletion – cancel your subscription
-            or delete your account from within the app first.
-        </p>
-        <p class="section-lead reveal">
-            The qualifications on the previous page are honest, not apologetic.
-            Every exception is your own choice, made explicitly, for a feature that requires it.
-            Nothing happens to your data without your action.
+            The <span class="tier">Connected</span> plan introduces a backend for one purpose: routing information between
+            people who have explicitly chosen to be connected.
+            Revoking a connection immediately ends the sharing of anything new.
+            Deleting the app from your phone does not terminate a <span class="tier">Connected</span> plan – cancel your
+            subscription from the app.
         </p>
     </div>
 </section>
@@ -231,7 +235,6 @@
                 <p class="faq-a">
                     Required for geofence cues.
                     Used only to detect when you enter or leave an area you have defined.
-                    Your location is never transmitted.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -241,7 +244,9 @@
                 <p class="faq-a">
                     Required for geofence cues to fire while the app is in the background.
                     You can choose "when in use" only – geofences will fire less reliably.
-                    Always-on location is never transmitted.
+                    To be clear, due to limitations in the GPS-to-phone network and the phone's design, even Always doesn't mean
+                    always.
+                    It means best effort in light of weather, buildings, tunnels, and battery level.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -251,8 +256,7 @@
                 <p class="faq-a">
                     Required for voice capture.
                     Recordings are transcribed on-device.
-                    Audio is stored locally until you choose to delete it.
-                    Nothing is transmitted without your action.
+                    No backend service is engaged.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -271,7 +275,6 @@
                 <p class="faq-a">
                     Required to read and write NFC tags.
                     Tag identifiers are stored locally.
-                    Nothing is transmitted.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -281,7 +284,6 @@
                 <p class="faq-a">
                     Required for Bluetooth device cues.
                     Device names are stored locally.
-                    Nothing is transmitted.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -291,8 +293,6 @@
                 <p class="faq-a">
                     Required for Wi-Fi network cues.
                     Network names are stored locally.
-                    Nothing is transmitted.
-                    This permission requires the Access Wi-Fi Information entitlement on iOS.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -302,39 +302,18 @@
                 <p class="faq-a">
                     Required to deliver retrieves.
                     Notifications are generated locally by cues you have set.
-                    No push notifications are sent without your action, except on the Connected tier where
-                    presence events and shared captures are routed to connected devices.
                 </p>
             </div>
         </div>
     </div>
 </section><footer>
     <div class="container">
-        <ul class="footer-nav">
-            
-            <li><a href="/index">Home</a></li>
-            
-            <li><a href="/cues">Cues</a></li>
-            
-            <li><a href="/inspirations">Inspirations</a></li>
-            
-            <li><a href="/pricing">Pricing</a></li>
-            
-            <li><a href="/adhd">ADHD</a></li>
-            
-            <li><a href="/caregivers">Caregivers</a></li>
-            
-            <li><a href="/faq">FAQ</a></li>
-            
-            <li><a href="/privacy">Privacy</a></li>
-            
-        </ul>
         <div class="footer-copy">
             Copyright © 2025-2026 – Captrieve – All Rights Reserved
         </div>
     </div>
 </footer>
-    <script type="module" src="/js/siteScripts.min.js?v=0d3016"></script>
+    <script type="module" src="/js/siteScripts.js?v=532d60"></script>
     
 </body>
 </html>

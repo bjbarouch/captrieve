@@ -41,12 +41,12 @@
 <section>
     <div class="container">
         <p class="section-label reveal">
-            Why the free tier works the way it does
+            Why the <span class="tier">Free</span> tier works the way it does
         </p>
         <p class="section-lead reveal">
             A retrieve is the moment the product delivers on its promise – a thought you captured finds you
             at exactly the right moment.
-            The free tier gives you twenty of those moments.
+            The <span class="tier">Free</span> tier gives you twenty of those moments.
             Twenty retrieves across different cue types gives you a genuine picture of what the product does
             before you spend anything.
             You pay only after you've seen it work.
@@ -71,13 +71,13 @@
                     <tr>
                         <th></th>
                         <th>
-                            Free
+                            <span class="tier">Free</span>
                         </th>
                         <th>
-                            Solo
+                            <span class="tier">Solo</span>
                         </th>
                         <th class="col-connected">
-                            Connected
+                            <span class="tier">Connected</span>
                         </th>
                     </tr>
                 </thead>
@@ -182,7 +182,7 @@
             <div class="pricing-prices">
                 <div class="pricing-option">
                     <div class="price">
-                        Free
+                        <span class="tier">Free</span>
                     </div>
                     <div class="price-label">
                         20 retrieves, then decide
@@ -193,7 +193,7 @@
                         $7.99
                     </div>
                     <div class="price-label">
-                        Solo – one-time purchase<br>No subscription, ever
+                        <span class="tier">Solo</span> – one-time purchase<br>No subscription, ever
                     </div>
                 </div>
                 <div class="pricing-option">
@@ -201,8 +201,8 @@
                         $2.99<span style="font-size: 1rem; color: var(--text-muted)">/mo</span>
                     </div>
                     <div class="price-label">
-                        Connected – or $24.99/year<br>
-                        Includes Solo permanently after 12 months
+                        <span class="tier">Connected</span> – or $24.99/year<br>
+                        Includes <span class="tier">Solo</span> permanently after 12 months
                     </div>
                 </div>
             </div>
@@ -218,14 +218,15 @@
 <section>
     <div class="container">
         <p class="section-label reveal">
-            Solo – $7.99, once
+            <span class="tier">Solo</span> – $7.99, once
         </p>
         <h2 class="reveal">
             One purchase.<br>
             <em>No ongoing relationship.</em>
         </h2>
         <p class="section-lead reveal">
-            Solo is the full local Captrieve experience – every cue type, unlimited retrieves, everything
+            <span class="tier">Solo</span> is the full local Captrieve experience – every cue type, unlimited retrieves,
+            everything
             on your device.
             No account.
             No server.
@@ -244,19 +245,19 @@
 <section>
     <div class="container">
         <p class="section-label reveal">
-            Connected – $2.99/month or $24.99/year
+            <span class="tier">Connected</span> – $2.99/month or $24.99/year
         </p>
         <h2 class="reveal">
-            Everything in Solo,<br>
+            Everything in <span class="tier">Solo</span>,<br>
             <em>plus the people you trust.</em>
         </h2>
         <p class="section-lead reveal">
-            Connected adds a backend that routes captures, presence events, and context between people
+            <span class="tier">Connected</span> adds a backend that routes captures, presence events, and context between people
             who have chosen to share.
             That backend has real ongoing costs – server infrastructure, encrypted relay, push notification
             routing.
             A subscription is the honest pricing model for ongoing costs.
-            Solo has none of those costs, which is why it's a one-time purchase.
+            <span class="tier">Solo</span> has none of those costs, which is why it's a one-time purchase.
         </p>
         <div class="cue-cards" style="margin-top: 1.5rem;">
 
@@ -295,9 +296,10 @@
         </div>
         <p class="pricing-note reveal" style="margin-top: 1.5rem;">
             If you ever stop your subscription, everything you've unlocked stays yours.
-            Connected features pause.
+            <span class="tier">Connected</span> features pause.
             Everything else continues.
-            After any 12 consecutive months of Connected, Solo is yours permanently – automatically,
+            After any 12 consecutive months of <span class="tier">Connected</span>, <span class="tier">Solo</span> is yours
+            permanently – automatically,
             no action required.
         </p>
     </div>
@@ -312,7 +314,7 @@
         <div class="faq-list">
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    Can I try Connected before committing to a year?
+                    Can I try <span class="tier">Connected</span> before committing to a year?
                 </p>
                 <p class="faq-a">
                     Yes – the monthly price is $2.99.
@@ -322,11 +324,11 @@
             </div>
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    What if I buy Solo and later want Connected?
+                    What if I buy <span class="tier">Solo</span> and later want <span class="tier">Connected</span>?
                 </p>
                 <p class="faq-a">
-                    You can upgrade to Connected at any time.
-                    Your one-time Solo purchase is not lost – it is what you fall back to if you
+                    You can upgrade to <span class="tier">Connected</span> at any time.
+                    Your one-time <span class="tier">Solo</span> purchase is not lost – it is what you fall back to if you
                     ever cancel the subscription.
                 </p>
             </div>
@@ -336,7 +338,7 @@
                 </p>
                 <p class="faq-a">
                     Yes.
-                    Both people in a connected relationship need a Connected subscription.
+                    Both people in a connected relationship need a <span class="tier">Connected</span> subscription.
                     Both get the full app.
                     The caregiving layer connects them – neither gets a stripped-down experience.
                 </p>
@@ -347,9 +349,11 @@
                 </p>
                 <p class="faq-a">
                     Local storage – including your retrieve count – resets on reinstall.
-                    There is no server-side enforcement of the free tier limit on Solo.
+                    There is no server-side enforcement of the <span class="tier">Free</span> tier limit on
+                    <span class="tier">Solo</span>.
                     Users who go to that effort are not the audience we're pricing for.
-                    If you've purchased Solo or subscribed to Connected, your purchase is restored
+                    If you've purchased <span class="tier">Solo</span> or subscribed to <span class="tier">Connected</span>,
+                    your purchase is restored
                     through the App Store or Google Play restore mechanism.
                 </p>
             </div>

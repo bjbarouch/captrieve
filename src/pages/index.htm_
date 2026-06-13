@@ -386,7 +386,8 @@
         </h2>
         <p class="section-lead reveal">
             Twenty retrieves, no credit card, no account.
-            After that, a one-time purchase keeps it forever – or add the Connected tier for shared captures,
+            After that, a one-time purchase keeps it forever – or add the <span class="tier">Connected</span> tier for shared
+            captures,
             presence events, and caregiver support.
         </p>
         <div class="cta-group reveal">

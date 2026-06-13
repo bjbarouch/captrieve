@@ -1,0 +1,81 @@
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@graph"   : [
+        {
+            "@type"         : "WebPage",
+            "name"          : "Recommendations – Captrieve",
+            "url"           : "https://captrieve.com/recommendations",
+            "description"   : "Practical recommendations for getting the most out of Captrieve and for remembering well in everyday life."
+        },
+        {
+            "tabTitle" : "Recommendations – Captrieve"
+        },
+        {
+            "@type"         : "Article",
+            "headline"      : "Recommendations",
+            "description"   : "Practical recommendations for getting the most out of Captrieve and for remembering well in everyday life.",
+            "datePublished" : "2026-06-13",
+            "dateModified"  : "2026-06-13"
+        }
+    ]
+}
+</script>
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label reveal">
+            Recommendations
+        </p>
+        <h1 class="reveal">
+            Getting the most out of<br>
+            <em>your time and effort</em>
+        </h1>
+        <p class="reveal">
+            Use <span class="brand">Cap<em>trieve</em></span>!
+            For those of us who need an external memory aid, it's fantastic.
+            (See the <a href="science">Science page</a> for how this has been validated.)
+        </p>
+        <p class="reveal">
+            Here are some things that studies have shown to have a significant positive impact on memory, from most benefit to
+            less but still valuable.
+        </p>
+        <ul class="reveal">
+            <li>
+                PUT THINGS HERE, IN ORDER -- sleep, exercise, "what are some things you  associated with this cue", ... whatever
+            </li>
+        </ul>
+        <p class="reveal">
+            By contrast, here are some ideas for improving memory that are popular, but that research has not shown to be
+            beneficial:
+        </p>
+        <ul class="reveal">
+            <li>
+                PUT THINGS HERE
+            </li>
+        </ul>
+    </div>
+</div>
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            Non-<span class="brand">Cap<em>trieve</em></span> recommendations
+        </p>
+        <h2 class="reveal">
+            Other <em>Resources</em>
+        </h2>
+        <p class="reveal">
+            Unusual perspectives on important topics:
+            <a href="https://zen-ish.space/articles/index" target="_blank" rel="noopener"
+            >https://zen-ish.space/articles/index</a>
+        </p>
+        <p class="reveal">
+            Ideas that help with real world problems, and for living a deeply meaningful life:
+            <a href="https://www.amazon.com/dp/B0DLT285T5" target="_blank" rel="noopener"><i>Eat The Strawberries</i>:
+            Face Your Challenges with Zen-ish Calm &amp; Confidence</i></a>
+        </p>
+        <p class="reveal">
+            Exercise for people who hate exercise but want to have good strength and health in real world daily life:
+            <a href="" target="_blank" rel="noopener"><i>Coming soon</i></a>
+        </p>
+    </div>
+</div>

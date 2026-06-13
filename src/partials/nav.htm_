@@ -1,10 +1,18 @@
 <body>
 <nav>
     <a href="/index" class="nav-brand">Cap<em>trieve</em></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
         {% for item in site.nav %}
         <li><a href="{{ item.href }}">{{ item.label }}</a></li>
         {% endfor %}
     </ul>
-    <a href="{{ site.navCta.href }}" class="nav-cta">{{ site.navCta.label }}</a>
+    <div class="nav-right">
+        <a href="{{ site.navCta.href }}" class="nav-cta">{{ site.navCta.label }}</a>
+        <a href="/login" class="nav-login">Login /<br>Register</a>
+        <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
 </nav>

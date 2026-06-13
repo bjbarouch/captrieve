@@ -1,0 +1,335 @@
+<script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@graph"   : [
+        {
+            "@type"         : "WebPage",
+            "name"          : "The science behind Captrieve - what it can and can't do for your memory",
+            "url"           : "https://captrieve.com/science",
+            "description"   : "Most forgetting is a failure of attention, not storage. Here is the research on why capturing a thought well helps you keep it, and the one claim we refuse to make."
+        },
+        {
+            "tabTitle" : "Science - Captrieve"
+        },
+        {
+            "@type"         : "Article",
+            "headline"      : "The science behind Captrieve - what it can and can't do for your memory",
+            "description"   : "Most forgetting is a failure of attention, not storage. Here is the research on why capturing a thought well helps you keep it, and the one claim we refuse to make.",
+            "datePublished" : "2026-06-13",
+            "dateModified"  : "2026-06-13"
+        }
+    ]
+}
+</script>
+<div class="page-hero">
+    <div class="container">
+        <p class="section-label reveal">
+            The evidence
+        </p>
+        <h1 class="reveal">
+            Does any of this<br>
+            <em>actually work?</em>
+        </h1>
+        <p class="reveal">
+            Memory apps have a bad reputation, and most of it is earned.
+            For years the field was ruled by games that promised to make you sharper.
+            They delivered nothing of the kind.
+        </p>
+        <p class="reveal">
+            Captrieve is a different kind of tool, built on older and sturdier research.
+            Here is what that research actually says.
+            That includes where it backs us, and the one place we won't overstate it.
+        </p>
+    </div>
+</div>
+
+<!-- Where memory fails -->
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            Where memory fails
+        </p>
+        <h2 class="reveal">
+            Most forgetting happens<br>
+            <em>before you forget.</em>
+        </h2>
+        <p class="reveal">
+            When you can't remember something, it feels like a retrieval problem.
+            It was in there, you think, and it just wouldn't come back.
+            More often it was never in there at all.
+            The thought arrived while your attention was elsewhere.
+            It got the barest processing, and left no trace worth keeping.
+        </p>
+        <p class="reveal">
+            This is one of the oldest findings in the study of memory.
+            In a classic experiment, some people engaged words for their meaning, with no plan to memorize.
+            They recalled about as well as people who were told outright to memorize them.
+            The principle traces to Hyde and Jenkins in 1969.
+            Craik and Lockhart later named the frame <i>levels of processing</i>.
+            Wanting to remember added little.
+            What mattered was what the mind actually <em>did</em> with the thing in the moment.
+        </p>
+        <p class="reveal">
+            The practical reading is freeing.
+            A great deal of everyday forgetting is not a verdict on your memory.
+            It is a verdict on the conditions under which the thing first reached you.
+            Fix that moment, and you have fixed most of the problem before it starts.
+            That moment is where Captrieve lives.
+        </p>
+    </div>
+</section>
+
+<!-- Why the usual fixes miss -->
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            Why the usual fixes miss
+        </p>
+        <h2 class="reveal">
+            Notes pile up. Reminders nag.<br>
+            <em>Brain games don't transfer.</em>
+        </h2>
+        <p class="reveal">
+            A note or voice memo preserves the thought, which feels like the job is done.
+            It isn't.
+            A note you never see again at the right moment is no better than a forgotten one.
+            Capture was never the bottleneck.
+            Retrieval, in the right context, is.
+        </p>
+        <p class="reveal">
+            Reminders help, but they carry one trigger and a thin slip of text.
+            Setting one well takes enough fiddling that you often don't bother.
+            Then there is the brain-training game, which promises to upgrade your memory.
+            That is the part the research is least kind to.
+            A consensus review by dozens of scientists reached a blunt conclusion.
+            You get better at the games, but the gains don't carry over to everyday memory
+            (<a href="https://www.psychologicalscience.org/publications/brain-training.html">Simons et al., 2016</a>).
+            The same year, the maker of one prominent program paid two million dollars to settle the matter.
+            The charge was that its claims were not backed by the science
+            (<a href="https://www.ftc.gov/news-events/news/press-releases/2016/01/lumosity-pay-2-million-settle-ftc-deceptive-advertising-charges-its-brain-training-program">the FTC release</a>).
+        </p>
+        <p class="reveal">
+            Captrieve is none of these.
+            It is not a filing cabinet, not a louder reminder, and not a brain game.
+            It works at the two joints where memory actually breaks.
+            One is the moment a thought is encoded.
+            The other is the moment it needs to come back.
+        </p>
+    </div>
+</section>
+
+<!-- What capturing does -->
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            What capturing does
+        </p>
+        <h2 class="reveal">
+            Catching a thought the right way<br>
+            <em>is</em> remembering it better.
+        </h2>
+        <p class="reveal">
+            To capture a thought in Captrieve, you say it in your own words.
+            Then you decide when and where you'll want it back.
+            That small sequence does three things the research shows will strengthen memory.
+        </p>
+        <p class="reveal">
+            The first is the <i>generation effect</i>.
+            Material you produce yourself is kept better than the same words handed to you to read
+            (<a href="https://psycnet.apa.org/record/1980-20399-001">Slamecka and Graf, 1978</a>).
+            A capture is generation by construction.
+            The second is <i>depth of processing</i>.
+            Choosing a cue forces the question of why a thought matters and where it belongs.
+            Deeper processing leaves a more durable trace.
+            The third is the <i>implementation intention</i>, a plan shaped like "if I am at X, I will do Y".
+            A meta-analysis of 94 studies found that such plans reliably improve follow-through
+            (<a href="https://www.sciencedirect.com/science/chapter/bookseries/abs/pii/S0065260106380021">Gollwitzer and Sheeran, 2006</a>).
+            Its mechanism is almost uncanny for our purposes.
+            The plan makes the cue more available, and ties it to the action.
+            So the thought surfaces when the cue appears.
+        </p>
+        <p class="reveal">
+            So a regular user is not passively storing things.
+            With every capture they generate, elaborate, and plan at once.
+            They do it on the things they cared enough to keep.
+            It feels effortless, because it becomes habitual.
+            The work underneath is exactly the work memory rewards.
+        </p>
+    </div>
+</section>
+
+<!-- Real memory improvement, precisely -->
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            Real memory improvement, precisely
+        </p>
+        <h2 class="reveal">
+            And sometimes,<br>
+            you just <em>remember.</em>
+        </h2>
+        <p class="reveal">
+            Most Captrieve use is one-off.
+            A thought is caught once, returned at the right moment, acted on, and gone.
+            Nothing needs to be memorized, and that is fine.
+            You never wanted to memorize "ask about the dizziness".
+            You wanted it handed to you in the chair on Thursday.
+        </p>
+        <p class="reveal">
+            But for a cue you return to again and again, something more happens on its own.
+            When the same thing meets the same place enough times, the place starts to summon it.
+            It comes back before the app does.
+            That is the ancient memory-palace technique running in reverse, the <i>method of loci</i>.
+            It is among the better-evidenced mnemonics there is.
+            A 2025 meta-analysis finds large gains in recall over rote repetition
+            (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12514325/">Ondřej, 2025</a>).
+            It also warns that the studies are small, so hold the size of the effect loosely.
+        </p>
+        <p class="reveal">
+            You can lean into this on purpose.
+            For a cue you've started to internalize, Captrieve can ask first, "what are some things you  associated with this
+            cue?".
+            Only then does it reveal the answer.
+            That small act of recalling before being told is <i>retrieval practice</i>.
+            It is the single strongest memory technique on this page.
+            People who test themselves remember far more, weeks later, than people who just re-read
+            (<a href="http://psychnet.wustl.edu/memory/wp-content/uploads/2018/04/Roediger-Karpicke-2006_PPS.pdf">Roediger and Karpicke, 2006</a>).
+            The same authors found that re-reading <em>feels</em> like learning while doing little.
+            It is an illusion worth knowing about.
+            Spacing the practice further apart over time helps more still
+            (<a href="https://digitalcommons.usf.edu/psy_facpub/1771/">Cepeda et al., 2006</a>).
+        </p>
+        <p class="reveal">
+            There is a quieter effect underneath all of this.
+            Many people carry a belief that they are simply someone who can't remember things.
+            The belief is self-fulfilling.
+            It lowers the very effort and attention that memory depends on.
+            Belief in your own memory measurably shapes how it performs.
+            Researchers study this as <i>memory self-efficacy</i>
+            (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6444346/">a freely readable overview</a>).
+            Memory itself gives almost no feedback, so the belief rarely gets corrected.
+            A successful "what are some things you  associated with this cue?" is a small, undeniable proof that you remembered.
+            Enough of those can shift the belief toward a truer and more useful one.
+        </p>
+        <p class="pull-quote reveal">
+            I can remember things, if I pay attention and make them rich enough.
+        </p>
+        <p class="reveal">
+            That is the precise sense in which Captrieve can improve your memory.
+            It strengthens your hold on the specific things you chose to capture and practice.
+            It is not a vague, general boost.
+            It is a real, earned grip on the things that matter to you.
+        </p>
+    </div>
+</section>
+
+<!-- What we won't claim -->
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            What we won't claim
+        </p>
+        <h2 class="reveal">
+            The line<br>
+            <em>we won't cross.</em>
+        </h2>
+        <p class="reveal">
+            Everything above is about the specific things you capture and encode well.
+            None of it means Captrieve improves your memory as a general faculty.
+            It won't help you recall a name you never captured, or find your keys.
+            It won't raise your overall powers of recall.
+            What improves is your hold on the particular things you ran through the process.
+        </p>
+        <p class="reveal">
+            We are careful about this on purpose.
+            The honest version is plain.
+            Captrieve helps you keep what you chose to capture, because capturing it well is good encoding.
+            The version we won't say is that it improves your memory.
+            That second claim is the one that got an industry fined.
+            It is also the one a careful reader rightly stops trusting you over.
+            We would rather be the tool that tells you exactly what it does.
+        </p>
+    </div>
+</section>
+
+<!-- Sources -->
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            Sources
+        </p>
+        <h2 class="reveal">
+            The research,<br>
+            <em>where you can read it.</em>
+        </h2>
+        <p class="reveal">
+            These links favor sources you can read in full for free.
+            A few older, foundational papers sit behind paywalls, because they pre-date open access.
+            Their findings are not in dispute, but only the summary is free.
+        </p>
+        <ul class="references reveal">
+            <li>
+                Hyde, T. S., and Jenkins, J. J. (1969).
+                Differential effects of incidental tasks on the organization of recall.
+                <i>Journal of Experimental Psychology, 82</i>(3), 472-481. Paywalled.
+            </li>
+            <li>
+                Craik, F. I. M., and Lockhart, R. S. (1972).
+                Levels of processing: A framework for memory research.
+                <i>Journal of Verbal Learning and Verbal Behavior, 11</i>(6), 671-684. Paywalled.
+            </li>
+            <li>
+                Slamecka, N. J., and Graf, P. (1978).
+                The generation effect: Delineation of a phenomenon.
+                <i>Journal of Experimental Psychology: Human Learning and Memory, 4</i>(6), 592-604.
+                <a href="https://psycnet.apa.org/record/1980-20399-001">Abstract</a>.
+            </li>
+            <li>
+                Gollwitzer, P. M., and Sheeran, P. (2006).
+                Implementation intentions and goal achievement: A meta-analysis of effects and processes.
+                <i>Advances in Experimental Social Psychology, 38</i>, 69-119.
+                <a href="https://www.sciencedirect.com/science/chapter/bookseries/abs/pii/S0065260106380021">Abstract</a>.
+            </li>
+            <li>
+                Roediger, H. L., and Karpicke, J. D. (2006).
+                The power of testing memory.
+                <i>Perspectives on Psychological Science, 1</i>(3), 181-210.
+                <a href="http://psychnet.wustl.edu/memory/wp-content/uploads/2018/04/Roediger-Karpicke-2006_PPS.pdf">Free PDF</a>.
+            </li>
+            <li>
+                Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., and Rohrer, D. (2006).
+                Distributed practice in verbal recall tasks.
+                <i>Psychological Bulletin, 132</i>(3), 354-380.
+                <a href="https://digitalcommons.usf.edu/psy_facpub/1771/">Free</a>.
+            </li>
+            <li>
+                Simons, D. J., et al. (2016).
+                Do "brain-training" programs work?
+                <i>Psychological Science in the Public Interest, 17</i>(3), 103-186.
+                <a href="https://www.psychologicalscience.org/publications/brain-training.html">Free</a>.
+            </li>
+            <li>
+                Federal Trade Commission (2016).
+                Lumosity to pay $2 million to settle deceptive-advertising charges.
+                <a href="https://www.ftc.gov/news-events/news/press-releases/2016/01/lumosity-pay-2-million-settle-ftc-deceptive-advertising-charges-its-brain-training-program">Press release</a>.
+            </li>
+            <li>
+                Ondřej, J. (2025).
+                The method of loci: A systematic review and meta-analysis.
+                <i>British Journal of Psychology.</i>
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12514325/">Free</a>.
+            </li>
+            <li>
+                On memory self-efficacy and performance, a freely readable empirical treatment is
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6444346/">available here</a>.
+                The concept builds on Bandura's work on self-efficacy.
+            </li>
+        </ul>
+        <p class="source-note reveal">
+            One caveat we keep in view.
+            The method-of-loci effect sizes come from studies their own authors rate as small.
+            They also carry a high risk of bias.
+            The direction is well supported, the technique works, but hold the exact magnitude loosely.
+        </p>
+    </div>
+</section>
