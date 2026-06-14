@@ -189,7 +189,7 @@ function buildPage(srcFile, outFile) {
         nav     = njkEnv.render("nav.htm_",     context),
         footer  = njkEnv.render("footer.htm_",  context),
         scripts = njkEnv.render("scripts.htm_", context),
-        body    = nunjucks.renderString(source, context),
+        body    = njkEnv.renderString(source, context),
         html    = head + nav + body + footer + scripts;
     mkdirSync(path.dirname(outFile), { recursive: true });
     writeFileSync(outFile, endWithNewline(stripLineTrailingSpace(html)));

@@ -384,27 +384,10 @@
     </div>
 </section>
 
-<!-- ── Get the app ── -->
-<section id="download">
-    <div class="container">
-        <p class="section-label reveal">
-            Get <span class="brand">Cap<em>trieve</em></span>
-        </p>
-        <h2 class="reveal">
-            Try it free.<br><em>Pay when you believe it.</em>
-        </h2>
-        <p class="section-lead reveal">
-            Twenty retrieves, no credit card, no account.
-            After that, a one-time purchase keeps it forever – or add the <span class="tier">Connected</span> tier for shared
-            captures,
-            presence events, and caregiver support.
-        </p>
-        <div class="cta-group reveal">
-            <a href="#" class="btn">App Store</a>
-            <a href="#" class="btn btn-secondary">Google Play</a>
-        </div>
-        <p class="paywall-note reveal">
-            <a href="/pricing" style="color: var(--accent);">See full pricing →</a>
-        </p>
-    </div>
-</section>
+{% set getappLead %}
+Twenty retrieves, no credit card, no account.
+After that, a one-time purchase keeps it forever – or add the <span class="tier">Connected</span> tier for shared captures,
+presence events, and caregiver support.
+{% endset %}
+{% set getappFooter %}<a href="/pricing" style="color: var(--accent);">See full pricing →</a>{% endset %}
+{% include "getapp.htm_" %}

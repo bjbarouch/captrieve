@@ -1,0 +1,23 @@
+<!-- ── Get the app ── -->
+<section id="download"{% if getappMargin %} style="margin-top: {{ getappMargin }};"{% endif %}>
+    <div class="container">
+        <p class="section-label reveal">
+            Get <span class="brand">Cap<em>trieve</em></span>
+        </p>
+        <h2 class="reveal">
+            Try it free.<br><em>Pay when you believe it.</em>
+        </h2>
+        <p class="section-lead reveal">
+            {{ getappLead | trim | safe }}
+        </p>
+        <div class="cta-group reveal">
+            <a href="#" class="btn">App Store</a>
+            <a href="#" class="btn btn-secondary">Google Play</a>
+        </div>
+        {% if getappFooter %}
+        <p class="paywall-note reveal">
+            {{ getappFooter | trim | safe }}
+        </p>
+        {% endif %}
+    </div>
+</section>

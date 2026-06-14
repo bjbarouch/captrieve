@@ -139,8 +139,8 @@ nav {
 }
 
 .brand {
-    font-size  : 110%;
-    font-style : bold;
+    font-size   : 110%;
+    font-weight : 600;
 }
 
 .nav-links {
@@ -1102,7 +1102,7 @@ body:not(:has(section)) .page-hero {
 .faq-a {
     color       : var(--text-muted);
     line-height : 1.7;
-    font-size   : 0.9375rem;
+    font-size   : 1.0625rem;
 }
 
 /* ── Privacy points ── */

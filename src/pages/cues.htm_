@@ -159,7 +159,9 @@
             <em>a physical memory.</em>
         </h2>
         <p class="section-lead reveal">
-            NFC tags come in many forms, many within the range from just 15 to 30 cents each.
+            NFC tags come in many forms.
+            For a choice that works on any surface, including metal, use anti-metal <i>NTAG stickers</i> (25mm, 13.56MHz),
+            about 30 cents each.
             Any of them should work with your phone, and that signal will be passed to
             <span class="brand">Cap<em>trieve</em></span>.
             Stick them anywhere.

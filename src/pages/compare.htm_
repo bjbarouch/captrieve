@@ -253,24 +253,10 @@
 </section>
 
 <!-- ── CTA ── -->
-<section id="download" style="margin-top: 3rem;">
-    <div class="container">
-        <p class="section-label reveal">
-            Get <span class="brand">Cap<em>trieve</em></span>
-        </p>
-        <h2 class="reveal">
-            Try it free.<br><em>Pay when you believe it.</em>
-        </h2>
-        <p class="section-lead reveal">
-            Twenty retrieves, no credit card, no account.
-            After that, $7.99 keeps it forever.
-        </p>
-        <div class="cta-group reveal">
-            <a href="#" class="btn">App Store</a>
-            <a href="#" class="btn btn-secondary">Google Play</a>
-        </div>
-        <p class="paywall-note reveal">
-            <a href="/faq" style="color: var(--accent);">Questions? See the FAQ →</a>
-        </p>
-    </div>
-</section>
+{% set getappMargin = "3rem" %}
+{% set getappLead %}
+Twenty retrieves, no credit card, no account.
+After that, $7.99 keeps it forever.
+{% endset %}
+{% set getappFooter %}<a href="/faq" style="color: var(--accent);">Questions? See the FAQ →</a>{% endset %}
+{% include "getapp.htm_" %}

@@ -50,8 +50,10 @@
                 deleting it, or cancel your subscription through your phone's subscription management view.
             </li>
             <li>
-                If you later put the app back on your phone, your private key will have been lost in the delete.
-                We will send you a enw key if you re-subscribe
+                Your private key is generated on your device and backed up to your phone's secure keychain.
+                If you reinstall on the same Apple or Google account, the key is restored and your shares keep working.
+                If that backup is not available, the app makes a new key and asks the people you share with to re-send, since
+                only they hold the originals.
             </li>
         </ul>
     </div>
@@ -128,19 +130,23 @@
             <em><span class="tier">Connected</span> only when you choose it.</em>
         </h2>
         <p class="section-lead reveal">
-            The <span class="tier">Free</span> and <span class="tier">Solo</span> tiers runs entirely on your device.
-            No outbound connections.
-            No telemetry.
-            No analytics.
+            The <span class="tier">Free</span> and <span class="tier">Solo</span> tiers run entirely on your device.
+            Your captures never leave the phone.
+            No analytics, no tracking, no profiles.
+            The one exception is anonymous diagnostics: when the app hits an error it sends us what broke and where, with no
+            identifier and none of your content, so we can fix it.
+            It is on by default, and you can switch it off.
             Location permissions are used only to fire cues you have set.
             Voice recordings are transcribed on-device, without engaging a backend server.
         </p>
         <p class="section-lead reveal">
-            The <span class="tier">Connected</span> plan introduces a backend for one purpose: routing information between
-            people who have explicitly chosen to be connected.
-            Revoking a connection immediately ends the sharing of anything new.
-            Deleting the app from your phone does not terminate a <span class="tier">Connected</span> plan – cancel your
-            subscription from the app.
+            The <span class="tier">Connected</span> plan introduces a backend for one purpose.
+            It routes information between people who have explicitly chosen to be connected.
+            Disconnecting from someone is a single action in the app, and it takes effect immediately: presence events stop, the
+            other person's access is revoked, and the data you shared is purged from our server.
+            This is separate from billing.
+            Canceling your subscription through the App Store or Google Play only stops the renewal – it does not end a
+            connection right away, so use Disconnect when you need sharing to stop now.
         </p>
     </div>
 </section>

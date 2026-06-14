@@ -30,9 +30,10 @@
             Just <em>Kidding</em>
         </h2>
         <p class="reveal">
-            On the <span class="tier">Free</span> and <span class="tier">Solo</span> tiers of service, your app does not send
-            any information at all to our server.
-            It is entirely contained on your phone.
+            On the <span class="tier">Free</span> and <span class="tier">Solo</span> tiers of service, your captures stay on
+            your phone.
+            The only thing the app ever sends us is anonymous diagnostics when something breaks – no identifier, none of your
+            content, and you can turn it off.
             There is no need to have an account, and there would be no benefit in doing so.
         </p>
         <p class="reveal">
