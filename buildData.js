@@ -7,7 +7,7 @@ export default {
     pageDirs : ["pages"],
 
     brand     : "Captrieve",
-    copyright : "Copyright © 2025-2026 – Captrieve – All Rights Reserved",
+    copyright : "Copyright © 2026 – Captrieve – All Rights Reserved",
 
     email : {
         support : "support@captrieve.com"
