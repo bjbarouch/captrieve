@@ -1,6 +1,0 @@
-cd ~/Library/"Application Support"/Code/User/History/
-for j in ./*/entries.json; do
-  url=$(grep -ao 'file://[^"]*' "$j" | head -1)
-    path=$(python3 -c 'import sys,urllib.parse; print(urllib.parse.unquote(sys.argv[1][7:]))' "$url")
-      case "$path" in *captrieve*) [ ! -e "$path" ] && echo "MISSING: $path  <-  ${j%/entries.json}";; esac
-      done

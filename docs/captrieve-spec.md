@@ -27,8 +27,10 @@ Captrieve makes your ideas reappear when and where you tell them to.
    are ready. There is no black box.
 -  **The inbox is visible.** Captures do not disappear. The user can browse, search, and surface anything deliberately, not only
    when a cue fires.
--  **No data leaves the device.** All captures are stored locally. This is a feature, not a limitation. Privacy is a selling
-   point.
+-  **Captures stay on the device.** Captures are stored locally, not in the cloud – this is a feature, not a limitation, and
+   privacy is a selling point. Data leaves the device only by the user's explicit choice: captures shared on the Connected
+   Tier travel end-to-end encrypted, and optional anonymous diagnostics may be sent to fix crashes, carrying no identifier
+   and no capture content. Nothing about a capture's contents leaves the device without the user's action.
 -  **The user is in control.** Triggers are explicit. Conditions are evaluable. Nothing fires unexpectedly and nothing fails to
    fire silently.
 
@@ -168,10 +170,15 @@ Four points, stated plainly, as they appear on the marketing page:
    Connected Tier, which has ongoing backend costs and is priced accordingly.
 -  **No algorithm.** Nothing decides when the user is ready. They set the cue. The app honors it. This is unconditional
    and does not change at any tier.
+-  **Anonymous diagnostics, off in one tap.** To find and fix crashes, the app may send anonymous diagnostic reports – the
+   kind of error and where it happened, the app and OS version, the device model. They carry no account, no identifier, and
+   nothing you captured. This is on by default and turns off with a single toggle in Settings.
 
 The qualifications above are honest, not apologetic.
-Every exception is the user's own choice, made explicitly, for a feature that requires it.
-Nothing happens to anyone's data without their action.
+Every exception that moves your captures or personal data is your own choice, made explicitly, for a feature that requires it.
+The one thing on by default – anonymous diagnostics – carries nothing personal and nothing you captured, and turns off in one
+tap.
+Nothing you capture leaves your phone without your action.
 
 ### Customer Quotes
 
@@ -1371,7 +1378,7 @@ No schema change required.
 
 The user can export all captures, locations, and settings as a single JSON file at any time from settings.
 The export reflects the complete local database at the moment of export.
-This is consistent with the no-data-leaves-device philosophy – the user controls their data and can take it with them.
+This is consistent with the captures-stay-on-device philosophy – the user controls their data and can take it with them.
 
 ---
 
@@ -1387,6 +1394,46 @@ This is consistent with the no-data-leaves-device philosophy – the user contro
 -  Storage usage summary
 -  Export all data as JSON
 -  Do Not Disturb default duration – the duration pre-selected when DND is activated (default: 1 hour)
+-  Diagnostics – send anonymous crash and error diagnostics (default: on); a single toggle turns it off. No identifier, no
+   capture content (see Diagnostics and Telemetry)
+
+---
+
+## Diagnostics and Telemetry
+
+Captrieve sends anonymous diagnostics to find and fix crashes and errors.
+This is the only telemetry in the app, and it is deliberately minimal.
+
+**What a diagnostic report contains.**
+-  The error or crash type and the code path where it occurred (stack trace).
+-  The app version and build.
+-  The operating system and version.
+-  The device model.
+
+**What a diagnostic report never contains.**
+-  No account, user ID, device ID, or any stable identifier that ties a report to a person or to that person's other reports.
+-  No capture content – not the text, not the audio, not the transcription.
+-  No cue content – no locations, geofences, Wi-Fi names, NFC tags, Bluetooth devices, or times.
+-  No presence events and no connection graph.
+-  No advertising or analytics SDKs, and no third-party trackers.
+
+**Default and control.**
+Diagnostics are on by default and turn off with a single toggle in Settings.
+The toggle takes effect immediately.
+This is the one piece of data flow in the app that is on without an explicit per-use choice, and it is named here and on the
+consumer-facing Privacy Promise precisely so that it is never a surprise.
+
+**Disclosure.**
+The diagnostics behavior is declared accurately in the App Store and Google Play data-collection labels: diagnostic data, not
+linked to the user's identity, not used for tracking.
+The store labels and this section must say the same thing.
+
+**Why on by default.**
+A crash stream that almost no one opts into is not worth building, and the early releases are when crash data matters most.
+The reports carry nothing personal and nothing captured, so the cost to the user is negligible while the benefit to product
+quality is real.
+If this default is ever judged to sit uncomfortably against the Privacy Promise, the honest alternative is opt-in accepted at
+first launch – a product decision, recorded here as the fallback.
 
 ---
 
@@ -1399,12 +1446,14 @@ This is consistent with the no-data-leaves-device philosophy – the user contro
 -  Connected Tier account model – define minimum account: email, device registration, connection graph. No profile, no
    social features. The account exists solely to identify the user to the routing layer.
 -  Subscription pricing – validate $2.99/month and $24.99/year against projected backend infrastructure costs before
-   committing. Confirm App Store and Google Play subscription mechanics.
+   committing. Confirm App Store and Google Play subscription mechanics. (Cancellation mechanics now specified: the stores
+   control cancellation, it stops renewal only, and access runs to period end – see Disconnect Versus Cancellation. Pricing
+   validation against infrastructure cost is still open.)
 -  Which geofencing Flutter package – `native_geofence` is the current candidate and the reliability spike (background,
    terminated, low-power, reboot scenarios) is underway. iOS limits the number of simultaneously monitored regions and may
    defer delivery in low-power mode. Commit only after spike results are in; do not build cue UI before then.
 -  Transcription – on-device only, or optional cloud transcription for accuracy? On-device preferred given the
-   no-data-leaves-device principle; evaluate quality on both platforms first.
+   captures-stay-on-device principle; evaluate quality on both platforms first.
 -  Snooze options – confirm quick-option menu: 1 hour, tonight, tomorrow morning, plus free datetime picker.
    For captures whose cue fired on a location event (geofence, Wi-Fi, NFC), the snooze menu should offer location-based
    options first – "snooze until I arrive here again," "snooze until I get to [another saved location]" – before time options.
@@ -1522,7 +1571,7 @@ received it twenty times.
 
 Deleting and reinstalling the app resets local storage, including retrieve count.
 There is no server-side enforcement of the free tier limit.
-This is an accepted tradeoff given the no-data-leaves-device architecture – introducing a server solely to enforce a trial
+This is an accepted tradeoff given the captures-stay-on-device architecture – introducing a server solely to enforce a trial
 limit would compromise the privacy positioning.
 Users who go to that effort are not the audience.
 Users who find genuine value will pay.
@@ -1798,32 +1847,78 @@ That distinction matters to the population and to the families supporting them.
 
 ### Privacy Architecture
 
-The Connected Tier is the intentional exception to the no-data-leaves-device principle.
+The Connected Tier is the intentional exception to the captures-stay-on-device principle.
 The exception is narrow and explicit: data leaves the device only when the user has chosen to share it with a specific named
 person.
 
 All data in transit and at rest on the server is end-to-end encrypted.
 The server holds ciphertext only and cannot read capture content or presence events.
-The user controls who holds the decryption key.
-Revoking a connection immediately invalidates the key for that connection.
+This is true end-to-end encryption, not encryption the server could undo – the claim that there is nothing for us to read is
+literal.
 
-The backend is scoped narrowly: push notification routing, encrypted relay for presence events and shared captures, presence
-log storage for connected pairs.
+**Keys are generated on the device.**
+Each device generates its own encryption keypair.
+The private key never leaves the device.
+The server stores only public keys, as a versioned directory: to share with a connected person, the sender encrypts to that
+person's current public key, looked up from the directory.
+The server never holds, escrows, or issues a private key, and so has nothing that could decrypt a user's data.
+
+**Key backup and recovery.**
+The private key is backed up through the platform's secure keychain – iCloud Keychain on iOS, the Android Keystore with the
+platform's encrypted backup.
+Reinstalling on the same Apple or Google account restores the key, and shared data becomes readable again with no extra step.
+This replaces any notion of a server-issued key that could be lost when an account is deleted, which was the earlier and
+weaker model.
+
+**Key change and re-sharing.**
+If a key is lost beyond recovery, or deliberately reissued, the device generates a new keypair and publishes the new public
+key to the directory, which bumps its version.
+Anything that person previously received was encrypted to the old public key, so it cannot be read with the new private key –
+those items show as unavailable, waiting to be re-shared.
+The asymmetry that makes this tolerable: the sender of any shared item still holds the original in plaintext on their own
+device, and the versioned directory lets senders detect a stale peer key and re-encrypt to the new one.
+Re-sharing restores access, and nothing a user authored themselves is ever lost to a key change.
+
+The backend is scoped narrowly: a versioned public-key directory, push notification routing, encrypted relay for presence
+events and shared captures, and presence log storage for connected pairs.
 It is not a general sync service, not a cloud backup, not a data platform.
 That scope is a product decision, not a resource constraint, and should be enforced as the Connected Tier evolves.
 
-### Subscription Cancellation
+### Disconnect Versus Cancellation
 
-When a Connected Tier subscription is canceled:
--  All active connections are immediately suspended.
--  Connected people are notified that the sharing relationship has ended.
--  No further presence events or shared captures are routed.
+These are two different actions and the product must not conflate them.
+Disconnect is immediate and about privacy.
+Cancellation is about billing and, because the stores control it, is not immediate.
+
+**Disconnect – immediate, in-app, per connection.**
+A user can sever any connection at any time, from inside the app, with immediate effect.
+On disconnect: presence sharing stops at once, the former connected person's access is revoked, and the data shared with them
+is purged from the server.
+This is the privacy kill-switch, and it is independent of billing – a user can disconnect a person while keeping the
+subscription, and the subscription can lapse without anyone needing to disconnect first.
+This realizes the Connected design principle that any connection can be severed at any time, immediately, with no residual
+data on the server.
+
+**Cancellation – billing, through the store, effective at period end.**
+A Connected subscription is billed through the App Store or Google Play, and only the store can cancel it.
+The app cannot cancel a subscription programmatically – the most it can do is deep-link the user to the system subscription
+settings.
+Canceling stops the renewal; it does not end access mid-period.
+The subscriber keeps Connected features until the end of the period already paid for, and only then does access end.
+Cancellation is therefore not a privacy mechanism – a user who wants sharing to stop now uses Disconnect, which is immediate.
+
+**What happens when access actually ends, at period end, if not renewed.**
+-  Connected features stop: presence events and shared captures are no longer routed, and connected people see that the
+   sharing relationship has ended.
 -  The user's local captures and cues are fully unaffected – the Solo experience continues normally.
--  If the user has completed 12 consecutive months of Connected subscription, Solo is permanently unlocked at no further
-   cost. This is automatic and requires no action from the user.
--  If the user has not yet reached 12 months, they revert to the free tier (20-retrieve cap) unless they have separately
-   purchased Solo.
--  Presence log history held on the server is deleted within 30 days of cancellation.
+-  If the user completed 12 consecutive months of Connected subscription, Solo is permanently unlocked at no further cost,
+   automatically and with no action required.
+-  If the user has not reached 12 months, they revert to the free tier (20-retrieve cap) unless they separately purchased
+   Solo.
+-  Presence log history held on the server is deleted within 30 days of access ending.
+
+Data held server-side for an active connection is purged immediately on an explicit Disconnect, as above.
+The 30-day window covers presence log history in the case where a subscription simply lapses without an explicit disconnect.
 
 
 

@@ -36,6 +36,7 @@ export default {
         { href : "/caregivers",      label : "Caregivers"      },
         { href : "/recommendations", label : "Recommendations" },
         { href : "/science",         label : "Science"         },
+        { href : "/compare",         label : "Compare"         },
         { href : "/faq",             label : "FAQ"             },
         { href : "/privacy",         label : "Privacy"         }
     ],
