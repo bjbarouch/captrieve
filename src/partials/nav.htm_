@@ -3,7 +3,7 @@
     <a href="/index" class="nav-brand">Cap<em>trieve</em></a>
     <ul class="nav-links" id="nav-links">
         {% for item in site.nav %}
-        <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+        <li><a href="{{ item.href }}"{% if item.href == "/" + currentPage %} class="active"{% endif %}>{{ item.label }}</a></li>
         {% endfor %}
     </ul>
     <div class="nav-right">

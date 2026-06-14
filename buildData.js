@@ -24,9 +24,7 @@ export default {
         height : "630"
     },
 
-    // primary nav items -- rendered by nav.htm_ as <li><a> entries
-    // NOTE: nav varies across current pages; the list below is the most complete version
-    // (from compare.html). Confirm which items belong before converting pages.
+    // nav items -- rendered by nav.htm_ in the hamburger menu
     nav : [
         { href : "/index",           label : "Home"            },
         { href : "/cues",            label : "Cues"            },
@@ -38,6 +36,7 @@ export default {
         { href : "/science",         label : "Science"         },
         { href : "/compare",         label : "Compare"         },
         { href : "/faq",             label : "FAQ"             },
+        { href : "/manual",          label : "Manual"          },
         { href : "/privacy",         label : "Privacy"         }
     ],
 
@@ -62,6 +61,7 @@ export default {
         recommendations : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
         login           : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
         faq             : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
+        manual          : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
         privacy         : { headScripts : ["/preview-auth.js"], bodyScripts : [] }
     },
 

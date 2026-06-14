@@ -182,6 +182,7 @@ function buildPage(srcFile, outFile) {
         context     = {
             site,
             meta,
+            currentPage : basename,
             headScripts : (pageScripts.headScripts ?? [ ]).map(substituteMarkers),
             bodyScripts : (pageScripts.bodyScripts ?? [ ]).map(substituteMarkers)
         },

@@ -22,6 +22,7 @@
     <meta name="description" content="{{ meta.description }}">
     <link rel="canonical" href="{{ meta.canonical }}"/>
     <link rel="icon" href="/images/captrieve-icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/captrieve-icon.png">
     <link rel="preload" href="/fonts/CormorantGaramond-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>

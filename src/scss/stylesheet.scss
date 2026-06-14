@@ -63,6 +63,9 @@ body {
     font-size               : 1.0625rem;
     line-height             : 1.7;
     -webkit-font-smoothing  : antialiased;
+    min-height              : 100vh;
+    display                 : flex;
+    flex-direction          : column;
 }
 
 p + p {
@@ -109,17 +112,14 @@ section:last-of-type {
 /* ── Nav ── */
 
 nav {
-    position        : fixed;
+    position        : sticky;
     top             : 0;
-    left            : 0;
-    right           : 0;
     z-index         : 100;
-    padding         : 1.25rem 5%;
+    padding         : 0.85rem 5%;
     display         : flex;
     justify-content : space-between;
     align-items     : center;
-    background      : rgba(255, 255, 255, 0.88);
-    backdrop-filter : blur(12px);
+    background      : var(--bg);
     border-bottom   : 1px solid var(--bg-rule);
 }
 
@@ -143,31 +143,51 @@ nav {
 }
 
 .nav-links {
-    display         : flex;
-    flex            : 1;
-    align-items     : center;
-    justify-content : center;
-    gap             : 1.25rem;
-    list-style      : none;
+    position       : absolute;
+    top            : calc(100% + 0.4rem);
+    right          : 5%;
+    z-index        : 100;
+    display        : none;
+    flex-direction : column;
+    min-width      : 11rem;
+    margin         : 0;
+    padding        : 0.3rem 0;
+    list-style     : none;
+    background     : var(--bg);
+    border         : 1px solid var(--bg-rule);
+    box-shadow     : 0 8px 24px rgba(26, 23, 20, 0.12);
+}
+
+.nav-links.open {
+    display : flex;
 }
 
 .nav-links a {
-    font-size       : 0.75rem;
+    display         : block;
+    white-space     : nowrap;
+    font-size       : 0.8125rem;
     font-weight     : 400;
     letter-spacing  : 0.1em;
     text-transform  : uppercase;
     color           : var(--text-muted);
     text-decoration : none;
-    white-space     : nowrap;
-    transition      : color 0.2s ease;
+    padding         : 0.6rem 1.25rem;
+    border-top      : 1px solid var(--bg-rule);
+    transition      : background 0.2s ease, color 0.2s ease;
+}
+
+.nav-links li:first-child a {
+    border-top : none;
 }
 
 .nav-links a:hover {
-    color : var(--text);
+    background : var(--accent);
+    color      : var(--bg);
 }
 
 .nav-links a.active {
-    color : var(--accent);
+    color       : var(--text);
+    font-weight : 600;
 }
 
 .nav-right {
@@ -215,7 +235,7 @@ nav {
 }
 
 .nav-toggle {
-    display         : none;
+    display         : flex;
     flex-direction  : column;
     justify-content : center;
     gap             : 0.3125rem;
@@ -247,50 +267,9 @@ nav {
     transform : translateY(-0.4375rem) rotate(-45deg);
 }
 
-/* Below the width where all links fit inline, collapse to a hamburger panel.
-   The panel is absolutely positioned, so the bar stays one line tall and the
-   per-page fixed-nav offsets remain valid. */
-@media (max-width: 1279px) {
-    .nav-toggle {
-        display : flex;
-    }
-
-    .nav-links {
-        position        : absolute;
-        top             : 100%;
-        left            : 0;
-        right           : 0;
-        display         : none;
-        flex            : none;
-        flex-direction  : column;
-        align-items     : stretch;
-        justify-content : flex-start;
-        gap             : 0;
-        padding         : 0.25rem 5% 1rem;
-        background      : rgba(255, 255, 255, 0.97);
-        backdrop-filter : blur(12px);
-        border-bottom   : 1px solid var(--bg-rule);
-    }
-
-    .nav-links.open {
-        display : flex;
-    }
-
-    .nav-links a {
-        display    : block;
-        font-size  : 0.8125rem;
-        padding    : 0.85rem 0;
-        border-top : 1px solid var(--bg-rule);
-    }
-
-    .nav-links li:first-child a {
-        border-top : none;
-    }
-}
-
 @media (max-width: 600px) {
     nav {
-        padding : 1rem 5%;
+        padding : 0.7rem 5%;
     }
 }
 
@@ -423,8 +402,7 @@ h3 {
 /* ── Hero ── */
 
 .hero {
-    padding       : 6rem 0 1.66rem;
-    margin-top    : 4.5rem;
+    padding       : 3rem 0 1.66rem;
     border-bottom : 1px solid var(--bg-rule);
 }
 
@@ -524,7 +502,7 @@ h3 {
 }
 
 .hero-home {
-    padding-top   : 7rem;
+    padding-top   : 3.5rem;
 }
 
 .hero-home h1 {
@@ -561,8 +539,7 @@ h3 {
 }
 
 .page-hero {
-    padding       : 5rem 0 1.66rem;
-    margin-top    : 3.8125rem;
+    padding       : 2.5rem 0 1.66rem;
     border-bottom : 1px solid var(--bg-rule);
 }
 
@@ -1200,7 +1177,7 @@ body:not(:has(section)) .page-hero {
 footer {
     padding    : 0.75rem 0;
     border-top : 1px solid var(--bg-rule);
-    margin-top : 1.5rem;
+    margin-top : auto;
 }
 
 .footer-copy {
