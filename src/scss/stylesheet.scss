@@ -139,7 +139,7 @@ nav {
 }
 
 .brand {
-    font-size   : 110%;
+    font-size   : 115%;
 }
 
 .nav-links {
@@ -1092,7 +1092,7 @@ body:not(:has(section)) .page-hero {
 
 .faq-q {
     font-family   : var(--serif);
-    font-size     : 1.125rem;
+    font-size     : 1.4rem;
     font-weight   : 400;
     color         : var(--text);
     margin-bottom : 0.5rem;
@@ -1100,8 +1100,7 @@ body:not(:has(section)) .page-hero {
 
 .faq-a {
     color       : var(--text-muted);
-    line-height : 1.7;
-    font-size   : 1.0625rem;
+    font-size   : 1rem;
 }
 
 /* ── Privacy points ── */
@@ -1146,7 +1145,8 @@ body:not(:has(section)) .page-hero {
 
 .tier {
     font-family : var(--serif);
-    font-size   : 1em;
+    font-size   : 1.25rem;
+    font-weight : 600;
 }
 
 /* ── Prose links & references (science page) ── */

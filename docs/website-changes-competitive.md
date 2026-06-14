@@ -1,7 +1,7 @@
 # Captrieve Website Changes – Competitive Honesty Pass (June 2026)
 
 Reason for this pass: Apple Reminders has offered location triggers (arrive/leave geofences, Siri creation, car triggers)
-since iOS 5 in 2011, and iOS Shortcuts automations can fire on NFC, Wi-Fi, Bluetooth, and location.
+since IOS 5 in 2011, and IOS Shortcuts automations can fire on NFC, Wi-Fi, Bluetooth, and location.
 Several lines of current site copy claim or imply that nothing on the user's phone is location-aware.
 Any Apple-literate reviewer can refute those lines with a screenshot, and the product's credibility takes the hit at first
 contact.
@@ -100,7 +100,7 @@ value in the drudgery it removes – not in pretending the incumbent doesn't exi
                 </p>
             </div>
             <div class="use-case reveal">
-                <h3>iOS Shortcuts</h3>
+                <h3>IOS Shortcuts</h3>
                 <p>
                     Genuinely capable, for the few who enjoy programming their phone.
                     One hand-built automation per behavior, maintained forever, by you.
@@ -188,7 +188,7 @@ Place directly after the entry above, in "The basics."
 
 ```html
 <div class="faq-item reveal">
-    <p class="faq-q">Couldn't I build this myself with iOS Shortcuts?</p>
+    <p class="faq-q">Couldn't I build this myself with IOS Shortcuts?</p>
     <p class="faq-a">
         A surprising amount of it, yes.
         Shortcuts automations can fire on an NFC tag, a Wi-Fi network, a Bluetooth device, a location, a time.

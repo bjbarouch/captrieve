@@ -78,7 +78,7 @@ Captrieve is.
 
 **The objection worth answering directly.**
 Apple Reminders has had location triggers since 2011.
-iOS Shortcuts can fire on an NFC tag, a Wi-Fi network, a Bluetooth device, a charger, a Focus mode, and a location.
+IOS Shortcuts can fire on an NFC tag, a Wi-Fi network, a Bluetooth device, a charger, a Focus mode, and a location.
 A technically sophisticated reviewer will know this.
 The honest answer is that these facts strengthen, not weaken, the case.
 
@@ -89,7 +89,7 @@ It has no capture flow, no inbox model, no composition, no AND conditions, no de
 Its location reliability is a long-running user complaint its own forums describe as a coin flip.
 It does not run on Android.
 
-iOS Shortcuts is a programming tool.
+IOS Shortcuts is a programming tool.
 Every behavior requires a hand-built automation, maintained by the user indefinitely.
 There is no capture model – no thought with a lifecycle, no inbox, no cue attached to a specific thing that needs
 to be remembered.
@@ -283,7 +283,7 @@ Community-first acquisition is a constraint on messaging and site structure, not
 
 ## Competitive Landscape
 
-Added June 2026 after a late discovery: Apple Reminders has had location triggers since iOS 5 (2011), and earlier drafts of
+Added June 2026 after a late discovery: Apple Reminders has had location triggers since IOS 5 (2011), and earlier drafts of
 this spec and the site copy claimed or implied otherwise.
 This section exists so that every marketing claim is written against what incumbents actually do, and so the "doesn't my
 phone already do this?" objection is answered before a reviewer asks it.
@@ -292,9 +292,9 @@ section gets re-verified each release.
 
 ### What incumbents actually do
 
-**Apple Reminders (free, preinstalled, iOS/macOS/watchOS)**
+**Apple Reminders (free, preinstalled, IOS/macOS/watchOS)**
 
--  Geofence triggers, arriving or leaving, with adjustable radius (~100m minimum to ~150 miles), since iOS 5.
+-  Geofence triggers, arriving or leaving, with adjustable radius (~100m minimum to ~150 miles), since IOS 5.
 -  Siri creation by voice, including "when I get home / leave work" via contact-card addresses.
 -  Car triggers: getting in / out of the car, via CarPlay or car Bluetooth connect/disconnect.
 -  "When Messaging" a chosen person.
@@ -305,7 +305,7 @@ time offsets ("20 minutes after leaving"), no multi-cue OR, no NFC, no Wi-Fi net
 devices, no charger triggers, no Focus mode triggers, no caregiver layer, no presence events, no Android.
 Reliability of its geofences is a long-running user complaint – community threads describe roughly coin-flip delivery.
 
-**iOS Shortcuts personal automations (free, preinstalled)**
+**IOS Shortcuts personal automations (free, preinstalled)**
 
 -  Triggers include: NFC tag, Wi-Fi network join, Bluetooth device connect, arrive/leave location, time of day, app opened,
    charger, Focus mode, CarPlay.
@@ -331,7 +331,7 @@ have never used it.
 
 This is a tailwind: the platform without Apple's free incumbent just lost its first-party location reminders.
 
-**Third-party geofence reminder apps (iOS App Store)**
+**Third-party geofence reminder apps (IOS App Store)**
 
 -  A persistent small-app category since Checkmark (2012), whose differentiator against Reminders was exactly time offsets
    before/after location events.
@@ -361,7 +361,7 @@ The defensible territory, in order of strength:
 
 ### The Shortcuts objection – extended treatment
 
-The claim that iOS Shortcuts makes Captrieve redundant is the most technically sophisticated objection and deserves a
+The claim that IOS Shortcuts makes Captrieve redundant is the most technically sophisticated objection and deserves a
 thorough answer that goes beyond "Shortcuts is hard."
 
 First, the objection is thirteen years old in a different form.
@@ -430,7 +430,7 @@ Entries should be written with enough natural-language keywords that a frustrate
 Each entry follows this structure consistently:
 
 1. **What the behavior is** – stated plainly, without hedging.
-2. **Why it happens** – with platform attribution where the constraint originates in iOS or Android, not Captrieve.
+2. **Why it happens** – with platform attribution where the constraint originates in IOS or Android, not Captrieve.
 3. **What the user can do about it** – always included if there is anything actionable. Never a dead end.
 
 ### Known Entries (seed list)
@@ -441,7 +441,7 @@ Status codes: [LIVE] = on faq.html now. [SPEC ONLY] = defined here, not yet on s
 
 -  What's the difference between Captrieve and a reminder app? [LIVE]
 -  Doesn't Apple Reminders already do location reminders? [LIVE]
--  Couldn't I build this myself with iOS Shortcuts? [LIVE]
+-  Couldn't I build this myself with IOS Shortcuts? [LIVE]
    (Links to compare.html for side-by-side task breakdown.)
 -  I'm on Android – didn't Google have location reminders? [LIVE]
 -  What's a retrieve? [LIVE]
@@ -451,15 +451,15 @@ Status codes: [LIVE] = on faq.html now. [SPEC ONLY] = defined here, not yet on s
 **Cues and reliability**
 
 -  Why didn't my location cue fire? [SPEC ONLY]
-   (Covers: phone off during boundary crossing, low-power mode deferral, region cap prioritization – all attributed to iOS/Android.)
+   (Covers: phone off during boundary crossing, low-power mode deferral, region cap prioritization – all attributed to IOS/Android.)
 -  Why is location triggering less reliable in some places than others? [LIVE]
 -  My Wi-Fi cue didn't fire when I arrived. What happened? [LIVE]
 -  Can Captrieve tell which floor of a building I'm on? [SPEC ONLY]
-   (No. GPS does not resolve altitude at floor scale on any phone. iOS and Android do not expose this. Not a Captrieve limitation.)
+   (No. GPS does not resolve altitude at floor scale on any phone. IOS and Android do not expose this. Not a Captrieve limitation.)
 -  Why did my cue fire twice right after I restarted my phone? [SPEC ONLY]
-   (Known iOS behavior on reboot. One-line explanation, no action needed – Captrieve discards the duplicate automatically.)
+   (Known IOS behavior on reboot. One-line explanation, no action needed – Captrieve discards the duplicate automatically.)
 -  What happens if I have a lot of location cues set? [SPEC ONLY]
-   (iOS limits how many locations your phone monitors simultaneously. Captrieve prioritizes the ones nearest your current
+   (IOS limits how many locations your phone monitors simultaneously. Captrieve prioritizes the ones nearest your current
    position. Mitigation: dismiss captures you've already acted on.)
 -  What happens if my phone is off when a cue was supposed to fire? [SPEC ONLY]
    (Time-based cues are evaluated on next boot. Geofence cues cannot be recovered – the device wasn't present to
@@ -518,7 +518,7 @@ Recommended device characteristics for reliable location triggering:
    Cellular triangulation significantly improves position accuracy and update frequency,
    especially indoors and when GPS signal is weak.
 -  GPS hardware, which is present on all modern phones and most tablets.
--  A recent OS version. iOS 14+ and Android 8+ are the tested baseline.
+-  A recent OS version. IOS 14+ and Android 8+ are the tested baseline.
    Older OS versions may have geofencing behavior that differs from current platform documentation.
 
 Devices that will work with caveats:
@@ -645,7 +645,7 @@ the burden of justification is on the feature, not on the constraint.
 
 ## Platform
 
-Flutter/Dart, targeting iOS and Android from a single codebase.
+Flutter/Dart, targeting IOS and Android from a single codebase.
 
 The product is fundamentally a phone app.
 Capture is impulse-driven and happens in the moment.
@@ -654,12 +654,12 @@ The phone is always present; other surfaces are not.
 
 ### Language Standard for OS-Imposed Constraints
 
-Any user-facing text describing a limitation that originates in iOS or Android behavior – not a Captrieve product decision –
+Any user-facing text describing a limitation that originates in IOS or Android behavior – not a Captrieve product decision –
 must attribute it accurately.
 
 The standard: name the platform, not the app.
 
--  Correct: "iOS limits the number of locations your phone can monitor simultaneously."
+-  Correct: "IOS limits the number of locations your phone can monitor simultaneously."
 -  Incorrect: "Captrieve can only monitor 20 locations at a time."
 
 The first is true and honest. The second implies a product decision that could have been made differently.
@@ -841,9 +841,9 @@ specific place (the dentist's office, the airport terminal, a friend's home) whe
 
 Use cases: arrive at home network, arrive at office network, arrive at the airport, arrive at a specific venue.
 
-Implementation note: Wi-Fi SSID scanning in the background is supported on both iOS and Android with the appropriate
+Implementation note: Wi-Fi SSID scanning in the background is supported on both IOS and Android with the appropriate
 permissions.
-On iOS, the CNCopyCurrentNetworkInfo API requires the Access Wi-Fi Information entitlement.
+On IOS, the CNCopyCurrentNetworkInfo API requires the Access Wi-Fi Information entitlement.
 This should be treated as a required entitlement, not optional – wifi_join is a core cue type.
 
 ### wifi_leave
@@ -944,7 +944,7 @@ their day.
 
 ### dnd_mode_enter
 
-Fires when the device enters Do Not Disturb or a Focus mode (iOS Focus, Android DND).
+Fires when the device enters Do Not Disturb or a Focus mode (IOS Focus, Android DND).
 This is a device-state cue, not a physical context cue – the user has explicitly signaled they are entering a
 different mode of attention.
 
@@ -962,7 +962,7 @@ It does not fire repeatedly while the mode is active.
 A time_after OR time_before AND condition can scope it to a specific window if the user's focus modes are set on a
 regular schedule but not always at the same time.
 
-Implementation note: iOS exposes Focus mode state via the Focus framework; reading current Focus status requires
+Implementation note: IOS exposes Focus mode state via the Focus framework; reading current Focus status requires
 appropriate entitlements.
 Android exposes DND state via NotificationManager.
 Evaluate package support and permission requirements during the trigger spike.
@@ -1033,10 +1033,10 @@ Nothing below that is visible to the cue evaluation layer.
 This parallelism is intentional: all context-sensing cue types in Captrieve expose a clean binary event (arrived,
 departed, connected, disconnected, tapped, opened) and hide all hardware complexity below that abstraction boundary.
 
-Implementation note: Flutter NFC packages support tag reading and writing on both iOS and Android.
-iOS requires the NFCReaderSession API, which requires user initiation – background NFC scanning is not available on iOS.
+Implementation note: Flutter NFC packages support tag reading and writing on both IOS and Android.
+IOS requires the NFCReaderSession API, which requires user initiation – background NFC scanning is not available on IOS.
 Android supports more permissive background NFC behavior.
-On iOS, the check-in model (user taps intentionally) maps naturally to the platform constraint.
+On IOS, the check-in model (user taps intentionally) maps naturally to the platform constraint.
 This should be presented to the user as the intended interaction, not as a limitation.
 
 ### app_open
@@ -1282,7 +1282,7 @@ It applies to geofence, Wi-Fi, Bluetooth, charger, DND mode, and NFC cues – al
 The threshold of 2 is a starting point; adjust after observing real usage patterns.
 
 This prompt serves a secondary function: it naturally surfaces candidates for dismissal when the user is approaching the
-20-region iOS geofence cap, without ever exposing the cap to the user as a technical constraint.
+20-region IOS geofence cap, without ever exposing the cap to the user as a technical constraint.
 
 ### Phone Off or Rebooted
 
@@ -1440,7 +1440,7 @@ first launch – a product decision, recorded here as the fallback.
 ## Open Items
 
 -  Connected Tier backend – select infrastructure provider and define minimum viable backend: push notification routing
-   (FCM for Android, APNs for iOS), end-to-end encrypted relay for presence events and shared captures, presence log
+   (FCM for Android, APNs for IOS), end-to-end encrypted relay for presence events and shared captures, presence log
    storage. Scope must stay narrow – no general sync, no data platform. Define data retention and deletion policy before
    launch.
 -  Connected Tier account model – define minimum account: email, device registration, connection graph. No profile, no
@@ -1450,7 +1450,7 @@ first launch – a product decision, recorded here as the fallback.
    control cancellation, it stops renewal only, and access runs to period end – see Disconnect Versus Cancellation. Pricing
    validation against infrastructure cost is still open.)
 -  Which geofencing Flutter package – `native_geofence` is the current candidate and the reliability spike (background,
-   terminated, low-power, reboot scenarios) is underway. iOS limits the number of simultaneously monitored regions and may
+   terminated, low-power, reboot scenarios) is underway. IOS limits the number of simultaneously monitored regions and may
    defer delivery in low-power mode. Commit only after spike results are in; do not build cue UI before then.
 -  Transcription – on-device only, or optional cloud transcription for accuracy? On-device preferred given the
    captures-stay-on-device principle; evaluate quality on both platforms first.
@@ -1467,19 +1467,19 @@ first launch – a product decision, recorded here as the fallback.
    device behavior across car audio and stationary speaker scenarios.
    Confirm continuous RSSI scanning battery impact is acceptable; if not, evaluate scan interval strategies
    (e.g. coarse scanning in OUTSIDE state, finer scanning once in proximity) to reduce drain.
--  Charger cue – confirm charger connect/disconnect event availability in Flutter on both iOS and Android.
-   On iOS, evaluate UIDevice.BatteryState notifications or equivalent.
+-  Charger cue – confirm charger connect/disconnect event availability in Flutter on both IOS and Android.
+   On IOS, evaluate UIDevice.BatteryState notifications or equivalent.
    On Android, evaluate BatteryManager broadcast receiver.
    Confirm the time_after AND condition is surfaced prominently in the cue picker for charger triggers –
    without a time gate the cue is too noisy for most users.
--  DND/Focus mode cue – confirm Focus framework access on iOS (entitlement requirements, App Store review implications).
+-  DND/Focus mode cue – confirm Focus framework access on IOS (entitlement requirements, App Store review implications).
    On Android, confirm NotificationManager DND state change broadcast availability.
    Evaluate whether different named Focus modes (Work, Personal, Sleep) should be individually selectable in the
    cue picker or treated as a single "any Focus mode" event.
 -  NFC cue – evaluate flutter_nfc_kit or equivalent. Confirm tag write/read flow on both platforms.
    The abstraction model is specified (see nfc_checkin section): the cue layer receives a single confirmed-read event;
    all hardware detail is below the abstraction boundary.
-   On iOS, confirm the intentional tap model via NFCReaderSession is sufficient and background NFC scanning is not
+   On IOS, confirm the intentional tap model via NFCReaderSession is sufficient and background NFC scanning is not
    needed. On Android, confirm the more permissive background NFC behavior does not introduce spurious read events
    that would require debouncing.
 -  NFC tag library UI – design the saved tag list analogous to saved Locations. Confirm naming and reuse flow before building.
@@ -1864,7 +1864,7 @@ person's current public key, looked up from the directory.
 The server never holds, escrows, or issues a private key, and so has nothing that could decrypt a user's data.
 
 **Key backup and recovery.**
-The private key is backed up through the platform's secure keychain – iCloud Keychain on iOS, the Android Keystore with the
+The private key is backed up through the platform's secure keychain – iCloud Keychain on IOS, the Android Keystore with the
 platform's encrypted backup.
 Reinstalling on the same Apple or Google account restores the key, and shared data becomes readable again with no extra step.
 This replaces any notion of a server-issued key that could be lost when an account is deleted, which was the earlier and

@@ -27,7 +27,7 @@ The server must be structurally incapable of decrypting shared content.
 
 ### Backup and recovery
 
-- The private key is stored in the platform secure keychain with cloud backup enabled: iOS Keychain with iCloud Keychain,
+- The private key is stored in the platform secure keychain with cloud backup enabled: IOS Keychain with iCloud Keychain,
   Android via Keystore plus the encrypted cloud backup path.
 - Reinstalling on the same Apple or Google account restores the private key automatically.
   The server is never involved, so end-to-end encryption holds.
@@ -95,7 +95,7 @@ These are two different actions and must not be conflated, because conflating th
 ### Cancellation (billing action)
 
 - Connected is an auto-renewable subscription billed through the App Store or Google Play.
-- Cancellation is performed through the store (Apple Account subscriptions on iOS, Google Play subscriptions on Android), or
+- Cancellation is performed through the store (Apple Account subscriptions on IOS, Google Play subscriptions on Android), or
   via a deep link the app provides to that screen.
   The app cannot cancel a store subscription programmatically.
 - Cancellation stops the renewal only.

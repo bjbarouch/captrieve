@@ -55,7 +55,7 @@ There is no algorithm deciding when you are ready, at any tier.
 
 ## Platform and stack
 
-Flutter / Dart, one codebase targeting iOS and Android.
+Flutter / Dart, one codebase targeting IOS and Android.
 It is fundamentally a phone app: capture is impulse-driven, and notification response happens wherever you are.
 
 -  Local storage: `sqflite` or `hive`. No backend required for the local tiers.
@@ -74,7 +74,7 @@ Standard Flutter workflow:
 ```
 flutter pub get
 flutter run            # on a connected device or simulator
-flutter build ios      # release builds
+flutter build IOS      # release builds
 flutter build apk
 ```
 

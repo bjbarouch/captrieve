@@ -6,7 +6,7 @@
             "@type"         : "WebPage",
             "name"          : "FAQ – Captrieve",
             "url"           : "https://captrieve.com/faq",
-            "description"   : "Questions people actually ask about Captrieve – cues, NFC tags, pricing, Connected, privacy, and how it compares to Apple Reminders and iOS Shortcuts."
+            "description"   : "Questions people actually ask about Captrieve – cues, NFC tags, pricing, Connected, privacy, and how it compares to Apple Reminders and IOS Shortcuts."
         },
         {
             "tabTitle" : "FAQ – Captrieve"
@@ -14,7 +14,7 @@
         {
             "@type"         : "Article",
             "headline"      : "FAQ – Captrieve",
-            "description"   : "Questions people actually ask about Captrieve – cues, NFC tags, pricing, Connected, privacy, and how it compares to Apple Reminders and iOS Shortcuts.",
+            "description"   : "Questions people actually ask about Captrieve – cues, NFC tags, pricing, Connected, privacy, and how it compares to Apple Reminders and IOS Shortcuts.",
             "datePublished" : "2025-06-01",
             "dateModified"  : "2026-06-11"
         }
@@ -42,7 +42,7 @@
         <div class="faq-list">
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    What's the difference between <span class="brand">Cap<em>trieve</em></span> and a reminder app?
+                    A reminder app comes with the phone. What does this add?
                 </p>
                 <p class="faq-a">
                     A reminder app is a task list.
@@ -83,7 +83,7 @@
             </div>
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    Couldn't I build this myself with iOS Shortcuts?
+                    Couldn't I build this myself with IOS Shortcuts?
                 </p>
                 <p class="faq-a">
                     Some of it, yes – but do you?
@@ -173,7 +173,7 @@
                     Dense urban areas with tall buildings can interfere with GPS.
                     Just being indoors seriously reduces GPS signals.
                     Underground locations have no GPS at all.
-                    iOS and Android do the best they can with what is available.
+                    IOS and Android do the best they can with what is available.
                     <span class="brand">Cap<em>trieve</em></span> works with what the device provides – it has no access to
                     signals the device cannot receive.
                 </p>
@@ -210,9 +210,9 @@
                 </p>
                 <p class="faq-a">
                     On Android, NFC tags can wake <span class="brand">Cap<em>trieve</em></span> automatically.
-                    On iOS, NFC requires either the app to be open or a lock screen NFC shortcut to be configured.
+                    On IOS, NFC requires either the app to be open or a lock screen NFC shortcut to be configured.
                     These are decisions made by Google and Apple.
-                    On iOS, one swipe to the lock screen shortcut and a tap on the tag is the full gesture.
+                    On IOS, one swipe to the lock screen shortcut and a tap on the tag is the full gesture.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -363,7 +363,7 @@
                     house?
                 </p>
                 <p class="faq-a">
-                    Not automatically – iOS and Android both prevent apps from sending SMS without the user
+                    Not automatically – IOS and Android both prevent apps from sending SMS without the user
                     tapping Send.
                     That is a deliberate platform constraint, not a <span class="brand">Cap<em>trieve</em></span> limitation.
                 </p>
