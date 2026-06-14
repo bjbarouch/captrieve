@@ -38,8 +38,8 @@
             There and then not there.
         </p>
         <p class="reveal">
-            Captrieve is built for exactly this – capture in a few seconds, and it reminds you
-            when you're actually in the right place
+            <span class="brand">Cap<em>trieve</em></span> is built for exactly this – capture in a few seconds, and it reminds
+            you when you're actually in the right place
             to do something about it.
             Not at 2 PM on a Tuesday a week and a half before the appointment.
             When you need it because you just walked through the door.
@@ -270,14 +270,14 @@
 <section>
     <div class="container">
         <p class="section-label reveal">
-            What Captrieve is not
+            What <span class="brand">Cap<em>trieve</em></span> is not
         </p>
         <h2 class="reveal">
             Not a task manager.<br>
             <em>Not another system to maintain.</em>
         </h2>
         <p class="section-lead reveal">
-            Captrieve does not want you to organize anything.
+            <span class="brand">Cap<em>trieve</em></span> does not want you to organize anything.
             It does not have projects or tags or priorities or due dates.
             It has thoughts and cues.
             You speak the thought.
@@ -287,7 +287,8 @@
         <p class="section-lead reveal">
             If you've tried and abandoned approximately seventeen productivity systems, this is built for you.
             The ones that failed asked you to build and maintain a system.
-            Captrieve asks you to do one thing in the moment the thought arrives, and then nothing else.
+            <span class="brand">Cap<em>trieve</em></span> asks you to do one thing in the moment the thought arrives, and then
+            nothing else.
             Future you handles it when the cue fires.
         </p>
     </div>
@@ -303,11 +304,12 @@
             <div class="story reveal">
                 <p class="story-quote">
                     As a person with ADHD, ideas fly in <em>and out</em> of my mind all the time.
-                    Now I use Captrieve with NFC tags all over my house – in the kitchen, on my guitar, at my desk,
-                    on my TV.
+                    Now I use <span class="brand">Cap<em>trieve</em></span> with NFC tags all over my house – in the kitchen, on
+                    my guitar, at my desk, on my TV.
                     It not only reminds me of the thing I need to do, the song I want to learn to play, the show I
-                    heard about and want to watch, but the habit of checking in with Captrieve in all of these places
-                    is actually training me to remember stuff on my own just from being in those places!
+                    heard about and want to watch, but the habit of checking in with
+                    <span class="brand">Cap<em>trieve</em></span> in all of these places is actually training me to remember
+                    stuff on my own just from being in those places!
                 </p>
                 <p class="story-attr"><span>–</span> J. E. M., full-time student, part-time crazy person</p>
             </div>
@@ -317,7 +319,7 @@
                     wanted to bring up, but damn me if I knew what it was.
                     Now I capture it the second I think of it and it's there when I walk in the door.
                     My manager has noticed. I've noticed.
-                    I assigned my phone's action button to Captrieve.
+                    I assigned my phone's action button to <span class="brand">Cap<em>trieve</em></span>.
                 </p>
                 <p class="story-attr"><span>–</span> Priya S., project coordinator</p>
             </div>
@@ -350,7 +352,7 @@
 <section id="download">
     <div class="container">
         <p class="section-label reveal">
-            Get Captrieve
+            Get <span class="brand">Cap<em>trieve</em></span>
         </p>
         <h2 class="reveal">
             Try it free.<br><em>Pay when you believe it.</em>

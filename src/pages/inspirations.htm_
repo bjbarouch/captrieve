@@ -38,7 +38,7 @@
         <p class="reveal">
             This is a specific grief of creative work: The best ideas don't consult your schedule.
             They arrive when your hands are full and leave before you can get to them.
-            Captrieve is built for exactly this moment – catch it in seconds,
+            <span class="brand">Cap<em>trieve</em></span> is built for exactly this moment – catch it in seconds,
             and it finds you again when you're actually at
             the piano, at the desk, at the canvas.
         </p>
@@ -100,7 +100,7 @@
                     Reminders set to a time
                 </h3>
                 <p>
-                    Captrieve supports time-based reminders too.
+                    <span class="brand">Cap<em>trieve</em></span> supports time-based reminders too.
                     Sometimes they are the best you can do.
                     But their slogan should be: Well, I tried, but you were busy.
                     "Remind me at 9 AM."
@@ -128,7 +128,8 @@
         </h2>
         <p class="section-lead reveal">
             One tap, speak, done – before the idea finishes arriving.
-            Then tell Captrieve where you'll want it back: the yoga studio, the music studio, the easel, your desk at work, …
+            Then tell <span class="brand">Cap<em>trieve</em></span> where you'll want it back: the yoga studio, the music
+            studio, the easel, your desk at work, …
             It shows up <em>there</em>.
             Not in a pile of notes you never search.
             Not at a time you thought would work, but your schedule got moved around.
@@ -213,7 +214,8 @@
                 </h3>
                 <p>
                     The melody came in the car.
-                    You hummed it – all the parts, the rhythm, the feel – into Captrieve and told it
+                    You hummed it – all the parts, the rhythm, the feel – into <span class="brand">Cap<em>trieve</em></span> and
+                    told it
                     to give it back to you when you got to the studio.
                     When you walked in, there it was: two minutes of you doing your best impression
                     of a full band, enough to build the whole bridge from.
@@ -242,7 +244,7 @@
                     The problem is the same: the idea arrived when you couldn't use it,
                     and the tool you have for catching it doesn't guarantee it finds you
                     when you can.
-                    Captrieve does.
+                    <span class="brand">Cap<em>trieve</em></span> does.
                 </p>
             </div>
         </div>
@@ -262,7 +264,8 @@
         <p class="section-lead reveal">
             NFC tags are small stickers – under a dollar each – that you place at the locations where you
             do your creative work.
-            Tap your phone against one when you arrive and Captrieve shows you everything you've captured
+            Tap your phone against one when you arrive and <span class="brand">Cap<em>trieve</em></span> shows you everything
+            you've captured
             since you were last there.
             No menu to navigate.
             No notes pile to dig through.
@@ -271,7 +274,7 @@
         <p class="section-lead reveal">
             This is the difference between a capture tool and a retrieval tool.
             Voice memos capture.
-            Captrieve retrieves – at the moment and in the place where retrieval is useful.
+            <span class="brand">Cap<em>trieve</em></span> retrieves – at the moment and in the place where retrieval is useful.
         </p>
         <div class="cue-cards">
             <div class="use-case reveal">
@@ -344,7 +347,7 @@
                 <p class="story-quote">
                     I was working on a new piece of music for my band, and really struggling with the bridge.
                     It came to me on a walk, and it was really good!
-                    I hummed it into Captrieve and told it to cue me when I got to my piano.
+                    I hummed it into <span class="brand">Cap<em>trieve</em></span> and told it to cue me when I got to my piano.
                     When I sat down at the piano, there it was, instead of me not being able to recall it
                     from memory!
                     I don't know how I worked before this.
@@ -380,7 +383,7 @@
 <section id="download">
     <div class="container">
         <p class="section-label reveal">
-            Get Captrieve
+            Get <span class="brand">Cap<em>trieve</em></span>
         </p>
         <h2 class="reveal">
             Try it free.<br><em>Pay when you believe it.</em>

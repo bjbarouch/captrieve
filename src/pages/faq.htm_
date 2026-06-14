@@ -42,18 +42,19 @@
         <div class="faq-list">
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    What's the difference between Captrieve and a reminder app?
+                    What's the difference between <span class="brand">Cap<em>trieve</em></span> and a reminder app?
                 </p>
                 <p class="faq-a">
                     A reminder app is a task list.
                     You stop what you're doing, type the task, and configure its one trigger by hand.
                     In Apple's case that trigger can be a time, a place, or getting in the car – it has been able to do that
                     since 2011.
-                    Captrieve starts a step earlier, at the thought itself: Speak it before it escapes, then cue it by time,
+                    <span class="brand">Cap<em>trieve</em></span> starts a step earlier, at the thought itself: Speak it before
+                    it escapes, then cue it by time,
                     place, Wi-Fi network join, Wi-Fi network leave, NFC tag, nearby Bluetooth device, on or off charger, or
                     Do Not Disturb or Focus mode – alone or in combination, with conditions and delays, and in the case of
                     geofencing, you can even get notifications X minutes in advance of arrival.
-                    More importantly, Captrieve's whole job is capture and retrieval.
+                    More importantly, <span class="brand">Cap<em>trieve</em></span>'s whole job is capture and retrieval.
                     That single purpose makes it worth developing a habit around it, and makes developing that habit easier.
                     When a tool does one thing, you remember to use it.
                 </p>
@@ -74,9 +75,10 @@
                     "Target or Walmart, whichever comes first."
                     No NFC tags, no Wi-Fi networks, no arbitrary Bluetooth devices, no charger, no Focus mode.
                     Nothing for connecting you with someone in your care, to know if they are up and about, or oddly not.
-                    And delivery of geofenced Reminders is famously unreliable because as great as geofencing is, and Captrieve
+                    And delivery of geofenced Reminders is famously unreliable because as great as geofencing is, and
+                    <span class="brand">Cap<em>trieve</em></span>
                     supports it, it is affected by the weather, your location, and even how much battery your phone has left.
-                    Captrieve exists for everything else.
+                    <span class="brand">Cap<em>trieve</em></span> exists for everything else.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -88,7 +90,7 @@
                     In all the time you have had that option, have you taken the time, in a moment of inspiration, to take the
                     several unfamiliar steps you don't really understand to try to capture the thing you can't keep in mind
                     while concentrating ot creating the shortcut?
-                    What Shortcuts asks of you is the work Captrieve does for you.
+                    What Shortcuts asks of you is the work <span class="brand">Cap<em>trieve</em></span> does for you.
                     To set up a single NFC-cued reminder in Shortcuts: open the app, create a Personal Automation, select NFC,
                     hold the phone to the tag, name the automation, add a notification action, type the thought text, save.
                     That is eight steps for one thought.
@@ -100,7 +102,8 @@
                     There is no inbox, no snooze, no lifecycle – just a notification that fires and disappears.
                     If you want to change it later, you find the automation, edit, and save.
                     Shortcuts proves your phone can do this.
-                    Captrieve is the product that makes amazing functionality available without requiring you to become a
+                    <span class="brand">Cap<em>trieve</em></span> is the product that makes amazing functionality available
+                    without requiring you to become a
                     tech-knowledgeable feature developer.
                     <a href="/compare">See exactly what each approach requires →</a>
                 </p>
@@ -113,7 +116,7 @@
                     Perhaps due to the reliability issues mentioned above, Google discontinued them.
                     Google removed them when Keep's reminders migrated to Google Tasks in late 2025 – they can no longer be
                     created or received.
-                    Captrieve resurrects this capability for you.
+                    <span class="brand">Cap<em>trieve</em></span> resurrects this capability for you.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -171,7 +174,8 @@
                     Just being indoors seriously reduces GPS signals.
                     Underground locations have no GPS at all.
                     iOS and Android do the best they can with what is available.
-                    Captrieve works with what the device provides – it has no access to signals the device cannot receive.
+                    <span class="brand">Cap<em>trieve</em></span> works with what the device provides – it has no access to
+                    signals the device cannot receive.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -192,10 +196,11 @@
                 <p class="faq-a">
                     Select "When I tap an NFC tag" as your cue type, then hold your phone against the
                     tag when prompted.
-                    Captrieve reads the tag's unique identifier, without the tag needing any special programming.
+                    <span class="brand">Cap<em>trieve</em></span> reads the tag's unique identifier, without the tag needing any
+                    special programming.
                     You can name the tag – Desk, Car, Work, Backyard, Nightstand, anything you like.
                     NFC tags are readily available for as little at 15 cents a piece, and do not have to be programmed to work
-                    with Captrieve.
+                    with Cap<span class="brand">Cap<em>trieve</em></span>trieve.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -203,7 +208,7 @@
                     Does NFC work in the background, or do I have to open the app first?
                 </p>
                 <p class="faq-a">
-                    On Android, NFC tags can wake Captrieve automatically.
+                    On Android, NFC tags can wake <span class="brand">Cap<em>trieve</em></span> automatically.
                     On iOS, NFC requires either the app to be open or a lock screen NFC shortcut to be configured.
                     These are decisions made by Google and Apple.
                     On iOS, one swipe to the lock screen shortcut and a tap on the tag is the full gesture.
@@ -249,7 +254,7 @@
                     Congratulations!
                 </p>
                 <p>
-                    Captrieve is designed to make itself unnecessary, one habit at a time.
+                    <span class="brand">Cap<em>trieve</em></span> is designed to make itself unnecessary, one habit at a time.
                     The tag on your nightstand was never the point – the bedtime routine that no longer
                     requires a reminder is.
                     Keep the tags where they are.
@@ -287,9 +292,10 @@
                 <p class="faq-a">
                     <span class="tier">Connected</span> is a subscription layer that lets you share retrieves with people you
                     trust who also have
-                    Captrieve.
+                    <span class="brand">Cap<em>trieve</em></span>.
                     It is designed for family members and caregivers for someone who needs a little non-invasive monitoring.
-                    Let's say that Grandma uses Captrieve with NFC tags to mark when she takes her meds, or has breakfast.
+                    Let's say that Grandma uses <span class="brand">Cap<em>trieve</em></span> with NFC tags to mark when she
+                    takes her meds, or has breakfast.
                     It's a very simple motor habit for her to just put her phone on the tag by the med, or in the kitchen, or
                     the bathroom, or wherever.
                     Then you get to see  that she is up and about (or not so you call to check in on her), that she has taken
@@ -331,7 +337,7 @@
                     A subscription does.
                     <span class="tier">Solo</span> has no ongoing backend costs, so we don't charge you forever even though you
                     get to keep using
-                    Captrieve forever.
+                    <span class="brand">Cap<em>trieve</em></span> forever.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -340,7 +346,8 @@
                 </p>
                 <p class="faq-a">
                     Yes.
-                    Both the caregiver and the person being cared for have their own Captrieve accounts
+                    Both the caregiver and the person being cared for have their own
+                    <span class="brand">Cap<em>trieve</em></span> accounts
                     and their own subscriptions.
                     If the caregiver is not a family member, it is customary for the family to pay for their subscription.
                     Both users get the full app.
@@ -351,26 +358,29 @@
             </div>
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    Can Captrieve send a text message to my caregiver when I leave the house?
+                    Can <span class="brand">Cap<em>trieve</em></span> send a text message to my caregiver when I leave the
+                    house?
                 </p>
                 <p class="faq-a">
                     Not automatically – iOS and Android both prevent apps from sending SMS without the user
                     tapping Send.
-                    That is a deliberate platform constraint, not a Captrieve limitation.
+                    That is a deliberate platform constraint, not a <span class="brand">Cap<em>trieve</em></span> limitation.
                 </p>
                 <p class="faq-a">
                     There are two good answers depending on what your caregiver uses.
                 </p>
                 <p class="faq-a">
-                    If your caregiver uses Captrieve: when you tap your front door NFC tag, a presence event
-                    notification goes to their Captrieve immediately – "Left home, 10:47 AM."
+                    If your caregiver uses <span class="brand">Cap<em>trieve</em></span>: when you tap your front door NFC tag,
+                    a presence event notification goes to their <span class="brand">Cap<em>trieve</em></span> immediately –
+                    "Left home, 10:47 AM."
                     No text message needed.
                     This is the more reliable path and requires nothing from you beyond the tap you were
                     already making.
                 </p>
                 <p class="faq-a">
-                    If your caregiver does not use Captrieve: Captrieve can bring a pre-written text to your
-                    attention at exactly the right moment.
+                    If your caregiver does not use <span class="brand">Cap<em>trieve</em></span>:
+                    <span class="brand">Cap<em>trieve</em></span> can bring a pre-written text to your own attention at exactly
+                    the right moment.
                     Your caregiver writes the message during setup – "Heading out, will check in later."
                     When you tap the door tag, a prompt appears: "Let [name] know you're heading out?"
                     One tap opens your phone's Messages app with the message and recipient already filled in.
@@ -391,7 +401,7 @@
         <div class="faq-list">
             <div class="faq-item reveal">
                 <p class="faq-q">
-                    Does Captrieve send my location to a server?
+                    Does <span class="brand">Cap<em>trieve</em></span> send my location to a server?
                 </p>
                 <p class="faq-a">
                     No.

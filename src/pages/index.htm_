@@ -36,7 +36,8 @@
             </h1>
         </div>
         <p class="hero-sub reveal">
-            Captrieve solves a single problem: You have a thought you do not want to lose, and you want to remember it <em>when
+            <span class="brand">Cap<em>trieve</em></span> solves a single problem: You have a thought you do not want to lose,
+            and you want to remember it <em>when
             you can put it to use</em>.
         </p>
         <p class="hero-sub reveal">
@@ -73,7 +74,7 @@
             That's a whole different ballgame.
         </p>
         <p class="hero-tagline reveal">
-            Captrieve makes your ideas reappear when and where you tell them to.
+            <span class="brand">Cap<em>trieve</em></span> makes your ideas reappear when and where you tell them to.
         </p>
         <div class="cta-group reveal">
             <a href="#download" class="btn">App Store</a>
@@ -92,7 +93,8 @@
             Three steps.<br><em>That's the whole thing.</em>
         </h2>
         <p class="section-lead reveal">
-            Captrieve: You capture a thought when you have it, and it shows up when you need it.
+            <span class="brand">Cap<em>trieve</em></span>: You capture a thought when you have it, and it shows up when you need
+            it.
         </p>
         <div class="steps">
             <div class="step reveal">
@@ -105,7 +107,7 @@
                     </h3>
                     <p>
                         Tap, speak, done – before the thought is gone.
-                        (Captrieve is a great assignment for your phone's action button.)
+                        (<span class="tier">Connected</span> is a great assignment for your phone's action button.)
                     </p>
                 </div>
             </div>
@@ -206,9 +208,10 @@
                     Alternative indicators of location such as connecting to a particular WiFi network help, but require you to
                     take steps like hand-creating a Shortcut, something confusing and time consuming that the vast majority of
                     users never do.
-                    When geofencing does work, Captrieve lets you do things like when I leave work AND it's after 5, but not if
+                    When geofencing does work, <span class="brand">Cap<em>trieve</em></span> lets you do things like when I
+                    leave work AND it's after 5, but not if
                     I leave work for lunch, for an off-site meeting, or to take a short break and go on a walk.
-                    Does Apple give you that without Captrieve?
+                    Does Apple give you that without <span class="brand">Cap<em>trieve</em></span>?
                     No.
                 </p>
             </div>
@@ -224,7 +227,8 @@
             </div>
         </div>
         <p class="section-lead reveal" style="margin-top: 2rem;">
-            <a href="/compare" style="color: var(--accent);">See what it actually takes to do this without Captrieve →</a>
+            <a href="/compare" style="color: var(--accent);">See what it actually takes to do this without
+            <span class="brand">Cap<em>trieve</em></span> →</a>
         </p>
     </div>
 </section>
@@ -233,7 +237,7 @@
 <section class="section-spacious">
     <div class="container">
         <h2 class="reveal">
-            Who is Captrieve for?<br>
+            Who is <span class="brand">Cap<em>trieve</em></span> for?<br>
         </h2>
         <div class="audiences">
             <div class="audience reveal">
@@ -257,7 +261,8 @@
                     </li>
                 </ul>
                 <p style="margin-top: 1rem;">
-                    In fact, you can do these things without Captrieve, but do you even know how?
+                    In fact, you can do these things without <span class="brand">Cap<em>trieve</em></span>, but do you even know
+                    how?
                     Are you having Siri or Alexa make reminders for you, but then having them show up when it's still not a good
                     time to act on them?
                     Bottom line: Are you getting them done?
@@ -269,7 +274,8 @@
                 </h3>
                 <p>
                     Inspiration strikes when it strikes.
-                    Captrieve captures it at the speed it arrives and delivers it back when you are positioned to use it –
+                    <span class="brand">Cap<em>trieve</em></span> captures it at the speed it arrives and delivers it back when
+                    you are positioned to use it –
                     at the studio, at the desk, at the piano, in the setting where the work happens.
                 </p>
                 <p>
@@ -289,12 +295,14 @@
                     And now it's gone again.
                 </p>
                 <p>
-                    Captrieve is different from a reminder because it fires in context – when you walk into the pharmacy, when
+                    <span class="brand">Cap<em>trieve</em></span> is different from a reminder because it fires in context –
+                    when you walk into the pharmacy, when
                     you sit down at the piano, when you get in the car.
                     The context provides a reminder at the time you can actually use it.
                 </p>
                 <p>
-                    <a href="/adhd" style="color: var(--accent);">How Captrieve works for ADHD →</a>
+                    <a href="/adhd" style="color: var(--accent);">How <span class="brand">Cap<em>trieve</em></span> works for
+                    ADHD →</a>
                 </p>
             </div>
             <div class="audience reveal">
@@ -323,7 +331,7 @@
                     Families and caregivers
                 </h3>
                 <p>
-                    Set Captrieve up for someone you care for.
+                    Set <span class="brand">Cap<em>trieve</em></span> up for someone you care for.
                     Know they are moving through their day, or know to call them if they are not.
                     Share a thought that finds them at exactly the right moment.
                     Help them remember their medications, and their appointments.
@@ -345,7 +353,7 @@
                 <p class="story-quote">
                     I was working on a new piece of music for my band, and really struggling with the bridge.
                     It came to me on a walk, and it was really good!
-                    I hummed it into Captrieve and told it to cue me when I got to my piano.
+                    I hummed it into <span class="brand">Cap<em>trieve</em></span> and told it to cue me when I got to my piano.
                     When I sat down at the piano, there it was, instead of me not being able to recall it from memory!
                     I don't know how I worked before this.
                 </p>
@@ -362,7 +370,8 @@
             </div>
             <div class="story reveal">
                 <p class="story-quote">
-                    As a person with ADHD, ideas fly in <em>and out</em> of my mind all the time. Now I use Captrieve with NFC
+                    As a person with ADHD, ideas fly in <em>and out</em> of my mind all the time. Now I use
+                    <span class="brand">Cap<em>trieve</em></span> with NFC
                     tags all over my house – in the kitchen, on my guitar, at my desk, on my TV.
                     It not only reminds me of the
                     thing I need to do, the song I want to learn to play, the show I heard about and want to watch, but the
@@ -379,7 +388,7 @@
 <section id="download">
     <div class="container">
         <p class="section-label reveal">
-            Get Captrieve
+            Get <span class="brand">Cap<em>trieve</em></span>
         </p>
         <h2 class="reveal">
             Try it free.<br><em>Pay when you believe it.</em>

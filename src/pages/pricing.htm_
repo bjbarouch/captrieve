@@ -54,7 +54,7 @@
         <p class="section-lead reveal">
             The paywall appears after your twentieth retrieve – not after you've captured twenty thoughts,
             not on a timer, not before you've had a chance to explore.
-            At the right moment, like everything else Captrieve does.
+            At the right moment, like everything else <span class="brand">Cap<em>trieve</em></span> does.
         </p>
     </div>
 </section>
@@ -225,7 +225,8 @@
             <em>No ongoing relationship.</em>
         </h2>
         <p class="section-lead reveal">
-            <span class="tier">Solo</span> is the full local Captrieve experience – every cue type, unlimited retrieves,
+            <span class="tier">Solo</span> is the full local <span class="brand">Cap<em>trieve</em></span> experience – every
+            cue type, unlimited retrieves,
             everything
             on your device.
             No account.

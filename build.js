@@ -30,6 +30,25 @@ function substituteMarkers(source) {
         .replaceAll("{{min.js}}",  minJs);
 }
 
+/**
+ * Strips trailing whitespace from every line. Nunjucks leaves indented blank
+ * lines where {% %} control tags were; this removes those leftover spaces.
+ * @param {string} text
+ * @returns {string}
+ */
+function stripLineTrailingSpace(text) {
+    return text.replace(/[ \t]+$/gm, "");
+}
+
+/**
+ * Guarantees the text ends with exactly one trailing newline.
+ * @param {string} text
+ * @returns {string}
+ */
+function endWithNewline(text) {
+    return `${text.replace(/\n+$/, "")}\n`;
+}
+
 // ---------------------------------------------------------------------------
 // Nunjucks environment
 // ---------------------------------------------------------------------------
@@ -173,7 +192,7 @@ function buildPage(srcFile, outFile) {
         body    = nunjucks.renderString(source, context),
         html    = head + nav + body + footer + scripts;
     mkdirSync(path.dirname(outFile), { recursive: true });
-    writeFileSync(outFile, html);
+    writeFileSync(outFile, endWithNewline(stripLineTrailingSpace(html)));
     return true;
 }
 
@@ -195,7 +214,7 @@ function buildCss() {
     const
         result = sass.compile(srcFile, { style: devAndTest ? "expanded" : "compressed", sourceMap: true });
     mkdirSync(path.join(outDir, "css"), { recursive: true });
-    writeFileSync(outFile, result.css);
+    writeFileSync(outFile, endWithNewline(result.css));
     if (result.sourceMap) {
         writeFileSync(`${outFile}.map`, JSON.stringify(result.sourceMap));
     }
@@ -292,11 +311,11 @@ async function buildJs(built) {
         const
             source = substituteMarkers(readFileSync(srcFile, "utf8"));
         if (devAndTest) {
-            writeFileSync(outFile, source);
+            writeFileSync(outFile, endWithNewline(source));
         }
         else {
             const result = await minify(source, { module: true, compress: true, mangle: true });
-            writeFileSync(outFile, result.code);
+            writeFileSync(outFile, endWithNewline(result.code));
         }
         built.push(outName);
         if (verbose) {
@@ -480,7 +499,7 @@ function buildErrorPages() {
             footer  = njkEnv.render("footer.htm_",  context),
             scripts = njkEnv.render("scripts.htm_", context),
             html    = head + nav + body + footer + scripts;
-        writeFileSync(outFile, html);
+        writeFileSync(outFile, endWithNewline(stripLineTrailingSpace(html)));
         built++;
         if (verbose) {
             console.log(`  built errorPages/${code}.html`);

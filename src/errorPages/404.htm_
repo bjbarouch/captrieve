@@ -6,7 +6,7 @@
             Requested: <span id="request" style="font-family: monospace;"></span>
         </p>
         <p class="section-lead">
-            <a href="/index">Return to Captrieve</a>
+            <a href="/index">Return to <span class="brand">Cap<em>trieve</em></span></a>
         </p>
     </div>
 </div>

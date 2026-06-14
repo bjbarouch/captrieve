@@ -1,5 +1,5 @@
 {
-    "name"        : "captrieve",
+    "name"        : "Captrieve",
     "version"     : "1.0.0",
     "description" : "captrieve.com build toolchain",
     "type"        : "module",

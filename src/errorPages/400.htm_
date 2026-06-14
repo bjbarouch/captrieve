@@ -4,7 +4,7 @@
         <h1 id="err-message"></h1>
         <p class="section-lead">
             If you followed a link to get here, it may be outdated or mistyped.
-            <a href="/index">Return to Captrieve</a>
+            <a href="/index">Return to <span class="brand">Cap<em>trieve</em></span></a>
         </p>
     </div>
 </div>

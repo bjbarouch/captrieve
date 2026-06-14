@@ -1,6 +1,6 @@
 @font-face {
     font-family:  "Cormorant Garamond";
-    src:          url("/css/CormorantGaramond-VariableFont_wght.woff2") format("woff2");
+    src:          url("/fonts/CormorantGaramond-VariableFont_wght.woff2") format("woff2");
     font-weight:  300 700;
     font-style:   normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family:  "Cormorant Garamond";
-    src:          url("/css/CormorantGaramond-Italic-VariableFont_wght.woff2") format("woff2");
+    src:          url("/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2") format("woff2");
     font-weight:  300 700;
     font-style:   italic;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family:  "DM Sans";
-    src:          url("/css/DMSans-VariableFont_opsz,wght.woff2") format("woff2");
+    src:          url("/fonts/DMSans-VariableFont_opsz,wght.woff2") format("woff2");
     font-weight:  100 1000;
     font-style:   normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family:  "DM Sans";
-    src:          url("/css/DMSans-Italic-VariableFont_opsz,wght.woff2") format("woff2");
+    src:          url("/fonts/DMSans-Italic-VariableFont_opsz,wght.woff2") format("woff2");
     font-weight:  100 1000;
     font-style:   italic;
     font-display: swap;
@@ -139,7 +139,8 @@ nav {
 }
 
 .brand {
-    font-size : 95%;
+    font-size  : 110%;
+    font-style : bold;
 }
 
 .nav-links {
@@ -379,6 +380,40 @@ h3 {
     line-height  : 1.25rem;
 }
 
+/* ── Content lists ── */
+/* A plain <ul> anywhere in page content gets the same treatment as the
+   caregivers lists, so lists look consistent without a wrapper class.
+   Components that render their own markers (references, compare steps,
+   no-bullets, person-column) opt out below. */
+.page-hero ul, section ul {
+    list-style     : none;
+    padding-left   : 0;
+    margin         : 1rem 0 0;
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.5rem;
+}
+.page-hero li, section li {
+    display   : flex;
+    gap       : 0.5rem;
+    color     : var(--text-muted);
+    font-size : 0.9375rem;
+}
+.page-hero li::before, section li::before {
+    content     : "–";
+    color       : var(--accent-dim);
+    flex-shrink : 0;
+}
+.references, .no-bullets {
+    display : block;
+}
+.references li, .no-bullets li {
+    display : block;
+}
+.references li::before, .compare-steps li::before, .no-bullets li::before {
+    content : none;
+}
+
 .section-spacious {
     padding-bottom : 3.83rem;
     line-height   : 1.7;
@@ -530,6 +565,13 @@ h3 {
     padding       : 5rem 0 1.66rem;
     margin-top    : 3.8125rem;
     border-bottom : 1px solid var(--bg-rule);
+}
+
+/* When the hero is the only content (e.g. error pages, which have no section),
+   its bottom border sits directly above the footer's top border and reads as a
+   double line. Drop it there, mirroring section:last-of-type. */
+body:not(:has(section)) .page-hero {
+    border-bottom : none;
 }
 
 .page-hero h1 {
