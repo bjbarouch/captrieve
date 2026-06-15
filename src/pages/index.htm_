@@ -107,7 +107,7 @@
                     </h3>
                     <p>
                         Tap, speak, done – before the thought is gone.
-                        (<span class="tier">Connected</span> is a great assignment for your phone's action button.)
+                        (<span class="tier">CONNECTED</span> is a great assignment for your phone's action button.)
                     </p>
                 </div>
             </div>
@@ -386,7 +386,7 @@
 
 {% set getappLead %}
 Twenty retrieves, no credit card, no account.
-After that, a one-time purchase keeps it forever – or add the <span class="tier">Connected</span> tier for shared captures,
+After that, a one-time purchase keeps it forever – or add the <span class="tier">CONNECTED</span> tier for shared captures,
 presence events, and caregiver support.
 {% endset %}
 {% set getappFooter %}<a href="/pricing" style="color: var(--accent);">See full pricing →</a>{% endset %}

@@ -1,6 +1,9 @@
 <body>
 <nav>
-    <a href="/index" class="nav-brand">Cap<em>trieve</em></a>
+    <div class="nav-left">
+        <a href="/index" class="nav-brand">Cap<em>trieve</em></a>
+        {% if currentNavLabel %}<span class="nav-current">{{ currentNavLabel }}</span>{% endif %}
+    </div>
     <ul class="nav-links" id="nav-links">
         {% for item in site.nav %}
         <li><a href="{{ item.href }}"{% if item.href == "/" + currentPage %} class="active"{% endif %}>{{ item.label }}</a></li>

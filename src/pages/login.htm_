@@ -30,14 +30,14 @@
             Just <em>Kidding</em>
         </h2>
         <p class="reveal">
-            On the <span class="tier">Free</span> and <span class="tier">Solo</span> tiers of service, your captures stay on
+            On the <span class="tier">FREE</span> and <span class="tier">SOLO</span> tiers of service, your captures stay on
             your phone.
             The only thing the app ever sends us is anonymous diagnostics when something breaks – no identifier, none of your
             content, and you can turn it off.
             There is no need to have an account, and there would be no benefit in doing so.
         </p>
         <p class="reveal">
-            On the <span class="tier">Connected</span> plan, our server holds only the data you have chosen to share with
+            On the <span class="tier">CONNECTED</span> plan, our server holds only the data you have chosen to share with
             another <span class="brand">Cap<em>trieve</em></span> customer, and is shared only with them.
             While stored on our server it is encrypted.
             There is literally nothing to see here, by you, by us, or by any malicious attacker.

@@ -27,7 +27,7 @@
     <link rel="preload" href="/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-Italic-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=806a88">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=ada6d5">
     <noscript>
         <style>.reveal { opacity: 1; transform: none; }</style>
     </noscript>
@@ -37,7 +37,10 @@
 </head>
 <body>
 <nav>
-    <a href="/index" class="nav-brand">Cap<em>trieve</em></a>
+    <div class="nav-left">
+        <a href="/index" class="nav-brand">Cap<em>trieve</em></a>
+        <span class="nav-current">Caregivers</span>
+    </div>
     <ul class="nav-links" id="nav-links">
 
         <li><a href="/index">Home</a></li>
@@ -133,52 +136,36 @@
             own retrieves.
             The caregiving layer is what connects them.
         </p>
-        <div class="two-people reveal">
-            <div class="person-column">
-                <h3>
-                    The person being cared for
-                </h3>
-                <ul>
-                    <li>
-                        Uses <span class="brand">Cap<em>trieve</em></span> for their own captures and reminders
-                    </li>
-                    <li>
-                        Taps NFC tags at meaningful locations as part of their own routine
-                    </li>
-                    <li>
-                        Sees retrieves you've set up on their behalf at exactly the right moment
-                    </li>
-                    <li>
-                        Does not need to understand the cue model
-                    </li>
-                    <li>
-                        Chooses what to share – nothing happens without their action
-                    </li>
-                </ul>
-            </div>
-            <div class="person-column">
-                <h3>
-                    The caregiver
-                </h3>
-                <ul>
-                    <li>
-                        Sets up retrieves for the person they care for
-                    </li>
-                    <li>
-                        Sees a timestamped log of when and where the person checked in
-                    </li>
-                    <li>
-                        Uses their own captures in the person's home – the same NFC tags, independent retrieves
-                    </li>
-                    <li>
-                        Receives a notification when the person leaves or returns home
-                    </li>
-                    <li>
-                        Gets a real-time view of pending and actual retrieves
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <table class="cmp-table people-table reveal">
+            <thead>
+                <tr>
+                    <th>The person being cared for</th>
+                    <th>The caregiver</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Uses <span class="brand">Cap<em>trieve</em></span> for their own captures and reminders</li>
+                            <li>Taps NFC tags at meaningful locations as part of their own routine</li>
+                            <li>Sees retrieves you've set up on their behalf at exactly the right moment</li>
+                            <li>Does not need to understand the cue model</li>
+                            <li>Chooses what to share – nothing happens without their action</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Sets up retrieves for the person they care for</li>
+                            <li>Sees a timestamped log of when and where the person checked in</li>
+                            <li>Uses their own captures in the person's home – the same NFC tags, independent retrieves</li>
+                            <li>Receives a notification when the person leaves or returns home</li>
+                            <li>Gets a real-time view of pending and actual retrieves</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 
@@ -424,14 +411,14 @@
         </h2>
         <p class="section-lead reveal">
             Both the person you care for and you need <span class="brand">Cap<em>trieve</em></span> and a
-            <span class="tier">Connected</span> subscription.
+            <span class="tier">CONNECTED</span> subscription.
             You both get the full app – not a stripped-down companion version.
             Both of you benefit from it independently.
             The caregiving layer is what connects you.
         </p>
         <p class="section-lead reveal">
-            <span class="tier">Connected</span> is $2.99/month or $24.99/year.
-            After any 12 consecutive months of <span class="tier">Connected</span>, <span class="tier">Solo</span> is yours
+            <span class="tier">CONNECTED</span> is $2.99/month or $24.99/year.
+            After any 12 consecutive months of <span class="tier">CONNECTED</span>, <span class="tier">SOLO</span> is yours
             permanently –
             even if you stop the subscription.
         </p>

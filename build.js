@@ -179,12 +179,14 @@ function buildPage(srcFile, outFile) {
         meta        = extractMeta(source, srcFile),
         basename    = path.basename(srcFile, ".htm_"),
         pageScripts = site.pageScripts?.[basename] ?? { },
+        navItem     = site.nav.find(function matchNavItem(n) { return n.href === `/${basename}`; }),
         context     = {
             site,
             meta,
-            currentPage : basename,
-            headScripts : (pageScripts.headScripts ?? [ ]).map(substituteMarkers),
-            bodyScripts : (pageScripts.bodyScripts ?? [ ]).map(substituteMarkers)
+            currentPage     : basename,
+            currentNavLabel : navItem?.label ?? "",
+            headScripts     : (pageScripts.headScripts ?? [ ]).map(substituteMarkers),
+            bodyScripts     : (pageScripts.bodyScripts ?? [ ]).map(substituteMarkers)
         },
         head    = njkEnv.render("head.htm_",    context),
         nav     = njkEnv.render("nav.htm_",     context),

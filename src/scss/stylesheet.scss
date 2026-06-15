@@ -123,11 +123,33 @@ nav {
     border-bottom   : 1px solid var(--bg-rule);
 }
 
+.nav-left {
+    display     : flex;
+    align-items : center;
+    gap         : 0.65rem;
+    min-width   : 0;
+    flex        : 1;
+}
+
+.nav-current {
+    font-family    : var(--sans);
+    font-size      : 0.75rem;
+    font-weight    : 500;
+    letter-spacing : 0.15em;
+    text-transform : uppercase;
+    color          : var(--text-muted);
+    white-space    : nowrap;
+    overflow       : hidden;
+    text-overflow  : ellipsis;
+    padding-left   : 0.65rem;
+    border-left    : 1px solid var(--bg-rule);
+}
+
 .nav-brand, .brand {
     font-family     : var(--serif);
     font-size       : 1.25rem;
     font-weight     : 600;
-    color           : var(--text);
+    color           : var(--text-dark);
     letter-spacing  : 0.05em;
     text-decoration : none;
     white-space     : nowrap;
@@ -271,6 +293,9 @@ nav {
     nav {
         padding : 0.7rem 5%;
     }
+    .nav-current {
+        display : none;
+    }
 }
 
 /* ── Buttons ── */
@@ -324,7 +349,7 @@ nav {
     letter-spacing : 0.2em;
     text-transform : uppercase;
     color          : var(--accent-dim);
-    margin-bottom  : 1.25rem;
+    margin-bottom  : 1rem;
 }
 
 h2 {
@@ -349,44 +374,37 @@ h3 {
     margin-bottom : 0.5rem;
 }
 
-.no-bullets {
-    list-style-type : none;
-}
 .no-bullets li {
-    margin-top   : 1rem;
-    padding-left : 1rem;
-    line-height  : 1.25rem;
+    margin-top  : 1rem;
+    line-height : 1.25rem;
 }
 
 /* ── Content lists ── */
-/* A plain <ul> anywhere in page content gets the same treatment as the
-   caregivers lists, so lists look consistent without a wrapper class.
-   Components that render their own markers (references, compare steps,
-   no-bullets, person-column) opt out below. */
+/* A plain <ul> anywhere in page content gets a hanging dash marker, so lists
+   look consistent without a wrapper class. The marker is an inline-block sitting
+   in the left-padding gutter, which keeps the item text in normal inline flow --
+   inline markup such as the brand wordmark then wraps and sits on the baseline
+   correctly. Components with their own markers (references, compare steps,
+   no-bullets) suppress the dash below. */
 .page-hero ul, section ul {
-    list-style     : none;
-    padding-left   : 0;
-    margin         : 1rem 0 0;
-    display        : flex;
-    flex-direction : column;
-    gap            : 0.5rem;
+    list-style   : none;
+    padding-left : 0;
+    margin       : 1rem 0 0;
 }
 .page-hero li, section li {
-    display   : flex;
-    gap       : 0.5rem;
-    color     : var(--text-muted);
-    font-size : 0.9375rem;
+    color        : var(--text-muted);
+    font-size    : 0.9375rem;
+    padding-left : 1rem;
+}
+.page-hero li + li, section li + li {
+    margin-top : 0.5rem;
 }
 .page-hero li::before, section li::before {
     content     : "–";
     color       : var(--accent-dim);
-    flex-shrink : 0;
-}
-.references, .no-bullets {
-    display : block;
-}
-.references li, .no-bullets li {
-    display : block;
+    display     : inline-block;
+    width       : 1rem;
+    margin-left : -1rem;
 }
 .references li::before, .compare-steps li::before, .no-bullets li::before {
     content : none;
@@ -400,11 +418,6 @@ h3 {
 }
 
 /* ── Hero ── */
-
-.hero {
-    padding       : 3rem 0 1.66rem;
-    border-bottom : 1px solid var(--bg-rule);
-}
 
 .hero-top {
     display     : flex;
@@ -459,27 +472,12 @@ h3 {
 
 .hero-eyebrow {
     font-family    : var(--sans);
-    font-size      : 0.625rem;
+    font-size      : 0.6875rem;
     font-weight    : 500;
     letter-spacing : 0.2em;
     text-transform : uppercase;
     color          : var(--accent);
     margin-bottom  : 1.25rem;
-}
-
-.hero h1 {
-    font-family   : var(--serif);
-    font-size     : clamp(2.625rem, 8vw, 4rem);
-    font-weight   : 300;
-    line-height   : 1.1;
-    letter-spacing: -0.01em;
-    color         : var(--text);
-    margin-bottom : 1.5rem;
-}
-
-.hero h1 em {
-    font-style : italic;
-    color      : var(--accent);
 }
 
 .hero-sub {
@@ -508,34 +506,6 @@ h3 {
 .hero-home h1 {
     font-size     : clamp(1.75rem, 4.25vw, 2.75rem);
     margin-bottom : 1.5rem;
-}
-
-.hero-home .hero-eyebrow {
-    font-size      : 0.6875rem;
-    font-weight    : 500;
-    letter-spacing : 0.2em;
-    text-transform : uppercase;
-    color          : var(--accent);
-    margin-bottom  : 1.25rem;
-}
-
-.hero-home .hero-sub {
-    font-size     : 1.17rem;
-    line-height   : 1.65;
-    color         : var(--text-muted);
-    margin-bottom : 1rem;
-}
-
-.hero-home .hero-tagline {
-    font-family   : var(--serif);
-    font-size     : 1.375rem;
-    font-style    : italic;
-    font-weight   : 300;
-    color         : var(--text-muted);
-    border-left   : 2px solid var(--accent-dim);
-    padding-left  : 1.25rem;
-    margin-top    : 0.25rem;
-    margin-bottom : 1.25rem;
 }
 
 .page-hero {
@@ -606,43 +576,6 @@ body:not(:has(section)) .page-hero {
 .step p {
     color       : var(--text-muted);
     line-height : 1.65;
-}
-
-/* ── Triggers ── */
-
-.cues {
-    background : var(--bg-card);
-    padding    : 1.5rem;
-    margin-top : 1.5rem;
-}
-
-.cues-label {
-    font-size      : 0.6875rem;
-    font-weight    : 500;
-    letter-spacing : 0.15em;
-    text-transform : uppercase;
-    color          : var(--text-dim);
-    margin-bottom  : 1rem;
-}
-
-.cue-item {
-    padding       : 0.5rem 0;
-    border-bottom : 1px solid var(--bg-rule);
-    color         : var(--text-muted);
-    font-size     : 0.9375rem;
-    display       : flex;
-    align-items   : center;
-    gap           : 0.75rem;
-}
-
-.cue-item:last-child {
-    border-bottom : none;
-}
-
-.cue-icon {
-    color      : var(--accent-dim);
-    font-style : normal;
-    flex-shrink: 0;
 }
 
 /* ── Audiences ── */
@@ -898,68 +831,23 @@ body:not(:has(section)) .page-hero {
     line-height : 1.65;
 }
 
-.two-people {
-    display    : grid;
-    grid-template-columns: 1fr 1fr;
-    gap        : 1.5rem;
-    margin-top : 1.5rem;
+/* ── Two-column tables (compare + caregivers) ── */
+/* A real <table> forces the header band and (on compare) the verdict band to
+   share a row baseline across both columns, which the old side-by-side grid
+   could not guarantee when one side wrapped or ran longer than the other. */
+
+.cmp-table {
+    width           : 100%;
+    table-layout    : fixed;
+    border-collapse : collapse;
+    border          : 1px solid var(--bg-rule);
+    margin-top      : 2rem;
 }
 
-.person-column h3 {
-    font-family   : var(--serif);
-    font-size     : 1.125rem;
-    color         : var(--accent);
-    margin-bottom : 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom : 1px solid var(--bg-rule);
-}
-
-.person-column ul {
-    list-style : none;
-    display    : flex;
-    flex-direction: column;
-    gap        : 0.5rem;
-}
-
-.person-column li {
-    color     : var(--text-muted);
-    font-size : 0.9375rem;
-    display   : flex;
-    gap       : 0.5rem;
-}
-
-.person-column li::before {
-    content    : "–";
-    color      : var(--accent-dim);
-    flex-shrink: 0;
-}
-
-@media (max-width: 600px) {
-    .two-people {
-        grid-template-columns : 1fr;
-    }
-}
-
-/* ── Comparison table ── */
-
-.compare-table {
-    display              : grid;
-    grid-template-columns: 1fr 1fr;
-    gap                  : 0;
-    margin-top           : 2rem;
-    border               : 1px solid var(--bg-rule);
-}
-
-.compare-col {
-    display        : flex;
-    flex-direction : column;
-}
-
-.compare-col + .compare-col {
-    border-left: 1px solid var(--bg-rule);
-}
-
-.compare-header {
+.cmp-table th {
+    width          : 50%;
+    text-align     : left;
+    vertical-align : bottom;
     font-size      : 0.6875rem;
     font-weight    : 500;
     letter-spacing : 0.15em;
@@ -969,50 +857,64 @@ body:not(:has(section)) .page-hero {
     border-bottom  : 1px solid var(--bg-rule);
 }
 
-.compare-header.compare-header-captrieve {
-    color: var(--accent);
+.cmp-table td {
+    width          : 50%;
+    vertical-align : top;
+    padding        : 0;
+}
+
+.cmp-table th + th, .cmp-table td + td {
+    border-left : 1px solid var(--bg-rule);
+}
+
+.cmp-table th.col-captrieve {
+    color : var(--accent);
+}
+
+.people-table th {
+    color : var(--accent);
 }
 
 .compare-steps {
-    list-style     : none;
-    display        : flex;
-    flex-direction : column;
-    padding        : 1rem 1.25rem;
-    gap            : 0.625rem;
+    list-style : none;
+    padding    : 1rem 1.25rem;
 }
 
 .compare-steps li {
-    color       : var(--text-muted);
-    font-size   : 0.9375rem;
-    line-height : 1.55;
-    display     : flex;
-    gap         : 0.625rem;
+    color        : var(--text-muted);
+    font-size    : 0.9375rem;
+    line-height  : 1.55;
+    padding-left : 1.85rem;
+}
+
+.compare-steps li + li {
+    margin-top : 0.625rem;
 }
 
 .compare-steps li .step-n {
-    font-size      : 0.75rem;
-    font-weight    : 500;
-    color          : var(--accent-dim);
-    flex-shrink    : 0;
-    min-width      : 1.25rem;
-    padding-top    : 0.15em;
+    display      : inline-block;
+    width        : 1.25rem;
+    margin-left  : -1.85rem;
+    margin-right : 0.6rem;
+    font-size    : 0.75rem;
+    font-weight  : 500;
+    color        : var(--accent-dim);
 }
 
-.compare-col-captrieve .compare-steps li .step-n {
-    color: var(--accent);
+.compare-table .col-captrieve .step-n {
+    color : var(--accent);
 }
 
 .compare-verdict {
-    font-size     : 0.9375rem;
-    color         : var(--text-muted);
-    padding       : 0.875rem 1.25rem;
-    border-top    : 1px solid var(--bg-rule);
-    line-height   : 1.55;
-    margin-top    : auto;
+    font-size   : 0.9375rem;
+    color       : var(--text-muted);
+    line-height : 1.55;
+    padding     : 0.875rem 1.25rem;
+    border-top  : 1px solid var(--bg-rule);
 }
 
 .compare-verdict strong {
-    color: var(--text);
+    color : var(--text);
 }
 
 .compare-scenario {
@@ -1041,12 +943,28 @@ body:not(:has(section)) .page-hero {
 }
 
 @media (max-width: 600px) {
-    .compare-table {
-        grid-template-columns: 1fr;
+    .cmp-table {
+        display        : flex;
+        flex-direction : column;
     }
-    .compare-col + .compare-col {
-        border-left  : none;
-        border-top   : 1px solid var(--bg-rule);
+    .cmp-table thead, .cmp-table tbody, .cmp-table tfoot, .cmp-table tr {
+        display : contents;
+    }
+    .cmp-table th, .cmp-table td {
+        display : block;
+        width   : auto;
+    }
+    .cmp-table th + th, .cmp-table td + td {
+        border-left : none;
+    }
+    .cmp-table tr > :first-child {
+        order : 1;
+    }
+    .cmp-table tr > :last-child {
+        order : 2;
+    }
+    .cmp-table thead th:last-child {
+        border-top : 1px solid var(--bg-rule);
     }
 }
 
@@ -1122,8 +1040,8 @@ body:not(:has(section)) .page-hero {
 
 .tier {
     font-family : var(--serif);
-    font-size   : 1.25rem;
     font-weight : 600;
+    text-transform  : uppercase;
 }
 
 /* ── Prose links & references (science page) ── */
@@ -1146,12 +1064,15 @@ body:not(:has(section)) .page-hero {
 }
 
 .references li {
-    font-size     : 0.9375rem;
-    line-height   : 1.55;
-    color         : var(--text-muted);
-    padding-left  : 1.25rem;
-    text-indent   : -1.25rem;
-    margin-bottom : 0.85rem;
+    font-size   : 0.9375rem;
+    line-height : 1.55;
+    color       : var(--text-muted);
+    padding-left: 1.25rem;
+    text-indent : -1.25rem;
+}
+
+.references li + li {
+    margin-top : 0.85rem;
 }
 
 .references a {

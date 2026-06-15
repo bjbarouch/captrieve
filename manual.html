@@ -27,7 +27,7 @@
     <link rel="preload" href="/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-Italic-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=806a88">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=ada6d5">
     <noscript>
         <style>.reveal { opacity: 1; transform: none; }</style>
     </noscript>
@@ -37,7 +37,10 @@
 </head>
 <body>
 <nav>
-    <a href="/index" class="nav-brand">Cap<em>trieve</em></a>
+    <div class="nav-left">
+        <a href="/index" class="nav-brand">Cap<em>trieve</em></a>
+        <span class="nav-current">Manual</span>
+    </div>
     <ul class="nav-links" id="nav-links">
 
         <li><a href="/index">Home</a></li>
@@ -409,12 +412,22 @@
         <p class="reveal">
             Cues that depend on the world around you, such as places, networks, and tags, behave differently on real
             hardware than they do in a simulator, and delivery can be affected by low power and connectivity.
-            Common questions are answered on the <a href="faq">FAQ page</a>, and you can reach a person at
-            <a href="mailto:support@captrieve.com">support@captrieve.com</a>.
+            Common questions are answered on the <a href="faq">FAQ page</a>.
         </p>
         <p class="reveal">
             <em>Still being written:</em> a troubleshooting guide for each cue type will be added here as the platform
             behavior is confirmed during development.
+        </p>
+    </div>
+</section>
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            Contacting Customer Support
+        </p>
+        <p class="reveal">
+            If you need help with something not covered here, and certainly if you encounter a bug, you can reach customer
+            support by email: <a href="mailto:support@captrieve.com">support@captrieve.com</a>
         </p>
     </div>
 </section>

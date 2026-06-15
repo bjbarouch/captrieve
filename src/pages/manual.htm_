@@ -332,12 +332,22 @@
         <p class="reveal">
             Cues that depend on the world around you, such as places, networks, and tags, behave differently on real
             hardware than they do in a simulator, and delivery can be affected by low power and connectivity.
-            Common questions are answered on the <a href="faq">FAQ page</a>, and you can reach a person at
-            <a href="mailto:support@captrieve.com">support@captrieve.com</a>.
+            Common questions are answered on the <a href="faq">FAQ page</a>.
         </p>
         <p class="reveal">
             <em>Still being written:</em> a troubleshooting guide for each cue type will be added here as the platform
             behavior is confirmed during development.
+        </p>
+    </div>
+</section>
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            Contacting Customer Support
+        </p>
+        <p class="reveal">
+            If you need help with something not covered here, and certainly if you encounter a bug, you can reach customer
+            support by email: <a href="mailto:support@captrieve.com">support@captrieve.com</a>
         </p>
     </div>
 </section>

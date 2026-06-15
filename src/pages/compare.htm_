@@ -56,43 +56,51 @@
                 You want to catch it before it's gone and have it waiting when you get to the piano –
                 not in a pile of unlabeled voice memos.
             </p>
-            <div class="compare-table reveal">
-                <div class="compare-col">
-                    <div class="compare-header">
-                        Without <span class="brand">Cap<em>trieve</em></span>
-                    </div>
-                    <ul class="compare-steps">
-                        <li><span class="step-n">1</span>Dry off enough to handle your phone without destroying it.</li>
-                        <li><span class="step-n">2</span>Open Voice Memos (or Notes, or whatever you use).</li>
-                        <li><span class="step-n">3</span>Record or type the idea.</li>
-                        <li><span class="step-n">4</span>It sits in a pile with every other unlabeled memo.</li>
-                        <li><span class="step-n">5</span>Later, at the piano, remember the memo exists.</li>
-                        <li><span class="step-n">6</span>Find it – scroll the pile, hope you know which one it is.</li>
-                        <li><span class="step-n">7</span>Listen through several to find the right one.</li>
-                    </ul>
-                    <div class="compare-verdict">
-                        <strong>Realistic outcome:</strong> You don't do steps 5–7.
-                        The memo exists forever, unheard, in the pile.
-                    </div>
-                </div>
-                <div class="compare-col compare-col-captrieve">
-                    <div class="compare-header compare-header-captrieve">
-                        With <span class="brand">Cap<em>trieve</em></span>
-                    </div>
-                    <ul class="compare-steps">
-                        <li><span class="step-n">1</span>Tap the <span class="brand">Cap<em>trieve</em></span> button
-                        (assignable to the action button).</li>
-                        <li><span class="step-n">2</span>Speak the idea.</li>
-                        <li><span class="step-n">3</span>Tap "When I get to the piano" – one tap on a saved location.</li>
-                        <li><span class="step-n">4</span>Finish your shower.</li>
-                        <li><span class="step-n">–</span>When you sit down at the piano, it pops up.</li>
-                    </ul>
-                    <div class="compare-verdict">
-                        <strong>Total time:</strong> Under 30 seconds.
-                        Done before the idea finishes arriving.
-                    </div>
-                </div>
-            </div>
+            <table class="cmp-table compare-table reveal">
+                <thead>
+                    <tr>
+                        <th>Without <span class="brand">Cap<em>trieve</em></span></th>
+                        <th class="col-captrieve">With <span class="brand">Cap<em>trieve</em></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul class="compare-steps">
+                                <li><span class="step-n">1</span>Dry off enough to handle your phone.</li>
+                                <li><span class="step-n">2</span>Open Voice Memos (or Notes, or whatever you use).</li>
+                                <li><span class="step-n">3</span>Record or type the idea.</li>
+                                <li><span class="step-n">4</span>It sits in a pile with every other unlabeled memo.</li>
+                                <li><span class="step-n">5</span>Finish your shower.</li>
+                                <li><span class="step-n">6</span>Later, at the piano, remember the memo exists.</li>
+                                <li><span class="step-n">7</span>Find it – scroll the pile, hope you know which one it is.</li>
+                                <li><span class="step-n">8</span>Listen through several to find the right one.</li>
+                            </ul>
+                        </td>
+                        <td class="col-captrieve">
+                            <ul class="compare-steps">
+                                <li><span class="step-n">1</span>Open <span class="brand">Cap<em>trieve</em></span>.</li>
+                                <li><span class="step-n">2</span>Speak the idea.</li>
+                                <li><span class="step-n">3</span>Tap "When I get to the piano" – one tap on a saved location.</li>
+                                <li><span class="step-n">4</span>Finish your shower.</li>
+                                <li><span class="step-n">–</span>When you sit down at the piano, it pops up.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="compare-verdict">
+                            <strong>Realistic outcome:</strong> You don't do steps 6, 7, and 8.
+                            The memo exists forever, still forgotten, in the pile.
+                        </td>
+                        <td class="compare-verdict col-captrieve">
+                            <strong>Total time:</strong> Under 30 seconds.
+                            Done before the idea leaves you, and when you need it, it comes back to you.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
 
         <!-- ── Scenario 2 ── -->
@@ -103,48 +111,56 @@
             <p class="scenario-context">
                 You noticed a medication side effect on Wednesday.
                 Your appointment is Thursday.
-                You want the question to be there when the doctor asks if there's anything else –
-                not gone, the way it always is.
+                You want the question to be there when the doctor asks if there's anything you want to discuss.
+                You don't want to remember it only after you leave.
             </p>
-            <div class="compare-table reveal">
-                <div class="compare-col">
-                    <div class="compare-header">
-                        Without <span class="brand">Cap<em>trieve</em></span> – Apple Reminders
-                    </div>
-                    <ul class="compare-steps">
-                        <li><span class="step-n">1</span>Open Reminders.</li>
-                        <li><span class="step-n">2</span>Create a new reminder.</li>
-                        <li><span class="step-n">3</span>Type the question as a task.</li>
-                        <li><span class="step-n">4</span>Tap the location option.</li>
-                        <li><span class="step-n">5</span>Search for or enter the clinic address.</li>
-                        <li><span class="step-n">6</span>Set arriving vs. leaving.</li>
-                        <li><span class="step-n">7</span>Save.</li>
-                        <li><span class="step-n">8</span>Hope it fires. Reminders users call delivery a coin flip.</li>
-                        <li><span class="step-n">9</span>If it doesn't fire, remember it anyway – which was the problem.</li>
-                    </ul>
-                    <div class="compare-verdict">
-                        <strong>Also:</strong> You interrupted whatever you were doing on Wednesday to type a task.
-                        And you could only set one trigger.
-                        And there was no room for the full context – just a task label.
-                    </div>
-                </div>
-                <div class="compare-col compare-col-captrieve">
-                    <div class="compare-header compare-header-captrieve">
-                        With <span class="brand">Cap<em>trieve</em></span>
-                    </div>
-                    <ul class="compare-steps">
-                        <li><span class="step-n">1</span>Tap the <span class="brand">Cap<em>trieve</em></span> button.</li>
-                        <li><span class="step-n">2</span>Speak the question – in full, the way you'd say it.</li>
-                        <li><span class="step-n">3</span>Tap "When I arrive somewhere," select the clinic.</li>
-                        <li><span class="step-n">–</span>Thursday, when you walk through the clinic door, it reminds you.</li>
-                    </ul>
-                    <div class="compare-verdict">
-                        <strong>Also:</strong> Capture three more questions the same way over the next week.
-                        They all show up at the same moment.
-                        You walk in prepared.
-                    </div>
-                </div>
-            </div>
+            <table class="cmp-table compare-table reveal">
+                <thead>
+                    <tr>
+                        <th>Without <span class="brand">Cap<em>trieve</em></span> – Apple Reminders</th>
+                        <th class="col-captrieve">With <span class="brand">Cap<em>trieve</em></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul class="compare-steps">
+                                <li><span class="step-n">1</span>Open Reminders.</li>
+                                <li><span class="step-n">2</span>Create a new reminder.</li>
+                                <li><span class="step-n">3</span>Type the question as a task.</li>
+                                <li><span class="step-n">4</span>Tap the location option.</li>
+                                <li><span class="step-n">5</span>Search for or enter the clinic address.</li>
+                                <li><span class="step-n">6</span>Set arriving vs. leaving.</li>
+                                <li><span class="step-n">7</span>Save.</li>
+                                <li><span class="step-n">8</span>Hope it fires. Reminders users call delivery a coin flip.</li>
+                                <li><span class="step-n">9</span>If it doesn't fire, remember it anyway – which was the problem.</li>
+                            </ul>
+                        </td>
+                        <td class="col-captrieve">
+                            <ul class="compare-steps">
+                                <li><span class="step-n">1</span>Open <span class="brand">Cap<em>trieve</em></span>.</li>
+                                <li><span class="step-n">2</span>Speak the question – in full, the way you'd say it.</li>
+                                <li><span class="step-n">3</span>Tap "When I arrive somewhere," select the clinic.</li>
+                                <li><span class="step-n">–</span>Thursday, when you walk through the clinic door, it reminds you.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="compare-verdict">
+                            <strong>Also:</strong> You interrupted whatever you were doing on Wednesday to type a task.
+                            And you could only set one trigger.
+                            And there was no room for the full context – just a task label.
+                        </td>
+                        <td class="compare-verdict col-captrieve">
+                            <strong>Also:</strong> Capture three more questions the same way over the next week.
+                            They all show up at the same moment.
+                            You walk in prepared.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
 
         <!-- ── Scenario 3 ── -->
@@ -155,44 +171,51 @@
             <p class="scenario-context">
                 There's a thing you need to pick up.
                 The store is on your route home.
-                You want the reminder to fire when you leave work – but only on a workday,
-                after 5 PM, not on weekends when you're leaving for other reasons.
+                You want the reminder to fire when you leave work – but only if it's after 5, not at lunchtime or when you go to
+                that offsite meeting.
             </p>
-            <div class="compare-table reveal">
-                <div class="compare-col">
-                    <div class="compare-header">
-                        Without <span class="brand">Cap<em>trieve</em></span> – Apple Reminders
-                    </div>
-                    <ul class="compare-steps">
-                        <li><span class="step-n">1</span>This is not possible in Apple Reminders.</li>
-                        <li><span class="step-n">–</span>Reminders supports one trigger per item.
-                        "Leave work" is the trigger.
-                        "But only after 5 PM" cannot be added.</li>
-                        <li><span class="step-n">–</span>You could accept that it fires on weekends and holidays too.
-                        Or you could set a time reminder at 5 PM and miss it because you're not leaving yet.</li>
-                    </ul>
-                    <div class="compare-verdict">
-                        <strong>Realistic outcome:</strong> You either get a reminder that fires at the wrong times,
-                        or you don't set it because it won't work right.
-                    </div>
-                </div>
-                <div class="compare-col compare-col-captrieve">
-                    <div class="compare-header compare-header-captrieve">
-                        With <span class="brand">Cap<em>trieve</em></span>
-                    </div>
-                    <ul class="compare-steps">
-                        <li><span class="step-n">1</span>Tap the <span class="brand">Cap<em>trieve</em></span> button.</li>
-                        <li><span class="step-n">2</span>Speak the errand.</li>
-                        <li><span class="step-n">3</span>Set cue: "When I leave work."</li>
-                        <li><span class="step-n">4</span>Add condition: "But only after 5 PM."</li>
-                        <li><span class="step-n">–</span>Fires exactly when it should. Never when it shouldn't.</li>
-                    </ul>
-                    <div class="compare-verdict">
-                        <strong>Also possible:</strong> Add a 20-minute delay so it fires when you're close to the store,
-                        not the moment you step outside.
-                    </div>
-                </div>
-            </div>
+            <table class="cmp-table compare-table reveal">
+                <thead>
+                    <tr>
+                        <th>Without <span class="brand">Cap<em>trieve</em></span> – Apple Reminders</th>
+                        <th class="col-captrieve">With <span class="brand">Cap<em>trieve</em></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul class="compare-steps">
+                                <li><span class="step-n">1</span>This is not possible in Apple Reminders.</li>
+                                <li><span class="step-n">–</span>Reminders supports one trigger per item.
+                                "Leave work" is the trigger.
+                                "But only after 5 PM" cannot be added.
+                                Or you could say, "at 5:15", but then what if you end up staying at work until 6?</li>
+                            </ul>
+                        </td>
+                        <td class="col-captrieve">
+                            <ul class="compare-steps">
+                                <li><span class="step-n">1</span>Open <span class="brand">Cap<em>trieve</em></span>.</li>
+                                <li><span class="step-n">2</span>Speak the errand.</li>
+                                <li><span class="step-n">3</span>Set cue: "When I leave work."</li>
+                                <li><span class="step-n">4</span>Add condition: "But only after 5 PM."</li>
+                                <li><span class="step-n">–</span>Fires exactly when it should, not when it won't help.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="compare-verdict">
+                            <strong>Realistic outcome:</strong> You either get a reminder that fires at the wrong time, or you don't
+                            set it because it won't work right.
+                        </td>
+                        <td class="compare-verdict col-captrieve">
+                            <strong>Also possible with <span class="brand">Cap<em>trieve</em></span>:</strong> Add a 20-minute delay
+                            so it fires when you're close to the store, not the moment you step outside.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
 
         <!-- ── Scenario 4 ── -->
@@ -205,48 +228,57 @@
                 You want it to pop up every time you're there, without setting a new reminder each day.
                 And you have a different thing for your piano, and a different thing for your kitchen.
             </p>
-            <div class="compare-table reveal">
-                <div class="compare-col">
-                    <div class="compare-header">
-                        Without <span class="brand">Cap<em>trieve</em></span> – IOS Shortcuts
-                    </div>
-                    <ul class="compare-steps">
-                        <li><span class="step-n">1</span>Open Shortcuts. Find Personal Automations.</li>
-                        <li><span class="step-n">2</span>Tap the + to create a new automation.</li>
-                        <li><span class="step-n">3</span>Choose NFC as the trigger type.</li>
-                        <li><span class="step-n">4</span>Hold your phone against the tag to register it.</li>
-                        <li><span class="step-n">5</span>Name the automation.</li>
-                        <li><span class="step-n">6</span>Add a Show Notification action.</li>
-                        <li><span class="step-n">7</span>Type the reminder text into the notification body.</li>
-                        <li><span class="step-n">8</span>Save.</li>
-                        <li><span class="step-n">9</span>Repeat from step 1 for the piano. And the kitchen.</li>
-                        <li><span class="step-n">10</span>When the thought changes, find the automation and edit it.</li>
-                    </ul>
-                    <div class="compare-verdict">
-                        <strong>Also:</strong> No inbox.
-                        No snooze.
-                        No way to browse what you've set up across locations.
-                        Each automation is a separate artifact you manage forever.
-                    </div>
-                </div>
-                <div class="compare-col compare-col-captrieve">
-                    <div class="compare-header compare-header-captrieve">
-                        With <span class="brand">Cap<em>trieve</em></span>
-                    </div>
-                    <ul class="compare-steps">
-                        <li><span class="step-n">1</span>Tap the <span class="brand">Cap<em>trieve</em></span> button.</li>
-                        <li><span class="step-n">2</span>Speak the thing.</li>
-                        <li><span class="step-n">3</span>Tap "When I tap an NFC tag." Hold the phone to the tag.</li>
-                        <li><span class="step-n">–</span>Name the tag "Desk." Done.</li>
-                        <li><span class="step-n">–</span>Repeat for piano and kitchen – same three steps each.</li>
-                        <li><span class="step-n">–</span>All of it lives in your inbox. Edit any capture in place.</li>
-                    </ul>
-                    <div class="compare-verdict">
-                        <strong>Total setup:</strong> About two minutes for all three locations,
-                        including placing the tags.
-                    </div>
-                </div>
-            </div>
+            <table class="cmp-table compare-table reveal">
+                <thead>
+                    <tr>
+                        <th>Without <span class="brand">Cap<em>trieve</em></span> – IOS Shortcuts</th>
+                        <th class="col-captrieve">With <span class="brand">Cap<em>trieve</em></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul class="compare-steps">
+                                <li><span class="step-n">1</span>Open Shortcuts. Find Personal Automations.</li>
+                                <li><span class="step-n">2</span>Tap the + to create a new automation.</li>
+                                <li><span class="step-n">3</span>Choose NFC as the trigger type.</li>
+                                <li><span class="step-n">4</span>Hold your phone against the tag to register it.</li>
+                                <li><span class="step-n">5</span>Name the automation.</li>
+                                <li><span class="step-n">6</span>Add a Show Notification action.</li>
+                                <li><span class="step-n">7</span>Type the reminder text into the notification body.</li>
+                                <li><span class="step-n">8</span>Save.</li>
+                                <li><span class="step-n">9</span>Repeat from step 1 for the piano. And the kitchen.</li>
+                                <li><span class="step-n">10</span>When the thought changes, find the automation and edit it.</li>
+                            </ul>
+                        </td>
+                        <td class="col-captrieve">
+                            <ul class="compare-steps">
+                                <li><span class="step-n">1</span>Open <span class="brand">Cap<em>trieve</em></span>.</li>
+                                <li><span class="step-n">2</span>Speak the thing.</li>
+                                <li><span class="step-n">3</span>Tap "When I tap an NFC tag." Hold the phone to the tag.</li>
+                                <li><span class="step-n">–</span>Name the tag "Desk." Done.</li>
+                                <li><span class="step-n">–</span>Repeat for piano and kitchen – same three steps each.</li>
+                                <li><span class="step-n">–</span>All of it lives in your inbox. Edit any capture in place.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="compare-verdict">
+                            <strong>Also:</strong> No inbox.
+                            No snooze.
+                            No way to browse what you've set up across locations.
+                            Each automation is a separate artifact you manage forever.
+                        </td>
+                        <td class="compare-verdict col-captrieve">
+                            <strong>Total setup:</strong> About two minutes for all three locations,
+                            including placing the tags.
+                            You can get a bunch of tags for less than 30 cents each.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
 
     </div>
