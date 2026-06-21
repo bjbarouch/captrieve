@@ -298,7 +298,7 @@
 <section>
     <div class="container">
         <p class="section-label reveal">
-            From people using it
+            What this sounds like in practice
         </p>
         <div class="stories">
             <div class="story reveal">
@@ -350,7 +350,7 @@
 
 <!-- ── CTA ── -->
 {% set getappLead %}
-Twenty retrieves, no credit card, no account.
-After that, $7.99 keeps it forever.
+The everyday app is free forever, with no account and nothing leaving your phone.
+Unlock the power features with one small purchase, only when you want them.
 {% endset %}
 {% include "getapp.htm_" %}

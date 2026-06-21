@@ -4,19 +4,19 @@
     "@graph"   : [
         {
             "@type"         : "WebPage",
-            "name"          : "Captrieve – Capture in the moment. Retrieve in context.",
+            "name"          : "Captrieve – Capture in the moment. Retrieve it when you need it.",
             "url"           : "https://captrieve.com/index",
-            "description"   : "Captrieve solves a single problem: You have a thought you don't want to lose, and you want it back when you can act on it. Capture in seconds. Retrieve in context."
+            "description"   : "Captrieve solves a single problem: You have a thought you don't want to lose, and you want it back when you can act on it. Capture in seconds. Retrieve it when you need it."
         },
         {
-            "tabTitle" : "Captrieve – Capture in the moment. Retrieve in context."
+            "tabTitle" : "Captrieve – Capture in the moment. Retrieve it when you need it."
         },
         {
             "@type"         : "Article",
-            "headline"      : "Captrieve – Capture in the moment. Retrieve in context.",
-            "description"   : "Captrieve solves a single problem: You have a thought you don't want to lose, and you want it back when you can act on it. Capture in seconds. Retrieve in context.",
+            "headline"      : "Captrieve – Capture in the moment. Retrieve it when you need it.",
+            "description"   : "Captrieve solves a single problem: You have a thought you don't want to lose, and you want it back when you can act on it. Capture in seconds. Retrieve it when you need it.",
             "datePublished" : "2025-06-01",
-            "dateModified"  : "2026-06-10"
+            "dateModified"  : "2026-06-20"
         }
     ]
 }
@@ -36,45 +36,81 @@
             </h1>
         </div>
         <p class="hero-sub reveal">
-            <span class="brand">Cap<em>trieve</em></span> solves a single problem: You have a thought you do not want to lose,
-            and you want to remember it <em>when
-            you can put it to use</em>.
+            <strong><span class="brand">Cap<em>trieve</em></span>: Capture in the moment. Retrieve it when you need it.</strong>
         </p>
         <p class="hero-sub reveal">
-            You remember to do something – when you can't do anything about it, so you have to remember it again <em>at the
-            right time</em>.
+            That's the whole product.
         </p>
         <p class="hero-sub reveal">
-            You need to pick up that thing at the store, say something <em>just that way</em> when you have that tough
-            conversation, or that sales conversation.
+            You have a hundred thoughts a day you don't want to lose but can't act on yet.
+            The task you keep forgetting to do.
+            The name you couldn't recall.
+            The phrasing you want for making that key point in that meeting.
+            The riff in your head you mean to work on later.
+            The thing you keep forgetting to buy when you're actually at the store.
+            Some of us have a million of these. Some of us two million.
         </p>
         <p class="hero-sub reveal">
-            You have to work that idea into a character's backstory, put that riff in that song, finally remember to make that
-            call, do that task, … and you are in the car right now, driving. You are in bed right now, and instead of having a
-            million unfinished things streaming through your head, escaping almost as quickly as they arrive, you just want to
-            go to sleep <em>but not forget them!</em>
+            I lose so many that I had to build the <span class="brand">Cap<em>trieve</em></span> app.
         </p>
         <p class="hero-sub reveal">
-            So you <em>hope</em> you will remember these things when you can act on them.
-            How's that working for you?
+            Your phone can already store a note or pop up a reminder at a time and place.
+            But you don't reach for those to catch fleeting thoughts, or rarely do, because they aren't fit for it.
+            The thought lands in a pile of unsorted notes, and the reminder fires at a clock time or a general location that
+            misses the moment when it would have been most helpful.
+            Leaving work, sure, but not when you slip out at noon for the gym, only when you leave after 5 and you're actually
+            headed home.
         </p>
         <p class="hero-sub reveal">
-            In desperation, you dictate it to Siri or Alexa to put in a note, and forget to ask for it later, or you put it in a
-            Google doc, or even a spreadsheet, and it sits there, passively, not reminding you.
-            It sits there, unindexed, so it's hard to find even if you remember to go looking for it.
-            Or you stop what you're doing, open your reminders app, type it in as a task, pick a trigger like geofencing, and
-            hope – users will tell you how often those fail to fire.
-            And what if you needed to capture a tone of voice, or a melody – nope.
+            <span class="brand">Cap<em>trieve</em></span> makes a thought reappear exactly when and where you tell it to:
+        </p>
+        <ul class="hero-sub reveal">
+            <li>
+                The riff you hummed, played back to you the moment you tap on your instrument's case
+            </li>
+            <li>
+                The point to raise not just <em>somewhere</em> at work, but specifically in the meeting with Liza and Dan
+            </li>
+            <li>
+                Being reminded of the new bedtime habit you want to develop, just as you are about to get into bed
+            </li>
+            <li>
+                The racing thoughts, captured so you can finally go to sleep, confident they will be handed back to you in the
+                morning
+            </li>
+        </ul>
+        <p class="hero-sub reveal">
+            Here's the strange part.
+            Bring a creative thought to a clean conclusion and it gets harder to hold, not easier.
+            Once it feels complete, no longer open, no longer pending, your mind <em>wants</em> to let it go.
+            <span class="brand">Cap<em>trieve</em></span> catches it before it does, and retrieves it when you say you will need
+            to have it back.
         </p>
         <p class="hero-sub reveal">
-            What if your ideas took just a few seconds to record, and came looking for you the next time you are at your
-            computer, the next time you are leaving work to go home, the next time you are in the kitchen, the next time you
-            meet with that client, the next time you are at a doctor appointment, or just before you give that speech?
-            Wow.
-            That's a whole different ballgame.
+            With the optional Connected plan, the right thought can reach someone else at the right moment too.
+            Send your own voice to your anxious child during the school day, right there on his smartwatch, telling him you love
+            him and you're proud of him.
+            Or keep a light, respectful tie to an aging parent.
+            Leave reminders in your own voice that reach her right when they're useful, see that her scheduled ten o'clock
+            medication reminder went out, and let her phone quietly note that she's up in the morning and that she headed out
+            and came home as usual.
+            A day that stays silent then becomes your cue to call and check in.
         </p>
-        <p class="hero-tagline reveal">
-            <span class="brand">Cap<em>trieve</em></span> makes your ideas reappear when and where you tell them to.
+        <p class="hero-sub reveal">
+            Why not just get an app that helps you train your memory?
+            The research says that brain-training games make you better at the games.
+            Whether the gains cross over into real life is a live scientific debate.
+            In early 2016, the FTC settled with a well-known brain-game maker over ads promising exactly that real-life transfer
+            without scientific evidence to back it up.
+            A $50 million judgment was arrived at, and then cut to $2 million because the company couldn't pay the $50 million.
+        </p>
+        <p class="hero-sub reveal">
+            You have already tried many times to have a better memory.
+            If that was working really well for you, you wouldn't be reading this.
+            What you need is an external memory that actively gives things back when and where you can act on them.
+        </p>
+        <p class="hero-sub reveal">
+            Capture in the moment. Retrieve it when you need it. <span class="brand">Cap<em>trieve</em></span>.
         </p>
         <div class="cta-group reveal">
             <a href="#download" class="btn">App Store</a>
@@ -107,7 +143,7 @@
                     </h3>
                     <p>
                         Tap, speak, done – before the thought is gone.
-                        (<span class="tier">CONNECTED</span> is a great assignment for your phone's action button.)
+                        (<span class="brand">Cap<em>trieve</em></span> is a great assignment for your phone's action button.)
                     </p>
                 </div>
             </div>
@@ -172,7 +208,7 @@
                 <p>
                     It's in a pile of other voice memos.
                     Unlabeled. Unindexed.
-                    Waiting for you to remember it exists and go listening through them all to possibly find it.
+                    Waiting for you to remember it exists and go through them all to possibly find it.
                     Later never comes, or comes too late, or takes too long.
                 </p>
             </div>
@@ -192,10 +228,10 @@
                     The reminder you dismissed
                 </h3>
                 <p>
-                    It fired at 2 PM on Tuesday.
+                    It fired at 2 P.M. on Tuesday.
                     You were in the middle of something.
                     You dismissed it.
-                    2 PM Tuesday was never the right moment anyway.
+                    2 P.M. Tuesday was never the right moment anyway.
                     The pharmacy was the right moment, and the reminder was never going to know that.
                 </p>
             </div>
@@ -220,9 +256,10 @@
                     On Android
                 </h3>
                 <p>
-                    Google removed location-based reminders entirely in late 2025.
-                    They cannot be created or received anymore.
-                    On Android, this category is simply non-existent.
+                    In late 2025, Google retired location-based reminders from the tools it builds into Android, folding
+                    Reminders into Google Tasks, which has no location option.
+                    Out of the box, Google's reminders can no longer fire when you reach a place.
+                    A few third-party apps still do it, but most people never go hunting for one.
                 </p>
             </div>
         </div>
@@ -291,7 +328,8 @@
                     You wrote it down but never looked at the note.
                     What note?
                     Is there a note somewhere?
-                    The reminder fired at 2 PM on Tuesday and you dismissed it because you were in the middle of something else.
+                    The reminder fired at 2 P.M. on Tuesday and you dismissed it because you were in the middle of something
+                    else.
                     And now it's gone again.
                 </p>
                 <p>
@@ -346,7 +384,7 @@
 <section class="section-spacious">
     <div class="container">
         <p class="section-label reveal">
-            From people using it
+            What this sounds like in practice
         </p>
         <div class="stories">
             <div class="story reveal">
@@ -357,7 +395,6 @@
                     When I sat down at the piano, there it was, instead of me not being able to recall it from memory!
                     I don't know how I worked before this.
                 </p>
-                <p class="story-attr"><span>–</span> Jim F., singer, songwriter, keyboardist</p>
             </div>
             <div class="story reveal">
                 <p class="story-quote">
@@ -366,7 +403,6 @@
                     all my questions.
                     Last visit I remembered to ask about a medication reaction, and it turns out that it mattered.
                 </p>
-                <p class="story-attr"><span>–</span> Carolyn M., retired teacher</p>
             </div>
             <div class="story reveal">
                 <p class="story-quote">
@@ -376,18 +412,16 @@
                     It not only reminds me of the
                     thing I need to do, the song I want to learn to play, the show I heard about and want to watch, but the
                     habit of tapping an NFC tag in all of these places is actually training me to remember stuff on my own, just
-                    just from being in those places!
+                    from being in those places!
                 </p>
-                <p class="story-attr"><span>–</span> J. E. M., full-time student, part-time crazy person</p>
             </div>
         </div>
     </div>
 </section>
 
 {% set getappLead %}
-Twenty retrieves, no credit card, no account.
-After that, a one-time purchase keeps it forever – or add the <span class="tier">CONNECTED</span> tier for shared captures,
-presence events, and caregiver support.
+The everyday app is free.
+Unlock the power features for a one-time fee, or add the CONNECTED subscription for sharing thoughts and for caregiver support.
 {% endset %}
 {% set getappFooter %}<a href="/pricing" style="color: var(--accent);">See full pricing →</a>{% endset %}
 {% include "getapp.htm_" %}

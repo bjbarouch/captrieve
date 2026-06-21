@@ -4,7 +4,7 @@
 
 **Captrieve: Capture in the moment. Retrieve in context.**
 
-This is the product in six words.
+This is the product in seven words.
 Every design decision serves it.
 
 Captrieve solves a single problem: you have a thought you do not want to lose and cannot act on right now, and you want to
@@ -140,15 +140,18 @@ It is not a strong differentiator against Apple Reminders, which is also locally
 The privacy claim is true and should be made, but it should be aimed at the right targets.
 
 **Monetization.**
-v1: fully on-device, no backend, no account, $7.99 one-time after 20 free retrieves.
-The paywall fires at a moment of demonstrated value – the user has just experienced the product working as promised
-twenty times.
-$7.99 is priced at the non-brainer threshold, below the mental transaction cost of deciding whether to buy.
+Free: fully on-device, no backend, no account, the whole capture-and-retrieve loop with no retrieve cap, the everyday cues
+(date and time, app-open, an NFC tag tap up to five tags, and a Wi-Fi network up to two), single-condition only.
+Solo: a one-time purchase of about $10 unlocks the power tier, which is the rest of the cues (geofence, charger, Focus, and
+Bluetooth), the composition layer, and removal of the tag and network caps.
+The upgrade prompt fires at a moment of demonstrated value, when the user reaches for a paid cue, a sixth tag or third network,
+or any composition.
 
-v2: Connected Tier at $2.99/month or $24.99/year.
-The backend introduced for the Connected Tier has real ongoing costs; subscription is the honest pricing model for it.
-After 12 consecutive months of Connected subscription, Solo is permanently unlocked.
-Solo users are entirely unaffected by the Connected Tier's introduction.
+Connected: $2.99/month or $24.99/year, with Family Sharing on.
+The backend introduced for the Connected Tier has real ongoing costs, so a subscription is the honest pricing model for it.
+Connected includes the Solo power tier while active, and after 12 consecutive months the Solo power tier is permanently
+unlocked.
+A voluntary Supporter purchase exists as a topper for goodwill, and unlocks only a thank-you, never functionality.
 
 ### What to Tell Family
 
@@ -274,9 +277,61 @@ Pages built: caregivers.html, adhd.html, inspirations.html (creative people / in
 Each speaks entirely in the language of its audience's experience without requiring the visitor to read about other
 segments first.
 
+**The sequence: earn proof at retail, then borrow reach from organizations.**
+The motion is staged, and the order matters.
+First, build credibility-light at the retail level, person to person.
+Free educational talks at independent-living and active-55+ communities, taught as a class on memory and habit by a retired
+author and coach, with hands-on help installing the free app and setting up a few NFC tags on the spot.
+In parallel, low-key presence in the ADHD forums and informal ADHD media, showing up as the maker who built the tool for his
+own brain.
+This stage is teaching, not selling, which is why it fits a founder who does not enjoy and will not sustain a hard-sell motion.
+It also produces the three things the next stage needs: a relationship with the community's gatekeepers, real stories from real
+users, and first-hand UX learning from watching older and ADHD users onboard.
+
+Second, take that proof to organizations that already hold the audience, and offer them a genuinely useful free app as
+editorial content rather than an ad.
+A newsletter editor at an aging-services or ADHD organization is pitched constantly, and "please feature my app" is ignorable.
+"A retired author built a free, privacy-respecting memory tool, taught it at local senior communities, and here is what a
+resident and her daughter said about it" is a story they would want anyway.
+The retail stage is what converts the org pitch from a request into a gift.
+
+**Organizations to approach, once there is proof to show.**
+Aging and caregiving: AARP and its state chapters, Area Agencies on Aging, the National Council on Aging, local senior-center
+networks, and caregiver-focused groups such as the Alzheimer's Association and the Family Caregiver Alliance.
+The caregiver-focused groups are the sweet spot, because their readers are the adult children, who are exactly who converts to
+Connected.
+ADHD: CHADD, ADDA (adult ADHD specifically, which matches the product better than child-focused channels), and the large
+informal channels of ADHD newsletters, Substacks, podcasts, and subreddits, which are often more reachable and more
+influential than the formal nonprofits.
+
+**The parent-to-adult-child bridge.**
+The funnel is deliberate and maps onto the tier model rather than fighting it.
+The parent installs the free app, often with in-person setup, and lives happily in the free tier.
+The paid conversion is the adult child subscribing to Connected to stay in the loop, which is exactly what Connected is for, and
+Family Sharing means one subscription covers the pair.
+To keep this from leaking, make the bridge explicit: a one-page handout the resident can hand to their child, and an in-app
+"invite a family member to stay connected" flow that makes the Connected value obvious to the child.
+
+**The ethical guardrail, stated as a hard constraint.**
+The two target communities are exceptionally alert to exploitation, and rightly so.
+The instant any of this reads as a funnel that softens up vulnerable people so their families can be sold a subscription, the
+outreach fails and the standing in a small, talkative world is lost.
+The protection is that the product is genuinely free and genuinely private, and the story stays honest to that.
+Connected must be discoverable by anyone who wants it, but it is never the point of the outreach, never mentioned to a room of
+residents, and never the thing an organization is implicitly helping sell.
+The free app is the offer, and Connected is found, not pushed.
+This is both the ethics and the strategy, and they point the same direction.
+
+**The shape of the motion.**
+This is slow compounding, not a launch.
+Talks produce stories, stories make org pitches land, an org feature produces a burst of free installs, and a small fraction of
+those families find Connected on their own.
+Each loop is months, and none of it works until the app is live and solid in both stores.
+It rewards patience, genuineness, and a real thing built well, and it does not require becoming a salesperson.
+
 **What this does not change.**
 The product does not change.
-The solo tier, the pricing, the feature set – none of these are altered by the go-to-market strategy.
+The pricing, the tiers, and the feature set are set by the Monetization section, not by the go-to-market strategy.
 Community-first acquisition is a constraint on messaging and site structure, not on the product itself.
 
 ---
@@ -445,7 +500,7 @@ Status codes: [LIVE] = on faq.html now. [SPEC ONLY] = defined here, not yet on s
    (Links to compare.html for side-by-side task breakdown.)
 -  I'm on Android – didn't Google have location reminders? [LIVE]
 -  What's a retrieve? [LIVE]
--  Why does the free tier cap on retrieves rather than captures? [LIVE]
+-  What is free, and what does Solo unlock? [LIVE]
 -  What happens to my captures if I delete the app? [LIVE]
 
 **Cues and reliability**
@@ -700,8 +755,9 @@ Transcription runs in the background – the user is not blocked waiting for it.
 A "transcribing..." indicator appears on the capture in the inbox.
 The review-and-confirm step is available when the user next opens that capture's detail view, not as a blocking step in the
 capture flow.
-Audio is retained alongside the transcript as backup.
-The user may discard audio to save storage.
+By default audio is retained alongside the transcript as a backup, and the user may discard it to save storage.
+When a capture is set to play its recording on retrieve, or is marked audio-primary, the audio is the content rather than a
+backup, and it is protected from discard while that setting holds (see Audio playback on retrieve).
 
 ### Maps and Geofencing
 
@@ -710,7 +766,10 @@ Geocoding via a compatible OpenStreetMap geocoding package, supporting place nam
 addresses.
 
 Background geofencing via platform-native APIs through a Flutter geofencing package.
-Geofencing is a first-class feature, not an add-on.
+Geofencing is a first-class feature within the paid tier in v1, not an add-on, and may migrate to the free tier in a later
+version (see Monetization).
+Because geofence is paid in v1, the free app ships with no always-on location permission, which is a deliberate
+simplification.
 Reliable background cue delivery is a core product promise.
 
 ### Notifications
@@ -733,8 +792,10 @@ Everything the user stores is a Capture.
 | `id` | UUID | |
 | `createdAt` | DateTime | |
 | `body` | String | Transcribed text, or typed text |
-| `audioPath` | String? | Local path to audio recording, if kept |
+| `audioPath` | String? | Local path to audio recording, if kept. Protected from discard when playAudioOnRetrieve or audioIsPrimary is set |
 | `photoPath` | String? | Local path to photo, if attached |
+| `playAudioOnRetrieve` | bool | If true, the original recording plays when the capture is retrieved, not only shown or read |
+| `audioIsPrimary` | bool | If true, the recording is the content: transcription is skipped or hidden, the audio is protected from discard, and the inbox shows a voice-note row |
 | `triggers` | List\<Trigger\> | One or more; OR logic across the list |
 | `status` | CaptureStatus | pending, surfaced, snoozed, dismissed |
 | `snoozedUntil` | DateTime? | Set when status is snoozed |
@@ -764,7 +825,7 @@ Any cue that fires delivers the notification.
 | `inlineRadius` | double? | Meters |
 | `wifiSsid` | String? | For wifi_join and wifi_leave triggers |
 | `bluetoothDeviceName` | String? | For bluetooth_connect and bluetooth_disconnect triggers |
-| `nfcTagId` | String? | For nfc_checkin triggers; the tag's unique identifier |
+| `nfcTagId` | String? | For nfc_checkin triggers; the app-minted UUIDv4 written to the tag at registration |
 | `delayMinutes` | int? | Delay after primary event before notification fires |
 | `repeatAfterMinutes` | int? | If set, fires again N minutes after initial delivery |
 | `andConditions` | List\<Condition\> | All must pass at moment of firing |
@@ -976,8 +1037,8 @@ The tap is a deliberate micro-ritual: I am here now, what do I need to know?
 
 NFC tags are inexpensive (under $1 each), widely available, and can be placed anywhere: a desk, a piano, a car dashboard,
 a medicine cabinet, a front door, an airplane seat armrest.
-The user writes a unique identifier to each tag during setup.
-When the phone reads that identifier, the associated capture surfaces.
+At first claim the app writes its own identifier to the tag and locks it (see Tag identity and registration below).
+When the phone later reads that identifier, the associated capture surfaces.
 
 **The check-in habit.**
 For users with ADHD or age-related memory impairment, passive cues fire at them.
@@ -1017,10 +1078,13 @@ This confirms the tap registered, the tag is recognized, and the absence of a re
 malfunction.
 The user does not need to tap again.
 When the user selects nfc_checkin as a cue type, they are prompted to tap a tag to register it.
-The app reads the tag's unique ID and stores it as `nfcTagId` on the trigger.
-If the tag has no ID written, the app writes one.
-The user can name the tag (e.g. "Piano", "Desk", "Car") – this name is stored locally and used in the cue summary.
-Named tags are saved to a tag library analogous to the saved Locations list and can be reused across captures.
+Registration mints and writes the tag's identity and locks the tag (see Tag identity and registration below), then stores
+that identity as `nfcTagId` on the trigger.
+The user can name the tag (e.g. "Piano", "Desk", "Car") – this name is a local mapping from the identity to a human label,
+stored on the device and used in the cue summary.
+Renaming changes only the label; the identity is unchanged, so every capture pointing at the tag is undisturbed.
+Named tags are saved to a tag library analogous to the saved Locations list, any number of captures may point at one tag, and
+a tag can be reused across captures.
 
 **Signal abstraction.**
 NFC follows the same abstraction principle as BLE proximity: the raw hardware event is converted to a single
@@ -1034,10 +1098,146 @@ This parallelism is intentional: all context-sensing cue types in Captrieve expo
 departed, connected, disconnected, tapped, opened) and hide all hardware complexity below that abstraction boundary.
 
 Implementation note: Flutter NFC packages support tag reading and writing on both IOS and Android.
-IOS requires the NFCReaderSession API, which requires user initiation – background NFC scanning is not available on IOS.
-Android supports more permissive background NFC behavior.
-On IOS, the check-in model (user taps intentionally) maps naturally to the platform constraint.
-This should be presented to the user as the intended interaction, not as a limitation.
+Two NFC operations exist, and they are different.
+Registration is a one-time foreground session (NFCReaderSession on IOS, reader mode on Android) that the app initiates – the
+only moment a tag is read in the foreground or written.
+Retrieval, after registration, uses background reading on both platforms: the written NDEF Universal Link is dispatched to the
+app by the OS without the app open (see Tag identity and registration for the full model and its platform caveats).
+The earlier framing – that IOS cannot read in the background, so the intentional foreground tap is the only model – is
+superseded. Background reading is available on IOS for NDEF Universal Links and is the better retrieval path; the foreground
+session survives only as the one-time registration step.
+
+**Tag selection and purchasing guidance.**
+Users supply their own tags, so the spec must define exactly which tags are compatible, and the website and manual must
+relay that in plain language.
+The recommended tags are the NXP NTAG21x family – NTAG213, NTAG215, or NTAG216 – which are inexpensive, ISO 14443 Type A,
+universally readable by current iPhones and Android phones, and writable NDEF.
+Any of the three suffices because Captrieve stores only a small identifier on the tag, not real content, so the least
+expensive (NTAG213) is adequate.
+Tags must be acquired rewritable and not pre-locked, because registration writes an NDEF Universal Link to the tag and then
+locks it (see Tag identity and registration below).
+A read-only or pre-locked tag cannot be registered.
+
+Tags that must be excluded, with the reason in each case:
+
+-  Privacy / anti-tracking / random-UID tags – emit a different identity on every read by design and resist stable NDEF use.
+-  Magic / changeable-UID tags – sold for cloning, and the writable UID makes them untrustworthy as a fixed identifier.
+-  MIFARE Classic – inconsistently supported or wholly unsupported on IOS. NTAG21x avoids this entirely.
+-  Pre-locked / read-only tags – cannot accept the NDEF write that registration performs.
+
+Metal placement requires anti-metal (ferrite-backed, "on-metal") tags.
+A plain sticker tag detunes against metal and fails to read.
+This is a placement caveat rather than a compatibility one, but it is the single most common field failure, so it belongs in
+the user-facing guidance.
+Per the Language Standard for hardware constraints, this is the tag's physics, not a Captrieve deficiency.
+
+**Tag identity and registration (resolved model).**
+This replaces the earlier read-vs-write fork. The model is: the app mints its own identifier, writes it to the tag once, and
+locks the tag. The factory UID is not used.
+
+Identity.
+At first claim the app generates a UUIDv4 and writes a single NDEF record – the Universal Link https://captrieve.com/t/<uuid>
+– as the only record on the tag, then applies the tag's one-way lock.
+The UUID is the canonical identity, stored as `nfcTagId`.
+A UUIDv4 is opaque: a stranger who reads the sticker learns a random token and nothing else – no hardware identifier, no
+content, no user.
+Two unrelated people could even use the same physical tag with entirely separate local mappings and never collide.
+
+Registration flow (one foreground session per tag, at first claim). The session branches on what the tag already holds:
+
+-  Blank tag – mint a UUIDv4, write the Universal Link as the sole record, lock the tag, save the identity. The normal path.
+-  Tag already carrying a Captrieve Universal Link – adopt the existing UUID in place. No write, no new identity. This is what
+   makes a second device, a fresh reinstall, or a found tag just work, and it is why locking does not strand a tag: the
+   identity on the tag is reusable even when the phone that wrote it is gone.
+-  Foreign NDEF, or a tag locked by something else – refuse gracefully with a plain explanation, rather than fail silently.
+
+Why locking. An unlocked tag that someone later overwrites produces the worst failure mode: the user concludes the app
+stopped working when in fact the tag changed under it. The one-way lock forecloses this. The cost is that the tag can never
+be re-pointed, which is acceptable because re-pointing is not a use case – a tag marks a fixed physical place.
+
+The re-adoption consequence, stated plainly. Re-adopting a tag restores the tag as a working slot, not its associations.
+The name and the captures lived only in the phone's local store, never on the tag, so a tag recovered after its mapping is
+lost comes back empty: a valid identity with no name and nothing attached.
+The user re-labels and re-populates it.
+For someone who has scattered tags across home, work, and car, re-adoption is still a large win over re-buying and re-placing
+them – but it is recovery of the slots, not their contents, and the manual must say so rather than let "the sticker still
+works" imply otherwise.
+
+Naming. Naming is a local mapping uuid to a human label. Rename edits the label only; the identity is unchanged, so every
+capture pointing at the tag is undisturbed. Any number of captures may point at one tag.
+
+Retrieval path and platform mechanics. After registration a tap is handled by OS background reading of the written Universal
+Link, with no app open and no button:
+
+-  IOS – Background Tag Reading dispatches the link to the app as an NSUserActivity. Requirements: the Associated Domains
+   entitlement (applinks:captrieve.com) and a valid apple-app-site-association file at
+   https://captrieve.com/.well-known/apple-app-site-association. That file is fetched by Apple at app install, validated, and
+   cached on the device. Tag taps thereafter resolve against the local cache with no network call. The Universal Link must be
+   the first NDEF record. Limits: iPhone XS and later (effectively all current devices); the phone must have been unlocked
+   once since boot, with the display on, and not mid Core-NFC session, Apple Pay, or camera use; iOS shows a banner the user
+   taps, and a locked phone asks to unlock first. The app receives the URL and parses the UUID from the path – it never
+   fetches the URL.
+-  Android – an intent filter on the NDEF URI, with autoVerify against a Digital Asset Links file, lets the OS launch the app
+   from the tap, generally without the extra confirmation IOS imposes. The live UID could also be read here, but is not
+   needed; the written UUID keeps both platforms on one identity.
+
+A failure mode to expect in testing: if the apple-app-site-association file (or the Android Digital Asset Links file) is
+missing, malformed, or unreachable at install time, the OS silently falls back to treating the link as a plain web URL and
+opens the browser. The domain and files must be live and correct before users install, not only before they tap.
+
+Installed-app-versus-not. Because the identity is a real Universal Link on a domain Captrieve controls, a tap on a phone
+without the app installed opens https://captrieve.com/t/<uuid> in the browser, which is a soft install-prompt opportunity
+rather than a dead tap. Installed app gets the parsed UUID; no app gets the web page; never both.
+
+Apple relationship. Writing NDEF, including the Universal Link, is plain Core NFC under the same "Near Field Communication
+Tag Reading" capability used for reading. There is no separate Apple agreement or approval for writing. The only addition
+versus pure reading is the Associated Domains entitlement, which is free and self-serve. The NFC & SE ("payments") path,
+which does require Apple approval, is not used. The standing build prerequisite is unchanged: the paid Apple Developer Program
+plus the Tag Reading capability, now plus Associated Domains.
+
+**Backup and the tag mapping.**
+Because the tag carries only an opaque UUID, and the uuid-to-name mapping plus the captures live only on the device, that
+local store is the single copy of everything that gives a tag meaning.
+It must be covered by the same backup path already specified for the Connected key material: the local store is backed up
+through the platform's own mechanism (iCloud, Android backup), and a reinstall on the same Apple or Google account restores
+it.
+Without a backup, a lost or wiped phone loses the mappings permanently. The locked tags survive as reusable identities but
+return empty on re-adoption.
+This is mandatory hygiene, stated in the user manual as plainly as "back up your phone," not buried.
+
+**Cross-device and sync (resolved).**
+This was an open fork. It is now decided.
+v1 ships JSON export and import of the tag library and the wider local store.
+Import defaults to merge: the incoming library is unioned with the local one, keyed by tag UUID, so the same physical tag is
+never duplicated.
+On a name conflict for the same UUID the rule is last-write-wins by timestamp.
+Replace is offered as an explicit alternative that discards the local library and takes the incoming one wholesale.
+The transport is any plain-text channel the user already has: a copy and paste of the JSON, or the JSON exported as a small
+file handed to the OS share sheet.
+The share sheet is the deliberate choice for the "Bluetooth on demand" wish.
+It already routes through AirDrop on IOS, Quick Share and Nearby on Android, and Bluetooth, email, and messages on both, so
+device-to-device transfer within one ecosystem falls out for almost no code.
+A custom app-managed Bluetooth path is explicitly rejected.
+IOS exposes no classic-Bluetooth serial channel to third-party apps, BLE peripheral support in Flutter is limited and
+platform-inconsistent, and the share sheet already delivers the same result.
+The cost would be disproportionate for a feature that is secondary by design.
+
+Live cloud sync stays deferred, but the deferral now has a decided shape rather than an open question.
+Three cloud paths exist and only one is worth building.
+Platform cloud on IOS (iCloud, CloudKit or key-value) is easy and privacy-clean but Apple-only.
+It is worth adding only as an optional nicety when a user's secondary device is also Apple, and never as the general answer.
+Google Drive or Firebase reaches both platforms but drags in a third-party backend and an account, which contradicts the
+no-server, no-account promise of the local tiers, so it is rejected.
+The Connected backend is the chosen path if and when live sync is built.
+It is the only transport that is both cross-ecosystem and privacy-clean, because the relay is app-to-app rather than tied to
+any vendor cloud and is already end-to-end encrypted.
+The work it adds is incremental rather than trivial: a new synced data type, end-to-end encryption of that payload like the
+rest, and multi-device conflict resolution, for which last-write-wins on timestamps is sufficient for a uuid-to-name map.
+It is therefore Connected-tier-only and gated on the Connected backend existing at all, which is a later release.
+The one fork that changes this calculus is the nature of the user's secondary device.
+An Apple secondary makes the optional iCloud nicety cheap.
+An Android secondary makes the Connected backend the only privacy-clean route, since no single consumer cloud spans iPhone
+and Android.
 
 ### app_open
 
@@ -1097,6 +1297,47 @@ For the thing you see, not the thing you think.
 Capture opens the camera or photo library.
 The photo is stored locally.
 An optional caption can be added by voice or text.
+
+### Audio playback on retrieve
+
+By default a retrieved capture shows its transcript, and optionally has that transcript read aloud by TTS.
+For some captures that is not enough, because the recording itself is the point.
+A per-capture setting, "play the recording when this comes back," makes the original pre-transcription audio part of the
+retrieve rather than a backup behind the text.
+
+Two distinct cases sit on this setting, and both are real.
+
+-  Audio as emphasis. The transcript is still useful, but the voice carries something the text cannot. A daughter records
+   "remember to take both the red pill and the blue one, and remember that I love you," sets it on her mother's
+   medicine-cabinet tag, and what her mother hears at the cabinet is her daughter's actual voice. The "I love you" in a real
+   voice is precisely what transcription strips out. Here playAudioOnRetrieve is set and audioIsPrimary is not, because the
+   text still has value as a written reminder.
+-  Audio as content. There is no useful transcript at all. A musician hums a riff to capture it and wants to hear the hum
+   back at the guitar. Here audioIsPrimary is set. Transcription is skipped or hidden rather than shown as noise, the audio is
+   protected from being discarded to save storage, and the inbox shows the capture as a voice note with a play control and a
+   duration rather than a line of text.
+
+**Playback behavior.**
+The recording plays when the user opens the retrieved capture.
+Whether it autoplays on open or waits for a play tap is a preference, with autoplay the sensible default for the accessibility
+and caregiver cases.
+Audio never autoplays during Do Not Disturb or quiet hours.
+A capture held during a quiet period waits exactly as its notification does, and its audio plays when the user opens it after
+the period ends.
+This composes with the NFC check-in model cleanly: tap the guitar tag and the riff plays, tap the cabinet tag and the voice
+plays, once the app has come forward.
+
+**Interaction with adjacent features.**
+Audio playback is the human recording, and TTS is the spoken transcript, so the two do not stack.
+When audioIsPrimary is set, TTS has nothing to read and is not offered.
+With the optional recall prompt, the revealed answer is the audio rather than text.
+
+**Tier placement.**
+Playing back your own recording on retrieve is a free-tier feature, because it is a natural extension of voice capture and
+costs nothing on a single device.
+Hearing someone else's recording, as in the daughter-to-mother case, requires the Connected Tier, because the audio has to
+travel between two people's devices, which is sharing and carries the only real cost.
+See the Connected Tier section for how shared audio is handled.
 
 ---
 
@@ -1483,13 +1724,30 @@ first launch – a product decision, recorded here as the fallback.
    needed. On Android, confirm the more permissive background NFC behavior does not introduce spurious read events
    that would require debouncing.
 -  NFC tag library UI – design the saved tag list analogous to saved Locations. Confirm naming and reuse flow before building.
+-  Launch affordances – specify the fast-entry paths the manual now recommends, as the mitigation for the IOS foreground-scan
+   constraint: an App Shortcut / App Intent so the iOS Action button (iPhone 15 Pro+) and the Apple Watch Ultra Action button
+   can open Captrieve or begin a scan; an iOS Control Center control (Controls API, iOS 18+) and an Android Quick Settings
+   tile (TileService – can startActivity over the lock screen, or unlockAndRun) for one-swipe access from the lock screen;
+   and home-screen icon placement guidance for devices with no button. Design alongside the NFC identity-model decision,
+   since the two together define the real-world tap experience.
+-  Wearable scope – capture and retrieval on Apple Watch and Wear OS are wanted, but scope them realistically. Third-party
+   NFC tag scanning is not available on either Apple Watch (Core NFC is iOS-only; watch NFC is reserved for Apple Pay) or
+   Wear OS (reader-mode NFC is not exposed to apps), so a watch cannot be a tag-scanning surface. The watch role is fast
+   voice capture and acting on surfaced retrievals. Model: the watch records a voice note and may set a cue on it; the
+   capture and its cue migrate to the phone at the first opportunity, where transcription and storage happen. If the phone is
+   not present, transcription is deferred until the watch reconnects to the phone. A tag cue set on the watch can only point
+   at an already-registered tag, drawn from the saved tag library, since the watch cannot scan a new one – which is a further
+   reason the tag library is a first-class object analogous to saved Locations. This also softens the current Platform line
+   "the phone is always present; other surfaces are not" – if wearables become a target, that stance moves from phone-only to
+   phone-first.
 -  "Next time I open the app" cue – flag checked on foreground resume; confirm sufficient before building around it.
 -  Geocoding package for flutter_map – evaluate options for place name, city, and airport search.
 -  Radius slider UX – confirm range and step behavior feels natural across neighborhood, city, and airport-approach scales.
 -  TTS playback – text-to-speech reading of capture body on notification or detail view open. Low implementation cost,
    high value for elderly users, drivers, and anyone in a hands-free context. Global preference with per-capture override.
    Auto-enable heuristic when a Bluetooth audio device is connected warrants evaluation. Tier decided: free, all tiers
-   (see Open Questions).
+   (see Open Questions). Distinct from audio playback on retrieve: TTS reads the transcript aloud, audio playback plays the
+   original human recording, and the two do not stack (see Audio playback on retrieve).
 -  Voice cue input – natural language voice input for cue setting ("the cue for this is when I leave the
    house") as an alternative to tapping the cue picker UI. Requires constrained NLP parsing against the cue model.
    Keeps the capture flow in one modality (voice throughout). Should be an enhancement to the cue picker, not a
@@ -1509,10 +1767,11 @@ first launch – a product decision, recorded here as the fallback.
 
 These questions were deferred for later decision and must be resolved before the relevant features are built.
 
-**Paywall copy.**
-The draft copy in the Monetization section is a placeholder.
-Finalize the exact wording before v1 launch.
-The principle is fixed: fire at a moment of demonstrated value, name what just happened, ask for money.
+**Upgrade prompt copy.**
+The Solo upgrade prompt fires when a user reaches for a paid cue, tries to add a sixth NFC tag or a third Wi-Fi network, or
+tries to combine cues at all.
+The exact wording is to be finalized before launch.
+The principle is fixed: fire at a moment of demonstrated value, name what just happened, then ask for money.
 
 **Advanced voice cue input and TTS – implementation sequencing.**
 Both are decided (voice cue input is Connected-only; TTS is free).
@@ -1540,117 +1799,112 @@ and implement the search behavior the FAQ section of this spec requires – the 
 
 ## Monetization
 
-### Free Tier
+The model has one rule behind it: never gate the core capture-and-retrieve loop, and never cut a user off from a thought
+they already captured.
+Payment gates power and breadth, not the basic act of remembering.
+This keeps the free tier strong enough to spread, and strong enough to serve fragile users with dignity, while giving
+committed users a fair upgrade at a moment of demonstrated value.
 
-Captrieve is free to download with full local functionality.
-The free tier allows 20 lifetime retrieves – a retrieve being a capture that has surfaced via a cue and been acted on.
-20 retrieves is enough to experience the product across genuinely different contexts and cue types.
-Ten retrieves might all happen in the same week with the same cue type before the user has explored what the product
-can do.
-Twenty gives them time to set a geofence, a Wi-Fi cue, an NFC tag, a datetime – to discover the breadth of the
-product before hitting the paywall.
+### Free Tier (forever, unlimited core)
 
-After the 20th retrieve, a paywall message is shown before the user can continue.
-Exact copy to be finalized, but the principle: the message fires at a moment of demonstrated value and names what just
-happened before asking for money.
-Draft:
+Captrieve is free to download and free to use indefinitely, with no account and nothing leaving the device.
+The free tier includes the entire capture-and-retrieve loop with no retrieve cap.
+There is no lifetime limit on remembering, and a capture and its retrieval are never walled.
+The free tier includes the cues a casual or older user actually reaches for, each on its own without composition: a date or
+time, the next time you open the app, an NFC tag tap, and a Wi-Fi network.
+Two of these carry a volume cap rather than a capability gate: up to five NFC tags and up to two Wi-Fi networks, with date,
+time, and app-open unlimited.
+The cap counts physical tags, not captures, so a single tag can carry many captures and a single Wi-Fi network many cues.
+This is generous for everyday use.
+A user with tags on the medicine cabinet and the kitchen, wake and bedtime reminders set by time, and the home and one regular
+place on Wi-Fi lives entirely inside the free tier and never pays, which is the intended outcome.
 
-> Twenty retrieves in. You've captured a thought in the moment and found it waiting for you in exactly the right place.
-> That's Captrieve working as promised. Keep going – everything, forever, for $7.99.
+### Solo Tier (one-time, about $10)
 
-A single "Unlock everything – $7.99" button follows.
+Solo is a one-time purchase that unlocks the power tier.
+It adds three things:
 
-### Why Retrieves, Not Captures
+-  The rest of the cues: geofence arrival and departure, Bluetooth connect and disconnect, charger connect and disconnect, and
+   Focus or Do Not Disturb. Geofence sits here in v1 because keeping it out of the free tier means the free app needs no
+   always-on location permission, which keeps it simpler, lighter on battery, and clear of the platform background-location
+   review.
+-  The composition layer: AND conditions, delays, and more than one cue on a capture with OR across them.
+-  Removal of the free volume caps: unlimited NFC tags and unlimited Wi-Fi networks.
 
-Capping on retrieves rather than captures means the paywall appears at a moment of demonstrated value – the user has just
-experienced the product working as promised, not merely used it.
-Asking for payment after a successful retrieve is honest: the user knows what they are paying for because they have already
-received it twenty times.
+These are the features a casual user rarely reaches for and a committed user reaches for constantly.
+They are also the most expensive features to build and to keep reliable across devices, so charging for them is honest rather
+than extractive.
 
-### Reinstall Circumvention
+The upgrade prompt fires at the moment of demonstrated value, which is the spec's standing monetization principle: fire when
+the user has just felt the value, name what just happened, then ask for money.
+Three moments trigger it.
+The first is when a user reaches for a paid cue type, such as a geofence or a Focus cue.
+The second is when a user tries to add a sixth NFC tag or a third Wi-Fi network.
+The third is when a user tries to combine cues at all, with an AND condition, a delay, or a second cue OR'd onto a capture.
+In every case the user has reached past the everyday product on their own, so the ask lands on someone already getting more out
+of Captrieve than the average user, which is why this converts at a real rate rather than a rounding error.
 
-Deleting and reinstalling the app resets local storage, including retrieve count.
-There is no server-side enforcement of the free tier limit.
-This is an accepted tradeoff given the captures-stay-on-device architecture – introducing a server solely to enforce a trial
-limit would compromise the privacy positioning.
-Users who go to that effort are not the audience.
-Users who find genuine value will pay.
+Pricing is about $10, in the non-brainer zone where the cost of deciding exceeds the cost of buying.
+The exact figure is to be finalized before launch.
 
-### Paid Features by Version
+### Connected Tier (subscription, $2.99/month or $24.99/year, Family Sharing on)
 
-- **v1** – one-time $7.99 purchase unlocks unlimited retrieves. Fully local, no backend, no account.
-- **v2** – Connected Tier subscription introduced. Advanced voice cue input is subscription-only.
-  Users who purchased v1 are unaffected – their one-time purchase and fully local experience does not change.
+Connected is the opt-in sharing and caregiver layer, described in full in the Connected Tier section.
+It is the only part of Captrieve with a real backend and therefore a real ongoing cost: push routing, the end-to-end encrypted
+relay, and presence-log storage.
+A subscription is the honest model for it, because it recovers an ongoing cost rather than charging rent on a local feature.
+Cloud-backed sharing is also a sanctioned subscription category on both stores.
 
-### Solo Tier – $7.99 One-Time
+Connected includes the Solo power tier while the subscription is active, so a subscriber never has to buy Solo separately.
+After any twelve consecutive months of Connected subscription, the Solo power tier is permanently unlocked for life, even if
+the subscription is later canceled.
+The reassurance is stated plainly on the pricing page rather than buried: if you ever stop your subscription, everything you
+have unlocked stays yours, the connected features pause, and everything else continues.
 
-$7.99 is priced at the non-brainer threshold – the zone where the mental transaction cost of deciding exceeds the cost
-of buying.
-The 20-retrieve free tier already handles the "will it actually work" objection before the paywall appears.
-By the time the user hits the paywall they are not deciding whether to trust the product.
-They are deciding whether $7.99 is worth what they have already experienced twenty times.
-It is.
+Family Sharing is enabled on the Connected subscription.
+This directly serves the core caregiver case and the author's own case: a single Connected subscription covers the subscriber
+and up to five family members, so one payment connects a parent and an adult child with no second account and no second
+charge.
 
-### Connected Tier – $2.99/month or $24.99/year
+### Optional Supporter purchase (a topper, not the plan)
 
-The annual price is approximately 30% off monthly – a standard and psychologically effective discount.
-The caregiver use case converts better on annual pricing: a family setting this up for an elderly parent is thinking
-about the year, not the month.
+A voluntary Supporter purchase exists for users who want to support development beyond what they have paid, or who are happy on
+the free tier and want to give something back.
+It unlocks nothing functional.
+It grants only a thank-you: a supporter badge, an alternate app icon, and a line in the about screen.
+It is offered at two or three fixed price points, for example about $2.99, $6.99, and $14.99, to approximate pay-what-you-want
+within the stores' fixed-tier pricing.
+It is a non-consumable with Family Sharing enabled, so it restores across devices and reads as owned rather than rented.
+The App Store permits in-app purchases whose purpose is to tip the developer, so this is compliant.
+The Supporter purchase catches goodwill on top of Solo and Connected.
+It does not carry the model, and the model does not depend on it.
 
-**The fallback mechanic.**
-If a Connected subscriber later decides the connected features are not for them, they do not lose what they paid for.
-They keep unlimited retrieves and all local features – the Solo experience – permanently, regardless of whether they
-continue the subscription.
-After any 12 consecutive months of Connected subscription, Solo is explicitly and automatically unlocked for life,
-even if the subscription is later canceled.
-This should be stated plainly on the pricing page as a reassurance, not buried in terms.
-Suggested copy: "If you ever stop your subscription, everything you've unlocked stays yours. Connected features pause.
-Everything else continues."
-The 12-month threshold means a Connected subscriber who cancels after one year has paid $24.99 – well above the $7.99
-Solo price – which satisfies the paid-more-than-one-time condition cleanly.
+### Reinstall and the absence of server enforcement
 
-**Why subscription for connected features.**
-The backend introduced for the Connected Tier has real ongoing costs: push notification infrastructure, encrypted relay,
-presence log storage.
-A one-time purchase does not recover those costs at scale.
-A subscription does, honestly and proportionally.
-This should be explained briefly on the pricing page – users who understand why the subscription exists are more likely
-to trust it.
+There is no retrieve cap and no trial to circumvent, so the old reinstall concern is moot for the free tier.
+The Solo unlock and the Supporter purchase are store purchases restored through the platform, so they survive a reinstall on
+the same account without any server of ours.
+This keeps the privacy posture intact, since no server is introduced to police entitlement.
 
-### Connected Tier (v2, Subscription)
+### What this retires
 
-The Connected Tier is a subscription layer for users who want to share presence, captures, and context with people they
-trust.
-It requires a backend and has genuine ongoing infrastructure costs.
-Subscription is therefore the honest pricing model for it – approximately $2.99/month or $24.99/year, exact pricing to be
-validated against infrastructure costs before launch.
+The previous model gated the core loop with a twenty-retrieve lifetime cap and sold Solo as the removal of that cap.
+That cap punished the core action and hit the most fragile users at the worst moment, so it is removed entirely.
+Solo is redefined from "uncap retrieves" to "unlock the power tier and lift the volume caps."
+The retrieves-not-captures rationale and the trial-circumvention reasoning that depended on the cap are retired with it.
 
-The Connected Tier is purely additive.
-Solo users on the one-time purchase are unaffected.
-Nothing about their experience, their data, or their pricing changes when the Connected Tier is introduced.
-
-What the Connected Tier includes is described fully in the Connected Tier section of this spec.
-The short version: presence events, shared captures, capture forwarding, presence log with history, and push notification
-routing to connected devices.
-
-**Why subscription and not a one-time purchase for connected features.**
-The backend introduced for the Connected Tier has ongoing costs: push notification infrastructure, encrypted relay for
-presence events and shared captures, server compute for routing.
-A one-time purchase does not recover those costs at scale.
-A subscription does, honestly and proportionally.
-The prior conclusion – no subscription because no feature clears the bar – was correct for a purely local app.
-The Connected Tier changes the economics by introducing real ongoing costs that justify real ongoing revenue.
-
-**Caregiver sharing and the Connected Tier.**
-The original spec included caregiver sharing as a v2 feature included in the one-time purchase.
-That decision is revised.
-Caregiver sharing requires the same backend infrastructure as the Connected Tier generally.
-It is now a use case within the Connected Tier, not a separate feature at a separate price point.
-A caregiver who subscribes to support someone they care for gets the full Connected Tier – presence events, shared captures,
-presence log – not a stripped-down version.
-The full app at a fair subscription price is a better offer and a cleaner product story than a feature-limited caregiver mode.
-The viral marketing dynamic is preserved: giving the caregiver full functionality at a reasonable subscription price is
-more compelling than a free read-only companion app.
+The free-to-paid boundary was then revised once more.
+An interim model put a uniform five-active-cue cap on the free tier, kept place and geofence in the free tier, and treated
+Wi-Fi as a paid power cue.
+The current model replaces the uniform cap with per-type volume caps that match how people actually set the product up, five
+NFC tags and two Wi-Fi networks, moves Wi-Fi into the free tier where it is cheap and reliable, and moves geofence into the
+paid tier.
+The geofence move is the load-bearing one: it is what lets the free app ship with no always-on location permission, and it
+also puts the paid wall on composition and breadth rather than on geofence, which competitors already give away.
+Geofence may migrate to the free tier in a later version, since users expect location reminders to be free.
+That change is deliberately deferred to after the Android launch, because a free tier with geofence re-adds the always-on
+location permission and the platform background-location review that the v1 design was structured to avoid, and that cost is
+worth taking on only once there is a proven product and momentum to carry it.
 
 
 ---
@@ -1715,13 +1969,25 @@ Any connection can be severed at any time, immediately, with no residual data re
 ### What Connected Users Can Do
 
 **Presence events.**
-A user can designate any NFC tag tap as a presence event – a signal that is routed to one or more connected people.
-The canonical case: tap the NFC tag at the front door when leaving the house; tap again on return.
-Connected people receive a push notification: "Left home at 10:47 AM." "Returned home at 1:23 PM."
-This is especially meaningful for elderly users whose family or caregivers want to know they are moving through their day
-normally, without the surveillance feel of continuous GPS tracking.
-The tap is consensual, intentional, and motivated by the user's own check-in habit – the presence signal is a side effect
-of a gesture that already serves them.
+Presence is built on passive signals first, so the feature works for the person it is meant to serve, someone who cannot be
+relied on to remember a gesture, since not remembering is the reason they are connected in the first place.
+The primary signals ask nothing of the care recipient.
+A home geofence reports leaving and returning directionally and on its own.
+A home Wi-Fi join or leave corroborates it cheaply and works indoors where GPS is weak.
+First phone activity in the morning, or the overnight charger coming off, reads as up and about.
+A scheduled reminder firing, such as the ten o'clock medication reminder, is itself a visible signal that the reminder went
+out, which is distinct from any claim that it was acted on.
+Connected people receive these as notifications and see them in the log: "Left home at 10:47 AM." "Home by 1:23 PM." "Up and
+about this morning."
+An NFC tag tap can also be designated as a presence event, an optional active check-in for users who keep that habit, but it
+is never the backbone, because a tap is directionless and a missed tap means nothing.
+That is the load-bearing honesty of the feature.
+Every signal tracks the phone, not the person, and none of them asserts that the care recipient is fine.
+What the system delivers is the rhythm of an ordinary day, and the actionable event is its absence.
+A day that stays silent is the caregiver's cue to call and check in, which is the design working as intended rather than a gap
+in it.
+This serves the families and caregivers who want to know an elderly person is moving through their day, without the
+surveillance feel of continuous GPS tracking, and without pretending to a certainty the technology cannot provide.
 
 **Presence log.**
 Connected people see a timestamped log of presence events, not just real-time notifications.
@@ -1758,16 +2024,20 @@ A shared capture is a one-way delivery.
 If the recipient wants to respond, they use whatever communication channel they already use with that person.
 Captrieve does not try to own the conversation – it delivers the thought at the right moment and gets out of the way.
 
-**Shared captures are text, not audio.**
-Captures shared via the Connected Tier are delivered as transcribed text, not as audio files.
-The sender records by voice as normal; the capture transcribes on-device as it always does.
-What is shared is the transcription.
-This is a deliberate decision, not a temporary limitation.
-Audio files are large relative to the small-payload architecture the Connected Tier backend is designed around.
-Transcription is already a first-class part of the capture flow and produces a faithful representation of the thought.
-The warmth of speaking is preserved in the sender's capture experience; what arrives for the recipient is the text – which
-is sufficient and keeps the backend scope clean.
-Revisit if specific use cases emerge where audio is genuinely necessary and worth the infrastructure cost.
+**Shared captures are text by default, and audio when the voice is the point.**
+By default a shared capture is delivered as transcribed text, which keeps the common case lean for the small-payload backend.
+The sender records by voice as normal, the capture transcribes on-device, and the text is what travels.
+This spec previously declared text-only a permanent decision.
+That decision is now revised, because a genuine use case has emerged of the exact kind the prior text invited a revisit for: a
+caregiver recording in their own voice for someone who needs to hear it, where transcription strips the one thing that
+matters.
+A sender may therefore opt a shared capture into carrying its audio.
+That audio travels end-to-end encrypted like all shared content, is bounded in length to respect the backend's payload
+discipline, and remains the deliberate exception rather than the default.
+The cost concern that motivated text-only still holds for the common case, which is why text stays the default and audio is a
+per-capture choice the sender makes when the voice is the reason for the message.
+If the recipient is offline, the audio is delivered when their device next syncs, the same deferral the rest of the connected
+flow uses.
 
 **The infrastructure discipline principle.**
 The existence of the backend is not an invitation to build features that belong to other products.
@@ -1828,7 +2098,8 @@ This is the caregiver using Captrieve for themselves, inside a space they share 
 A care recipient connects a caregiver – a family member, a professional, a friend.
 The caregiver sees:
 -  The care recipient's pending and surfaced captures and cue status, in real time.
--  The presence event log – NFC door taps, arrival and departure times, the rhythm of a normal day.
+-  The presence log: arrivals and departures, morning activity, scheduled reminders firing, and any optional tag check-ins,
+   the rhythm of a normal day where a silent day is the cue to call.
 -  Shared captures the care recipient has chosen to send them.
 
 The care recipient sees no added complexity.
@@ -1913,8 +2184,8 @@ Cancellation is therefore not a privacy mechanism – a user who wants sharing t
 -  The user's local captures and cues are fully unaffected – the Solo experience continues normally.
 -  If the user completed 12 consecutive months of Connected subscription, Solo is permanently unlocked at no further cost,
    automatically and with no action required.
--  If the user has not reached 12 months, they revert to the free tier (20-retrieve cap) unless they separately purchased
-   Solo.
+-  If the user has not reached 12 months, they revert to the free tier (the everyday cues within the free volume caps, no
+   retrieve cap) unless they separately purchased Solo.
 -  Presence log history held on the server is deleted within 30 days of access ending.
 
 Data held server-side for an active connection is purged immediately on an explicit Disconnect, as above.

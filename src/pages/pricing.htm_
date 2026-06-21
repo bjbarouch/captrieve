@@ -6,7 +6,7 @@
             "@type"         : "WebPage",
             "name"          : "Pricing – Captrieve",
             "url"           : "https://captrieve.com/pricing",
-            "description"   : "Twenty retrieves free, no credit card, no account. After that, $7.99 keeps it forever. Or add Connected for shared captures, presence events, and caregiver support."
+            "description"   : "The everyday app is free forever, no account, nothing leaves your phone. A one-time Solo purchase unlocks the power features. Connected adds shared captures, presence events, and caregiver support, with Family Sharing."
         },
         {
             "tabTitle" : "Pricing – Captrieve"
@@ -14,9 +14,9 @@
         {
             "@type"         : "Article",
             "headline"      : "Pricing – Captrieve",
-            "description"   : "Twenty retrieves free, no credit card, no account. After that, $7.99 keeps it forever. Or add Connected for shared captures, presence events, and caregiver support.",
+            "description"   : "The everyday app is free forever, no account, nothing leaves your phone. A one-time Solo purchase unlocks the power features. Connected adds shared captures, presence events, and caregiver support, with Family Sharing.",
             "datePublished" : "2025-06-01",
-            "dateModified"  : "2026-06-11"
+            "dateModified"  : "2026-06-20"
         }
     ]
 }
@@ -27,34 +27,35 @@
             Pricing
         </p>
         <h1 class="reveal">
-            Try it free.<br>
-            <em>Pay when you believe it.</em>
+            Free to use.<br>
+            <em>Pay only for power.</em>
         </h1>
         <p class="reveal">
-            Twenty retrieves, no credit card, no account required.
-            After that, one decision: keep it forever for $7.99, or add the connected layer for everything else.
+            The everyday app is free forever, with no account and nothing leaving your phone.
+            You pay only if you want the power features, and only when you reach for them.
         </p>
     </div>
 </div>
 
-<!-- ── Why pay at all ── -->
+<!-- ── Why free works ── -->
 <section>
     <div class="container">
         <p class="section-label reveal">
-            Why the <span class="tier">FREE</span> tier works the way it does
+            How the <span class="tier">FREE</span> tier works
         </p>
         <p class="section-lead reveal">
-            A retrieve is the moment the product delivers on its promise – a thought you captured finds you
-            at exactly the right moment.
-            The <span class="tier">FREE</span> tier gives you twenty of those moments.
-            Twenty retrieves across different cue types gives you a genuine picture of what the product does
-            before you spend anything.
-            You pay only after you've seen it work.
+            <span class="tier">FREE</span> is not a trial.
+            It is the whole everyday app, and it stays free.
+            You get the full capture-and-retrieve loop with no limit on retrieves, and the everyday cues used one at a time:
+            a date or time, opening the app, an NFC tag tap, and a Wi-Fi network.
+            Two of those carry a friendly limit, up to five tags and two Wi-Fi networks, counted as tags, not captures, so one
+            tag holds as many reminders as you like.
+            A grandparent with tags on the medicine cabinet and the kitchen, wake and bedtime reminders set by time, and the
+            home and clubhouse on Wi-Fi lives here happily and never pays, which is exactly the intent.
         </p>
         <p class="section-lead reveal">
-            The paywall appears after your twentieth retrieve – not after you've captured twenty thoughts,
-            not on a timer, not before you've had a chance to explore.
-            At the right moment, like everything else <span class="brand">Cap<em>trieve</em></span> does.
+            Payment is for power and breadth, never for the basic act of remembering.
+            Nothing you have captured is ever walled off, on any tier.
         </p>
     </div>
 </section>
@@ -84,21 +85,7 @@
                 <tbody>
                     <tr>
                         <td class="row-label">
-                            Retrieves
-                        </td>
-                        <td>
-                            20 lifetime
-                        </td>
-                        <td>
-                            Unlimited
-                        </td>
-                        <td>
-                            Unlimited
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="row-label">
-                            All local cue types
+                            Unlimited retrieves
                         </td>
                         <td><span class="check">✓</span></td>
                         <td><span class="check">✓</span></td>
@@ -114,9 +101,41 @@
                     </tr>
                     <tr>
                         <td class="row-label">
-                            Hands-free TTS playback
+                            Everyday cues: time, app-open, NFC tap, Wi-Fi
                         </td>
                         <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="row-label">
+                            NFC tags
+                        </td>
+                        <td>Up to 5</td>
+                        <td>Unlimited</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td class="row-label">
+                            Wi-Fi networks
+                        </td>
+                        <td>Up to 2</td>
+                        <td>Unlimited</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td class="row-label">
+                            Location, charger, Focus, Bluetooth cues
+                        </td>
+                        <td><span class="no">–</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td class="row-label">
+                            Combine cues with conditions and delays
+                        </td>
+                        <td><span class="no">–</span></td>
                         <td><span class="check">✓</span></td>
                         <td><span class="check">✓</span></td>
                     </tr>
@@ -143,15 +162,6 @@
                         <td><span class="check">✓</span></td>
                         <td><span class="check">✓</span></td>
                         <td><span class="no">–</span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="row-label">
-                            Voice cue input
-                        </td>
-                        <td><span class="no">–</span></td>
-                        <td><span class="no">–</span></td>
-                        <td><span class="check">✓</span></td>
                     </tr>
                     <tr>
                         <td class="row-label">
@@ -185,12 +195,12 @@
                         <span class="tier">FREE</span>
                     </div>
                     <div class="price-label">
-                        20 retrieves, then decide
+                        The everyday app, forever
                     </div>
                 </div>
                 <div class="pricing-option">
                     <div class="price">
-                        $7.99
+                        $9.99
                     </div>
                     <div class="price-label">
                         <span class="tier">SOLO</span> – one-time purchase<br>No subscription, ever
@@ -202,7 +212,7 @@
                     </div>
                     <div class="price-label">
                         <span class="tier">CONNECTED</span> – or $24.99/year<br>
-                        Includes <span class="tier">SOLO</span> permanently after 12 months
+                        Includes <span class="tier">SOLO</span>, with Family Sharing
                     </div>
                 </div>
             </div>
@@ -218,26 +228,25 @@
 <section>
     <div class="container">
         <p class="section-label reveal">
-            <span class="tier">SOLO</span> – $7.99, once
+            <span class="tier">SOLO</span> – $9.99, once
         </p>
         <h2 class="reveal">
             One purchase.<br>
             <em>No ongoing relationship.</em>
         </h2>
         <p class="section-lead reveal">
-            <span class="tier">SOLO</span> is the full local <span class="brand">Cap<em>trieve</em></span> experience – every
-            cue type, unlimited retrieves,
-            everything
-            on your device.
+            <span class="tier">SOLO</span> unlocks the power features: the rest of the cues (location, charger, Focus, and
+            Bluetooth), combining cues with conditions and delays, and unlimited tags and Wi-Fi networks.
+            Everything still lives on your device.
             No account.
             No server.
             No subscription.
             Pay once and it's yours as long as you have the phone.
         </p>
         <p class="section-lead reveal">
-            $7.99 is priced to feel inconsequential – less than a coffee, more than nothing.
-            By the time you hit the paywall, you've already retrieved twenty thoughts you would have lost.
-            You know what you're paying for.
+            The prompt to buy appears at the right moment, when you reach for a paid cue, a sixth tag or third network, or
+            your first combined cue.
+            By then you already know what the app does for you, so you know exactly what you're paying for.
         </p>
     </div>
 </section>
@@ -253,11 +262,10 @@
             <em>plus the people you trust.</em>
         </h2>
         <p class="section-lead reveal">
-            <span class="tier">CONNECTED</span> adds a backend that routes captures, presence events, and context between people
-            who have chosen to share.
-            That backend has real ongoing costs – server infrastructure, encrypted relay, push notification
-            routing.
-            A subscription is the honest pricing model for ongoing costs.
+            <span class="tier">CONNECTED</span> adds a backend that routes captures, presence events, and context between
+            people who have chosen to share, and it includes the <span class="tier">SOLO</span> power features.
+            That backend has real ongoing costs: server infrastructure, encrypted relay, and push notification routing.
+            A subscription is the honest pricing model for an ongoing cost.
             <span class="tier">SOLO</span> has none of those costs, which is why it's a one-time purchase.
         </p>
         <div class="cue-cards" style="margin-top: 1.5rem;">
@@ -296,12 +304,34 @@
             </div>
         </div>
         <p class="pricing-note reveal" style="margin-top: 1.5rem;">
+            One subscription covers up to five family members through Family Sharing, so a parent and an adult child connect
+            under a single payment.
             If you ever stop your subscription, everything you've unlocked stays yours.
             <span class="tier">CONNECTED</span> features pause.
             Everything else continues.
-            After any 12 consecutive months of <span class="tier">CONNECTED</span>, <span class="tier">SOLO</span> is yours
-            permanently – automatically,
-            no action required.
+            After any 12 consecutive months of <span class="tier">CONNECTED</span>, the <span class="tier">SOLO</span> power
+            features are yours permanently, automatically, no action required.
+        </p>
+    </div>
+</section>
+
+<!-- ── Supporter ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            Optional <span class="tier">SUPPORTER</span>
+        </p>
+        <h2 class="reveal">
+            If it helps you,<br>
+            <em>you can chip in.</em>
+        </h2>
+        <p class="section-lead reveal">
+            A <span class="tier">SUPPORTER</span> purchase is entirely optional, for people who are happy on the free tier and
+            want to give something back, or who want to support development beyond what they've paid.
+            It unlocks nothing functional, only a small thank-you: a supporter badge, an alternate app icon, and a line in the
+            about screen.
+            It comes at a few price points so you can give what feels right.
+            Nobody is ever asked to choose between paying and keeping a thought they captured.
         </p>
     </div>
 </section>
@@ -329,8 +359,8 @@
                 </p>
                 <p class="faq-a">
                     You can upgrade to <span class="tier">CONNECTED</span> at any time.
-                    Your one-time <span class="tier">SOLO</span> purchase is not lost – it is what you fall back to if you
-                    ever cancel the subscription.
+                    <span class="tier">CONNECTED</span> includes the <span class="tier">SOLO</span> power features, and your
+                    one-time <span class="tier">SOLO</span> purchase is what you fall back to if you ever cancel.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -338,10 +368,11 @@
                     Does the caregiver need their own subscription?
                 </p>
                 <p class="faq-a">
-                    Yes.
-                    Both people in a connected relationship need a <span class="tier">CONNECTED</span> subscription.
-                    Both get the full app.
-                    The caregiving layer connects them – neither gets a stripped-down experience.
+                    No.
+                    One <span class="tier">CONNECTED</span> subscription covers up to five family members through Family
+                    Sharing, so only one of you pays.
+                    You each have your own private account for the connection itself, and both of you get the full app, not a
+                    stripped-down companion version.
                 </p>
             </div>
             <div class="faq-item reveal">
@@ -349,13 +380,10 @@
                     What happens if I delete and reinstall the app?
                 </p>
                 <p class="faq-a">
-                    Local storage – including your retrieve count – resets on reinstall.
-                    There is no server-side enforcement of the <span class="tier">FREE</span> tier limit on
-                    <span class="tier">SOLO</span>.
-                    Users who go to that effort are not the audience we're pricing for.
+                    The free everyday app has no limit to reset, so there is nothing to lose on the free tier except your local
+                    captures, which is why you should back up your phone.
                     If you've purchased <span class="tier">SOLO</span> or subscribed to <span class="tier">CONNECTED</span>,
-                    your purchase is restored
-                    through the App Store or Google Play restore mechanism.
+                    your purchase is restored through the App Store or Google Play restore mechanism.
                 </p>
             </div>
         </div>

@@ -38,11 +38,18 @@ anything by hand.
 
 ## Tiers
 
--  **Free.** Full local functionality, no account, capped at 20 retrieves. Nothing leaves the device.
--  **Solo – $7.99, one-time.** Unlimited retrieves and all local features. No subscription, no account, no cloud.
--  **Connected – $2.99/month or $24.99/year.** Adds an opt-in sharing layer: presence events, shared captures, capture
-   forwarding, and a presence log, all routed through an end-to-end encrypted backend. Built for families, partners, and
-   caregivers. After 12 consecutive months, Solo is permanently unlocked even if the subscription later ends.
+-  **Free, forever.** The everyday app: the full capture-and-retrieve loop with no retrieve cap, and the everyday cues used
+   one at a time – date and time (unlimited), app-open, an NFC tag tap (up to 5 tags), and a Wi-Fi network (up to 2). The cap
+   counts tags, not captures. No account, nothing leaves the device.
+-  **Solo – one-time, about $10.** Unlocks the power tier: the rest of the cues (geofence, Bluetooth, charger, Focus), cue
+   composition (AND conditions, delays, multiple cues with OR), and removal of the tag and network caps. No subscription, no
+   account, no cloud. Geofence is paid in v1 so the free app needs no always-on location, and it may move to free in a later
+   version.
+-  **Connected – $2.99/month or $24.99/year, Family Sharing on.** Adds an opt-in sharing layer: presence events, shared
+   captures, capture forwarding, and a presence log, all routed through an end-to-end encrypted backend. Built for families,
+   partners, and caregivers, and includes the Solo power tier. One subscription covers up to five family members. After 12
+   consecutive months, the Solo power tier is permanently unlocked even if the subscription later ends.
+-  **Optional Supporter purchase.** A voluntary way to support development that unlocks only a thank-you, never a feature.
 
 ## Privacy
 

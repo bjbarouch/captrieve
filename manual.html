@@ -27,12 +27,12 @@
     <link rel="preload" href="/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-Italic-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=ada6d5">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=7b184f">
     <noscript>
         <style>.reveal { opacity: 1; transform: none; }</style>
     </noscript>
 
-    <script src="/preview-auth.js?v=a32977"></script>
+    <script src="/preview-auth.js?v=f6d305"></script>
 
 </head>
 <body>
@@ -96,7 +96,7 @@
             "headline"      : "Manual",
             "description"   : "How Captrieve works, end to end: capturing a thought, setting a cue, the inbox, notifications, your data, and the tiers.",
             "datePublished" : "2026-06-14",
-            "dateModified"  : "2026-06-14"
+            "dateModified"  : "2026-06-20"
         }
     ]
 }
@@ -259,6 +259,105 @@
 <section>
     <div class="container prose">
         <p class="section-label reveal">
+            NFC tags
+        </p>
+        <h2 class="reveal">
+            Choosing tags that <em>work</em>
+        </h2>
+        <p class="reveal">
+            If you want to use tag cues, you supply the tags yourself.
+            They are inexpensive and sold almost everywhere, but they are not all alike, and the wrong ones simply will not
+            work with <span class="brand">Cap<em>trieve</em></span>.
+            A little care at the moment of purchase saves a frustrating afternoon later.
+        </p>
+        <p class="reveal">
+            Buy the common kind labeled <i>NTAG213</i>, <i>NTAG215</i>, or <i>NTAG216</i>, and described as
+            <i>rewritable</i> (some listings say <i>writable</i> or <i>programmable</i>).
+            Any of the three works, so the least expensive is fine.
+            A pack of round stickers is the easiest way to start, and a single pack is usually more tags than one person
+            needs.
+        </p>
+        <p class="reveal">
+            <em>A warning, because this is where people get caught.</em>
+            Some tags on sale will not work with the app, and the product listing will not always make that obvious.
+            Avoid the following.
+        </p>
+        <ul class="reveal">
+            <li>
+                <i>Privacy</i>, <i>anti-tracking</i>, or <i>random ID</i> tags.
+                These deliberately change their identity on every tap, so the app cannot recognize them as the same tag
+                twice.
+            </li>
+            <li>
+                <i>Magic</i> or <i>changeable UID</i> tags.
+                These are sold for copying other tags, and are not what you want here.
+            </li>
+            <li>
+                Older <i>MIFARE Classic</i> tags.
+                Many iPhones will not read them at all.
+            </li>
+            <li>
+                Tags already marked <i>locked</i> or <i>read only</i>.
+                A tag that cannot be set up is no use.
+            </li>
+        </ul>
+        <p class="reveal">
+            One note about where you put a tag rather than which to buy.
+            A plain sticker tag will not read through metal.
+            To place a tag on something metal, such as a filing cabinet or a car dashboard, buy the kind sold as
+            <i>anti-metal</i> or <i>on metal</i>.
+        </p>
+        <p class="reveal">
+            If a tag you already own refuses to set up, or is not recognized when you tap it, one of the reasons above is
+            almost always why, and a correct tag costs very little to replace.
+        </p>
+    </div>
+</section>
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            Quick access
+        </p>
+        <h2 class="reveal">
+            Reaching <span class="brand">Cap<em>trieve</em></span> in <em>one move</em>
+        </h2>
+        <p class="reveal">
+            A capture is only as useful as it is fast to start, and a tag tap should feel immediate.
+            A little setup makes a large difference, and we recommend it strongly.
+        </p>
+        <p class="reveal">
+            If your phone or watch has an <i>Action button</i>, assign it to open
+            <span class="brand">Cap<em>trieve</em></span>.
+            On iPhone 15 Pro and later, and on Apple Watch Ultra, that button launches the app with a single press, which is
+            the fastest way to catch a thought before it slips.
+            Several Android phones and watches have a spare or remappable button that can be set the same way, and where they
+            do, the same advice applies.
+        </p>
+        <p class="reveal">
+            If your phone has no such button, put the <span class="brand">Cap<em>trieve</em></span> icon on your first home
+            screen, within reach and without searching.
+            The seconds saved there are often the difference between keeping a thought and losing it.
+        </p>
+        <p class="reveal">
+            There is one honest difference between the platforms, and it is smaller than it used to be.
+            Once a tag is set up, a tap brings your capture back on both iPhone and Android without opening the app first.
+            On iPhone the phone shows a short banner that you tap to open the capture, and if the phone is locked it asks you
+            to unlock first.
+            The one time you must start a scan from inside <span class="brand">Cap<em>trieve</em></span> is when you first
+            set up a new tag, which writes the tag and locks it so nothing can quietly change it later.
+            The banner step on iPhone is an Apple rule rather than a <span class="brand">Cap<em>trieve</em></span> choice.
+        </p>
+        <p class="reveal">
+            <em>Still being written:</em> a one-press <span class="brand">Cap<em>trieve</em></span> control for
+            <i>Control Center</i> on iPhone, and for the <i>Quick Settings</i> panel on Android, reachable with a single
+            swipe down from the lock screen without fully unlocking, is planned and will be documented here once it is built.
+            Even then, the phone will still ask you to unlock before it reads a tag.
+        </p>
+    </div>
+</section>
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
             The inbox
         </p>
         <h2 class="reveal">
@@ -300,6 +399,37 @@
         <p class="reveal">
             <em>Still being written:</em> the exact deferral options and the handling of captures whose time passed while the
             phone was off will be documented here as they are finalized.
+        </p>
+    </div>
+</section>
+<section>
+    <div class="container prose">
+        <p class="section-label reveal">
+            Hearing it back
+        </p>
+        <h2 class="reveal">
+            When the <em>voice</em> is the point
+        </h2>
+        <p class="reveal">
+            Sometimes the words are not enough, and what you want back is the recording itself.
+            You can set any voice capture to play its original recording when it returns, instead of only showing the
+            typed-out version.
+        </p>
+        <p class="reveal">
+            A daughter can record "remember to take the red pill and the blue one, and remember that I love you," set it on
+            her mother's medicine cabinet tag, and her mother hears her actual voice at the cabinet.
+            A musician can hum a riff, set it on the guitar tag, and hear the hum back at the instrument, where a typed
+            description would have been useless.
+            Recording in your own voice for someone else to hear is part of the Connected sharing layer.
+        </p>
+        <p class="reveal">
+            For something like the riff, where there are no words to type out, the capture is kept as a voice note.
+            It shows a play button rather than text, and its recording is protected so it is never cleared to save space.
+            Playback waits for your quiet hours, the same way notifications do.
+        </p>
+        <p class="reveal">
+            <em>Still being written:</em> the exact controls for turning this on per capture, and the autoplay preference,
+            will be documented here as those screens are built.
         </p>
     </div>
 </section>
@@ -366,8 +496,19 @@
             See the <a href="privacy">Privacy page</a> for the full account.
         </p>
         <p class="reveal">
-            <em>Still being written:</em> the export format and the exact Settings layout will be documented here as those
-            screens are built.
+            <em>Because your data lives on your phone, back your phone up.</em>
+            This is ordinary phone hygiene, but it matters here for a specific reason.
+            A tag holds only a meaningless code, never your notes or the name you gave it, so the name and the captures exist
+            only on your phone.
+            With a normal backup in place (iCloud, or your Android backup), reinstalling on the same account restores
+            everything.
+            Without one, a lost or wiped phone loses the names and captures, and a tag you set up will still work but will
+            come back empty, ready to be named and filled again.
+        </p>
+        <p class="reveal">
+            <em>Still being written:</em> the export format, the exact Settings layout, and a simple way to move your tag
+            list to a second device, such as a tablet, by copying a small file into an email or a message, will be documented
+            here as those screens are built.
         </p>
     </div>
 </section>
@@ -380,12 +521,20 @@
             Free, Solo, and <em>Connected</em>
         </h2>
         <p class="reveal">
-            <i>Free</i> gives you full local functionality with no account, capped at twenty retrieves, and nothing leaves
-            the device.
-            <i>Solo</i> is a one-time purchase that removes the cap and keeps everything local, with no subscription and no
-            cloud.
+            <i>Free</i> is the everyday app, free forever, with no account and nothing leaving your phone.
+            You get the full capture-and-retrieve loop with no limit on retrieves, and the everyday cues used one at a time:
+            a date or time, the next time you open the app, an NFC tap (up to five tags), and a Wi-Fi network (up to two).
+            The limit counts tags, not captures, so one tag can hold many reminders.
+            <i>Solo</i> is a one-time purchase, about ten dollars, that unlocks the power features: the rest of the cues
+            (geofence, Bluetooth, charger, and Focus), combining cues with conditions and delays, and removal of the tag and
+            network limits.
             <i>Connected</i> is a subscription that adds an opt-in sharing layer for families, partners, and caregivers,
-            routed through an end-to-end encrypted backend.
+            routed through an end-to-end encrypted backend, and it includes the Solo power features.
+            One Connected subscription can cover up to five family members through Family Sharing.
+        </p>
+        <p class="reveal">
+            An optional <i>Supporter</i> purchase lets you chip in if the app has helped you.
+            It unlocks only a small thank-you, never a feature, and the app never walls off anything you rely on.
         </p>
         <p class="reveal">
             Two Connected actions are deliberately separate.
@@ -438,7 +587,7 @@
         </div>
     </div>
 </footer>
-    <script type="module" src="/js/siteScripts.min.js?v=fefa18"></script>
+    <script type="module" src="/js/siteScripts.js?v=532d60"></script>
 
 </body>
 </html>

@@ -32,7 +32,7 @@
         <style>.reveal { opacity: 1; transform: none; }</style>
     </noscript>
 
-    <script src="/preview-auth.js?v=a32977"></script>
+    <script src="/preview-auth.js?v=f6d305"></script>
 
 </head>
 <body>
@@ -96,7 +96,7 @@
             "headline"      : "Captrieve for caregivers – support the person, respect their independence",
             "description"   : "Set up retrieves for the person you care for. See a log of their day. Stay connected without surveillance. Both of you use the full app.",
             "datePublished" : "2025-06-01",
-            "dateModified"  : "2026-06-11"
+            "dateModified"  : "2026-06-20"
         }
     ]
 }
@@ -157,7 +157,7 @@
                     <td>
                         <ul>
                             <li>Sets up retrieves for the person they care for</li>
-                            <li>Sees a timestamped log of when and where the person checked in</li>
+                            <li>Sees a timestamped log of the person's comings and goings, and any check-ins they make</li>
                             <li>Uses their own captures in the person's home – the same NFC tags, independent retrieves</li>
                             <li>Receives a notification when the person leaves or returns home</li>
                             <li>Gets a real-time view of pending and actual retrieves</li>
@@ -180,9 +180,9 @@
             <em>It finds them.</em>
         </h2>
         <p class="section-lead reveal">
-            The person you care for doesn't need to do anything except develop one habit:
-            tapping their phone against a small sticker you've placed somewhere meaningful.
-            You set up what they see when they do.
+            The reminders the person relies on arrive on their own, on a time or a place you set, so the help does not depend
+            on them remembering anything.
+            A small sticker they can tap is an optional extra: One gesture pulls up whatever you have prepared for that spot.
         </p>
         <div class="cue-cards">
             <div class="cue-card featured reveal">
@@ -191,7 +191,7 @@
                 </h3>
                 <p>
                     You put an NFC tag on the nightstand.
-                    You set up three retrieves: medications taken, door locked, phone charging.
+                    You set up three reminders: take your evening medications, lock the door, plug in your phone.
                     You train them to tap their phone against the tag at bedtime.
                     That's it.
                 </p>
@@ -219,9 +219,8 @@
                     Leaving the house
                 </h3>
                 <p>
-                    Tag by the front door.
-                    Reminder: keys, wallet, today's appointment address.
-                    And notifies you, automatically, that they've left.
+                    Tag by the front door surfaces a reminder if they tap it: keys, wallet, today's appointment address.
+                    Separately, and needing no tap, a geofence on their home lets you know they have headed out.
                 </p>
             </div>
             <div class="use-case reveal">
@@ -240,11 +239,9 @@
                     Returning home
                 </h3>
                 <p>
-                    The same front door tag, tapped again on return.
-                    You get a notification: home at 1:23 PM.
-                    No GPS tracking.
-                    No constant monitoring.
-                    Just the rhythm of a normal day, visible when it reassures.
+                    The home geofence sees them arrive, with no tap required, and you get a notification: home at 1:23 PM.
+                    No live map, no minute-by-minute tracking, just the boundary crossing.
+                    Only the rhythm of a normal day, visible when it reassures.
                 </p>
             </div>
         </div>
@@ -262,24 +259,27 @@
             <em>A rhythm you can see.</em>
         </h2>
         <p class="section-lead reveal">
-            GPS tracking watches someone without their ongoing participation.
-            <span class="brand">Cap<em>trieve</em></span> is different: The person taps a tag they placed themselves, for their
-            own routine.
-            The presence signal is a side effect of a gesture that already serves them.
+            GPS tracking watches someone continuously and paints a map.
+            <span class="brand">Cap<em>trieve</em></span> does not.
+            It notes a few ordinary boundary events that need nothing from the person: when a geofence on their home sees them
+            leave and return, and when their phone first stirs in the morning.
+            That matters, because the person you care for is the one least able to remember to check in.
         </p>
         <p class="section-lead reveal">
-            What you see as a caregiver is a log – not a map.
-            Front door, 10:47 AM: departed.
-            Front door, 1:23 PM: returned.
-            The log makes a normal day visible.
-            An absence in the log is something you notice yourself, in your own time.
+            What you see is a log, not a map.
+            Left home, 10:47 AM.
+            Home again, 1:23 PM.
+            Up and about this morning.
+            Every signal tracks the phone, not the person, and none of it claims they are fine, so the thing you act on is its
+            absence.
+            A day that stays silent is your cue to call, in your own time.
             The app does not alarm.
             You do the interpreting.
+            If they keep a tag-tapping habit, those taps can appear too, an optional check-in on top of the passive signals.
         </p>
         <blockquote class="pull-quote reveal">
-            The tap serves them.
-            It incidentally informs you.
-            That distinction matters.
+            You see the shape of an ordinary day.
+            What you act on is its absence.
         </blockquote>
     </div>
 </section>
@@ -410,10 +410,11 @@
             <em>For both of you.</em>
         </h2>
         <p class="section-lead reveal">
-            Both the person you care for and you need <span class="brand">Cap<em>trieve</em></span> and a
-            <span class="tier">CONNECTED</span> subscription.
-            You both get the full app – not a stripped-down companion version.
-            Both of you benefit from it independently.
+            You and the person you care for each have <span class="brand">Cap<em>trieve</em></span> and your own private
+            account for the connection.
+            Only one of you needs to pay: one <span class="tier">CONNECTED</span> subscription covers up to five family
+            members through Family Sharing.
+            You both get the full app, not a stripped-down companion version, and both of you benefit from it independently.
             The caregiving layer is what connects you.
         </p>
         <p class="section-lead reveal">
@@ -431,7 +432,7 @@
         </div>
     </div>
 </footer>
-    <script type="module" src="/js/siteScripts.min.js?v=fefa18"></script>
+    <script type="module" src="/js/siteScripts.js?v=532d60"></script>
 
 </body>
 </html>
