@@ -16,7 +16,7 @@
             "headline"      : "Captrieve for ADHD – built for the way ADHD brains actually work",
             "description"   : "The thought is gone before you finish the sentence. Captrieve captures it in seconds and reminds you when you're actually in the right place to do something about it.",
             "datePublished" : "2025-06-01",
-            "dateModified"  : "2026-06-11"
+            "dateModified"  : "2026-06-21"
         }
     ]
 }
@@ -183,6 +183,37 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- ── Reminders you don't learn to ignore ── -->
+<section>
+    <div class="container">
+        <p class="section-label reveal">
+            Skip if done
+        </p>
+        <h2 class="reveal">
+            A reminder you don't<br>
+            <em>learn to ignore.</em>
+        </h2>
+        <p class="section-lead reveal">
+            Here's the quiet reason reminders stop working for you.
+            They fire whether or not you've already done the thing.
+            So a lot of them are pointless, and your brain learns – correctly – that the notification means nothing.
+            You swipe it away before you've even read it.
+        </p>
+        <p class="section-lead reveal">
+            <span class="brand">Cap<em>trieve</em></span> lets you attach a done signal to a reminder.
+            Tap the pillbox tag when you take your meds, or the dog-food tag when you feed the dog, and the reminder for that
+            day simply doesn't fire.
+            The only reminders that reach you are the ones for things you genuinely haven't done yet – so they're worth
+            looking at again.
+        </p>
+        <p class="section-lead reveal">
+            And when it matters, it won't guess wrong against you.
+            For something like medication, an uncertain signal never silences the reminder outright – it still shows up, asking
+            you to confirm.
+        </p>
     </div>
 </section>
 

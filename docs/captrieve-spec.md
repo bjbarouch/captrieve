@@ -240,6 +240,13 @@ A few examples across very different contexts – in every case, future you is g
 -  The reminder to call ahead – surfaced when you are 15 minutes from home, set via a large-radius geofence on your home
    location.
 -  The thing you need when you get in the car – surfaced when your phone connects to your car audio system.
+-  The evening medication – surfaced every night at 8 pm, unless you already tapped the pillbox tag, in which case it stays
+   silent for the night.
+-  Feeding the dog – surfaced every day at 6 pm, unless the dog-food tag was tapped first, so it only nags on the days you
+   actually forgot.
+-  The plants – surfaced every Saturday morning, unless you watered them early and tapped the windowsill tag.
+-  The course of antibiotics – surfaced twice a day for ten days starting tomorrow, then it ends on its own.
+-  The monthly bill – surfaced on the first of every month, and on the second Wednesday if there is one you pay then too.
 
 
 ---
@@ -655,6 +662,10 @@ at the note again," "reminders just train me to dismiss them," "I need to see it
 it matters."
 The site and any community outreach should mirror this language, not describe it from outside.
 
+One of those complaints, "reminders just train me to dismiss them," has a direct structural answer in the satisfaction cue.
+A reminder that stays silent whenever the thing was already done stops firing on the occasions that teach dismissal, so it
+keeps the credibility that ordinary reminders spend.
+
 There is significant overlap between creative people and people with ADHD – the hyperfocus-then-forget pattern, the
 sensitivity to interruptions in the capture moment, the need for retrieval that fits the moment rather than a clock.
 This is not a coincidence and the product serves both in the same motion.
@@ -672,6 +683,10 @@ The failure mode is not forgetting to look at a note.
 It is walking into the doctor's office after waiting six weeks for the appointment and saying "everything is fine"
 because the questions are gone.
 Captrieve addresses that specific failure: the question is captured when it arrives, and it surfaces at the clinic door.
+
+This population is also the reason satisfaction cues default to a soft, confirm-first suppression for anything health-related.
+A missed medication reminder is not an acceptable failure mode, so when a done signal is only a heuristic the reminder still
+appears, pre-marked, rather than vanishing on a guess.
 
 The privacy positioning is especially important here: people navigating memory loss or cognitive change are often
 already managing loss of autonomy, and may be resistant to tools that feel surveillant or that share their data without
@@ -797,11 +812,15 @@ Everything the user stores is a Capture.
 | `playAudioOnRetrieve` | bool | If true, the original recording plays when the capture is retrieved, not only shown or read |
 | `audioIsPrimary` | bool | If true, the recording is the content: transcription is skipped or hidden, the audio is protected from discard, and the inbox shows a voice-note row |
 | `triggers` | List\<Trigger\> | One or more; OR logic across the list |
-| `status` | CaptureStatus | pending, surfaced, snoozed, dismissed |
+| `satisfiers` | List\<Satisfier\> | Optional. Cues that mark the capture done and suppress its pending triggers when one fires inside the satisfaction window. OR across the list. Empty for most captures |
+| `status` | CaptureStatus | pending, surfaced, snoozed, satisfied, dismissed |
 | `snoozedUntil` | DateTime? | Set when status is snoozed |
 | `label` | String? | Optional user-defined name shown in inbox instead of auto-generated cue summary |
 | `autoDismiss` | bool | If true, dismiss automatically after first notification is acted on |
 | `surfaceCount` | int | Incremented each time a cue fires and a notification is delivered. Never reset. Used to detect stale captures. |
+| `completions` | List\<Completion\> | Append-only log of satisfaction events: timestamp, the satisfier that fired, and whether it beat the reminder. Drives the habit-graduation suggestion. Empty unless the capture has satisfiers |
+| `activeFrom` | DateTime? | If set, no cue fires before this. Arms a capture for a future date – "starting next Monday" |
+| `activeUntil` | DateTime? | If set, no cue fires after this and the capture archives. Bounds event-based cues to a range; a recurring time cue usually expresses its range through the recurrence rule instead |
 
 ### Trigger
 
@@ -827,7 +846,8 @@ Any cue that fires delivers the notification.
 | `bluetoothDeviceName` | String? | For bluetooth_connect and bluetooth_disconnect triggers |
 | `nfcTagId` | String? | For nfc_checkin triggers; the app-minted UUIDv4 written to the tag at registration |
 | `delayMinutes` | int? | Delay after primary event before notification fires |
-| `repeatAfterMinutes` | int? | If set, fires again N minutes after initial delivery |
+| `repeatAfterMinutes` | int? | If set, fires again N minutes after initial delivery. A re-nag within one firing, not a daily repeat |
+| `recurrence` | Recurrence? | For datetime triggers only. If set, the trigger fires repeatedly on a rule – daily, weekly, monthly – rather than once. See Recurrence |
 | `andConditions` | List\<Condition\> | All must pass at moment of firing |
 
 ### Condition
@@ -853,6 +873,87 @@ A point-in-time predicate evaluated at the moment a Trigger's primary event occu
 -  "Remind me when I leave the office, but wait 20 minutes first" – geofence_departure trigger with delayMinutes set to 20.
 -  "Remind me when I land" – geofence_arrival trigger on the destination city or airport, with a generous radius (several
    kilometers). The user searches for the destination on the map rather than dragging a pin from their current location.
+
+### Recurrence
+
+A datetime Trigger fires once by default.
+A Recurrence turns it into a repeating reminder: every day at 9, every weekday at 7, the second Wednesday of each month, the
+first of the month at noon.
+The model is a deliberate subset of the iCalendar recurrence rule (RRULE), chosen because it is the portable standard and maps
+cleanly onto both platforms, without exposing RRULE's full and rarely-needed complexity.
+
+| Field | Type | Notes |
+|---|---|---|
+| `frequency` | Frequency | daily, weekly, monthly, yearly |
+| `interval` | int | Every N periods. 1 is every period, 2 is every other, and so on |
+| `byWeekday` | List\<Weekday\>? | For weekly rules: which days fire, such as Mon, Wed, Fri |
+| `bySetPosition` | int? | For "the Nth weekday of the month": 2 with byWeekday Wednesday is the second Wednesday; -1 is the last |
+| `byMonthDay` | int? | For "the Nth of the month": 15 is the fifteenth, -1 is the last day |
+| `timeOfDay` | TimeOfDay | The clock time the reminder fires on each occurrence |
+| `starts` | Date | The first eligible date. "Beginning next Monday" sets this |
+| `ends` | RecurrenceEnd | never, onDate (until a date), or afterCount (after N occurrences) |
+
+**Range is recurrence plus an end.**
+"Daily at 7 am for one week, beginning next Monday" is one rule: frequency daily, timeOfDay 07:00, starts next Monday, ends
+afterCount 7.
+A range is not a separate concept for time reminders; it is the recurrence's own start and end.
+For an event cue with no clock – "every time I tap the gym tag, but only for the next month" – the same range is expressed by
+the capture's activeFrom and activeUntil instead, since there is no datetime trigger to carry the rule.
+
+**One occurrence at a time.**
+A recurring trigger schedules only its next occurrence, not an open-ended series of pending notifications.
+When an occurrence fires or is satisfied, the next one is computed and scheduled.
+This keeps the notification queue bounded and survives reboot the same way a single datetime trigger does (see Phone Off or
+Rebooted).
+
+### Satisfier
+
+A Satisfier is a cue that silences a reminder instead of delivering one.
+It reuses the full Trigger event vocabulary – an NFC tap, a Wi-Fi join, a geofence arrival, a charger connect – but inverts
+the effect: when a Satisfier fires inside its window, the capture is marked `satisfied`, its pending triggers for that window
+are canceled, and the event is appended to the completion log.
+A capture can carry more than one Satisfier, with OR across them: any one firing satisfies the capture.
+
+This is the third cue primitive, distinct from the two above.
+A Trigger surfaces the capture.
+A Condition gates a Trigger at the instant it fires.
+A Satisfier suppresses a Trigger that has not yet fired, on the strength of something the user already did.
+
+A Satisfier therefore departs from the statelessness that Triggers and Conditions assume.
+A Condition is a point-in-time predicate with no memory.
+A Satisfier must remember that the thing was done at 7 am and carry that fact to the 8 pm trigger.
+The carried state is small – a `satisfied` flag and a timestamp scoped to the current window – but it is real, and it is the
+one place in the model where a cue's outcome depends on an earlier event rather than only on the present moment.
+
+| Field | Type | Notes |
+|---|---|---|
+| `id` | UUID | |
+| `type` | TriggerType | The same event vocabulary as Trigger: nfc_checkin, wifi_join, geofence_arrival, charger_connect, and the rest |
+| event params | – | The same fields a Trigger of this type uses: nfcTagId, wifiSsid, locationId, and so on |
+| `window` | SatisfactionWindow | The period inside which doing the thing counts as done for this reminder. For a one-shot capture, creation until the trigger. For a recurring capture, the current recurrence period |
+| `mode` | SatisfyMode | hard or soft. hard suppresses the reminder silently. soft still fires, pre-marked "looks like you already did this – confirm?", so a wrong guess never silently drops a real need |
+
+**Suppression mode and the cost of a wrong guess.**
+A false trigger is a spurious nudge, which is merely annoying.
+A false satisfier is silence when the user actually needed the nudge, which is worse, and for a medication reminder it is a
+safety matter.
+The two example signals sit in different reliability classes.
+A dedicated NFC tag on the pillbox is trustworthy, because the user taps it only when the dose is actually taken.
+A Wi-Fi join at the pharmacy standing in for "picked up the refill" is a heuristic, fine for "did I collect the prescription
+this week" and wrong for "did I take today's dose", because the user might be there for shampoo.
+hard mode suits the trustworthy signal.
+soft mode is the default for anything health-related, and the always-visible inbox backstops both, since a suppressed capture
+is quiet, never gone.
+
+### Completion
+
+One entry in a capture's completion log, written each time a Satisfier fires.
+
+| Field | Type | Notes |
+|---|---|---|
+| `at` | DateTime | When the satisfier fired |
+| `satisfierId` | UUID | Which satisfier marked the capture done |
+| `beatReminder` | bool | True if the satisfier fired before the reminder for that window did. The signal that the behavior is running ahead of the cue |
 
 ---
 
@@ -1268,8 +1369,88 @@ Referenced by Triggers and Conditions.
 ### CaptureStatus
 
 `pending` – cue has not yet fired. `surfaced` – cue fired, notification delivered, awaiting user action. `snoozed` –
-user deferred; `snoozedUntil` set. `dismissed` – user released the capture.
+user deferred; `snoozedUntil` set. `satisfied` – a satisfaction cue fired and suppressed the pending reminder for this
+window; for a recurring capture the flag resets at the next period, for a one-shot it resolves like a completed capture.
+`dismissed` – user released the capture.
 No further notifications.
+For a recurring capture (see Recurring Reminders), status tracks the current occurrence and returns to `pending` for the next
+one; the capture moves to the archive only when its recurrence rule ends.
+
+---
+
+## Recurring Reminders
+
+Any reminder can recur.
+A datetime cue can fire once, or every day at 9, or every weekday, or the second Wednesday of each month, or daily at 7 am for
+one week beginning next Monday.
+The rule and its bounds are described in the Recurrence data model; this section is what recurrence means for the rest of the
+product.
+
+**The capture stays alive across occurrences.**
+A one-shot capture resolves after it is acted on.
+A recurring capture does not.
+Its status describes the current occurrence – pending, then surfaced, then acted on, snoozed, or satisfied – and then resets to
+pending for the next occurrence.
+When the rule runs out, the last occurrence behaves like a one-shot and the capture moves to the archive.
+Editing the rule, or ending it early, is an ordinary edit on the capture.
+
+**Recurrence is what makes a satisfaction cue repeat.**
+A satisfaction cue needs a window inside which "already done" counts, and for a recurring reminder that window is exactly one
+occurrence period.
+Feed the dog every day at 8 pm, unless the dog-food tag was tapped today: each day is a fresh window, a tap before 8 pm
+satisfies that day, and tomorrow the question returns.
+The second Wednesday of the month, unless already handled: the window is that month's occurrence.
+This is the pairing the two features were built for, and it is where the completion log accrues into habit graduation.
+
+**Persistent silence and persistent nagging are both signals.**
+A recurring capture that is satisfied early, day after day, is a habit forming, and the app offers to loosen or retire it.
+A recurring capture that surfaces and is ignored, day after day, is the opposite: the same stale-capture machinery that flags a
+one-shot gone cold (see Stale Capture Prompt) can ask whether a daily reminder the user keeps dismissing still earns its place.
+
+**Tier.**
+Basic recurrence is free, because a repeating date-and-time reminder is part of the everyday loop the free tier already
+promises with "date and time, unlimited."
+What is paid is composition, unchanged: the moment a recurring reminder also carries a satisfaction cue, an AND condition, a
+delay, or a second OR'd cue, it crosses into Solo, on the same rule as every other composed capture.
+
+---
+
+## Satisfaction Cues ("skip if done")
+
+A satisfaction cue answers a request the rest of the model cannot: remind me to do this, unless I have already done it.
+Feed the dog at 8 pm, unless the dog-food tag was already tapped.
+Take the evening dose, unless the pillbox tag was already tapped.
+Pick up the refill, unless joining the pharmacy Wi-Fi already showed I was there.
+The reminder is set as usual, and a second cue is attached as the done signal.
+If the done signal fires first, the reminder never speaks.
+
+**Why it belongs in Captrieve and not in a reminder app.**
+A reminder app fires on a clock and has no idea whether the thing was done, so it nags whether or not the nagging is needed.
+That is the precise mechanism by which reminders train people to dismiss them: a share of the time they fire when the work is
+already finished, so the user learns the notification carries no information and swipes it away on reflex.
+A satisfaction cue removes those false alarms.
+The reminder that does appear is one the user genuinely had not acted on, so it keeps its signal and stays worth answering.
+
+**It is composition, inverted.**
+Mechanically a satisfaction cue is a second cue on the capture whose effect is to cancel rather than deliver.
+It reuses every existing cue type, so the user is choosing from a vocabulary they already know.
+Because it is composition, it lives in the Solo tier alongside AND conditions, delays, and multi-cue OR, and the upgrade
+prompt fires the first time a user reaches for a done signal.
+
+**Recurrence is the natural home.**
+The headline cases – feed the dog, take the meds, water the plants – are daily.
+A satisfaction cue is most valuable on a recurring capture, where each period resets the done flag and the cue asks the
+question again the next day.
+Recurring captures are the home this feature was built for: see Recurring Reminders for how a recurrence period defines the
+satisfaction window.
+
+**Habit graduation, made real.**
+Because each satisfaction event is logged with whether it beat the reminder, the app can notice when the behavior has
+outrun the cue – fourteen evenings running, the dog was fed before 8 pm – and offer to move the reminder later, loosen it,
+or pause it.
+This is the same idea the cues page already celebrates, the habit outlasting the tool, turned into a concrete prompt.
+It stays a suggestion the user accepts, never an automatic change, because the standing rule holds: no algorithm decides when
+the user is ready.
 
 ---
 
@@ -1396,6 +1577,22 @@ Not required; most captures will have none.
 
 An "Add another cue" option appends a second cue to the same capture.
 The UI makes clear these are OR – any one firing delivers the notification.
+
+### Recurrence and Range
+
+For a date-and-time cue, a "Repeats" control offers the common rules as one tap each – every day, every weekday, weekly on
+chosen days, monthly on a date, monthly on the Nth weekday – with a custom option for the rest.
+A "Starts" date and an "Ends" choice – never, on a date, or after a number of times – set the range, defaulting to start today
+and never end.
+Most captures are one-shot and show none of this until the user asks for it.
+
+### Satisfaction Cues ("But skip it if...")
+
+Available after a primary cue is set, alongside the "But only if..." condition option, as a "But skip it if..." addition.
+The user picks a done signal from the same cue picker – most often the tag or network that means the task is finished – and
+chooses whether a match silences the reminder outright or surfaces it pre-marked for a quick confirm.
+Not required, and absent on most captures.
+A Solo-tier feature, since it is a second composed cue.
 
 ---
 
@@ -1760,6 +1957,12 @@ first launch – a product decision, recorded here as the fallback.
    wifiSsid and nfcTagIds fields, all pointing to the same named place. Any signal sufficient to identify arrival or
    departure. This makes location identification redundant and reliable in a way no single method is. Requires data model
    change and cue evaluation logic update. Design before building cue types that reference Locations.
+-  Recurrence and satisfaction windows – the recurrence model is now specified (see Recurrence and Recurring Reminders): any
+   datetime cue can repeat on an RRULE subset with a start and an end, and a satisfaction window is one occurrence period.
+   Remaining before build: confirm the RRULE subset is expressible with the chosen Flutter scheduling and notification
+   packages across reboot and low-power deferral, since each occurrence is scheduled one at a time; decide how far the
+   "Repeats" quick options go before falling to a custom rule; and confirm the per-occurrence satisfied-flag persistence
+   introduces no regression in the otherwise point-in-time cue evaluation path.
 
 ---
 
@@ -1768,10 +1971,22 @@ first launch – a product decision, recorded here as the fallback.
 These questions were deferred for later decision and must be resolved before the relevant features are built.
 
 **Upgrade prompt copy.**
-The Solo upgrade prompt fires when a user reaches for a paid cue, tries to add a sixth NFC tag or a third Wi-Fi network, or
-tries to combine cues at all.
+The Solo upgrade prompt fires when a user reaches for a paid cue, tries to add a sixth NFC tag or a third Wi-Fi network, tries
+to combine cues at all, or attaches a satisfaction cue for the first time.
 The exact wording is to be finalized before launch.
 The principle is fixed: fire at a moment of demonstrated value, name what just happened, then ask for money.
+
+**Recurrence in the free tier.**
+Decided: basic recurrence – one datetime cue repeating on a rule, with a range – is free, and composing a recurring reminder
+with a satisfaction cue or any condition is Solo.
+Confirm this reads as generous rather than as a downgrade of the old "date and time, unlimited" promise, and that the free
+"Repeats" quick options are rich enough to feel complete on their own.
+
+**Satisfaction cue default mode.**
+Suppression mode is hard or soft per capture: hard silences the reminder, soft surfaces it pre-marked for a quick confirm.
+The decided default is soft for anything health-related and hard available everywhere, but the exact rule for when the app
+pre-selects soft – by keyword, by category, or only on explicit user choice – is open, and must avoid both silently dropping a
+real medication need and nagging through a done dose. Resolve alongside the recurrence model (see Open Items).
 
 **Advanced voice cue input and TTS – implementation sequencing.**
 Both are decided (voice cue input is Connected-only; TTS is free).
@@ -1812,6 +2027,9 @@ The free tier includes the entire capture-and-retrieve loop with no retrieve cap
 There is no lifetime limit on remembering, and a capture and its retrieval are never walled.
 The free tier includes the cues a casual or older user actually reaches for, each on its own without composition: a date or
 time, the next time you open the app, an NFC tag tap, and a Wi-Fi network.
+A date-or-time cue may repeat on a schedule and run for a bounded range, since a recurring reminder is part of the everyday
+loop, not a power feature.
+Composing that recurring reminder with a skip-if-done cue or any other condition is where Solo begins.
 Two of these carry a volume cap rather than a capability gate: up to five NFC tags and up to two Wi-Fi networks, with date,
 time, and app-open unlimited.
 The cap counts physical tags, not captures, so a single tag can carry many captures and a single Wi-Fi network many cues.
@@ -1828,7 +2046,8 @@ It adds three things:
    Focus or Do Not Disturb. Geofence sits here in v1 because keeping it out of the free tier means the free app needs no
    always-on location permission, which keeps it simpler, lighter on battery, and clear of the platform background-location
    review.
--  The composition layer: AND conditions, delays, and more than one cue on a capture with OR across them.
+-  The composition layer: AND conditions, delays, satisfaction cues ("skip if done"), and more than one cue on a capture with
+   OR across them.
 -  Removal of the free volume caps: unlimited NFC tags and unlimited Wi-Fi networks.
 
 These are the features a casual user rarely reaches for and a committed user reaches for constantly.
@@ -1837,10 +2056,12 @@ than extractive.
 
 The upgrade prompt fires at the moment of demonstrated value, which is the spec's standing monetization principle: fire when
 the user has just felt the value, name what just happened, then ask for money.
-Three moments trigger it.
+Four moments trigger it.
 The first is when a user reaches for a paid cue type, such as a geofence or a Focus cue.
 The second is when a user tries to add a sixth NFC tag or a third Wi-Fi network.
 The third is when a user tries to combine cues at all, with an AND condition, a delay, or a second cue OR'd onto a capture.
+The fourth is the first time a user asks a reminder to skip itself when the thing is already done, by attaching a satisfaction
+cue.
 In every case the user has reached past the everyday product on their own, so the ask lands on someone already getting more out
 of Captrieve than the average user, which is why this converts at a real rate rather than a rounding error.
 
