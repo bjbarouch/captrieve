@@ -818,7 +818,7 @@ Everything the user stores is a Capture.
 | `label` | String? | Optional user-defined name shown in inbox instead of auto-generated cue summary |
 | `autoDismiss` | bool | If true, dismiss automatically after first notification is acted on |
 | `surfaceCount` | int | Incremented each time a cue fires and a notification is delivered. Never reset. Used to detect stale captures. |
-| `completions` | List\<Completion\> | Append-only log of satisfaction events: timestamp, the satisfier that fired, and whether it beat the reminder. Drives the habit-graduation suggestion. Empty unless the capture has satisfiers |
+| `completions` | List\<Completion\> | Append-only log of completion events from Done, Already Done, or a satisfier firing: timestamp, source, and whether it was unaided. Drives the unaided count and the habit-graduation suggestion |
 | `activeFrom` | DateTime? | If set, no cue fires before this. Arms a capture for a future date – "starting next Monday" |
 | `activeUntil` | DateTime? | If set, no cue fires after this and the capture archives. Bounds event-based cues to a range; a recurring time cue usually expresses its range through the recurrence rule instead |
 
@@ -947,13 +947,15 @@ is quiet, never gone.
 
 ### Completion
 
-One entry in a capture's completion log, written each time a Satisfier fires.
+One entry in a capture's completion log, written each time the capture is completed – by the user choosing Done or Already Done
+on a surfaced capture, or by a Satisfier firing.
 
 | Field | Type | Notes |
 |---|---|---|
-| `at` | DateTime | When the satisfier fired |
-| `satisfierId` | UUID | Which satisfier marked the capture done |
-| `beatReminder` | bool | True if the satisfier fired before the reminder for that window did. The signal that the behavior is running ahead of the cue |
+| `at` | DateTime | When the completion was logged |
+| `source` | CompletionSource | already_done (manual, the user had handled it before the reminder), done (manual, the user acted when it surfaced), satisfier_auto (a satisfaction cue completed it) |
+| `unaided` | bool | True for already_done and satisfier_auto – the user had it handled without the reminder's help. False for done. Feeds the unaided count and the habit-graduation suggestion |
+| `satisfierId` | UUID? | Set only when source is satisfier_auto: which satisfier marked the capture |
 
 ---
 
@@ -1371,7 +1373,8 @@ Referenced by Triggers and Conditions.
 `pending` – cue has not yet fired. `surfaced` – cue fired, notification delivered, awaiting user action. `snoozed` –
 user deferred; `snoozedUntil` set. `satisfied` – a satisfaction cue fired and suppressed the pending reminder for this
 window; for a recurring capture the flag resets at the next period, for a one-shot it resolves like a completed capture.
-`dismissed` – user released the capture.
+`completed` – the user chose Done or Already Done, or a satisfier completed it; a Completion is logged and the capture moves to
+the archive. `dismissed` – the user released the capture without doing it.
 No further notifications.
 For a recurring capture (see Recurring Reminders), status tracks the current occurrence and returns to `pending` for the next
 one; the capture moves to the archive only when its recurrence rule ends.
@@ -1451,6 +1454,65 @@ or pause it.
 This is the same idea the cues page already celebrates, the habit outlasting the tool, turned into a concrete prompt.
 It stays a suggestion the user accepts, never an automatic change, because the standing rule holds: no algorithm decides when
 the user is ready.
+
+---
+
+## Completion and Acknowledgment
+
+Every surfaced capture is dismissed somehow, so the dismiss moment is where the app learns what actually happened, at no extra
+cost in taps.
+Instead of one "dismiss" that throws that outcome away, a surfaced capture offers two completion verbs and a release.
+
+**The two verbs.**
+Done (✓) means the user acted on the reminder when it surfaced.
+Already Done (✓+) means the user had already handled it before the reminder spoke – called Bob at 2 for a 3:45 reminder, or
+simply remembered the thing at the piano on their own.
+Already Done is the more meaningful of the two, because it is unaided: the user remembered without the app's help, which is the
+exact memory-self-efficacy proof the science page is built on.
+The check-plus icon foreshadows that it is worth more.
+Dismiss, separately, releases a capture the user no longer intends to act on, and logs nothing.
+The two verbs are present on every surfaced capture, recurring or one-shot, task or thought; the user picks the one that is
+true, and Already Done is simply ignored when it does not apply rather than hidden.
+
+**Logging is always on and always distinct.**
+Done and Already Done are recorded as separate Completion entries every time, whether or not the user has ever opened the score
+utility below.
+This costs nothing and means the history is already there if the user later wants to see it.
+This is the manual twin of the satisfaction cue: a satisfaction cue is an automatic Already Done, detected by a real-world
+signal instead of reported by hand, and all three paths write to the one completion log.
+
+**Acknowledgment.**
+Already Done earns a small celebration, a brief confetti burst, because it is the unaided win.
+Done earns a quiet check.
+The acknowledgment is non-verbal by default, with no "good job" text, because spoken praise can read as condescending to the
+older and memory-impaired users the product serves; the feeling is carried by the motion, not by words.
+
+**The score utility, which may never be clicked.**
+There is a single, optional, private screen that the user reaches only by going looking for it.
+It shows two things: how reliably the user gets things Done, and how many times they did them unaided.
+It is a count that goes up, never a ratio and never a percentage, so a quiet week is a smaller happy number and never a failing
+grade.
+It carries no streaks, and nothing about it ever fires a notification – a reminder nagging the user to keep their numbers up
+would re-create the very dismissal-training the rest of this design exists to remove.
+It is local and personal, with no leaderboard and no sharing, consistent with the no-account, no-cloud posture.
+
+**Graduation is the highest score.**
+The completion log is what powers the habit-graduation suggestion in Recurring Reminders, and the framing is deliberate.
+When a recurring reminder has been Already Done often enough that the habit clearly runs on its own, the app offers to retire
+it, and retiring it is presented as the achievement, not a loss.
+The score's pinnacle is needing the app less, which inverts the usual incentive of an app that profits from engagement.
+
+**What it is not.**
+Completion data never becomes a caregiver compliance feed.
+"Did she take her pills today" is exactly the action-level monitoring the Connected Tier deliberately refuses (see Caregiver
+Use Case): presence there is passive pattern-absence, never a watch on specific acts.
+The completion log and the score stay personal to the user whose captures they are, and any caregiver visibility would be a
+separate, explicit, user-controlled decision well outside this feature.
+
+**Tier.**
+Free, all tiers.
+The dismiss verbs, the logging, and the acknowledgment are core retrieval UX, and the score utility is a local personal
+feedback screen with no backend, so none of it is gated.
 
 ---
 
@@ -1657,7 +1719,11 @@ From the inbox the user can:
 
 -  Tap any capture to see full detail – text, photo, audio player, all cues and their status.
 -  Snooze a surfaced capture – sets a new cue from a quick-option menu or free picker.
--  Dismiss a capture – marks it done, moves to archive.
+-  Complete a surfaced capture with one of two verbs – Done (✓), or Already Done (✓+) when the user had already handled it
+   before the reminder. Both log a Completion and move the capture to the archive; Already Done also marks the completion
+   unaided. See Completion and Acknowledgment.
+-  Dismiss a capture without completing it – releases it to the archive with no completion logged, for when the user no longer
+   intends to act on it.
 -  Edit any capture's body, photo, or cues.
 -  Delete a capture permanently.
 -  Search all captures by text content.
@@ -1677,7 +1743,7 @@ From the inbox the user can:
 
 ## Archive
 
-Dismissed captures move to the archive.
+Completed and dismissed captures move to the archive.
 The archive is searchable and browsable.
 Captures in the archive can be viewed in full detail, restored to pending with a new cue, or permanently deleted.
 Nothing is automatically deleted from the archive.
@@ -1825,6 +1891,9 @@ This is consistent with the captures-stay-on-device philosophy – the user cont
 -  Default cue – the quick option shown first in the cue picker (default: tomorrow morning)
 -  Default "tomorrow morning" time (default: 8:00 am)
 -  Auto-dismiss default – whether new captures default to auto-dismiss on or off
+-  Completion acknowledgment – whether the Already Done confetti and Done check animations play (default: on)
+-  Progress screen – show the optional, private completion and unaided-count screen (default: off; the underlying logging is
+   always on regardless, see Completion and Acknowledgment)
 -  Audio retention preference – keep all, keep none, ask each time
 -  Saved Locations – manage, edit, delete
 -  Saved Wi-Fi Networks – manage named networks used as cue SSIDs
@@ -1852,6 +1921,7 @@ This is the only telemetry in the app, and it is deliberately minimal.
 -  No account, user ID, device ID, or any stable identifier that ties a report to a person or to that person's other reports.
 -  No capture content – not the text, not the audio, not the transcription.
 -  No cue content – no locations, geofences, Wi-Fi names, NFC tags, Bluetooth devices, or times.
+-  No completion, progress, or score data – not what was done, and not the count of what the user handled unaided.
 -  No presence events and no connection graph.
 -  No advertising or analytics SDKs, and no third-party trackers.
 

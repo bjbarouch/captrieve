@@ -1,8 +1,22 @@
 {
   "permissions": {
     "allow": [
+      "Edit(/Users/bjb/Sites/captrieve/**)",
+      "Write(/Users/bjb/Sites/captrieve/**)",
       "Bash(npm run *)",
-      "Bash(grep -rn ' $' docs/captrieve-spec.md src/pages/cues.htm_)"
+      "Bash(node build.js*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git show*)",
+      "Bash(grep*)",
+      "Bash(ls*)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(wc *)",
+      "Bash(find *)",
+      "Bash(echo *)"
     ]
   }
 }
