@@ -217,9 +217,14 @@
                 </div>
             </div>
         </div>
-        <div class="cta-group reveal" style="margin-top: 2rem;">
-            <a href="#" class="btn">App Store</a>
-            <a href="#" class="btn btn-secondary">Google Play</a>
+        <div class="highlight reveal">
+            <p class="hero-sub reveal">
+                Capture in the moment. Retrieve it when you need it. <span class="brand">Cap<em>trieve</em></span>.
+            </p>
+            <div class="cta-group reveal">
+                <a href="#download" class="btn">App Store</a>
+                <a href="#download" class="btn btn-secondary">Google Play</a>
+            </div>
         </div>
     </div>
 </section>
