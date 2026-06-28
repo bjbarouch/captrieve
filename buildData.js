@@ -47,7 +47,7 @@ export default {
     },
 
     // page-specific scripts, keyed by page basename (no extension)
-    // headScripts load in <head>; bodyScripts load at end of <body>
+    // headScripts load in <head>. bodyScripts load at end of <body>
     // preview-auth.js is a temporary dev gate -- remove all entries here at launch
     pageScripts : {
         index           : { headScripts : ["/preview-auth.js"], bodyScripts : [] },

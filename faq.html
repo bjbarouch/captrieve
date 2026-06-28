@@ -27,7 +27,7 @@
     <link rel="preload" href="/fonts/CormorantGaramond-Italic-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/DMSans-Italic-VariableFont_opsz,wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=d0bb40">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css?v=2cce8e">
     <noscript>
         <style>.reveal { opacity: 1; transform: none; }</style>
     </noscript>
@@ -250,6 +250,78 @@
             Cues
         </p>
         <div class="faq-list">
+            <div class="faq-item reveal">
+                <p class="faq-q">
+                    If I set a reminder for when I get home, does it nag me the whole time I'm home?
+                </p>
+                <p class="faq-a">
+                    No.
+                    A retrieve fires once, when you arrive.
+                    After it has found you, it goes quiet.
+                    You are never reminded again merely for still being home.
+                </p>
+                <p class="faq-a">
+                    What happens next depends on the kind of reminder.
+                    A one-time reminder is finished once you mark it done, and does not return.
+                    A recurring reminder, such as taking your meds when you get home, re-arms only after you leave and come back.
+                    <span class="brand">Cap<em>trieve</em></span> treats "still home" and "home again" as different things, so the
+                    reminder waits for a real new arrival instead of firing again while you are standing in your kitchen.
+                    A daily routine re-arms on the next day it applies, not the moment you finish it.
+                </p>
+                <p class="faq-a">
+                    Snooze is the one case that is meant to come back on its own.
+                    If you snooze a retrieve for ten minutes, it returns in ten minutes whether or not anything has changed, because
+                    that is what you asked it to do.
+                    The line between a helpful nudge and a nag is exactly this, and
+                    <span class="brand">Cap<em>trieve</em></span> is built around getting it right.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">
+                    How does <span class="brand">Cap<em>trieve</em></span> know when I'm at a place? Do I pick Wi-Fi or GPS?
+                </p>
+                <p class="faq-a">
+                    You do not pick.
+                    You name the place, and <span class="brand">Cap<em>trieve</em></span> recognizes it with whatever signals it
+                    has for that place.
+                    When you save a place such as home, it can remember several things about it at once: the Wi-Fi network you are
+                    on there, the spot on the map, even a Bluetooth device you connect to there.
+                    Any one of them is enough to fire the cue, and it fires on whichever notices first.
+                </p>
+                <p class="faq-a">
+                    This matters because the signals have different strengths.
+                    Joining your home Wi-Fi is instant and sharp, but only some places have a network you join.
+                    A place on the map works anywhere, but can take a little longer to notice you have arrived.
+                    Using whatever is available means you get the quick recognition where there is a network and broad coverage
+                    everywhere else, without thinking about any of it.
+                </p>
+                <p class="faq-a">
+                    <span class="brand">Cap<em>trieve</em></span> only ever uses networks you already join.
+                    It never asks you to connect to anything.
+                    And you can see exactly which signals a place uses, and remove any of them, on that place's screen.
+                </p>
+            </div>
+            <div class="faq-item reveal">
+                <p class="faq-q">
+                    Can I say "remind me next time I'm at any drugstore"?
+                </p>
+                <p class="faq-a">
+                    Yes, for the drugstores <span class="brand">Cap<em>trieve</em></span> knows about, which are the ones you have
+                    told it about.
+                    You can tag a place with a category, such as drugstore, and a single reminder can then fire at any place
+                    carrying that tag.
+                    One "pick up my prescription" reminder works at every drugstore you have saved, not just one.
+                </p>
+                <p class="faq-a">
+                    What it will not do is look a place up in an outside database to decide it is a drugstore, because that would
+                    mean sending your location off your phone, which is the one thing the app is built never to do.
+                    So <span class="brand">Cap<em>trieve</em></span> knows the places you have named, not every place in the world.
+                    The first time you walk into a brand-new pharmacy it has never seen, it will not fire, because nothing has told
+                    it that this is a drugstore.
+                    Save the place and tag it once, and it joins the group for next time.
+                    Your personal map grows as you use it.
+                </p>
+            </div>
             <div class="faq-item reveal">
                 <p class="faq-q">
                     Why is location triggering less reliable in some places than others?
@@ -488,6 +560,32 @@
             Privacy
         </p>
         <div class="faq-list">
+            <div class="faq-item reveal">
+                <p class="faq-q">
+                    Do you collect data about how I use the app?
+                </p>
+                <p class="faq-a">
+                    Yes, a little, and you can turn it off.
+                    To make <span class="brand">Cap<em>trieve</em></span> better, we collect content-free information about how the
+                    app is performing: which kinds of cues fire, which features get used, and crash reports.
+                    When something breaks, we also include the recent sequence of steps that led up to it, because some bugs only
+                    appear after a particular order of events.
+                    It is on by default.
+                </p>
+                <p class="faq-a">
+                    What we never see is your stuff: the content of your captures and reminders, your photos or voice, your
+                    locations, or anything that identifies you.
+                    Reports are grouped by a random ID your phone makes up, which lets us tell that one install hit a bug several
+                    times without ever knowing it is you.
+                    There is no account to create, so we never have your email, your name, or your Apple or Google sign-in.
+                    We do not track you across other apps, and we share nothing with advertisers.
+                </p>
+                <p class="faq-a">
+                    It is the difference between guessing what to improve and knowing.
+                    If you would rather share none of it, turn it off in Settings, then Privacy, then Diagnostics.
+                    The app works exactly the same.
+                </p>
+            </div>
             <div class="faq-item reveal">
                 <p class="faq-q">
                     Does <span class="brand">Cap<em>trieve</em></span> send my location to a server?
