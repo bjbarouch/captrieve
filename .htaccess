@@ -43,6 +43,22 @@ RewriteCond %{HTTPS}s ^on(s)|off
 RewriteCond http%1://%{HTTP_HOST} ^(https?://)(www\.)?(.+)$
 RewriteRule ^ %1%3%{REQUEST_URI} [R=301,L]
 
+# pre-launch preview gate -- the product is not public yet
+# strangers receive maintenance.html only and never the real page HTML
+# you and reviewers unlock with  https://captrieve.com/?key=aca35455db586a5c4d74b436
+# that sets a 7-day cookie. revisiting the key URL re-grants access, so effective
+# access lasts until the secret is rotated (then stale cookies lapse within 7 days)
+# local dev over loopback is never gated, so this identical file does not block development
+# the /.well-known/ exemption keeps automatic TLS certificate renewal working
+# remove this whole block (and maintenance.html) at launch
+RewriteCond %{QUERY_STRING} (?:^|&)key=aca35455db586a5c4d74b436(?:&|$) [NC]
+RewriteRule ^ %{REQUEST_URI}? [CO=cv_preview:1:%{HTTP_HOST}:10080:/:secure:HttpOnly,R=302,L]
+RewriteCond %{REMOTE_ADDR} !^(127\.0\.0\.1|::1)$
+RewriteCond %{REQUEST_URI} !^/maintenance\.html$ [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/ [NC]
+RewriteCond %{HTTP_COOKIE} !(?:^|;\s)cv_preview=1
+RewriteRule ^ /maintenance.html [L]
+
 # hide .html endings
 # redirect /file.html to /file
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]

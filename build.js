@@ -32,7 +32,7 @@ function substituteMarkers(source) {
 
 /**
  * Strips trailing whitespace from every line. Nunjucks leaves indented blank
- * lines where {% %} control tags were; this removes those leftover spaces.
+ * lines where {% %} control tags were. This removes those leftover spaces.
  * @param {string} text
  * @returns {string}
  */
@@ -553,6 +553,7 @@ function auditIndex() {
 
 /**
  * Removes all build output: asset directories, root-level HTML files, and sitemap.xml.
+ * Preserves maintenance.html, which is hand-authored infrastructure, not build output.
  * @returns {void}
  */
 function clean() {
@@ -563,6 +564,9 @@ function clean() {
         console.log(`  removed ${dir}/`);
     }
     for (const file of globSync(path.join(outDir, "*.html"))) {
+        if (path.basename(file) === "maintenance.html") {
+            continue;
+        }
         rmSync(file);
         if (verbose) {
             console.log(`  removed ${path.basename(file)}`);

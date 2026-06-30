@@ -48,22 +48,8 @@ export default {
 
     // page-specific scripts, keyed by page basename (no extension)
     // headScripts load in <head>. bodyScripts load at end of <body>
-    // preview-auth.js is a temporary dev gate -- remove all entries here at launch
-    pageScripts : {
-        index           : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        compare         : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        pricing         : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        cues            : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        inspirations    : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        adhd            : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        caregivers      : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        science         : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        recommendations : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        login           : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        faq             : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        manual          : { headScripts : ["/preview-auth.js"], bodyScripts : [] },
-        privacy         : { headScripts : ["/preview-auth.js"], bodyScripts : [] }
-    },
+    // the pre-launch preview gate now lives server-side in .htaccess, not here
+    pageScripts : { },
 
     // error page scripts, keyed by HTTP status code or "default"
     errorPageScripts : {
