@@ -64,8 +64,8 @@ Prove you can build, run on the real device, debug on-device, and ship to an int
 For a developer new to mobile, the toolchain and the submission pipeline are larger risks than any feature, so they go first.
 
 **Build.**
--  Flutter and Dart environment, Android Studio, device debugging against the Moto G Power. (See the separate macOS setup
-   guide.)
+-  Flutter and Dart environment, Android Studio, device debugging against the Moto G Power. (See flutter-setup-macos.md
+   in the app repo.)
 -  Project skeleton with the repository pattern and the platform abstractions listed above, all stubbed.
 -  Local storage wired up with `sqflite` or `hive`, and the Capture and Trigger data models created.
 -  A trivial running app: record audio, save a local note, list it. Nothing context-aware yet.

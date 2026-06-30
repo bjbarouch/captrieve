@@ -1,0 +1,1 @@
+function a(t){for(const o of t){const e=o;(e.tagName==="TEXTAREA"||e.tagName==="INPUT"&&(e?.type?.toLowerCase()==="text"||e?.type?.toLowerCase()==="search"||e?.type?.toLowerCase()==="email"||e?.type?.toLowerCase()==="url"||e?.type?.toLowerCase()==="tel"||e?.type?.toLowerCase()==="password"))&&(e.value=e.value.trim())}}export{a as trimFields};

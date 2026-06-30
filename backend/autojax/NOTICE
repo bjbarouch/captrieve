@@ -1,0 +1,17 @@
+AutoJax
+Copyright 2025-2026 Bennett Barouch
+
+Licensed under the Apache License, Version 2.0 (the "License").
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------
+Third-party components bundled with this distribution
+------------------------------------------------------------------------
+
+PHPMailer
+  Bundled at src/util/vendor/PHPMailer/ and shipped in dist/util/vendor/PHPMailer/.
+  Copyright (c) PHPMailer contributors.
+  Licensed under the GNU Lesser General Public License v2.1 (LGPL-2.1-only).
+  Full license text: src/util/vendor/PHPMailer/LICENSE

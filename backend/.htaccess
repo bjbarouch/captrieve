@@ -1,0 +1,9 @@
+# autojax -- security headers for the auth pages it ships (the hash pins the inline import map; do not edit it)
+<IfModule mod_headers.c>
+    <FilesMatch "^autojax-(forgotPassword|resetPassword|admin|confirmEmail)\.html$">
+        Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-ilt77PAAWcppmindsu/xed0p7YiqkBYuuShVD5ArSLM='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        Header always set X-Content-Type-Options "nosniff"
+        Header always set X-Frame-Options "DENY"
+        Header always set Referrer-Policy "no-referrer"
+    </FilesMatch>
+</IfModule>

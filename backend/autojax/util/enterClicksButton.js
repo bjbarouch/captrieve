@@ -1,0 +1,1 @@
+const i=new WeakSet;function a(n,t){i.has(n)||(i.add(n),n instanceof HTMLFormElement&&n.addEventListener("submit",function(e){e.preventDefault()}),n.addEventListener("keydown",function(e){t.disabled||e.key!=="Enter"&&e.keyCode!==13||e.target instanceof HTMLTextAreaElement||(e.preventDefault(),t.focus(),t.click())}))}export{a as enterClicksButton};

@@ -1,0 +1,240 @@
+{
+    // autojax.json
+    //
+    // non-secret configuration for autojax.
+    // this file lives as a peer of autojax/ and is safe to put under source control.
+    // secrets (db credentials, email credentials, encryption key, jwt secret) are in autojax-secrets.php outside DOCUMENT_ROOT.
+    //
+    // the installer wrote the path and url values below from your answers.
+    // YOU MUST complete the ajaxApi section with your app's services.
+    //
+    // PHP and JavaScript both read this file at runtime.
+    // JSON5-style comments (// and /* */) are supported -- do not use // inside string values.
+
+    // -------------------------------------------------------------------------
+    // paths and urls -- set by installer
+    // -------------------------------------------------------------------------
+
+    // absolute filesystem path to autojax-secrets.php (the secrets file, outside DOCUMENT_ROOT)
+    "secretsFile" : "%%SECRETS_FILE%%",
+
+    // web URL of autojax/'s parent directory, where the editable html/css pages live (no trailing slash)
+    "parentUrl"   : "%%CORE_PARENT_URL%%",
+
+    // web URL of ajaxPort.php -- lives inside autojax/ajaxApi/
+    "ajaxUrl"     : "%%CORE_URL%%/ajaxApi/ajaxPort.php",
+
+    // -------------------------------------------------------------------------
+    // app settings -- edit these after installation
+    // -------------------------------------------------------------------------
+
+    // URL to redirect to on logout or session timeout
+    // used by the default autoJaxConfig.logout implementation
+    // override autoJaxConfig.logout in your app code if you need custom behavior
+    "loginUrl"    : "%%LOGIN_URL%%",
+
+    // PHP timezone identifier -- used for log timestamps
+    // see https://www.php.net/manual/en/timezones.php
+    "timezone"    : "%%TIMEZONE%%",
+
+    // set to true only if you need to support CORS preflight requests that arrive
+    // without an Origin header (unusual -- leave false for normal deployments)
+    "preflightWithNoOrigin" : false,
+
+    // opt-in multi-page session. false (the default) keeps the session memory-only with no cookie, the most
+    // secure mode. true makes login set an httpOnly, Secure, SameSite=Strict cross-page cookie and enables the
+    // session/read exchange, so a real navigation to a separate document can recover the session. see
+    // docs/routing-and-multipage-design.md and docs/security-posture.md
+    "crossPageSession" : false,
+
+    // how many sessions a single account may hold at once. only two values are meaningful:
+    //   1 (the default) -- unlimited concurrent sessions. an account can be logged in on any number of
+    //                      devices or tabs at once, each with its own token. this is how most sites behave
+    //   0              -- a single active session. a new login displaces the previous one (last-wins): the
+    //                      older session is rejected on its next request and logged out. for highly secure
+    //                      apps that must guarantee one live session per account
+    // when 0, login records the active session on the user row and every request checks it; when 1 those
+    // columns stay NULL and the check is skipped. do NOT combine 0 with crossPageSession: cross-page assumes a
+    // single logical session may span concurrent documents/tabs, which last-wins enforcement will fight
+    "concurrentSessions" : 1,
+
+    // -------------------------------------------------------------------------
+    // transport security and proxy awareness
+    // -------------------------------------------------------------------------
+
+    // set "trusted" to true ONLY if autojax runs behind a reverse proxy, load balancer, or CDN that you
+    // control and that sets X-Forwarded-For and X-Forwarded-Proto. when true, the real client IP (for
+    // throttling) and the scheme (for the HTTPS check) are read from those headers, skipping "hops" trusted
+    // proxies between the client and PHP. when false (the default) only REMOTE_ADDR and the direct TLS state
+    // are trusted and forwarded headers are ignored -- never trust them unless a proxy you control sets them
+    "proxy" : {
+        "trusted" : false,
+        "hops"    : 1
+    },
+
+    // -------------------------------------------------------------------------
+    // logging
+    // -------------------------------------------------------------------------
+
+    // absolute filesystem path for log files
+    // if inside DOCUMENT_ROOT, add an .htaccess to deny web access
+    "logDir"      : "%%LOG_DIR%%",
+
+    // -------------------------------------------------------------------------
+    // email -- recipient addresses only; server, credentials, and key are in autojax-secrets.php
+    // -------------------------------------------------------------------------
+
+    // turn real email delivery off. with email ON, production sends mail normally, and dev and test reroute
+    // every message to the dev address (and actually send it) so the whole flow stays inspectable. with
+    // email OFF, no mail is sent at all. leave false unless you have a reason to silence outbound mail.
+    "emailTurnOff" : false,
+
+    // how outbound mail is sent. must be set to EXACTLY "smtp" or "sendmail" -- autojax never infers a
+    // transport, and refuses to start (unless emailTurnOff is true) if this is missing or anything else.
+    // "sendmail" hands each message to the local mail system (the sendmail interface postfix and exim provide),
+    // which queues and delivers it out of process, so it does not tie up a web worker on the SMTP round trip
+    // and works on hosts that block direct outbound SMTP. "smtp" instead opens an authenticated SMTP connection
+    // to the server in autojax-secrets.php. the installer sets this from the result of mail-probe.sh, which
+    // sends a real test message and confirms delivery. re-run mail-probe.sh any time your mail setup changes
+    "emailTransport" : "%%EMAIL_TRANSPORT%%",
+
+    "emailSupport" : {
+        "test" : "%%EMAIL_SUPPORT_TEST%%",
+        "prod" : "%%EMAIL_SUPPORT_PROD%%"
+    },
+
+    // -------------------------------------------------------------------------
+    // session -- durationInMinutes and absoluteMaxInMinutes are the non-secret
+    // jwt settings; jwt secret, secretOld, and secretLastUpdate are in autojax-secrets.php
+    // -------------------------------------------------------------------------
+
+    "jwt" : {
+        // durationInMinutes is the idle timeout: how long a session survives with no activity before it logs
+        // out. each authenticated response refreshes the token, so an active user is extended automatically.
+        // allowed 5-480, silently clamped. keep it at 20 or less -- longer weakens the idle guard on an
+        // unattended session. see the README for the full rationale
+        "durationInMinutes" : 15,
+        // absoluteMaxInMinutes is a hard cap on total session age regardless of activity or keep-alives. it
+        // bounds how long a single captured token can ever be replayed, because a refresh cannot push a
+        // session past it. default 120 (two hours); allowed 5-480 (eight hours), silently clamped, and never
+        // below durationInMinutes. there is no "off" -- every session has a finite maximum life
+        "absoluteMaxInMinutes" : 120
+    },
+
+    // -------------------------------------------------------------------------
+    // password policy
+    // -------------------------------------------------------------------------
+
+    // minimum password length. allowed 12-72, silently clamped. 12 is the floor because anything
+    // shorter is too weak; 72 is bcrypt's hard limit (the most bytes it will ever hash). raise this
+    // if you want to require longer passwords, for example 16. enforced identically on the client
+    // and the server, so a value set here changes both the in-browser check and the server check
+    "password" : {
+        "minLength" : 12
+    },
+
+    // -------------------------------------------------------------------------
+    // throttling and password reset -- change only if you have a reason to
+    // -------------------------------------------------------------------------
+
+    "loginThrottle" : {
+        "maxIpFails"            : 20,
+        "maxLoginNameHashFails" : 10,
+        "windowInMinutes"       : 15
+    },
+
+    // per-IP volume cap for the unauthenticated public endpoints (login, password, registerNewUser). unlike
+    // loginThrottle this counts EVERY request, not just failures, so it is deliberately far more generous:
+    // many legitimate users can share one public IP (office NAT, school, mobile carrier CGNAT) and each makes
+    // a few calls, so a tight cap would lock them all out. set maxIpFails to where request volume from a single
+    // IP actually threatens performance or signals abuse, well above the failure thresholds above
+    "publicThrottle" : {
+        "maxIpFails"      : 300,
+        "windowInMinutes" : 15
+    },
+
+    "passwordReset" : {
+        "ttlInSeconds"      : 600,
+        "cooldownInMinutes" : 5
+    },
+
+    // self-registration email confirmation -- ttlInMinutes is both the confirmation-link lifetime
+    // and the window after which an unconfirmed "pending" account is purged (separate from passwordReset)
+    "emailConfirm" : {
+        "ttlInMinutes" : 10
+    },
+
+    "passwordResetRequestThrottle" : {
+        "maxIpFails"      : 10,
+        "windowInMinutes" : 60
+    },
+
+    "passwordResetAttemptThrottle" : {
+        "maxIpFails"      : 10,
+        "windowInMinutes" : 60
+    },
+
+    // client error-log submissions per IP. its own bucket, kept separate from the public and login throttles
+    // so a page stuck in an error loop cannot lock the user out of login. deliberately generous
+    "clientLogThrottle" : {
+        "maxIpFails"      : 120,
+        "windowInMinutes" : 15
+    },
+
+    // -------------------------------------------------------------------------
+    // ajaxApi -- YOUR APP'S SERVICES -- YOU MUST FILL THIS IN
+    //
+    // one entry per service your app exposes through autojax's ajax pipeline.
+    //
+    // each entry's KEY is the service name. in the common case you declare nothing but the permission matrix below:
+    //
+    // "serviceFile"  optional. path to the PHP service handler, relative to autojax/'s parent directory. defaults to
+    //                "<serviceName>.php" in the parent directory. declare it only to point elsewhere, for example
+    //                "ajaxApi/serviceX.php" when many services live in an ajaxApi/ subfolder. the file must declare
+    //                function serviceRequest(): void
+    //
+    // "namespace"    optional. by default your handler is just a global function serviceRequest() with no namespace at
+    //                all, which is safe because exactly one service is loaded per request, so its name cannot collide.
+    //                declare a "namespace" only if you prefer to keep your handler (and any helpers) in your own PHP
+    //                namespace: then write "namespace YourNs { ... }" in the file and ajaxPort dispatches
+    //                "YourNs\serviceRequest". PHP namespace names are case-insensitive, so "YourNs" matches "yourNs"
+    //
+    // permission values for each crud action:
+    //   true   action is part of the api, authentication required
+    //   false  action is part of the api, authentication NOT required
+    //   null   action is not part of the api
+    //
+    // "subService"   optional. if a service dispatches by subService name,
+    //                declare each sub-service with its own crud permissions.
+    //                top-level crud entries cover calls with no subService.
+    //                omit or set to null if not needed.
+    //
+    // example with no subService:
+    //   "yourService" : {
+    //       "serviceFile" : "ajaxApi/yourService.php",
+    //       "subService"  : null,
+    //       "create" : true,
+    //       "read"   : false,
+    //       "update" : true,
+    //       "delete" : null
+    //   }
+    //
+    // example with subService:
+    //   "yourService" : {
+    //       "serviceFile" : "ajaxApi/yourService.php",
+    //       "subService"  : {
+    //           "detail"  : { "create" : true,  "read" : true,  "update" : true,  "delete" : true  },
+    //           "summary" : { "create" : null,  "read" : true,  "update" : null,  "delete" : null  },
+    //           "public"  : { "create" : null,  "read" : false, "update" : null,  "delete" : null  }
+    //       },
+    //       "create" : true,
+    //       "read"   : true,
+    //       "update" : true,
+    //       "delete" : true
+    //   }
+    // -------------------------------------------------------------------------
+    "ajaxApi" : {
+        // your services here
+    }
+
+}

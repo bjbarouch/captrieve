@@ -1,0 +1,191 @@
+/* autojax template styles, shared by the admin, forgot-password, and
+   reset-password pages. Conflicting rules were merged in favor of the more
+   generous dimension. */
+
+/* --- base --- */
+body {
+    font-family : sans-serif;
+    max-width   : 640px;
+    margin      : 3rem auto;
+    padding     : 0 1rem;
+}
+h1 {
+    font-size : 1.4rem;
+    margin    : 0 0 1.5rem 0;
+}
+p {
+    font-size : 0.9rem;
+    color     : #444;
+    margin    : 0 0 1.25rem 0;
+}
+label {
+    display       : block;
+    font-size     : 0.9rem;
+    margin-bottom : 0.2rem;
+}
+
+.no-bullets {
+    list-style-type : none;
+}
+
+/* --- forms and inputs --- */
+input {
+    width   : 100%;
+    padding : 0.3rem 0.4rem;
+    margin  : 0 0 0.75rem 0;
+}
+.form-group {
+    margin-bottom : 0.75rem;
+}
+.form-group label {
+    display       : block;
+    font-size     : 0.9rem;
+    margin-bottom : 0.2rem;
+}
+.form-group input {
+    width   : 100%;
+    padding : 0.3rem 0.4rem;
+    margin  : 0;
+}
+
+/* --- admin panel --- */
+#login-section,
+#panel-section {
+    display : none;
+}
+#login-section.visible,
+#panel-section.visible {
+    display : block;
+}
+#session-info {
+    font-size     : 0.85rem;
+    color         : #555;
+    margin-bottom : 1rem;
+}
+#search-row {
+    display       : flex;
+    gap           : 0.5rem;
+    align-items   : flex-end;
+    margin-bottom : 1rem;
+}
+#search-row input {
+    flex    : 1;
+    padding : 0.3rem 0.4rem;
+    margin  : 0;
+}
+#search-row button {
+    margin      : 0;
+    white-space : nowrap;
+}
+#user-card {
+    display       : none;
+    border        : 1px solid #ddd;
+    border-radius : 4px;
+    padding       : 1rem;
+    margin-top    : 1rem;
+}
+#user-card.visible {
+    display : block;
+}
+.user-field {
+    font-size     : 0.9rem;
+    margin-bottom : 0.35rem;
+}
+.user-field .label {
+    color   : #666;
+    display : inline-block;
+    width   : 7rem;
+}
+.status-active     { color : #2a2; }
+.status-suspended  { color : #a80; }
+.status-terminated { color : #888; }
+.admin-badge {
+    font-size     : 0.75rem;
+    background    : #336;
+    color         : #fff;
+    border-radius : 3px;
+    padding       : 0 0.3rem;
+    margin-left   : 0.3rem;
+}
+#action-row {
+    margin-top : 0.75rem;
+    display    : flex;
+    flex-wrap  : wrap;
+    gap        : 0.4rem;
+}
+#action-row button {
+    margin    : 0;
+    font-size : 0.85rem;
+    padding   : 0.25rem 0.6rem;
+}
+#action-result {
+    font-size  : 0.9rem;
+    margin-top : 0.5rem;
+    min-height : 1.2em;
+}
+#action-result.success { color : #2a2; }
+#action-result.error   { color : #c00; }
+
+/* --- reset-password fields --- */
+.pwd-wrapper {
+    position      : relative;
+    margin-bottom : 0.75rem;
+}
+.pwd-wrapper input {
+    width      : 100%;
+    padding    : 0.3rem 2rem 0.3rem 0.4rem;
+    margin     : 0;
+    box-sizing : border-box;
+}
+.pwd-toggle {
+    position  : absolute;
+    right     : 0.4rem;
+    top       : 50%;
+    transform : translateY(-50%);
+    cursor    : pointer;
+    width     : var(--eye-icon-width, 1.25rem);
+    opacity   : 0.6;
+}
+.pwd-toggle:hover {
+    opacity : 1;
+}
+.requirements {
+    font-size : 0.8rem;
+    color     : #666;
+    margin    : -0.5rem 0 0.75rem 0;
+}
+#token-error {
+    color     : #c00;
+    font-size : 0.9rem;
+}
+#form-area {
+    display : none;
+}
+#form-area.visible {
+    display : block;
+}
+
+/* --- messages and links --- */
+.error-msg {
+    color         : #c00;
+    font-size     : 0.9rem;
+    min-height    : 1.2em;
+    margin-bottom : 0.5rem;
+}
+#success-msg {
+    display    : none;
+    font-size  : 0.9rem;
+    color      : #2a2;
+    margin-top : 0.75rem;
+}
+#success-msg.visible {
+    display : block;
+}
+#back-link {
+    display         : block;
+    font-size       : 0.85rem;
+    margin-top      : 1.25rem;
+    color           : #36c;
+    cursor          : pointer;
+    text-decoration : underline;
+}

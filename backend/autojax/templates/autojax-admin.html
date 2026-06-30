@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AutoJax User Administration</title>
+    <link rel="stylesheet" href="autojax-admin.css">
+    <!-- add your stylesheet here -->
+    %%IMPORTMAP%%
+    <script type="module" src="%%CORE_URL%%/autojax-admin.js"></script>
+</head>
+<body>
+<h1>Book Registry Administration</h1>
+    <div id="login-section" class="visible">
+        <div class="form-group">
+            <label for="login-name">Email or Display Name</label>
+            <input type="text" id="login-name" autocomplete="username">
+        </div>
+        <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" autocomplete="current-password">
+        </div>
+        <div id="login-error" class="error-msg"></div>
+        <button type="button" id="login-btn" class="default-button">Log In</button>
+    </div>
+    <div id="panel-section">
+        <div id="session-info"></div>
+        <button type="button" id="logout-btn" class="default-button">Log Out</button>
+        <div id="review-section">
+            <h2>Activity since you last reviewed</h2>
+            <p id="review-note">
+                These are sanitized summaries only. The full detail for every item is in the log files.
+            </p>
+            <div id="review-error" class="error-msg"></div>
+            <div class="review-card" id="review-serverErrors">
+                <h3>Server errors</h3>
+                <div class="review-summary"></div>
+                <button type="button" class="review-mark default-button" data-category="serverErrors">Mark reviewed</button>
+            </div>
+            <div class="review-card" id="review-otherErrors">
+                <h3>Other errors (attacks, protocol, client logs)</h3>
+                <div class="review-summary"></div>
+                <button type="button" class="review-mark default-button" data-category="otherErrors">Mark reviewed</button>
+            </div>
+            <div class="review-card" id="review-registrations">
+                <h3>New user registrations</h3>
+                <div class="review-summary"></div>
+                <button type="button" class="review-mark default-button" data-category="registrations">Mark reviewed</button>
+            </div>
+        </div>
+        <div id="search-row">
+            <input type="text" id="search-input" placeholder="Email address or display name">
+            <button type="button" id="search-btn" class="default-button">Look Up</button>
+        </div>
+        <div id="search-error" class="error-msg"></div>
+        <div id="user-card">
+            <div class="user-field">
+                <span class="label">Display name</span>
+                <span id="card-name"></span>
+                <span id="card-admin-badge" class="admin-badge" style="display:none">admin</span>
+            </div>
+            <div class="user-field">
+                <span class="label">Email</span>
+                <span id="card-email"></span>
+            </div>
+            <div class="user-field">
+                <span class="label">Status</span>
+                <span id="card-status"></span>
+            </div>
+            <div class="user-field">
+                <span class="label">User ID</span>
+                <span id="card-id"></span>
+            </div>
+            <div id="action-row"></div>
+            <div id="action-result"></div>
+        </div>
+    </div>
+</body>
+</html>

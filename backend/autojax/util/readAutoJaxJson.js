@@ -1,0 +1,1 @@
+import{stripJson5Comments as e}from"./util.js";async function s(){const o=new URL("../../autojax.json",import.meta.url).href,t=await fetch(o);if(!t.ok)throw new Error(`autojax: failed to load autojax.json from ${o}: ${t.status}`);const r=await t.text(),a=e(r);return JSON.parse(a)}export{s as readAutoJaxJson};
